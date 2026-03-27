@@ -1,0 +1,302 @@
+{
+  "hero": {
+    "badge": "🔩 Remise en état professionnelle à {zone}",
+    "title": "Réparation Rideau Métallique {zone} ({zonePostal})",
+    "subtitle": "Rideau métallique endommagé, bruyant ou défaillant à {zone} ? Nos techniciens spécialisés assurent la réparation complète de tous les composants : lames, moteur, axe d'enroulement, serrure, rails et coffre. Intervention rapide dans tout le {department}. Appelez le {phone} pour un diagnostic gratuit."
+  },
+  "intro": {
+    "title": "Spécialiste réparation rideau métallique à {zone}",
+    "paragraphs": [
+      "Votre <strong>rideau métallique</strong> présente des signes d'usure, un dysfonctionnement ou des dommages visibles à <strong>{zone}</strong> ({zonePostal}) ? Avant d'envisager un remplacement complet, la <strong>réparation de votre fermeture métallique</strong> est souvent la solution la plus économique et la plus rapide. <strong>{name}</strong> dispose d'une équipe de <strong>techniciens qualifiés</strong>, forts de plus de 12 ans d'expérience dans la <strong>réparation de rideaux métalliques</strong> pour commerces, entrepôts, garages et locaux professionnels à {zone} et dans l'ensemble du <strong>{department}</strong>. Nos spécialistes interviennent sur tous les types de fermetures : <strong>rideaux à lames pleines</strong>, <strong>grilles articulées</strong>, <strong>rideaux micro-perforés</strong>, <strong>portes de garage enroulables</strong> et <strong>stores métalliques</strong>. Chaque intervention débute par un <strong>diagnostic précis</strong> afin d'identifier l'origine exacte du problème et de vous proposer la solution de réparation la plus adaptée. Nous disposons d'un <strong>stock permanent de pièces détachées</strong> pour intervenir efficacement dès le premier passage.",
+      "La <strong>réparation de rideau métallique à {zone}</strong> couvre un large éventail de problématiques : <strong>lames tordues</strong> ou enfoncées suite à un choc, <strong>moteur</strong> qui ne répond plus ou émet des bruits anormaux, <strong>axe d'enroulement</strong> grippé ou déformé, <strong>ressorts de traction</strong> cassés, <strong>serrure forcée</strong> après une tentative d'effraction, <strong>rails de guidage</strong> décalés ou obstrués, et <strong>coffre d'enroulement</strong> détérioré. <strong>{name}</strong> prend en charge chacune de ces réparations avec rigueur et professionnalisme à {zone} ({zonePostal}). Nos techniciens se déplacent avec un <strong>véhicule entièrement équipé</strong> comprenant l'outillage professionnel et les pièces de rechange les plus courantes, ce qui nous permet de résoudre la majorité des pannes en <strong>une seule intervention</strong>. Pour toute demande de <strong>réparation de rideau métallique à {zone}</strong>, contactez-nous au <strong>{phone}</strong> : <strong>diagnostic gratuit</strong>, devis transparent et <strong>intervention rapide</strong> garantie dans tout le {department}."
+    ]
+  },
+  "situations": {
+    "title": "Situations nécessitant une réparation à {zone}",
+    "items": [
+      {
+        "icon": "💥",
+        "title": "Rideau endommagé par un choc ou une effraction",
+        "description": "Votre rideau métallique à {zone} a subi un impact de véhicule, une tentative de cambriolage ou un acte de vandalisme. Les lames sont tordues, le tablier est déformé, ou le système de verrouillage a été forcé. Nos techniciens évaluent les dégâts, remplacent les éléments endommagés et renforcent la structure pour restaurer une protection optimale de votre local."
+      },
+      {
+        "icon": "⚙️",
+        "title": "Mécanisme défaillant et bruits anormaux",
+        "description": "Votre fermeture métallique grince, vibre, se bloque à mi-course ou fonctionne par à-coups à {zone}. Ces symptômes révèlent un problème sur l'axe d'enroulement, les ressorts, les paliers ou les roulements. Sans réparation rapide, la panne complète est inévitable. Nos spécialistes diagnostiquent l'origine du dysfonctionnement et procèdent aux réparations nécessaires pour redonner fluidité et fiabilité à votre rideau."
+      },
+      {
+        "icon": "🔌",
+        "title": "Panne électrique et défaillance moteur",
+        "description": "Le moteur de votre rideau métallique ne répond plus à {zone} : aucune réaction à la télécommande, surchauffe du moteur, disjonctions répétées ou coupure du condensateur. Nous intervenons sur tous les systèmes de motorisation (Somfy, Nice, Came, Simu) pour réparer ou remplacer le composant défaillant et rétablir le fonctionnement électrique de votre fermeture dans les meilleurs délais."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Usure naturelle et corrosion",
+        "description": "Les intempéries, l'humidité de la vallée de l'Oise et le gel hivernal fragilisent les rideaux métalliques à {zone} au fil des années. Les lames se rouillent, les joints s'abîment, les rails se grippent et l'étanchéité diminue. {name} assure la réparation et le traitement anticorrosion de votre rideau pour prolonger sa durée de vie et maintenir un niveau de protection conforme aux exigences de sécurité de votre commerce dans le {department}."
+      }
+    ]
+  },
+  "typesReparation": {
+    "title": "Types de réparations de rideaux métalliques à {zone}",
+    "items": [
+      {
+        "name": "Réparation de lames",
+        "description": "Remplacement de lames tordues, enfoncées, rouillées ou manquantes. Nous utilisons des lames identiques ou compatibles (acier galvanisé, aluminium, inox) pour restaurer l'intégrité du tablier de votre rideau métallique à {zone}.",
+        "icon": "📏"
+      },
+      {
+        "name": "Réparation moteur",
+        "description": "Diagnostic et réparation du moteur tubulaire ou central de votre rideau métallique. Remplacement du condensateur, du frein, des contacts électriques ou du moteur complet si nécessaire. Toutes marques : Somfy, Nice, Came, Simu.",
+        "icon": "⚡"
+      },
+      {
+        "name": "Réparation axe d'enroulement",
+        "description": "Remise en état ou remplacement de l'axe d'enroulement, des flasques, des roulements et des embouts. Rééquilibrage du tablier pour un fonctionnement fluide et silencieux de votre fermeture métallique à {zone}.",
+        "icon": "🔄"
+      },
+      {
+        "name": "Réparation serrure et verrouillage",
+        "description": "Remplacement de la serrure à cylindre, des verrous de sol, du crochet de fermeture et des contacts de sécurité. Renforcement du système anti-effraction après tentative de cambriolage à {zone}.",
+        "icon": "🔒"
+      },
+      {
+        "name": "Réparation rails de guidage",
+        "description": "Réalignement, redressement ou remplacement des coulisses latérales. Nettoyage et lubrification des rails pour éliminer les frottements et retrouver une montée-descente fluide du rideau à {zone}.",
+        "icon": "📐"
+      },
+      {
+        "name": "Réparation coffre d'enroulement",
+        "description": "Remise en état du coffre (caisson) : réparation de la tôle, remplacement des fixations, traitement anticorrosion et étanchéité. Protection des composants internes contre les intempéries et la poussière à {zone}.",
+        "icon": "🛡️"
+      }
+    ]
+  },
+  "processus": {
+    "title": "Notre processus de réparation à {zone}",
+    "items": [
+      {
+        "step": "1",
+        "title": "Diagnostic complet gratuit",
+        "description": "Notre technicien se déplace à {zone} ({zonePostal}) pour examiner votre rideau métallique. Il identifie précisément l'origine de la panne ou du dysfonctionnement, vérifie l'état de chaque composant et vous explique clairement le problème constaté. Ce diagnostic est entièrement gratuit et sans engagement."
+      },
+      {
+        "step": "2",
+        "title": "Devis détaillé et transparent",
+        "description": "Après le diagnostic, vous recevez un devis complet mentionnant les pièces à remplacer, le coût de la main-d'œuvre et la durée estimée de l'intervention. Aucun supplément caché : le prix annoncé est le prix final. Vous êtes libre d'accepter ou de refuser sans frais."
+      },
+      {
+        "step": "3",
+        "title": "Réparation professionnelle",
+        "description": "Une fois le devis accepté, notre technicien procède à la réparation de votre rideau métallique à {zone}. Utilisation de pièces d'origine ou compatibles de haute qualité. La majorité des réparations sont réalisées en un seul passage grâce à notre stock de pièces embarqué."
+      },
+      {
+        "step": "4",
+        "title": "Tests et vérification complète",
+        "description": "Après la réparation, nous effectuons des tests complets : cycles d'ouverture et fermeture, vérification des dispositifs de sécurité, contrôle du verrouillage, mesure du bruit et de la fluidité. Nous ne partons que lorsque votre rideau fonctionne parfaitement. Certificat de garantie remis sur place."
+      }
+    ]
+  },
+  "advantages": {
+    "title": "Pourquoi choisir {name} pour votre réparation à {zone}",
+    "items": [
+      "Diagnostic gratuit et sans engagement sur place à {zone} ({zonePostal})",
+      "Réparation jusqu'à 70% moins chère qu'un remplacement complet",
+      "Pièces détachées d'origine ou compatibles haute qualité en stock",
+      "Garantie de 6 mois à 2 ans sur toutes les réparations effectuées",
+      "Intervention rapide : sous 24h en urgence, sur rendez-vous sinon",
+      "Devis détaillé et transparent, sans frais cachés ni surprise",
+      "Techniciens certifiés avec plus de 12 ans d'expérience terrain",
+      "Toutes marques et tous types de rideaux métalliques pris en charge"
+    ]
+  },
+  "alternatingFeatures": [
+    {
+      "title": "<strong>Réparation Rideau Métallique {zone}</strong> : Tous Composants, Toutes Marques",
+      "content": "<p>Spécialiste de la <strong>réparation de rideau métallique à {zone}</strong> ({zonePostal}), {name} intervient sur l'ensemble des composants de votre fermeture métallique : <strong>lames en acier ou aluminium</strong>, <strong>moteur tubulaire ou central</strong>, <strong>axe d'enroulement</strong>, <strong>ressorts de traction et de torsion</strong>, <strong>serrures et verrous</strong>, <strong>rails de guidage</strong> et <strong>coffre d'enroulement</strong>. Quelle que soit la marque de votre rideau (Somfy, Nice, Came, Simu, ou fabrication artisanale), nos techniciens possèdent les compétences et les pièces nécessaires pour le remettre en état.</p><p>Chaque <strong>réparation de rideau métallique à {zone}</strong> commence par un <strong>diagnostic approfondi</strong> réalisé sur place par un technicien expérimenté. Cette étape est fondamentale pour identifier l'origine exacte du problème, qu'il soit mécanique, électrique ou structurel. Nous ne remplaçons que les pièces défaillantes, ce qui réduit considérablement le coût par rapport à un <strong>remplacement complet</strong>. Nos interventions respectent les normes en vigueur et les préconisations des fabricants.</p><p>Avec plus de <strong>12 ans d'expérience</strong> en réparation de fermetures métalliques dans le <strong>{department}</strong>, {name} a réparé des milliers de rideaux pour des commerces, pharmacies, restaurants, entrepôts et garages à {zone} et ses environs. Appelez le <strong>{phone}</strong> pour un <strong>diagnostic gratuit</strong> et une remise en état rapide de votre rideau métallique.</p>",
+      "image": "/images/gallery/rideau-metallique-creil.webp",
+      "imageAlt": "Réparation rideau métallique professionnel {zone}",
+      "imagePosition": "right"
+    },
+    {
+      "title": "<strong>Réparation Lames et Tablier</strong> de Rideau Métallique à {zone}",
+      "content": "<p>Les <strong>lames du rideau métallique</strong> constituent la surface de protection de votre commerce à {zone}. Elles sont exposées aux chocs, aux intempéries, à la corrosion et aux tentatives d'effraction. Lorsqu'une ou plusieurs lames sont <strong>tordues, enfoncées, rouillées ou manquantes</strong>, l'intégrité de la fermeture est compromise : le rideau peut se bloquer, laisser passer l'eau ou ne plus offrir une sécurité suffisante. {name} procède au <strong>remplacement unitaire des lames endommagées</strong> sans démonter l'ensemble du tablier, ce qui réduit le temps d'intervention et le coût de la réparation.</p><p>Nous disposons d'un <strong>stock permanent de lames</strong> dans différents profils et matériaux : <strong>lames pleines en acier galvanisé</strong> pour une sécurité maximale, <strong>lames en aluminium</strong> pour la légèreté et la résistance à la corrosion, et <strong>lames micro-perforées</strong> pour conserver la visibilité de votre vitrine à {zone}. Chaque lame de remplacement est sélectionnée pour correspondre parfaitement au profil existant de votre rideau, garantissant une <strong>compatibilité totale</strong> et un fonctionnement sans accroc.</p><p>Au-delà du simple remplacement, nos techniciens vérifient l'<strong>alignement complet du tablier</strong>, le bon coulissement dans les rails de guidage et l'équilibrage général du rideau. Un tablier bien aligné et équilibré réduit l'usure du moteur, diminue le bruit de fonctionnement et prolonge significativement la <strong>durée de vie de votre rideau métallique</strong> à {zone} ({zonePostal}). Contactez-nous au <strong>{phone}</strong> pour planifier une intervention rapide.</p>",
+      "image": "/images/gallery/rideau-metallique-lame-pleine-france.webp",
+      "imageAlt": "Réparation lames rideau métallique {zone}",
+      "imagePosition": "left"
+    },
+    {
+      "title": "<strong>Réparation Moteur</strong> de Rideau Métallique à {zone}",
+      "content": "<p>Le <strong>moteur de votre rideau métallique</strong> est le composant le plus sollicité. Les symptômes d'un moteur défaillant : absence de réaction, <strong>bruits de grincement</strong>, surchauffe, arrêts en plein cycle ou disjonctions répétées. {name} diagnostique la panne avec précision et procède à la <strong>réparation ou au remplacement</strong>.</p><p>Nous intervenons sur toutes les marques (<strong>Somfy, Nice, Came, Simu, Gaposa</strong>) et disposons des pièces en stock : <strong>condensateurs, freins électromagnétiques, cartes électroniques et télécommandes</strong>.</p>",
+      "image": "/images/gallery/entretien-rideau-metallique-rideau-de-fer.webp",
+      "imageAlt": "Réparation moteur rideau métallique {zone} {department}",
+      "imagePosition": "right"
+    },
+    {
+      "title": "<strong>Réparation Mécanisme d'Enroulement</strong> à {zone}",
+      "content": "<p>Au-delà du moteur, nous réparons l'ensemble du <strong>mécanisme d'enroulement</strong> à {zone} : axe, ressorts de compensation, paliers, roulements, flasques et embouts. Un mécanisme bien réparé garantit un fonctionnement <strong>silencieux, fluide et durable</strong> de votre rideau métallique.</p><p>Chaque réparation est suivie de <strong>tests complets</strong> et accompagnée d'une garantie pièces et main-d'œuvre. Appelez le <strong>{phone}</strong> pour une intervention rapide dans le <strong>{department}</strong>.</p>",
+      "image": "/images/gallery/Axe-central-motorise-rideau-metallique.webp",
+      "imageAlt": "Mécanisme enroulement rideau métallique {zone}",
+      "imagePosition": "left"
+    }
+  ],
+  "reviews": [
+    {
+      "name": "Thierry G.",
+      "rating": 5,
+      "text": "Réparation rapide et efficace de mon rideau métallique à {zone}. Deux lames étaient complètement tordues après un choc. Le technicien de {name} les a remplacées en moins d'une heure. Fonctionnement impeccable, comme neuf !",
+      "date": "Février 2025",
+      "zone": "{zone}",
+      "service": "Réparation"
+    },
+    {
+      "name": "Nadia B.",
+      "rating": 5,
+      "text": "Mon rideau de pharmacie à {zone} ne remontait plus du tout. Panne de condensateur selon le diagnostic. Réparation faite sur place en 30 minutes, le technicien avait la pièce dans son camion. Très professionnel, je recommande {name}.",
+      "date": "Janvier 2025",
+      "zone": "{zone}",
+      "service": "Réparation"
+    },
+    {
+      "name": "François M.",
+      "rating": 4,
+      "text": "Réparation de l'axe d'enroulement de mon rideau à {zone}. Le ressort était cassé, ce qui bloquait tout le mécanisme. Intervention un peu plus longue que prévu mais résultat parfait. Le rideau fonctionne à nouveau sans effort.",
+      "date": "Décembre 2024",
+      "zone": "{zone}",
+      "service": "Réparation"
+    },
+    {
+      "name": "Sophie L.",
+      "rating": 5,
+      "text": "Après une tentative de cambriolage sur ma boutique à {zone}, le rideau était tordu et la serrure forcée. {name} est intervenu le jour même pour tout remettre en état. Lames changées, serrure renforcée. Rien à redire !",
+      "date": "Février 2025",
+      "zone": "{zone}",
+      "service": "Réparation"
+    },
+    {
+      "name": "Karim D.",
+      "rating": 5,
+      "text": "Excellent travail de réparation sur le moteur de mon rideau métallique à {zone}. Le moteur Somfy était en fin de vie, remplacé par un modèle plus récent et plus silencieux. Devis respecté, intervention propre.",
+      "date": "Novembre 2024",
+      "zone": "{zone}",
+      "service": "Réparation"
+    },
+    {
+      "name": "Isabelle P.",
+      "rating": 5,
+      "text": "Je recommande vivement {name} pour la réparation de rideaux métalliques à {zone}. Mon rideau grinçait affreusement depuis des mois. Après leur passage : lubrification des rails, remplacement des roulements et réglage complet. C'est le silence total maintenant.",
+      "date": "Janvier 2025",
+      "zone": "{zone}",
+      "service": "Réparation"
+    },
+    {
+      "name": "Marc V.",
+      "rating": 4,
+      "text": "Réparation des rails de guidage sur mon rideau de garage à {zone}. Ils étaient complètement décalés, le rideau frottait et se bloquait une fois sur deux. Les rails ont été réalignés et renforcés. Le rideau glisse parfaitement maintenant.",
+      "date": "Octobre 2024",
+      "zone": "{zone}",
+      "service": "Réparation"
+    },
+    {
+      "name": "Amina R.",
+      "rating": 5,
+      "text": "Réparation urgente de mon rideau de boulangerie à {zone} un dimanche matin. Le rideau refusait de monter et j'avais des clients qui attendaient. {name} est arrivé en moins d'une heure et a réglé le problème. Service exceptionnel !",
+      "date": "Décembre 2024",
+      "zone": "{zone}",
+      "service": "Réparation"
+    },
+    {
+      "name": "Philippe C.",
+      "rating": 5,
+      "text": "Réparation complète du coffre d'enroulement de mon rideau à {zone}. La tôle était rouillée et laissait passer l'eau sur le mécanisme. Tout a été remis en état, traitement anticorrosion appliqué. Travail soigné par {name}.",
+      "date": "Novembre 2024",
+      "zone": "{zone}",
+      "service": "Réparation"
+    },
+    {
+      "name": "Céline T.",
+      "rating": 5,
+      "text": "Trois lames cassées sur mon rideau micro-perforé à {zone}. Je pensais devoir changer tout le tablier mais le technicien de {name} a remplacé uniquement les lames abîmées. Économie substantielle et rideau comme neuf. Merci !",
+      "date": "Février 2025",
+      "zone": "{zone}",
+      "service": "Réparation"
+    },
+    {
+      "name": "Jean-Pierre H.",
+      "rating": 4,
+      "text": "Réparation du système de verrouillage de mon rideau d'entrepôt à {zone}. Les verrous de sol ne s'enclenchaient plus correctement. Le technicien a remplacé les gâches et réajusté les points de fermeture. Sécurité retrouvée.",
+      "date": "Septembre 2024",
+      "zone": "{zone}",
+      "service": "Réparation"
+    },
+    {
+      "name": "Laura K.",
+      "rating": 5,
+      "text": "Mon rideau métallique de restaurant à {zone} descendait tout seul en plein service. Problème de frein moteur identifié et réparé par {name} le lendemain de mon appel. Le technicien a été très pédagogue dans ses explications.",
+      "date": "Janvier 2025",
+      "zone": "{zone}",
+      "service": "Réparation"
+    },
+    {
+      "name": "Rachid E.",
+      "rating": 5,
+      "text": "Réparation de la carte électronique du moteur de mon rideau à {zone}. Plutôt que de changer le moteur complet, le technicien a identifié que seule la carte était défaillante. Réparation à moindre coût, je suis très satisfait de {name}.",
+      "date": "Décembre 2024",
+      "zone": "{zone}",
+      "service": "Réparation"
+    },
+    {
+      "name": "Virginie S.",
+      "rating": 5,
+      "text": "Réparation de 5 lames rouillées et remplacement des joints d'étanchéité sur mon rideau à {zone}. Le rideau était dans un sale état après 12 ans sans entretien. Maintenant il est comme neuf. {name} fait du bon travail.",
+      "date": "Octobre 2024",
+      "zone": "{zone}",
+      "service": "Réparation"
+    },
+    {
+      "name": "Damien F.",
+      "rating": 5,
+      "text": "Intervention de {name} pour la réparation de mon rideau de magasin de sport à {zone}. Problème complexe sur l'axe d'enroulement : ressort cassé et palier usé. Tout a été remplacé en une matinée. Le rideau fonctionne mieux qu'avant !",
+      "date": "Novembre 2024",
+      "zone": "{zone}",
+      "service": "Réparation"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Qui appeler pour la réparation d'un rideau métallique à {zone} ?",
+      "answer": "Pour toute réparation de rideau métallique à {zone} ({zonePostal}), contactez <strong>{name}</strong> au <strong>{phone}</strong>. Nos techniciens spécialisés interviennent rapidement pour diagnostiquer et réparer tous les composants de votre fermeture métallique : lames, moteur, axe, serrure, rails et coffre. Diagnostic gratuit sur place et devis détaillé avant toute intervention dans l'ensemble du {department}."
+    },
+    {
+      "question": "Combien coûte la réparation d'un rideau métallique à {zone} ?",
+      "answer": "Le coût de la réparation d'un rideau métallique à {zone} dépend de la nature de la panne, des dimensions du rideau et des pièces à remplacer. Chaque situation est différente, c'est pourquoi nous établissons systématiquement un <strong>devis gratuit et détaillé sur place</strong> après diagnostic. Dans tous les cas, la réparation reste significativement moins chère qu'un remplacement complet. Appelez le <strong>{phone}</strong> pour un diagnostic gratuit et un devis précis."
+    },
+    {
+      "question": "Peut-on réparer un rideau métallique au lieu de le remplacer à {zone} ?",
+      "answer": "Oui, dans la grande majorité des cas, la réparation est non seulement possible mais recommandée. Nos techniciens à {zone} privilégient toujours la réparation quand elle est techniquement viable, ce qui représente une économie de 50 à 70% par rapport à un remplacement complet. Seuls les rideaux très anciens présentant une corrosion généralisée ou des déformations structurelles majeures nécessitent un remplacement intégral. {name} vous conseille honnêtement sur la meilleure option."
+    },
+    {
+      "question": "En combien de temps est réparé un rideau métallique à {zone} ?",
+      "answer": "La durée de réparation d'un rideau métallique à {zone} varie selon la complexité de la panne. Le remplacement de lames prend entre 30 minutes et 2 heures. La réparation d'un moteur nécessite 1 à 3 heures selon le problème. La remise en état d'un axe d'enroulement demande 2 à 4 heures. Nos techniciens disposent d'un stock de pièces embarqué, ce qui permet de réaliser la majorité des réparations en un seul passage, le jour même de l'intervention."
+    },
+    {
+      "question": "Proposez-vous une garantie sur les réparations de rideaux métalliques à {zone} ?",
+      "answer": "Absolument. Toutes les réparations effectuées par {name} à {zone} ({zonePostal}) sont couvertes par une garantie de <strong>6 mois à 2 ans</strong> selon la nature de l'intervention et les pièces remplacées. Les pièces d'origine bénéficient de la garantie constructeur. Un certificat de garantie vous est remis à l'issue de chaque intervention. En cas de problème pendant la période de garantie, nous revenons gratuitement."
+    },
+    {
+      "question": "Réparez-vous les rideaux métalliques de toutes les marques à {zone} ?",
+      "answer": "Oui, nos techniciens à {zone} sont formés pour intervenir sur toutes les marques de rideaux métalliques et de motorisation : <strong>Somfy, Nice, Came, Simu, Gaposa, Bubendorff</strong>, ainsi que sur les fabrications artisanales et sur-mesure. Nous disposons de pièces détachées compatibles pour la quasi-totalité des modèles présents sur le marché. Quel que soit l'âge ou la marque de votre rideau, contactez le <strong>{phone}</strong> pour une prise en charge rapide."
+    },
+    {
+      "question": "Mon rideau métallique fait du bruit à {zone}, faut-il le réparer ?",
+      "answer": "Un rideau métallique bruyant à {zone} est un signal d'alerte à ne pas ignorer. Les grincements, claquements ou vibrations indiquent généralement un problème de lubrification des rails, une usure des roulements, un déséquilibre du tablier ou un début de défaillance du moteur. Sans intervention, ces problèmes s'aggravent et peuvent conduire à un blocage complet ou une casse plus coûteuse. Nous recommandons de faire diagnostiquer rapidement votre rideau en appelant le <strong>{phone}</strong>."
+    },
+    {
+      "question": "Intervenez-vous en urgence pour la réparation de rideau métallique à {zone} ?",
+      "answer": "Oui, {name} propose un service de réparation en urgence à {zone} ({zonePostal}) et dans tout le {department}. Pour les situations critiques (rideau bloqué empêchant l'ouverture du commerce, local non sécurisé après effraction), nos techniciens interviennent sous <strong>24 heures</strong>, y compris les week-ends. Appelez le <strong>{phone}</strong> pour une prise en charge immédiate de votre demande de réparation urgente."
+    }
+  ],
+  "cta": {
+    "title": "Besoin d'une réparation de rideau métallique à {zone} ?",
+    "subtitle": "Appelez le {phone} pour un diagnostic gratuit sur place. Nos techniciens interviennent rapidement à {zone} ({zonePostal}) et dans tout le {department} pour remettre en état votre fermeture métallique."
+  }
+}

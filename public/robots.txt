@@ -1,0 +1,11 @@
+# Robots.txt - DRM Marseille
+# https://depannage-rideau-metallique-marseille.com
+
+User-agent: *
+Allow: /
+Sitemap: https://depannage-rideau-metallique-marseille.com/sitemap.xml
+
+# Bloquer les répertoires non publics
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/

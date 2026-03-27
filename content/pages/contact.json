@@ -1,0 +1,167 @@
+{
+  "hero": {
+    "badge": "📞 Contactez-nous",
+    "title": "Contact DRM {city} - Rideau Métallique",
+    "subtitle": "Besoin d'un dépannage urgent, d'un devis gratuit ou d'un conseil pour votre rideau métallique à {city} ? Contactez notre équipe par téléphone, e-mail ou via le formulaire ci-dessous. Nous intervenons à {city} et dans toute l'agglomération creilloise dans le département de l'{department}."
+  },
+  "coordonnees": {
+    "phone": "{phone}",
+    "email": "{email}",
+    "address": "Creil, 60100 Oise",
+    "horaires": {
+      "urgence": "24h/24, 7j/7",
+      "bureau": "Lundi - Vendredi : 8h - 18h",
+      "samedi": "Samedi : 9h - 13h"
+    }
+  },
+  "zoneIntervention": {
+    "title": "Zone d'Intervention DRM {city}",
+    "description": "Nous intervenons à {city} et dans toutes les communes de l'agglomération creilloise et du département de l'{department} (60). Temps d'intervention moyen : 20 à 30 minutes.",
+    "zones": [
+      "Creil centre - Gare, centre-ville",
+      "Nogent-sur-Oise",
+      "Montataire",
+      "Senlis",
+      "Chantilly",
+      "Saint-Maximin",
+      "Pont-Sainte-Maxence",
+      "Lamorlaye",
+      "Gouvieux",
+      "Villers-Saint-Paul",
+      "Liancourt",
+      "Clermont",
+      "Chambly",
+      "Méru",
+      "Beauvais",
+      "Compiègne"
+    ]
+  },
+  "urgence": {
+    "title": "Urgence Rideau Métallique ?",
+    "description": "Pour toute urgence (rideau bloqué, effraction, panne moteur), appelez directement le {phone}. Notre équipe est disponible 24h/24, 7j/7 pour une intervention rapide à {city} et dans les {department}.",
+    "delai": "Intervention en moins de 30 minutes"
+  },
+  "confiance": {
+    "title": "Pourquoi Faire Confiance à DRM {city} ?",
+    "items": [
+      {
+        "icon": "🏆",
+        "value": "12+",
+        "label": "Années d'expérience",
+        "description": "Plus de 12 ans au service des professionnels à {city} et dans l'{department}"
+      },
+      {
+        "icon": "🔧",
+        "value": "3 500+",
+        "label": "Interventions",
+        "description": "Des milliers de rideaux métalliques dépannés, installés et entretenus"
+      },
+      {
+        "icon": "👷",
+        "value": "8",
+        "label": "Techniciens certifiés",
+        "description": "Équipe de techniciens qualifiés, formés et équipés sur {city}"
+      },
+      {
+        "icon": "📋",
+        "value": "99%",
+        "label": "Devis honorés",
+        "description": "Devis respecté à la lettre. Aucune surprise, transparence totale"
+      }
+    ]
+  },
+  "engagements": {
+    "title": "Nos Engagements Qualité",
+    "items": [
+      "Intervention en moins de 30 minutes à {city}",
+      "Devis gratuit et sans engagement, communiqué par téléphone",
+      "Devis respecté, aucune surprise",
+      "Techniciens certifiés avec 12+ ans d'expérience",
+      "Pièces d'origine constructeur, garanties",
+      "Garantie pièces et main d'œuvre sur toutes les interventions",
+      "Disponibilité 24h/24, 7j/7, y compris jours fériés",
+      "Nettoyage du chantier après intervention"
+    ],
+    "stats": [
+      { "value": "4.9/5", "label": "Note clients" },
+      { "value": "94+", "label": "Avis vérifiés" },
+      { "value": "98%", "label": "Satisfaction" }
+    ]
+  },
+  "formulaire": {
+    "title": "Demandez un Devis Gratuit",
+    "subtitle": "Remplissez le formulaire ci-dessous et nous vous recontactons dans l'heure (pendant les heures de bureau) ou dès le lendemain matin.",
+    "champs": [
+      { "name": "nom", "label": "Nom complet", "type": "text", "required": true },
+      { "name": "telephone", "label": "Téléphone", "type": "tel", "required": true },
+      { "name": "email", "label": "E-mail", "type": "email", "required": false },
+      { "name": "adresse", "label": "Adresse du local", "type": "text", "required": true },
+      { "name": "service", "label": "Service souhaité", "type": "select", "required": true, "options": ["Dépannage urgence", "Installation neuve", "Remplacement", "Fabrication sur-mesure", "Motorisation", "Entretien / Contrat", "Autre"] },
+      { "name": "message", "label": "Décrivez votre besoin", "type": "textarea", "required": false }
+    ]
+  },
+  "reviews": [
+    {
+      "name": "Laurent M.",
+      "rating": 5,
+      "text": "Service client au top ! J'ai appelé pour un devis d'installation et le technicien est venu le lendemain à mon magasin en centre-ville de Creil. Réponse rapide, devis clair et travail impeccable.",
+      "date": "Il y a 2 semaines",
+      "zone": "Creil centre",
+      "service": "Contact"
+    },
+    {
+      "name": "Marie C.",
+      "rating": 5,
+      "text": "J'ai rempli le formulaire de contact un vendredi soir et j'ai été rappelée dès le lundi matin à 8h pour un dépannage dans mon salon de coiffure à Montataire. Équipe réactive et professionnelle.",
+      "date": "Il y a 1 mois",
+      "zone": "Montataire",
+      "service": "Contact"
+    },
+    {
+      "name": "Ahmed Z.",
+      "rating": 5,
+      "text": "Appel en urgence à 3h du matin pour un rideau bloqué sur mon commerce à Creil. Le standard de nuit a répondu immédiatement et un technicien était sur place en 25 minutes. Efficacité remarquable.",
+      "date": "Il y a 3 semaines",
+      "zone": "Creil",
+      "service": "Contact"
+    },
+    {
+      "name": "Véronique P.",
+      "rating": 4,
+      "text": "Bon accueil téléphonique, conseils utiles pour mon projet de motorisation à Chantilly. Le technicien a pris le temps de m'expliquer les différentes options avant de me faire un devis. Pas de pression commerciale, j'apprécie.",
+      "date": "Il y a 6 semaines",
+      "zone": "Chantilly",
+      "service": "Contact"
+    },
+    {
+      "name": "Thomas B.",
+      "rating": 5,
+      "text": "Demande de devis par e-mail pour 4 rideaux pour notre centre commercial à Senlis. Réponse détaillée en 48h. RDV pris rapidement pour la visite technique. Communication fluide du début à la fin.",
+      "date": "Il y a 2 mois",
+      "zone": "Senlis",
+      "service": "Contact"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Qui appeler pour un dépannage de rideau métallique à {city} ?",
+      "answer": "Pour tout dépannage de rideau métallique à {city} et dans les {department}, contactez <strong>DRM {city}</strong> au <strong>{phone}</strong>. Notre standard est disponible <strong>24h/24, 7j/7</strong>. Un technicien est dépêché en moins de 30 minutes sur {city} et les communes environnantes. Devis gratuit et sans engagement."
+    },
+    {
+      "question": "Comment obtenir un devis gratuit à {city} ?",
+      "answer": "Vous pouvez obtenir un devis gratuit de 3 façons : par téléphone au <strong>{phone}</strong> (devis estimatif immédiat), par e-mail à <strong>{email}</strong>, ou via le formulaire de contact sur cette page. Pour les projets d'installation ou fabrication, une visite technique gratuite est programmée."
+    },
+    {
+      "question": "Quels sont les horaires de DRM {city} ?",
+      "answer": "Nos bureaux sont ouverts du <strong>lundi au vendredi de 8h à 18h</strong> et le <strong>samedi de 9h à 13h</strong>. Pour les <strong>urgences</strong> (rideau bloqué, effraction, panne), notre service est disponible <strong>24h/24, 7j/7</strong> au {phone}."
+    },
+    {
+      "question": "Dans quelles zones intervenez-vous autour de {city} ?",
+      "answer": "Nous intervenons à <strong>{city} et dans toute l'agglomération creilloise</strong> ainsi que dans les communes de l'{department} (60) : Nogent-sur-Oise, Montataire, Senlis, Chantilly, Saint-Maximin, Pont-Sainte-Maxence, Lamorlaye, Gouvieux, Villers-Saint-Paul, Liancourt, Clermont, Chambly, Méru, Beauvais, Compiègne et bien d'autres."
+    }
+  ],
+  "cta": {
+    "title": "Contactez DRM {city} maintenant",
+    "subtitle": "Appelez le {phone} pour un dépannage immédiat ou demandez un devis gratuit. Disponible 24h/24, 7j/7 à {city} et dans les {department}."
+  }
+}

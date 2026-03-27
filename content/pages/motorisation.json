@@ -1,0 +1,263 @@
+{
+  "hero": {
+    "badge": "⚙️ Motorisation Professionnelle",
+    "title": "Motorisation Rideau Métallique {city} - Installation & Réparation",
+    "subtitle": "Motorisez votre rideau métallique manuel ou remplacez un moteur défaillant à {city}. DRM {city} installe et répare les motorisations de rideaux métalliques. Moteurs Somfy, Nice, Came certifiés."
+  },
+  "avantages": [
+    {
+      "icon": "🖐️",
+      "title": "Confort quotidien",
+      "description": "Plus besoin de forcer chaque matin et soir. Un simple bouton ou télécommande suffit pour ouvrir et fermer votre rideau à {city}."
+    },
+    {
+      "icon": "⏱️",
+      "title": "Gain de temps",
+      "description": "Ouverture et fermeture en 30 secondes au lieu de 2-3 minutes en manuel. Vous gagnez du temps chaque jour."
+    },
+    {
+      "icon": "🔒",
+      "title": "Sécurité renforcée",
+      "description": "Verrouillage automatique en position basse. Impossible de forcer un rideau motorisé sans laisser de traces."
+    },
+    {
+      "icon": "📈",
+      "title": "Longévité accrue",
+      "description": "La montée et descente motorisée est plus douce et régulière, ce qui réduit l'usure de votre rideau de 40%."
+    }
+  ],
+  "types": [
+    {
+      "icon": "🔌",
+      "title": "Moteur tubulaire",
+      "description": "S'intègre dans l'axe d'enroulement. Discret, compact et silencieux. Idéal pour les boutiques du centre de {city}.",
+      "puissance": "100-300 Nm"
+    },
+    {
+      "icon": "⚡",
+      "title": "Moteur central",
+      "description": "Puissant et robuste. Recommandé pour les entrepôts, garages industriels et grandes surfaces de {city} et des {department}.",
+      "puissance": "300-600 Nm"
+    },
+    {
+      "icon": "🏭",
+      "title": "Moteur latéral",
+      "description": "Solution économique qui se fixe sur le côté. Parfaite pour les petits commerces et les espaces réduits.",
+      "puissance": "100-200 Nm"
+    }
+  ],
+  "accessoires": [
+    {
+      "icon": "📡",
+      "title": "Télécommande multi-canaux",
+      "description": "Commandez jusqu'à 4 rideaux avec une seule télécommande. Portée 30-50 mètres."
+    },
+    {
+      "icon": "🔢",
+      "title": "Clavier à code",
+      "description": "Digicode extérieur résistant aux intempéries. Code personnalisable, idéal pour les commerces de {city}."
+    },
+    {
+      "icon": "👁️",
+      "title": "Détecteur d'obstacle",
+      "description": "Sécurité anti-écrasement. Le rideau s'arrête et remonte automatiquement en cas d'obstacle."
+    },
+    {
+      "icon": "🔋",
+      "title": "Batterie de secours",
+      "description": "Fonctionnement en cas de coupure de courant. Autonomie de 10 à 20 cycles. Indispensable pour les commerces alimentaires."
+    },
+    {
+      "icon": "📱",
+      "title": "Module smartphone",
+      "description": "Pilotez votre rideau depuis votre téléphone via Wi-Fi. Compatible iOS et Android."
+    },
+    {
+      "icon": "⏰",
+      "title": "Horloge programmable",
+      "description": "Programmation automatique des horaires d'ouverture et fermeture. Idéal pour les commerces."
+    }
+  ],
+  "comparatif": {
+    "title": "Manuel vs Motorisé : la comparaison",
+    "items": [
+      {
+        "critere": "Temps d'ouverture",
+        "manuel": "2-3 minutes",
+        "motorise": "30 secondes"
+      },
+      {
+        "critere": "Effort physique",
+        "manuel": "Important (10-30 kg)",
+        "motorise": "Aucun"
+      },
+      {
+        "critere": "Sécurité",
+        "manuel": "Verrouillage par clé",
+        "motorise": "Verrouillage auto"
+      },
+      {
+        "critere": "Usure du rideau",
+        "manuel": "Élevée",
+        "motorise": "Réduite (-40%)"
+      },
+      {
+        "critere": "Contrôle à distance",
+        "manuel": "Non",
+        "motorise": "Oui"
+      },
+      {
+        "critere": "Programmation",
+        "manuel": "Non",
+        "motorise": "Oui"
+      }
+    ]
+  },
+  "roi": {
+    "title": "Les avantages de la motorisation",
+    "items": [
+      {
+        "poste": "Gain de temps quotidien",
+        "calcul": "5 min/jour × 300 jours",
+        "economie": "25h/an"
+      },
+      {
+        "poste": "Réduction usure rideau",
+        "calcul": "Durée de vie +40%",
+        "economie": "Significative"
+      },
+      {
+        "poste": "Réduction pannes",
+        "calcul": "Moins de manipulation brutale",
+        "economie": "Significative"
+      },
+      {
+        "poste": "Sécurité renforcée",
+        "calcul": "Verrouillage auto = moins d'effractions",
+        "economie": "Inestimable"
+      }
+    ]
+  },
+  "processus": [
+    {
+      "step": 1,
+      "title": "Étude technique gratuite",
+      "description": "Notre technicien se déplace à {city} pour analyser votre rideau, ses dimensions, son poids et recommander la motorisation adaptée."
+    },
+    {
+      "step": 2,
+      "title": "Devis et choix du moteur",
+      "description": "Présentation des options de motorisation (marque, puissance, type de commande) avec un devis détaillé et transparent."
+    },
+    {
+      "step": 3,
+      "title": "Installation professionnelle",
+      "description": "Pose du moteur, câblage électrique, installation du système de commande. Durée moyenne : 2 à 4 heures."
+    },
+    {
+      "step": 4,
+      "title": "Programmation et formation",
+      "description": "Réglage des fins de course, programmation des télécommandes, explication du fonctionnement. Remise de la garantie."
+    }
+  ],
+  "temoignages": [
+    {
+      "icon": "🛒",
+      "texte": "Je motorise mes 2 rideaux tous les matins en 30 secondes au lieu de 5 minutes. Un vrai bonheur pour mon commerce en centre-ville !",
+      "nom": "Ahmed, épicerie fine - Creil centre"
+    },
+    {
+      "icon": "💊",
+      "texte": "La batterie de secours m'a sauvée lors d'une coupure EDF. Mon rideau de pharmacie a pu s'ouvrir normalement le matin.",
+      "nom": "Catherine, pharmacie - Nogent-sur-Oise"
+    },
+    {
+      "icon": "🥐",
+      "texte": "Avec la programmation horaire, mon rideau s'ouvre tout seul à 5h30. Mes voisins ne m'entendent plus grâce au moteur Somfy silencieux.",
+      "nom": "Julien, boulangerie - Montataire"
+    },
+    {
+      "icon": "👗",
+      "texte": "Le module smartphone est génial ! Je peux ouvrir le rideau de ma boutique depuis chez moi, 15 minutes avant d'arriver.",
+      "nom": "Sophie, prêt-à-porter - Senlis"
+    },
+    {
+      "icon": "🔧",
+      "texte": "Pour notre atelier de 5 mètres de large, le moteur central Hörmann est parfait. Ouverture rapide et puissante, même avec le vent.",
+      "nom": "Patrick, garage auto - Pont-Sainte-Maxence"
+    },
+    {
+      "icon": "💎",
+      "texte": "Le verrouillage automatique motorisé, c'est la sécurité en plus pour ma bijouterie. Impossible de forcer le rideau sans alertes.",
+      "nom": "Nadia, bijouterie - Chantilly"
+    }
+  ],
+  "reviews": [
+    {
+      "name": "Philippe B.",
+      "rating": 5,
+      "text": "Motorisation Somfy pour mon vieux rideau manuel dans mon commerce d'alimentation à Senlis. Ultra silencieux et rapide. Installation en 3 heures, impeccable.",
+      "date": "Il y a 1 semaine",
+      "zone": "Senlis",
+      "service": "Motorisation"
+    },
+    {
+      "name": "Nadia K.",
+      "rating": 5,
+      "text": "Remplacement du moteur HS dans ma bijouterie à Creil, près de la place Carnot. DRM a installé un moteur Nice avec batterie de secours. Parfait pour mon commerce.",
+      "date": "Il y a 3 semaines",
+      "zone": "Creil centre",
+      "service": "Motorisation"
+    },
+    {
+      "name": "Bruno C.",
+      "rating": 4,
+      "text": "Motorisation de 2 rideaux dans mon entrepôt à Saint-Maximin. Moteurs centraux puissants, commande par télécommande et clavier à code. Le résultat est là.",
+      "date": "Il y a 2 mois",
+      "zone": "Saint-Maximin",
+      "service": "Motorisation"
+    },
+    {
+      "name": "Émilie F.",
+      "rating": 5,
+      "text": "Ajout d'une commande smartphone sur mon rideau de salon de thé à Nogent-sur-Oise. Je peux ouvrir le rideau depuis chez moi avant d'arriver ! Super pratique.",
+      "date": "Il y a 1 mois",
+      "zone": "Nogent-sur-Oise",
+      "service": "Motorisation"
+    },
+    {
+      "name": "François D.",
+      "rating": 5,
+      "text": "Remplacement moteur grillé sur mon rideau de pharmacie à Montataire. Intervention rapide en 2h, moteur Somfy garanti 5 ans. Très pro.",
+      "date": "Il y a 10 jours",
+      "zone": "Montataire",
+      "service": "Motorisation"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Qui appeler pour motoriser un rideau métallique à {city} ?",
+      "answer": "Pour la motorisation de votre rideau métallique à {city} et dans les {department} (60), contactez <strong>DRM {city}</strong> au <strong>{phone}</strong>. Installateur certifié Somfy, Nice et Came, nous motorisons tous types de rideaux métalliques. Devis gratuit sur site."
+    },
+    {
+      "question": "Peut-on motoriser un rideau métallique manuel à {city} ?",
+      "answer": "Oui, <strong>tout rideau métallique manuel peut être motorisé</strong> à {city}. Notre technicien évalue la faisabilité sur place et vous propose la motorisation la mieux adaptée. L'opération dure en moyenne 2 à 4 heures."
+    },
+    {
+      "question": "Quel moteur choisir pour un rideau métallique à {city} ?",
+      "answer": "Le choix dépend de la taille et du poids : <strong>moteur tubulaire</strong> pour les commerces standard, <strong>moteur central</strong> pour les grandes dimensions, <strong>moteur latéral</strong> pour les petits budgets. Marques : Somfy, Nice, Came."
+    },
+    {
+      "question": "Comment obtenir un devis pour la motorisation d'un rideau métallique à {city} ?",
+      "answer": "Appelez le <strong>{phone}</strong> pour obtenir un devis gratuit et sans engagement. Notre technicien évalue votre rideau sur place et vous propose la motorisation la mieux adaptée."
+    },
+    {
+      "question": "Quelle est la garantie sur un moteur de rideau métallique ?",
+      "answer": "Tous nos moteurs sont garantis <strong>2 à 5 ans</strong> selon la marque. Les moteurs Somfy sont garantis 5 ans pièces et main d'œuvre."
+    }
+  ],
+  "cta": {
+    "title": "Motorisez votre rideau métallique à {city}",
+    "subtitle": "Devis gratuit et étude technique sur site dans les {department}. Moteurs certifiés Somfy, Nice et Came."
+  }
+}

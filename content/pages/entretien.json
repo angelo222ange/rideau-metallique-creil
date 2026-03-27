@@ -1,0 +1,267 @@
+{
+  "hero": {
+    "badge": "🔧 Entretien Préventif",
+    "title": "Entretien Rideau Métallique {city} - Contrat de Maintenance",
+    "subtitle": "Prolongez la durée de vie de votre rideau métallique avec un entretien régulier à {city}. DRM {city} propose des contrats de maintenance préventive adaptés aux commerces et professionnels des {department}. Évitez les pannes coûteuses et les immobilisations imprévues."
+  },
+  "signes": {
+    "title": "8 signes que votre rideau a besoin d'entretien",
+    "items": [
+      {
+        "icon": "🔊",
+        "signe": "Bruit anormal",
+        "urgence": "moyen",
+        "action": "Lubrification et vérification des mécanismes"
+      },
+      {
+        "icon": "🐌",
+        "signe": "Lenteur de fonctionnement",
+        "urgence": "moyen",
+        "action": "Contrôle moteur et équilibrage"
+      },
+      {
+        "icon": "↕️",
+        "signe": "Rideau qui déraille",
+        "urgence": "urgent",
+        "action": "Réalignement glissières urgent"
+      },
+      {
+        "icon": "🔒",
+        "signe": "Verrouillage difficile",
+        "urgence": "urgent",
+        "action": "Remplacement serrure ou mécanisme"
+      },
+      {
+        "icon": "🔋",
+        "signe": "Moteur qui chauffe",
+        "urgence": "urgent",
+        "action": "Diagnostic moteur immédiat"
+      },
+      {
+        "icon": "📏",
+        "signe": "Jeu dans les lames",
+        "urgence": "moyen",
+        "action": "Resserrage et remplacement clips"
+      },
+      {
+        "icon": "🌧️",
+        "signe": "Traces de rouille",
+        "urgence": "moyen",
+        "action": "Traitement anti-corrosion"
+      },
+      {
+        "icon": "⚠️",
+        "signe": "Course incomplète",
+        "urgence": "urgent",
+        "action": "Réglage fins de course"
+      }
+    ]
+  },
+  "avantages": [
+    {
+      "icon": "💰",
+      "title": "Économies significatives",
+      "description": "Un entretien régulier réduit de 70% les risques de panne grave. Mieux vaut prévenir que guérir : la maintenance évite les dépannages d'urgence."
+    },
+    {
+      "icon": "⏰",
+      "title": "Zéro panne imprévue",
+      "description": "Les pannes sont détectées avant qu'elles ne surviennent. Votre commerce à {city} reste ouvert sans interruption."
+    },
+    {
+      "icon": "🔧",
+      "title": "Durée de vie allongée",
+      "description": "Un rideau bien entretenu dure 15 à 20 ans au lieu de 8 à 10 ans sans entretien. Amortissement maximal de votre investissement."
+    },
+    {
+      "icon": "🛡️",
+      "title": "Sécurité garantie",
+      "description": "Les systèmes de sécurité (anti-chute, anti-relevage) sont vérifiés à chaque visite. Conformité maintenue avec les normes en vigueur."
+    }
+  ],
+  "prestations": [
+    {
+      "icon": "🔍",
+      "title": "Inspection complète",
+      "description": "Vérification de l'ensemble du mécanisme : moteur, axe d'enroulement, lames, glissières, système de verrouillage, câbles et ressorts."
+    },
+    {
+      "icon": "🧴",
+      "title": "Lubrification des mécanismes",
+      "description": "Graissage des coulisses, glissières, charnières et paliers. Essentiel pour les commerces de {city} exposés aux intempéries picardes."
+    },
+    {
+      "icon": "⚙️",
+      "title": "Réglage des fins de course",
+      "description": "Ajustement des positions haute et basse pour un arrêt précis et sécurisé du rideau."
+    },
+    {
+      "icon": "🔩",
+      "title": "Serrage et fixations",
+      "description": "Vérification et resserrage de toutes les fixations : supports moteur, équerres, platines, vis de lames."
+    },
+    {
+      "icon": "🛡️",
+      "title": "Protection anti-corrosion",
+      "description": "Application de produit anti-corrosion. Indispensable à {city} en raison de l'humidité de la vallée de l'Oise."
+    },
+    {
+      "icon": "📋",
+      "title": "Rapport et recommandations",
+      "description": "Compte-rendu détaillé après chaque visite avec l'état de chaque composant et les recommandations."
+    }
+  ],
+  "planning": {
+    "title": "Calendrier d'entretien recommandé",
+    "items": [
+      {
+        "frequence": "Mensuel",
+        "actions": "Vérification visuelle, nettoyage des glissières, test de fonctionnement"
+      },
+      {
+        "frequence": "Trimestriel",
+        "actions": "Lubrification complète, vérification des fixations, test des sécurités"
+      },
+      {
+        "frequence": "Semestriel",
+        "actions": "Inspection complète, réglage fins de course, contrôle moteur, traitement anti-corrosion"
+      },
+      {
+        "frequence": "Annuel",
+        "actions": "Révision générale, remplacement pièces d'usure, rapport complet, mise aux normes si nécessaire"
+      }
+    ]
+  },
+  "economies": {
+    "title": "Entretien vs pas d'entretien : la comparaison sur 5 ans",
+    "comparatif": [
+      {
+        "critere": "Dépannages urgents",
+        "avec": "Très rares",
+        "sans": "Fréquents"
+      },
+      {
+        "critere": "Pièces détachées",
+        "avec": "Usure anticipée",
+        "sans": "Remplacements coûteux"
+      },
+      {
+        "critere": "Remplacement complet",
+        "avec": "Évité",
+        "sans": "Probable"
+      }
+    ],
+    "dureeVieAvec": "15-20 ans",
+    "dureeVieSans": "8-10 ans"
+  },
+  "contrats": [
+    {
+      "name": "Essentiel",
+      "isPopular": false,
+      "features": [
+        "1 visite annuelle de contrôle",
+        "Inspection complète 20 points",
+        "Lubrification et graissage",
+        "Réglage fins de course",
+        "Rapport d'intervention détaillé",
+        "Intervention prioritaire en cas de panne"
+      ]
+    },
+    {
+      "name": "Professionnel",
+      "isPopular": true,
+      "features": [
+        "2 visites par an (semestriel)",
+        "Inspection complète 40 points",
+        "Lubrification et graissage complet",
+        "Réglage et ajustement de tous les composants",
+        "Pièces d'usure courantes incluses",
+        "-20% sur les pièces détachées",
+        "Intervention prioritaire sous 2h",
+        "Traitement anti-corrosion"
+      ]
+    },
+    {
+      "name": "Premium",
+      "isPopular": false,
+      "features": [
+        "4 visites par an (trimestriel)",
+        "Inspection complète 60 points",
+        "Lubrification, graissage et nettoyage complet",
+        "Toutes pièces d'usure incluses",
+        "-30% sur toutes les pièces détachées",
+        "Intervention d'urgence garantie sous 1h",
+        "Main d'œuvre offerte sur les réparations",
+        "Hotline dédiée 24h/24"
+      ]
+    }
+  ],
+  "reviews": [
+    {
+      "name": "Isabelle R.",
+      "rating": 5,
+      "text": "Contrat Pro depuis 3 ans pour ma pharmacie à Creil centre. Le technicien passe 2 fois par an, toujours ponctuel et soigneux. Pas une seule panne en 3 ans !",
+      "date": "Il y a 2 mois",
+      "zone": "Creil centre",
+      "service": "Entretien"
+    },
+    {
+      "name": "Karim B.",
+      "rating": 5,
+      "text": "Entretien annuel de nos 3 rideaux dans notre boulangerie-pâtisserie à Nogent-sur-Oise. Le technicien a détecté une usure des ressorts qui aurait pu causer un blocage.",
+      "date": "Il y a 1 mois",
+      "zone": "Nogent-sur-Oise",
+      "service": "Entretien"
+    },
+    {
+      "name": "Christine P.",
+      "rating": 4,
+      "text": "Contrat Essentiel pour mon salon d'esthétique à Senlis. Le technicien est venu faire l'entretien annuel, tout est nickel. Rapport détaillé avec photos, c'est rassurant.",
+      "date": "Il y a 3 semaines",
+      "zone": "Senlis",
+      "service": "Entretien"
+    },
+    {
+      "name": "David M.",
+      "rating": 5,
+      "text": "Maintenance de 8 rideaux pour notre centre commercial à Creil. DRM gère tout : planning, interventions, rapports. Aucune panne depuis le contrat Premium.",
+      "date": "Il y a 6 semaines",
+      "zone": "Creil",
+      "service": "Entretien"
+    },
+    {
+      "name": "Olivier S.",
+      "rating": 5,
+      "text": "Entretien préventif de mon rideau de garage à Chantilly. Le technicien a appliqué un traitement anti-corrosion vu l'humidité hivernale. Très bon conseil, le rideau est comme neuf après 5 ans.",
+      "date": "Il y a 2 semaines",
+      "zone": "Chantilly",
+      "service": "Entretien"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Qui appeler pour l'entretien d'un rideau métallique à {city} ?",
+      "answer": "Pour l'entretien de votre rideau métallique à {city} et dans les {department} (60), contactez <strong>DRM {city}</strong> au <strong>{phone}</strong>. Nous proposons des contrats de maintenance adaptés : Essentiel (1 visite/an), Pro (2 visites/an) ou Premium (4 visites/an)."
+    },
+    {
+      "question": "À quelle fréquence faut-il entretenir un rideau métallique à {city} ?",
+      "answer": "Nous recommandons <strong>au minimum 1 à 2 entretiens par an</strong> à {city}. Le climat de la vallée de l'Oise (humidité, gel hivernal, variations de température) accélère l'usure. Pour les commerces à fort trafic, 3 à 4 entretiens par an sont recommandés."
+    },
+    {
+      "question": "Comment souscrire un contrat d'entretien à {city} ?",
+      "answer": "Appelez le <strong>{phone}</strong> pour obtenir un devis gratuit et sans engagement. Nous proposons 3 formules adaptées à vos besoins : Essentiel, Professionnel et Premium."
+    },
+    {
+      "question": "L'entretien est-il obligatoire pour un rideau métallique ?",
+      "answer": "L'entretien n'est pas légalement obligatoire pour un rideau standard, mais il est <strong>fortement recommandé</strong>. Pour les rideaux coupe-feu en ERP, la maintenance annuelle est <strong>obligatoire</strong> et doit être consignée dans le registre de sécurité."
+    },
+    {
+      "question": "Quels sont les signes qu'un rideau a besoin d'entretien ?",
+      "answer": "Les signes principaux sont : <strong>bruit anormal</strong>, <strong>ralentissement</strong>, <strong>à-coups</strong>, <strong>traces de rouille</strong>, <strong>difficulté à verrouiller</strong>. Si vous constatez un de ces signes à {city}, appelez le <strong>{phone}</strong>."
+    }
+  ],
+  "cta": {
+    "title": "Protégez votre rideau métallique à {city}",
+    "subtitle": "Souscrivez un contrat d'entretien adapté à votre commerce. Devis gratuit et première visite offerte dans les {department}."
+  }
+}

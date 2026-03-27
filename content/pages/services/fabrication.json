@@ -1,0 +1,339 @@
+{
+  "hero": {
+    "badge": "🏭 Fabrication sur-mesure à {zone}",
+    "title": "Fabrication Rideau Métallique {zone} ({zonePostal})",
+    "subtitle": "Fabrication sur-mesure de rideaux métalliques à {zone}. Acier galvanisé, aluminium, inox. Adapté à vos dimensions et besoins spécifiques dans tout le {department}."
+  },
+  "intro": {
+    "title": "Fabrication de rideaux métalliques sur-mesure à {zone}",
+    "paragraphs": [
+      "Vous recherchez un rideau métallique parfaitement adapté à votre local à {zone} ? {name} fabrique des rideaux métalliques sur-mesure pour commerces, entrepôts et locaux professionnels dans tout le {department}.",
+      "Chaque rideau est conçu sur-mesure selon vos dimensions exactes, votre type d'activité et vos exigences de sécurité. Nos ateliers produisent des rideaux conformes aux normes NF EN 13241-1 et marquage CE. Contactez-nous au {phone}."
+    ]
+  },
+  "situations": {
+    "title": "Types de rideaux fabriqués à {zone}",
+    "items": [
+      {
+        "icon": "🔒",
+        "title": "Lames pleines",
+        "description": "Sécurité maximale pour commerces et entrepôts à {zone}. Acier galvanisé ou aluminium, isolation thermique et phonique."
+      },
+      {
+        "icon": "👁️",
+        "title": "Lames micro-perforées",
+        "description": "Visibilité de votre vitrine à {zone} tout en assurant la sécurité. Idéal pour commerces et boutiques."
+      },
+      {
+        "icon": "🔲",
+        "title": "Grilles métalliques",
+        "description": "Protection avec visibilité totale. Tubes ondulés ou mailles, parfait pour vitrines de magasins."
+      },
+      {
+        "icon": "🔥",
+        "title": "Rideaux coupe-feu",
+        "description": "Conformes aux normes ERP et réglementation incendie. Résistance au feu de 1h à 4h."
+      }
+    ]
+  },
+  "advantages": {
+    "title": "Pourquoi choisir {name} pour la fabrication à {zone} ?",
+    "items": [
+      "Fabrication 100% sur-mesure selon vos dimensions exactes",
+      "Matériaux premium : acier galvanisé, aluminium, inox",
+      "Conformité normes NF EN 13241-1 et marquage CE",
+      "Large choix de coloris RAL disponibles",
+      "Garantie fabricant de 2 à 10 ans",
+      "Installation incluse par nos techniciens certifiés à {zone}"
+    ]
+  },
+  "surMesure": {
+    "title": "Le sur-mesure, la garantie d'un rideau parfait à {zone}",
+    "subtitle": "Chaque local est unique. Un rideau sur-mesure garantit un ajustement parfait et une sécurité optimale.",
+    "comparatif": [
+      {
+        "critere": "Dimensions",
+        "surMesure": "Adapté au millimètre près",
+        "standard": "Tailles prédéfinies, ajustements nécessaires"
+      },
+      {
+        "critere": "Sécurité",
+        "surMesure": "Pas de jeu latéral, protection maximale",
+        "standard": "Possibles espaces, sécurité réduite"
+      },
+      {
+        "critere": "Esthétique",
+        "surMesure": "Finitions parfaites, coloris au choix",
+        "standard": "Coloris limités, finitions standard"
+      },
+      {
+        "critere": "Durabilité",
+        "surMesure": "Matériaux adaptés à l'usage, longue durée",
+        "standard": "Matériaux standards, usure plus rapide"
+      },
+      {
+        "critere": "Installation",
+        "surMesure": "Pose rapide, aucun ajustement sur site",
+        "standard": "Adaptations nécessaires à la pose"
+      }
+    ],
+    "avantages": [
+      {
+        "icon": "📐",
+        "title": "Mesures exactes",
+        "description": "Un technicien se déplace à {zone} pour prendre les mesures au millimètre près."
+      },
+      {
+        "icon": "🎨",
+        "title": "Personnalisation totale",
+        "description": "Choix du matériau, du type de lames, du coloris RAL et des options de motorisation."
+      },
+      {
+        "icon": "🏭",
+        "title": "Fabrication en atelier",
+        "description": "Production dans nos ateliers avec contrôle qualité rigoureux à chaque étape."
+      },
+      {
+        "icon": "✅",
+        "title": "Conformité garantie",
+        "description": "Chaque rideau est certifié conforme aux normes en vigueur (NF EN 13241-1, CE)."
+      }
+    ]
+  },
+  "normes": {
+    "title": "Normes et certifications de nos rideaux à {zone}",
+    "subtitle": "Tous nos rideaux métalliques fabriqués pour {zone} et le {department} respectent les normes en vigueur.",
+    "items": [
+      {
+        "icon": "🏅",
+        "name": "NF EN 13241-1",
+        "description": "Norme européenne pour les portes et portails industriels, commerciaux et de garage."
+      },
+      {
+        "icon": "🇪🇺",
+        "name": "Marquage CE",
+        "description": "Conformité aux exigences européennes de sécurité, de santé et de protection environnementale."
+      },
+      {
+        "icon": "🔥",
+        "name": "Certification coupe-feu",
+        "description": "Résistance au feu certifiée de 1h à 4h selon le modèle. Obligatoire pour les ERP."
+      },
+      {
+        "icon": "🛡️",
+        "name": "Anti-effraction",
+        "description": "Résistance aux tentatives d'effraction selon la norme NF EN 1627 (classes RC1 à RC4)."
+      },
+      {
+        "icon": "♿",
+        "name": "Accessibilité PMR",
+        "description": "Rideaux motorisés compatibles avec les exigences d'accessibilité pour les personnes à mobilité réduite."
+      },
+      {
+        "icon": "📋",
+        "name": "Déclaration de performance",
+        "description": "Document fourni avec chaque rideau attestant de ses caractéristiques techniques et de sa conformité."
+      }
+    ]
+  },
+  "materiaux": [
+    {
+      "name": "Acier galvanisé",
+      "description": "Résistant à la corrosion, robuste et économique. Le matériau de référence pour les rideaux métalliques.",
+      "avantages": ["Excellent rapport qualité-performance", "Résistance à la corrosion", "Grande robustesse"]
+    },
+    {
+      "name": "Aluminium",
+      "description": "Léger, moderne et résistant. Idéal pour les grandes dimensions et les rideaux motorisés.",
+      "avantages": ["Légèreté", "Résistance à la corrosion", "Finitions esthétiques"]
+    },
+    {
+      "name": "Inox (Acier inoxydable)",
+      "description": "Haut de gamme, inaltérable et esthétique. Parfait pour les environnements exigeants.",
+      "avantages": ["Inaltérable", "Esthétique premium", "Hygiène (agroalimentaire)"]
+    }
+  ],
+  "reviews": [
+    {
+      "name": "Philippe R.",
+      "rating": 5,
+      "text": "Fabrication sur-mesure d'un rideau en acier galvanisé pour mon commerce à {zone}. Les dimensions sont parfaites, le rideau coulisse comme un gant. Bravo {name} !",
+      "date": "Janvier 2025",
+      "zone": "{zone}",
+      "service": "Fabrication"
+    },
+    {
+      "name": "Sylvie M.",
+      "rating": 5,
+      "text": "Rideau micro-perforé fabriqué sur-mesure pour ma boutique à {zone}. On voit la vitrine même quand c'est fermé. Fabrication et pose impeccables !",
+      "date": "Décembre 2024",
+      "zone": "{zone}",
+      "service": "Fabrication"
+    },
+    {
+      "name": "Hassan E.",
+      "rating": 5,
+      "text": "Fabrication d'un rideau coupe-feu pour notre local ERP à {zone}. Conforme aux normes, la commission de sécurité a validé sans réserve. Excellent travail.",
+      "date": "Février 2025",
+      "zone": "{zone}",
+      "service": "Fabrication"
+    },
+    {
+      "name": "Brigitte T.",
+      "rating": 4,
+      "text": "Très satisfaite de mon rideau en aluminium laqué couleur RAL pour ma boutique à {zone}. Esthétique, solide et silencieux. Seul bémol : 2 semaines d'attente.",
+      "date": "Novembre 2024",
+      "zone": "{zone}",
+      "service": "Fabrication"
+    },
+    {
+      "name": "Christophe D.",
+      "rating": 5,
+      "text": "Rideau industriel grande dimension fabriqué pour notre entrepôt à {zone}. 6 mètres de large, motorisé. La qualité de fabrication est irréprochable. Merci {name}.",
+      "date": "Janvier 2025",
+      "zone": "{zone}",
+      "service": "Fabrication"
+    },
+    {
+      "name": "Djamila K.",
+      "rating": 5,
+      "text": "2 rideaux à lames pleines fabriqués sur-mesure pour mes locaux à {zone}. Dimensions parfaites, finitions soignées. Le coloris RAL correspond exactement à ce que je voulais.",
+      "date": "Octobre 2024",
+      "zone": "{zone}",
+      "service": "Fabrication"
+    },
+    {
+      "name": "Georges L.",
+      "rating": 5,
+      "text": "Fabrication d'un rideau en inox pour notre laboratoire à {zone}. Qualité premium, hygiène parfaite. L'équipe de {name} a été à l'écoute de nos besoins spécifiques.",
+      "date": "Décembre 2024",
+      "zone": "{zone}",
+      "service": "Fabrication"
+    },
+    {
+      "name": "Martine J.",
+      "rating": 4,
+      "text": "Excellent travail pour la fabrication de mon rideau à {zone}. Conseils pertinents sur le choix du matériau. Le technicien connaît bien son métier.",
+      "date": "Septembre 2024",
+      "zone": "{zone}",
+      "service": "Fabrication"
+    },
+    {
+      "name": "Alain B.",
+      "rating": 5,
+      "text": "Rideau grille métallique fabriqué sur-mesure pour mon magasin à {zone}. Visibilité totale et sécurité assurée. Fabrication rapide et installation pro.",
+      "date": "Février 2025",
+      "zone": "{zone}",
+      "service": "Fabrication"
+    },
+    {
+      "name": "Corinne S.",
+      "rating": 5,
+      "text": "Commande de 4 rideaux pour notre copropriété de garages à {zone}. Fabrication en série sur-mesure, très bien organisée. Qualité au rendez-vous.",
+      "date": "Novembre 2024",
+      "zone": "{zone}",
+      "service": "Fabrication"
+    },
+    {
+      "name": "Mehdi A.",
+      "rating": 5,
+      "text": "Rideau acier galvanisé motorisé fabriqué pour mon restaurant à {zone}. Robuste, fiable et esthétique. {name} a su répondre à mes exigences techniques.",
+      "date": "Janvier 2025",
+      "zone": "{zone}",
+      "service": "Fabrication"
+    },
+    {
+      "name": "Véronique H.",
+      "rating": 5,
+      "text": "Fabrication et pose d'un rideau aluminium pour ma boulangerie à {zone}. Le coloris s'intègre parfaitement à la façade. Travail de qualité !",
+      "date": "Décembre 2024",
+      "zone": "{zone}",
+      "service": "Fabrication"
+    },
+    {
+      "name": "Bruno N.",
+      "rating": 4,
+      "text": "Rideau sur-mesure pour notre local commercial à {zone}. Fabrication conforme au cahier des charges. Installation rapide et propre. Je recommande.",
+      "date": "Octobre 2024",
+      "zone": "{zone}",
+      "service": "Fabrication"
+    },
+    {
+      "name": "Samira G.",
+      "rating": 5,
+      "text": "Superbe rideau fabriqué pour ma pharmacie à {zone}. Lames pleines avec serrure haute sécurité. La qualité de fabrication est exceptionnelle.",
+      "date": "Février 2025",
+      "zone": "{zone}",
+      "service": "Fabrication"
+    },
+    {
+      "name": "Thierry W.",
+      "rating": 5,
+      "text": "Fabrication sur-mesure d'un rideau grande hauteur pour notre atelier à {zone}. Dimensions hors standard, mais {name} a relevé le défi avec brio !",
+      "date": "Novembre 2024",
+      "zone": "{zone}",
+      "service": "Fabrication"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Qui appeler pour une fabrication de rideau métallique à {zone} ?",
+      "answer": "Pour la fabrication sur-mesure d'un rideau métallique à {zone} ({zonePostal}), contactez <strong>{name}</strong> au <strong>{phone}</strong>. Nous fabriquons tous types de rideaux métalliques pour le {department} : lames pleines, micro-perforés, grilles, coupe-feu."
+    },
+    {
+      "question": "Quel est le délai de fabrication d'un rideau métallique à {zone} ?",
+      "answer": "Le délai de fabrication est de <strong>5 à 15 jours ouvrés</strong> selon le type et les dimensions du rideau. Les rideaux standards sont plus rapides, les modèles spéciaux (coupe-feu, inox) nécessitent un délai plus long."
+    },
+    {
+      "question": "Quels matériaux utilisez-vous pour la fabrication à {zone} ?",
+      "answer": "Nous utilisons <strong>3 matériaux principaux</strong> : acier galvanisé (le plus courant), aluminium (léger et moderne) et inox (haut de gamme). Le choix dépend de votre activité et de vos exigences à {zone}."
+    },
+    {
+      "question": "Peut-on choisir la couleur de son rideau métallique à {zone} ?",
+      "answer": "Oui, nous proposons un <strong>large choix de coloris RAL</strong>. L'aluminium peut être laqué dans la couleur de votre choix. L'acier galvanisé peut également être peint. Personnalisation totale pour votre local à {zone}."
+    },
+    {
+      "question": "Vos rideaux fabriqués sont-ils conformes aux normes ?",
+      "answer": "Oui, tous nos rideaux sont conformes à la norme <strong>NF EN 13241-1</strong> et portent le <strong>marquage CE</strong>. Les modèles coupe-feu sont certifiés par un organisme agréé. Documentation complète fournie."
+    },
+    {
+      "question": "Comment obtenir un devis pour la fabrication d'un rideau métallique à {zone} ?",
+      "answer": "Appelez le <strong>{phone}</strong> pour un devis gratuit et sans engagement. Notre technicien se déplace à {zone} pour la prise de cotes et vous remet un devis détaillé."
+    },
+    {
+      "question": "L'installation est-elle incluse dans le devis de fabrication à {zone} ?",
+      "answer": "Oui, nos devis incluent la <strong>fabrication + la pose + la mise en service</strong> à {zone}. Pas de frais cachés. Le devis comprend aussi la garantie et les documents de conformité."
+    },
+    {
+      "question": "Pouvez-vous fabriquer un rideau sur-mesure hors standard à {zone} ?",
+      "answer": "Oui, nous sommes spécialisés dans les <strong>dimensions hors standard</strong> : grande largeur, grande hauteur, formes spéciales. Contactez-nous au {phone} pour étudier votre projet à {zone}."
+    }
+  ],
+  "cta": {
+    "title": "Un projet de fabrication à {zone} ?",
+    "subtitle": "Appelez-nous pour un devis gratuit sur-mesure. Nos experts se déplacent à {zone} ({zonePostal}) pour prendre les mesures."
+  },
+  "alternatingFeatures": [
+    {
+      "title": "<strong>Fabrication Rideau Métallique Sur-Mesure {zone}</strong> : Expertise Artisanale",
+      "content": "<p>La <strong>fabrication de rideau métallique sur-mesure à {zone}</strong> ({zonePostal}) nécessite un savoir-faire précis et des équipements professionnels. {name} dispose d'ateliers de fabrication équipés pour produire tous types de <strong>rideaux métalliques</strong> : à <strong>lames pleines</strong>, <strong>micro-perforés</strong>, <strong>grilles articulées</strong>, <strong>tubes ondulés</strong>, et <strong>rideaux coupe-feu</strong>.</p><p>Chaque <strong>rideau métallique</strong> est fabriqué selon vos <strong>dimensions exactes</strong> (largeur, hauteur, épaisseur) et vos contraintes techniques. Nous travaillons avec des matériaux de qualité : <strong>acier galvanisé</strong> (résistant et économique), <strong>aluminium laqué</strong> (léger et esthétique), ou <strong>inox</strong> (haut de gamme, anti-corrosion).</p><p>Notre <strong>processus de fabrication</strong> respecte la norme <strong>NF EN 13241-1</strong> et garantit le <strong>marquage CE</strong>. Délai de fabrication : 5 à 15 jours ouvrés. Installation comprise dans le devis pour {zone} et tout le <strong>{department}</strong>.</p>",
+      "image": "/images/gallery/rideau-metallique-micro-perforee-realisation-france.webp",
+      "imageAlt": "Fabrication sur-mesure rideau métallique {zone}",
+      "imagePosition": "right"
+    },
+    {
+      "title": "<strong>Rideau Métallique Personnalisé {zone}</strong> : Matériaux et Finitions",
+      "content": "<p>Le choix du <strong>matériau de fabrication</strong> pour votre <strong>rideau métallique à {zone}</strong> dépend de plusieurs critères : usage (intensif ou occasionnel), environnement (vallée de l'Oise, zone industrielle), esthétique souhaitée, et budget. {name} vous conseille la solution optimale.</p><p>L'<strong>acier galvanisé</strong> reste le matériau le plus répandu : robuste, anti-effraction, et économique. L'<strong>aluminium</strong> séduit par sa légèreté et ses possibilités de <strong>laquage dans tous les coloris RAL</strong> : idéal pour harmoniser votre rideau avec votre identité visuelle. L'<strong>inox</strong> est privilégié pour les zones humides (piscines, garages souterrains) ou les commerces de luxe.</p><p>Les <strong>finitions personnalisées</strong> incluent : choix de la couleur, marquage CE, serrure renforcée, hublots de ventilation, et options de sécurité (détection d'obstacle, système anti-arrachement). Votre <strong>rideau métallique sur-mesure</strong> sera unique et parfaitement adapté à votre commerce à {zone}.</p>",
+      "image": "/images/gallery/rideau-metallique-creil.webp",
+      "imageAlt": "Rideau métallique aluminium personnalisé {zone}",
+      "imagePosition": "left"
+    },
+    {
+      "title": "<strong>Rideau Coupe-Feu et Normes</strong> : Conformité ERP à {zone}",
+      "content": "<p>La <strong>fabrication de rideau coupe-feu à {zone}</strong> répond à des exigences strictes de sécurité incendie, notamment pour les <strong>ERP (Établissements Recevant du Public)</strong> et les <strong>parkings</strong>. {name} fabrique des <strong>rideaux métalliques coupe-feu</strong> certifiés conformes aux normes en vigueur dans le <strong>{department}</strong>.</p><p>Nos <strong>rideaux coupe-feu</strong> sont testés et certifiés pour des résistances au feu de <strong>1h à 4h</strong> (EI1, EI2, EI3, EI4) selon les besoins de votre projet à {zone}. Ils sont équipés de <strong>systèmes de fermeture automatique</strong> en cas d'incendie (détecteur de fumée, couplage centrale incendie).</p><p>La <strong>fabrication sur-mesure</strong> prend en compte toutes les contraintes réglementaires : dimensions, matériaux certifiés, dispositifs de sécurité, traçabilité complète. Nous fournissons tous les <strong>documents de conformité</strong> (PV, certificat CE, notice d'utilisation) exigés lors des contrôles. Devis gratuit pour <strong>rideau coupe-feu {zone}</strong> au <strong>{phone}</strong>.</p>",
+      "image": "/images/gallery/BI-Moteur-ACM-76-rideau-metallique.webp",
+      "imageAlt": "Rideau métallique coupe-feu certifié ERP {zone}",
+      "imagePosition": "right"
+    }
+  ]
+}

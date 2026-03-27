@@ -1,0 +1,343 @@
+{
+  "hero": {
+    "title": "Dépannage Rideau Métallique {zone} ({zonePostal})",
+    "subtitle": "Rideau métallique bloqué, en panne ou endommagé à {zone} ? Nos techniciens spécialisés interviennent en urgence 24h/24 et 7j/7 dans tout le secteur de {zone} ({zonePostal}). Déblocage, réparation moteur, remplacement de lames, serrurerie. Appelez le {phone}."
+  },
+  "intro": {
+    "title": "Votre spécialiste dépannage rideau métallique à {zone}",
+    "paragraphs": [
+      "Votre rideau métallique est bloqué, ne répond plus ou fait un bruit anormal à {zone} ({zonePostal}) ? {name} est votre interlocuteur de confiance pour le dépannage de toutes les fermetures métalliques dans le {department}. Forts de plus de 12 ans d'expérience dans la réparation et la remise en état de rideaux métalliques, nos techniciens maîtrisent parfaitement les interventions sur tous types de dispositifs : rideaux à lames pleines, grilles articulées, rideaux micro-perforés, portes de garage enroulables et stores métalliques. Que le problème soit d'origine mécanique, électrique ou lié à une tentative d'effraction, nous diagnostiquons la panne avec précision et procédons à la réparation dans les meilleurs délais. Notre expertise couvre l'ensemble du secteur de {zone} et ses environs, avec un stock de pièces détachées embarqué pour résoudre la majorité des pannes en un seul passage.",
+      "Disponibles 24 heures sur 24 et 7 jours sur 7, nos équipes de dépannage interviennent rapidement à {zone} ({zonePostal}) y compris les week-ends et jours fériés. Chaque technicien dispose d'un véhicule entièrement équipé avec les pièces détachées les plus courantes : moteurs, lames, axes d'enroulement, ressorts, serrures, boîtiers de commande et récepteurs radio. Cette organisation nous permet de réparer votre fermeture métallique en une seule intervention dans la grande majorité des cas. Pour un dépannage rapide et efficace de votre rideau métallique à {zone}, appelez le {phone} : un technicien qualifié prend en charge votre demande immédiatement et se déplace sous 30 à 60 minutes selon votre localisation dans le {department}."
+    ]
+  },
+  "situations": {
+    "title": "Situations de dépannage à {zone}",
+    "items": [
+      {
+        "title": "Rideau métallique bloqué en position fermée",
+        "description": "Votre commerce à {zone} est inaccessible car le rideau métallique refuse de s'ouvrir. Qu'il s'agisse d'un problème mécanique sur l'axe d'enroulement, d'un moteur défaillant ou d'une lame déformée, nos techniciens interviennent en urgence pour débloquer votre fermeture métallique et vous permettre de reprendre votre activité."
+      },
+      {
+        "title": "Rideau métallique bloqué en position ouverte",
+        "description": "Votre local à {zone} est exposé et vulnérable car le rideau ne descend plus. Cette situation compromet gravement la sécurité de votre commerce, surtout la nuit. Nous intervenons en priorité pour remettre votre rideau de fer en état de fonctionnement et sécuriser vos locaux dans les plus brefs délais."
+      },
+      {
+        "title": "Rideau endommagé suite à une tentative d'effraction",
+        "description": "Après une tentative de cambriolage à {zone}, votre rideau métallique est tordu, forcé ou partiellement arraché. Nos techniciens évaluent les dégâts, procèdent aux réparations nécessaires et renforcent le système de verrouillage pour éviter toute nouvelle intrusion. Nous fournissons un rapport détaillé pour votre assurance."
+      },
+      {
+        "title": "Moteur de rideau métallique en panne",
+        "description": "Le moteur de votre fermeture métallique ne répond plus à {zone} : aucune réaction à la télécommande ou à l'interrupteur, bruit anormal, surchauffe ou arrêts intempestifs. Nous diagnostiquons la panne électrique et procédons soit à la réparation du moteur existant, soit à son remplacement par un modèle équivalent ou supérieur."
+      }
+    ]
+  },
+  "deblocage": {
+    "title": "Déblocage de Rideau Métallique à {zone} - Intervention Express",
+    "description": "Le déblocage de rideau métallique est l'intervention la plus fréquente que nous réalisons à {zone} ({zonePostal}). Un rideau bloqué peut avoir de multiples origines : lame sortie des rails de guidage, axe d'enroulement grippé, ressort cassé, moteur en panne, boîtier de commande défaillant ou simplement un défaut d'entretien ayant provoqué une accumulation de saleté dans les glissières. Quel que soit le type de blocage, nos techniciens spécialisés interviennent en urgence sur tout le secteur de {zone} et dans l'ensemble du {department}. Équipés d'outillage professionnel et de pièces détachées, ils résolvent la majorité des blocages en moins d'une heure, vous permettant de retrouver l'usage normal de votre fermeture métallique sans délai.",
+    "steps": [
+      {
+        "step": "1",
+        "title": "Appel et prise en charge immédiate",
+        "description": "Contactez-nous au {phone}. Un technicien de permanence évalue votre situation par téléphone et organise un déplacement rapide vers {zone}. Délai d'intervention estimé : 30 à 60 minutes."
+      },
+      {
+        "step": "2",
+        "title": "Diagnostic sur place à {zone}",
+        "description": "À son arrivée, le technicien examine votre rideau métallique, identifie la cause exacte du blocage et vous explique l'intervention nécessaire. Un devis est établi avant toute réparation."
+      },
+      {
+        "step": "3",
+        "title": "Déblocage et réparation",
+        "description": "Le technicien procède au déblocage de votre fermeture métallique : remise en place des lames, dégrippage de l'axe, remplacement du ressort ou réparation du moteur selon la panne diagnostiquée."
+      },
+      {
+        "step": "4",
+        "title": "Vérification et conseils d'entretien",
+        "description": "Après le déblocage, plusieurs cycles d'ouverture et fermeture sont effectués pour vérifier le bon fonctionnement. Le technicien vous remet une facture détaillée et vous donne des conseils de maintenance préventive."
+      }
+    ]
+  },
+  "pannes": {
+    "title": "Pannes de Rideau Métallique : Diagnostic et Réparation à {zone}",
+    "items": [
+      {
+        "title": "Panne de moteur électrique",
+        "description": "Le moteur de votre rideau métallique ne démarre plus, émet un bruit anormal ou surchauffe à {zone}. Nos techniciens diagnostiquent l'origine de la panne (condensateur, carte électronique, bobinage) et procèdent à la réparation ou au remplacement du moteur. Nous travaillons avec les grandes marques : Somfy, Nice, Came, ACM, Simu.",
+        "urgency": "urgent"
+      },
+      {
+        "title": "Lames endommagées ou déformées",
+        "description": "Des lames de votre rideau de fer sont tordues, percées ou arrachées à {zone}, suite à un choc, une tentative d'effraction ou l'usure naturelle. Nous remplaçons les lames abîmées à l'identique pour redonner à votre fermeture métallique son aspect d'origine et sa pleine fonctionnalité. Lames acier galvanisé, aluminium ou inox disponibles en stock.",
+        "urgency": "moyen"
+      },
+      {
+        "title": "Axe d'enroulement cassé ou voilé",
+        "description": "L'axe d'enroulement de votre rideau métallique est déformé, fissuré ou cassé à {zone}. Ce composant central supporte tout le poids du tablier et sa défaillance bloque complètement le rideau. Nous remplaçons l'axe et les supports de fixation, puis équilibrons l'ensemble pour un fonctionnement fluide et durable.",
+        "urgency": "urgent"
+      },
+      {
+        "title": "Attache de lame défectueuse",
+        "description": "Les attaches reliant les lames entre elles sont usées ou cassées, provoquant un jeu excessif ou la sortie de lames de votre store métallique à {zone}. Ce problème, souvent lié à l'usure, s'aggrave rapidement s'il n'est pas traité. Nous remplaçons les attaches et agrafes défectueuses et vérifions l'ensemble du tablier.",
+        "urgency": "moyen"
+      },
+      {
+        "title": "Fins de course déréglées ou défectueuses",
+        "description": "Votre rideau métallique ne s'arrête plus aux bonnes positions à {zone} : il dépasse en haut, ne descend pas complètement ou s'arrête de manière aléatoire. Le réglage ou le remplacement des fins de course résout ce problème courant. Nos techniciens recalibrent précisément les points d'arrêt haut et bas de votre fermeture métallique.",
+        "urgency": "faible"
+      },
+      {
+        "title": "Télécommande ou récepteur en panne",
+        "description": "La télécommande de votre rideau métallique ne fonctionne plus à {zone} : signal non reçu, portée réduite ou aucune réaction du moteur. Nous diagnostiquons le problème (pile, télécommande, récepteur radio, carte de commande) et procédons à la reprogrammation ou au remplacement du composant défaillant.",
+        "urgency": "faible"
+      }
+    ]
+  },
+  "urgence": {
+    "title": "Dépannage Urgence Rideau Métallique {zone} - Disponible 24h/24",
+    "description": "Un rideau métallique en panne représente un risque majeur pour la sécurité de votre commerce à {zone}. C'est pourquoi {name} assure un service de dépannage d'urgence disponible 24 heures sur 24, 7 jours sur 7, y compris les dimanches et jours fériés. Notre équipe de techniciens de garde couvre l'ensemble de {zone} ({zonePostal}) et du {department}, avec des véhicules équipés de pièces détachées pour une réparation immédiate. Que votre rideau soit bloqué après une tentative d'effraction en pleine nuit ou qu'une panne moteur vous empêche d'ouvrir votre commerce le matin, nous sommes là pour intervenir dans les plus brefs délais.",
+    "stats": [
+      {
+        "value": "30 min",
+        "label": "Délai d'intervention moyen à {zone}"
+      },
+      {
+        "value": "24h/24",
+        "label": "Disponibilité y compris week-ends et fériés"
+      },
+      {
+        "value": "95%",
+        "label": "Pannes résolues en un seul passage"
+      }
+    ],
+    "cases": [
+      "Rideau métallique bloqué après une tentative d'effraction en pleine nuit à {zone}",
+      "Panne moteur empêchant l'ouverture du commerce le matin à {zone}",
+      "Rideau de fer resté ouvert le soir, impossible de sécuriser le local à {zone}",
+      "Lames arrachées par un véhicule nécessitant une sécurisation immédiate à {zone}"
+    ]
+  },
+  "advantages": {
+    "title": "Pourquoi choisir {name} pour votre dépannage à {zone} ?",
+    "items": [
+      "Intervention rapide en 30 à 60 minutes sur tout le secteur de {zone} ({zonePostal}) et le {department}, 24 heures sur 24 et 7 jours sur 7",
+      "Techniciens qualifiés avec plus de 12 ans d'expérience dans le dépannage de rideaux métalliques, grilles métalliques et fermetures industrielles",
+      "Véhicules équipés de pièces détachées en stock : moteurs, lames, axes, ressorts, serrures et composants électroniques pour une réparation en un seul passage",
+      "Devis gratuit et transparent avant toute intervention à {zone}, sans frais cachés ni supplément injustifié",
+      "Garantie sur toutes les pièces remplacées et la main-d'oeuvre, avec certificat de conformité remis après chaque dépannage",
+      "Service après-vente réactif et contrats de maintenance préventive pour éviter les pannes futures sur vos fermetures métalliques à {zone}"
+    ]
+  },
+  "alternatingFeatures": [
+    {
+      "title": "<strong>Dépannage Rideau Métallique {zone}</strong> : Intervention Rapide",
+      "content": "<p>Spécialiste du <strong>dépannage de rideau métallique à {zone}</strong> ({zonePostal}), <strong>{name}</strong> intervient en urgence sur toutes les pannes de fermetures métalliques pour les commerces, locaux professionnels et industriels du <strong>{department}</strong>. Nos techniciens interviennent sur les <strong>rideaux à lames pleines</strong>, <strong>grilles articulées</strong>, <strong>rideaux micro-perforés</strong>, <strong>stores métalliques</strong> et <strong>portes de garage enroulables</strong>.</p><p>Chaque intervention débute par un <strong>diagnostic complet</strong> : problème mécanique, <strong>ressort cassé</strong>, lames déformées, <strong>panne moteur</strong> ou dysfonctionnement du boîtier de commande. Ce diagnostic rigoureux cible exactement la réparation nécessaire.</p>",
+      "image": "/images/gallery/depannage-rideau-metallique-creil-60.webp",
+      "imageAlt": "Dépannage rideau métallique en urgence à {zone}",
+      "imagePosition": "right"
+    },
+    {
+      "title": "<strong>Réparation en Une Seule Visite</strong> à {zone}",
+      "content": "<p>Grâce à notre <strong>stock de pièces détachées embarqué</strong>, nous résolvons la grande majorité des pannes de rideau métallique à {zone} en une seule visite. Moteurs <strong>Somfy</strong>, <strong>Nice</strong>, <strong>Came</strong> et <strong>ACM</strong>, lames en acier galvanisé ou aluminium, axes d'enroulement, ressorts, serrures : notre véhicule atelier est équipé pour toutes les situations.</p><p>Appelez le <strong>{phone}</strong> pour un dépannage immédiat dans le <strong>{department}</strong>.</p>",
+      "image": "/images/gallery/rideau-metallique-lame-cobra-realisation.webp",
+      "imageAlt": "Pièces détachées rideau métallique dépannage {zone}",
+      "imagePosition": "left"
+    },
+    {
+      "title": "<strong>Réparation Moteur Rideau Métallique {zone}</strong> : Diagnostic",
+      "content": "<p>La <strong>panne de moteur</strong> est l'une des causes les plus fréquentes de blocage de <strong>rideau métallique à {zone}</strong>. Nos techniciens maîtrisent le diagnostic et la <strong>réparation de tous types de motorisations</strong> : <strong>moteur tubulaire</strong> ou <strong>moteur central</strong>. Nous intervenons sur <strong>Somfy</strong>, <strong>Nice</strong>, <strong>Came</strong>, <strong>ACM</strong>, <strong>Simu</strong>, <strong>BFT</strong> et <strong>Faac</strong>.</p><p>Le <strong>diagnostic électromécanique</strong> identifie la cause précise : <strong>condensateur défaillant</strong>, carte électronique grillée, bobinage endommagé ou système de frein usé. La réparation est souvent possible et plus économique que le remplacement. Devis détaillé systématique avant intervention.</p>",
+      "image": "/images/gallery/moteur-tubulaire-rideau-metallique-drm.webp",
+      "imageAlt": "Réparation moteur rideau métallique à {zone} dans le {department}",
+      "imagePosition": "right"
+    },
+    {
+      "title": "<strong>Remplacement Moteur</strong> et Installation à {zone}",
+      "content": "<p>Lorsque le remplacement du moteur s'avère nécessaire, <strong>{name}</strong> dispose d'un large choix de motorisations adaptées à votre <strong>rideau de fer à {zone}</strong>. Nous sélectionnons le moteur en fonction du poids du tablier, de la fréquence d'utilisation et de vos besoins spécifiques.</p><p>Chaque <strong>installation de moteur</strong> comprend le réglage des fins de course, la programmation des télécommandes et la vérification complète du fonctionnement. Contactez-nous au <strong>{phone}</strong> pour un diagnostic moteur rapide dans le <strong>{department}</strong>.</p>",
+      "image": "/images/gallery/motorisation-rideau-metallique-creil-60.webp",
+      "imageAlt": "Remplacement moteur rideau métallique à {zone}",
+      "imagePosition": "left"
+    },
+    {
+      "title": "<strong>Sécurisation Après Effraction à {zone}</strong> ({zonePostal})",
+      "content": "<p>Votre <strong>rideau métallique a été forcé lors d'une tentative d'effraction à {zone}</strong> ? <strong>{name}</strong> intervient en urgence, de jour comme de nuit, pour <strong>sécuriser vos locaux</strong>. Les lames déformées sont redressées ou remplacées, la serrure changée si forcée, et l'ensemble du mécanisme vérifié. Nous installons des <strong>renforts anti-effraction</strong> si nécessaire.</p><p>Un <strong>rapport détaillé</strong> vous est remis pour votre déclaration d'assurance. Appelez immédiatement le <strong>{phone}</strong> : nous intervenons sous 30 minutes dans tout le <strong>{department}</strong>.</p>",
+      "image": "/images/gallery/rideau-metallique-lame-pleine-france.webp",
+      "imageAlt": "Sécurisation rideau métallique après effraction à {zone} {zonePostal}",
+      "imagePosition": "right"
+    }
+  ],
+  "reviews": [
+    {
+      "name": "Karim B.",
+      "rating": 5,
+      "text": "Rideau métallique de ma boucherie complètement bloqué un lundi matin à {zone}. J'ai appelé {name} en panique et le technicien était là en 30 minutes. Un ressort cassé, remplacé sur place. Intervention rapide et propre, je recommande vivement.",
+      "date": "Février 2025",
+      "zone": "{zone}",
+      "service": "Dépannage"
+    },
+    {
+      "name": "Sophie L.",
+      "rating": 5,
+      "text": "Panne de moteur sur le rideau de ma boutique de vêtements à {zone}. Le technicien de {name} a diagnostiqué un condensateur défaillant et l'a remplacé en moins d'une heure. Rideau comme neuf, prix très correct. Merci !",
+      "date": "Janvier 2025",
+      "zone": "{zone}",
+      "service": "Dépannage"
+    },
+    {
+      "name": "Marc D.",
+      "rating": 5,
+      "text": "Tentative d'effraction sur mon commerce à {zone} un samedi soir. Lames tordues et serrure forcée. L'équipe de {name} est intervenue en urgence dans la nuit pour sécuriser le local. Travail sérieux et professionnel, rapport fourni pour l'assurance.",
+      "date": "Décembre 2024",
+      "zone": "{zone}",
+      "service": "Dépannage"
+    },
+    {
+      "name": "Nathalie P.",
+      "rating": 4,
+      "text": "Rideau métallique de ma pharmacie qui faisait un bruit terrible en descendant à {zone}. Le technicien a graissé les rails, remplacé deux attaches de lames usées et réglé les fins de course. Plus aucun bruit, ça fonctionne parfaitement. Bon rapport qualité-prix.",
+      "date": "Novembre 2024",
+      "zone": "{zone}",
+      "service": "Dépannage"
+    },
+    {
+      "name": "Antoine R.",
+      "rating": 5,
+      "text": "Mon rideau de garage ne remontait plus à {zone}. Diagnostic rapide : l'axe d'enroulement était voilé. Remplacement effectué dans la journée par {name}. Technicien compétent et ponctuel. Je les rappellerai sans hésiter.",
+      "date": "Octobre 2024",
+      "zone": "{zone}",
+      "service": "Dépannage"
+    },
+    {
+      "name": "Fatima E.",
+      "rating": 5,
+      "text": "Déblocage de grille métallique pour mon salon de coiffure à {zone}. La grille était sortie des rails après un coup de vent violent. Intervention très rapide, le technicien a tout remis en place et vérifié l'ensemble du mécanisme. Très satisfaite.",
+      "date": "Mars 2025",
+      "zone": "{zone}",
+      "service": "Dépannage"
+    },
+    {
+      "name": "Philippe G.",
+      "rating": 5,
+      "text": "Panne de télécommande sur le rideau motorisé de mon restaurant à {zone}. Le récepteur était en cause. Le technicien de {name} a remplacé le récepteur et reprogrammé les télécommandes en moins de 45 minutes. Service impeccable.",
+      "date": "Janvier 2025",
+      "zone": "{zone}",
+      "service": "Dépannage"
+    },
+    {
+      "name": "Caroline M.",
+      "rating": 4,
+      "text": "Rideau métallique de ma bijouterie bloqué en position ouverte à {zone} un vendredi soir. Situation stressante pour la sécurité. {name} a envoyé un technicien en urgence qui a réparé le moteur et sécurisé le rideau. Petit supplément pour l'intervention de nuit mais compréhensible vu le service rendu.",
+      "date": "Septembre 2024",
+      "zone": "{zone}",
+      "service": "Dépannage"
+    },
+    {
+      "name": "Youssef A.",
+      "rating": 5,
+      "text": "Remplacement de 4 lames endommagées sur le rideau métallique de mon entrepôt à {zone}. Un camion avait accroché le rideau en manoeuvrant. Les lames ont été remplacées à l'identique le jour même. Bravo à l'équipe de {name} pour la réactivité.",
+      "date": "Février 2025",
+      "zone": "{zone}",
+      "service": "Dépannage"
+    },
+    {
+      "name": "Isabelle V.",
+      "rating": 5,
+      "text": "Problème récurrent de rideau qui se bloquait à mi-course à {zone}. Après plusieurs tentatives avec un autre prestataire sans succès, j'ai fait appel à {name}. Diagnostic précis : fins de course défectueuses. Réparation définitive en une intervention. Enfin résolu !",
+      "date": "Décembre 2024",
+      "zone": "{zone}",
+      "service": "Dépannage"
+    },
+    {
+      "name": "Laurent T.",
+      "rating": 5,
+      "text": "Dépannage en urgence le dimanche matin à {zone}. Mon rideau de commerce ne descendait plus du tout. Le technicien a identifié un problème de carte électronique et l'a remplacée sur place. Disponible même le dimanche, c'est vraiment appréciable.",
+      "date": "Novembre 2024",
+      "zone": "{zone}",
+      "service": "Dépannage"
+    },
+    {
+      "name": "Samira K.",
+      "rating": 5,
+      "text": "Déblocage de rideau métallique pour ma boulangerie à {zone} à 5h du matin. Impossible d'ouvrir pour la fournée. Le technicien de {name} est arrivé en 25 minutes et a débloqué le rideau rapidement. Un professionnel sérieux, je recommande à tous les commerçants de {zone}.",
+      "date": "Mars 2025",
+      "zone": "{zone}",
+      "service": "Dépannage"
+    },
+    {
+      "name": "Jean-Pierre H.",
+      "rating": 4,
+      "text": "Réparation du moteur central de mon rideau industriel à {zone}. Le moteur surchauffait et se coupait en sécurité. Changement du condensateur et nettoyage complet du moteur. Fonctionne à nouveau normalement. Technicien compétent et explicatif.",
+      "date": "Octobre 2024",
+      "zone": "{zone}",
+      "service": "Dépannage"
+    },
+    {
+      "name": "Amandine F.",
+      "rating": 5,
+      "text": "Suite à des intempéries, le rideau métallique de mon magasin à {zone} s'est déformé et ne fermait plus correctement. {name} a redressé les lames, remplacé les rails abîmés et remis l'ensemble en parfait état. Travail soigné et garanti. Très bonne expérience.",
+      "date": "Janvier 2025",
+      "zone": "{zone}",
+      "service": "Dépannage"
+    },
+    {
+      "name": "Vincent C.",
+      "rating": 5,
+      "text": "Serrure de rideau métallique forcée sur mon local à {zone}. Le technicien a installé une nouvelle serrure renforcée et ajouté un verrou de sécurité supplémentaire. Intervention rapide et travail de qualité. Je me sens plus en sécurité maintenant. Merci {name}.",
+      "date": "Février 2025",
+      "zone": "{zone}",
+      "service": "Dépannage"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Qui appeler pour un dépannage de rideau métallique à {zone} ?",
+      "answer": "Pour tout <strong>dépannage de rideau métallique à {zone}</strong> ({zonePostal}), contactez <strong>{name}</strong> au <strong>{phone}</strong>. Nos techniciens spécialisés interviennent en urgence <strong>24h/24 et 7j/7</strong> pour le déblocage, la réparation moteur, le remplacement de lames, la réparation de serrure et tout dysfonctionnement de votre fermeture métallique. Service rapide, devis gratuit et intervention garantie sur tout le secteur de {zone} et le {department}."
+    },
+    {
+      "question": "Quel est le délai d'intervention pour un dépannage à {zone} ?",
+      "answer": "Le délai d'intervention moyen de <strong>{name}</strong> à {zone} ({zonePostal}) est de <strong>30 à 60 minutes</strong>. Nos techniciens de permanence sont positionnés stratégiquement dans le {department} pour couvrir rapidement l'ensemble du secteur. En cas d'urgence absolue (effraction, sécurité compromise), nous priorisons votre demande pour une intervention dans les meilleurs délais."
+    },
+    {
+      "question": "Combien coûte un dépannage de rideau métallique à {zone} ?",
+      "answer": "Le coût d'un <strong>dépannage de rideau métallique à {zone}</strong> dépend de la nature exacte de la panne, des dimensions du rideau et des pièces à remplacer. Chaque situation est unique : un déblocage simple ne coûte pas la même chose qu'un remplacement de moteur ou d'axe. <strong>{name}</strong> vous remet un <strong>devis gratuit et détaillé sur place</strong> avant toute intervention, sans engagement ni surprise. Appelez le <strong>{phone}</strong> pour un diagnostic gratuit."
+    },
+    {
+      "question": "Intervenez-vous le week-end et les jours fériés à {zone} ?",
+      "answer": "Oui, <strong>{name}</strong> assure un service de <strong>dépannage 7 jours sur 7</strong> à {zone} ({zonePostal}), y compris les <strong>samedis, dimanches et jours fériés</strong>. Un technicien de permanence est disponible en permanence pour répondre aux urgences. Nous savons qu'une panne de rideau métallique ne prévient pas et nous adaptons notre disponibilité aux besoins de nos clients commerçants et professionnels du {department}."
+    },
+    {
+      "question": "Quels types de rideaux métalliques dépannez-vous à {zone} ?",
+      "answer": "Nos techniciens interviennent sur <strong>tous les types de fermetures métalliques</strong> à {zone} : <strong>rideaux à lames pleines</strong> en acier ou aluminium, <strong>rideaux micro-perforés</strong>, <strong>grilles métalliques articulées</strong>, <strong>rideaux coupe-feu</strong>, <strong>portes de garage enroulables</strong>, <strong>stores métalliques</strong> et <strong>rideaux industriels</strong> grande dimension. Que votre rideau soit manuel ou motorisé, ancien ou récent, nous avons l'expertise pour le réparer."
+    },
+    {
+      "question": "Proposez-vous une garantie sur les réparations à {zone} ?",
+      "answer": "Oui, toutes les réparations effectuées par <strong>{name}</strong> à {zone} bénéficient d'une <strong>garantie pièces et main-d'oeuvre</strong>. La durée de garantie varie selon le type d'intervention : <strong>3 mois pour un déblocage</strong>, <strong>6 mois à 1 an pour un remplacement de pièces</strong> (moteur, lames, axe) et <strong>jusqu'à 2 ans pour un moteur neuf</strong>. Un certificat de garantie vous est remis à l'issue de chaque intervention."
+    },
+    {
+      "question": "Quelles marques de moteurs réparez-vous à {zone} ?",
+      "answer": "Nos techniciens sont formés sur <strong>toutes les grandes marques de moteurs</strong> de rideaux métalliques : <strong>Somfy</strong>, <strong>Nice</strong>, <strong>Came</strong>, <strong>ACM</strong>, <strong>Simu</strong>, <strong>BFT</strong>, <strong>Faac</strong> et <strong>Gaposa</strong>. Que votre moteur soit un <strong>tubulaire</strong>, un <strong>central</strong> ou un <strong>moteur latéral</strong>, nous disposons des pièces détachées et de l'expertise nécessaire pour le réparer ou le remplacer à {zone} ({zonePostal})."
+    },
+    {
+      "question": "Comment se déroule un dépannage en urgence à {zone} ?",
+      "answer": "Le processus de <strong>dépannage en urgence à {zone}</strong> est simple et rapide. <strong>Étape 1</strong> : vous appelez le <strong>{phone}</strong>, un technicien évalue votre situation par téléphone. <strong>Étape 2</strong> : le technicien se déplace à {zone} sous 30 à 60 minutes avec son véhicule équipé. <strong>Étape 3</strong> : diagnostic sur place et devis avant intervention. <strong>Étape 4</strong> : réparation immédiate avec les pièces en stock. <strong>Étape 5</strong> : vérification du bon fonctionnement et remise de la facture."
+    },
+    {
+      "question": "Peut-on éviter les pannes de rideau métallique à {zone} ?",
+      "answer": "Oui, un <strong>entretien préventif régulier</strong> permet de réduire considérablement le risque de panne de votre rideau métallique à {zone}. <strong>{name}</strong> recommande un <strong>entretien annuel</strong> comprenant : graissage des rails et de l'axe d'enroulement, vérification des fixations, contrôle du moteur et des composants électriques, réglage des fins de course et nettoyage général. Nous proposons des <strong>contrats de maintenance</strong> adaptés aux commerces de {zone} et du {department}. Appelez le <strong>{phone}</strong> pour en savoir plus."
+    },
+    {
+      "question": "Mon rideau métallique fait un bruit anormal à {zone}, que faire ?",
+      "answer": "Un <strong>bruit anormal</strong> sur votre rideau métallique à {zone} peut avoir plusieurs origines : <strong>rails encrassés ou déformés</strong>, lames désalignées, attaches usées, roulements de moteur fatigués ou axe d'enroulement grippé. Il est important de ne pas ignorer ce symptôme car il indique généralement une <strong>usure en cours</strong> qui, sans traitement, évoluera vers un blocage complet. Contactez <strong>{name}</strong> au <strong>{phone}</strong> pour un diagnostic. Une intervention préventive est toujours moins coûteuse qu'un dépannage d'urgence."
+    },
+    {
+      "question": "Fournissez-vous un document pour l'assurance après effraction à {zone} ?",
+      "answer": "Oui, après chaque intervention de <strong>dépannage suite à une effraction à {zone}</strong>, <strong>{name}</strong> vous remet un <strong>rapport détaillé</strong> décrivant les dégâts constatés sur votre rideau métallique, les réparations effectuées et le coût de l'intervention. Ce document est <strong>accepté par toutes les compagnies d'assurance</strong> pour votre déclaration de sinistre. Nous pouvons également fournir un devis complémentaire pour les travaux de remise en état définitifs si nécessaire."
+    },
+    {
+      "question": "Dépannez-vous les rideaux métalliques de particuliers à {zone} ?",
+      "answer": "Oui, <strong>{name}</strong> intervient aussi bien chez les <strong>professionnels</strong> (commerces, restaurants, entrepôts, bureaux) que chez les <strong>particuliers</strong> à {zone} ({zonePostal}). Nous dépannons les <strong>portes de garage enroulables</strong>, les <strong>volets roulants métalliques</strong> et toutes les fermetures métalliques résidentielles. Le même niveau de qualité et de réactivité est garanti, que vous soyez un professionnel ou un particulier dans le {department}."
+    }
+  ],
+  "cta": {
+    "title": "Besoin d'un dépannage à {zone} ?",
+    "subtitle": "Appelez le {phone} pour une intervention rapide à {zone} ({zonePostal}). Devis gratuit, intervention 24h/24."
+  }
+}

@@ -1,0 +1,347 @@
+{
+  "hero": {
+    "badge": "🚨 Urgence déblocage 24h/24",
+    "title": "Déblocage Rideau Métallique {zone} ({zonePostal})",
+    "subtitle": "Votre rideau métallique est coincé, bloqué en position haute, basse ou à mi-course à {zone} ? Les techniciens de {name} interviennent en urgence 24h/24 et 7j/7 dans tout le secteur de {zone} ({zonePostal}) pour le déblocage immédiat de votre fermeture métallique. Manoeuvre manuelle, dégrippage, remise en rails. Appelez le {phone}."
+  },
+  "intro": {
+    "title": "Spécialiste du déblocage de rideau métallique à {zone}",
+    "paragraphs": [
+      "Un rideau métallique bloqué à {zone} ({zonePostal}) représente bien plus qu'un simple désagrément technique : c'est votre activité commerciale qui s'arrête, votre local professionnel qui reste inaccessible ou votre commerce qui demeure vulnérable sans protection. {name} est le spécialiste du déblocage de rideaux métalliques dans le {department}, avec une expertise de terrain forgée par des milliers d'interventions sur tous les types de blocages. Nos techniciens maîtrisent les techniques de déblocage manuel et motorisé applicables aux rideaux à lames pleines, grilles articulées, rideaux micro-perforés et portes de garage enroulables. Que le blocage soit d'origine mécanique, électrique ou consécutif à un choc extérieur, nous disposons du savoir-faire et de l'outillage professionnel pour libérer votre fermeture métallique dans les meilleurs délais à {zone}.",
+      "La réactivité est au coeur de notre service de déblocage à {zone} ({zonePostal}). Lorsque vous nous contactez au {phone}, un technicien de permanence évalue immédiatement la situation par téléphone et se met en route vers votre adresse dans le {department}. Nos véhicules ateliers sont équipés en permanence du matériel nécessaire au déblocage : outils de manoeuvre manuelle, vérins hydrauliques, clés spéciales pour déverrouillage de secours, pièces de rechange courantes comme les ressorts, lames et attaches. Cette organisation nous permet de résoudre la grande majorité des blocages de rideau métallique à {zone} en une seule intervention, sans nécessiter de second passage. Chaque déblocage est suivi d'un diagnostic complet pour identifier la cause profonde du problème et vous proposer, si nécessaire, une réparation préventive qui évitera toute récidive."
+    ]
+  },
+  "situations": {
+    "title": "Situations de déblocage à {zone}",
+    "items": [
+      {
+        "icon": "⬆️",
+        "title": "Rideau bloqué en position haute à {zone}",
+        "description": "Votre rideau métallique refuse de descendre et votre commerce reste grand ouvert et exposé à {zone}. Ce type de blocage est fréquemment causé par un dysfonctionnement des fins de course, un moteur défaillant qui ne parvient plus à entraîner le tablier vers le bas, ou un blocage mécanique au niveau du tambour d'enroulement. Nos techniciens procèdent au déblocage en toute sécurité, en utilisant si nécessaire la manoeuvre de secours manuelle pour sécuriser immédiatement vos locaux."
+      },
+      {
+        "icon": "⬇️",
+        "title": "Rideau bloqué en position basse à {zone}",
+        "description": "Impossible d'ouvrir votre commerce à {zone} car le rideau reste verrouillé en position fermée. Cette situation paralyse totalement votre activité et nécessite une intervention de déblocage en urgence. Les causes les plus courantes sont une serrure grippée, un axe d'enroulement bloqué par la rouille ou un ressort de compensation cassé qui empêche la remontée du tablier. {name} intervient rapidement pour libérer votre rideau et vous permettre de reprendre votre activité."
+      },
+      {
+        "icon": "↕️",
+        "title": "Rideau coincé à mi-course à {zone}",
+        "description": "Le rideau métallique de votre local à {zone} s'est immobilisé à mi-hauteur, ni ouvert ni fermé, laissant votre commerce dans une situation inconfortable et peu sécurisée. Un blocage à mi-course est généralement provoqué par une lame déformée ou sortie des rails de guidage, une attache cassée entre deux lames, ou un obstacle coincé dans le mécanisme d'enroulement. Nos techniciens identifient précisément le point de blocage et libèrent le rideau sans endommager les composants adjacents."
+      },
+      {
+        "icon": "⚡",
+        "title": "Blocage suite à panne électrique à {zone}",
+        "description": "Une coupure de courant, un disjoncteur qui saute ou un défaut sur le circuit d'alimentation a immobilisé votre rideau motorisé à {zone}. Sans électricité, le moteur ne peut plus actionner le rideau et celui-ci reste figé dans sa position actuelle. Nos techniciens maîtrisent les procédures de déblocage manuel des motorisations de toutes marques, vous permettant de manipuler votre rideau en attendant le rétablissement du courant, puis diagnostiquent et résolvent le défaut électrique à l'origine du problème."
+      }
+    ]
+  },
+  "deblocage": {
+    "title": "Procédure de Déblocage de Rideau Métallique à {zone} - Intervention Express",
+    "description": "Le déblocage de rideau métallique est une intervention technique qui requiert méthode et expertise. À {zone} ({zonePostal}), {name} a développé un protocole de déblocage rigoureux qui garantit une intervention rapide tout en préservant l'intégrité de votre fermeture métallique. Contrairement à un déblocage en force qui risque d'aggraver les dégâts, notre approche méthodique commence toujours par l'identification de la cause exacte du blocage avant toute manipulation. Cette méthode professionnelle permet de résoudre durablement le problème, qu'il s'agisse d'une lame déviée, d'un axe grippé, d'un ressort rompu, d'une panne moteur ou d'un boîtier de commande défaillant. Nos techniciens couvrent l'ensemble du secteur de {zone} et du {department}, équipés de tout le matériel nécessaire pour un déblocage en un seul passage.",
+    "steps": [
+      {
+        "step": "1",
+        "title": "Appel et évaluation téléphonique",
+        "description": "Contactez {name} au {phone}. Notre technicien de permanence recueille les informations essentielles : type de rideau, nature du blocage, position actuelle du tablier, et évalue le degré d'urgence. Il vous guide éventuellement pour une tentative de déblocage simple par téléphone et organise le déplacement immédiat vers {zone} si nécessaire. Délai moyen d'arrivée : 30 minutes."
+      },
+      {
+        "step": "2",
+        "title": "Diagnostic visuel et mécanique sur site",
+        "description": "À son arrivée à {zone}, le technicien procède à un examen méthodique de votre rideau métallique : inspection des rails de guidage, vérification de l'état des lames et des attaches, contrôle du tambour d'enroulement, test du moteur et de l'alimentation électrique. Ce diagnostic permet d'identifier avec certitude la cause du blocage et de définir la méthode de déblocage adaptée."
+      },
+      {
+        "step": "3",
+        "title": "Déblocage et remise en état",
+        "description": "Le technicien procède au déblocage de votre fermeture métallique selon la méthode la plus appropriée : manoeuvre de secours manuelle, remise en rails des lames déviées, dégrippage de l'axe d'enroulement, remplacement du ressort cassé, réparation ou déverrouillage du moteur. Les pièces usées ou défectueuses sont remplacées sur place grâce au stock embarqué dans le véhicule atelier."
+      },
+      {
+        "step": "4",
+        "title": "Tests de fonctionnement et prévention",
+        "description": "Une fois le déblocage réalisé, le technicien effectue plusieurs cycles complets d'ouverture et de fermeture pour vérifier le bon fonctionnement du rideau métallique. Il graisse les points de friction, ajuste les fins de course si nécessaire et vous remet une facture détaillée. Des recommandations d'entretien personnalisées vous sont communiquées pour prévenir tout nouveau blocage à {zone}."
+      }
+    ]
+  },
+  "pannes": {
+    "title": "Causes Fréquentes de Blocage de Rideau Métallique à {zone}",
+    "items": [
+      {
+        "title": "Lame sortie des rails de guidage",
+        "description": "Une ou plusieurs lames de votre rideau métallique ont quitté leur rail de guidage à {zone}, provoquant un blocage immédiat du tablier. Ce problème survient souvent après un choc (véhicule, chariot élévateur), une tentative de forçage ou simplement l'usure des rails qui s'élargissent avec le temps. Nos techniciens remettent les lames en place, redressent les rails si nécessaire et vérifient l'alignement de l'ensemble du tablier.",
+        "urgency": "urgent"
+      },
+      {
+        "title": "Axe d'enroulement grippé ou bloqué",
+        "description": "L'axe central autour duquel s'enroule votre rideau métallique est grippé par la corrosion, le manque de lubrification ou une déformation à {zone}. Le tablier ne peut plus s'enrouler ni se dérouler, rendant toute manipulation impossible. Nous procédons au dégrippage complet de l'axe, appliquons un traitement anticorrosion et lubrifions l'ensemble du mécanisme pour restaurer un fonctionnement fluide et durable.",
+        "urgency": "urgent"
+      },
+      {
+        "title": "Ressort de compensation cassé",
+        "description": "Le ressort de compensation qui équilibre le poids du tablier s'est rompu à {zone}, rendant le rideau extrêmement lourd à manoeuvrer ou totalement immobile. Un ressort cassé empêche la remontée du rideau et peut provoquer une descente brutale dangereuse. Nos techniciens remplacent le ressort défaillant par un modèle de capacité identique et règlent la tension pour un équilibrage optimal du tablier.",
+        "urgency": "urgent"
+      },
+      {
+        "title": "Moteur bloqué ou en sécurité thermique",
+        "description": "Le moteur de votre rideau métallique s'est mis en sécurité thermique après une surchauffe ou présente un blocage mécanique interne à {zone}. Le rideau ne répond plus aux commandes et reste figé dans sa position. Nos techniciens réalisent le déblocage du moteur, identifient la cause de la surchauffe (surcharge, condensateur faible, ventilation obstruée) et effectuent la réparation nécessaire pour un fonctionnement fiable.",
+        "urgency": "moyen"
+      },
+      {
+        "title": "Serrure grippée ou mécanisme de verrouillage bloqué",
+        "description": "La serrure de votre rideau métallique est grippée, le barillet est bloqué ou le mécanisme de verrouillage refuse de s'ouvrir à {zone}. Vous ne pouvez ni ouvrir ni déverrouiller votre fermeture métallique malgré l'utilisation de la clé. Ce blocage est souvent lié à l'oxydation du mécanisme, une clé usée ou un défaut d'alignement du pêne. Nous débloquons la serrure, la lubrifions ou la remplaçons si elle est irréparable.",
+        "urgency": "moyen"
+      },
+      {
+        "title": "Boîtier de commande ou récepteur défaillant",
+        "description": "Le boîtier de commande murale ou le récepteur radio de votre rideau motorisé ne transmet plus les ordres au moteur à {zone}. Ni la télécommande, ni l'interrupteur mural ne produisent de réaction. Ce dysfonctionnement électronique bloque votre rideau dans sa position actuelle. Nos techniciens testent chaque composant de la chaîne de commande, remplacent l'élément défaillant et reprogramment le système pour un fonctionnement normal.",
+        "urgency": "faible"
+      }
+    ]
+  },
+  "urgence": {
+    "title": "Déblocage Urgence Rideau Métallique {zone} - Service 24h/24 7j/7",
+    "description": "Un rideau métallique bloqué peut survenir à tout moment : tôt le matin lorsque vous devez ouvrir votre commerce à {zone}, tard le soir quand il faut sécuriser vos locaux, ou même en pleine nuit après une coupure de courant. {name} maintient une équipe de techniciens de garde disponible en permanence pour le déblocage d'urgence dans tout le secteur de {zone} ({zonePostal}) et l'ensemble du {department}. Chaque véhicule d'intervention est pré-équipé d'outils de déblocage, de pièces détachées courantes et de dispositifs d'éclairage pour intervenir efficacement quelle que soit l'heure. Ne restez pas bloqué devant votre commerce, appelez le {phone} et un technicien sera sur place dans les plus brefs délais.",
+    "stats": [
+      {
+        "value": "30 min",
+        "label": "Délai moyen de déblocage à {zone}"
+      },
+      {
+        "value": "24h/24",
+        "label": "Service de déblocage week-ends et fériés inclus"
+      },
+      {
+        "value": "92%",
+        "label": "Blocages résolus en un seul passage"
+      }
+    ],
+    "cases": [
+      "Rideau métallique bloqué en position basse empêchant l'ouverture du commerce le matin à {zone}",
+      "Fermeture métallique coincée en position haute rendant le local vulnérable le soir à {zone}",
+      "Rideau de fer immobilisé à mi-course après une coupure de courant à {zone}",
+      "Grille métallique bloquée après une tentative de forçage nocturne à {zone}",
+      "Rideau motorisé ne répondant plus aux commandes après un orage à {zone}"
+    ]
+  },
+  "advantages": {
+    "title": "Pourquoi choisir {name} pour le déblocage à {zone} ?",
+    "items": [
+      "Intervention de déblocage en 30 minutes chrono sur tout le secteur de {zone} ({zonePostal}) et dans le {department}, de jour comme de nuit, 24 heures sur 24",
+      "Techniciens spécialisés dans le déblocage de toutes marques et tous types de rideaux métalliques : lames pleines, grilles articulées, micro-perforés et rideaux industriels",
+      "Déblocage manuel maîtrisé en cas de panne électrique ou de coupure de courant, permettant de sécuriser votre local en toute circonstance à {zone}",
+      "Diagnostic systématique de la cause du blocage inclus dans chaque intervention, pour éviter toute récidive et vous proposer une solution durable",
+      "Véhicules ateliers équipés de pièces détachées : ressorts, lames, attaches, serrures, composants moteur pour une réparation immédiate sur place à {zone}",
+      "Devis transparent et gratuit avant toute intervention, facturation claire sans frais cachés, et garantie sur les pièces remplacées et la main-d'oeuvre"
+    ]
+  },
+  "alternatingFeatures": [
+    {
+      "title": "<strong>Spécialiste du Déblocage de Rideau Métallique à {zone}</strong>",
+      "content": "<p>Un <strong>rideau métallique bloqué à {zone}</strong> ({zonePostal}) représente bien plus qu'un simple désagrément technique : c'est votre activité commerciale qui s'arrête, votre local professionnel qui reste inaccessible ou votre commerce qui demeure vulnérable sans protection. <strong>{name}</strong> est le spécialiste du <strong>déblocage de rideaux métalliques</strong> dans le <strong>{department}</strong>, avec une expertise de terrain forgée par des milliers d'interventions sur tous les types de blocages.</p>",
+      "image": "/images/gallery/depannage-rideau-metallique-rm-drm-france.webp",
+      "imageAlt": "Spécialiste déblocage rideau métallique à {zone}",
+      "imagePosition": "right"
+    },
+    {
+      "title": "<strong>Déblocage Manuel et Motorisé</strong> à {zone}",
+      "content": "<p>Nos techniciens maîtrisent les techniques de <strong>déblocage manuel et motorisé</strong> applicables aux <strong>rideaux à lames pleines</strong>, <strong>grilles articulées</strong>, <strong>rideaux micro-perforés</strong> et <strong>portes de garage enroulables</strong>. Que le blocage soit d'origine mécanique, électrique ou consécutif à un choc extérieur, nous disposons du savoir-faire et de l'<strong>outillage professionnel</strong> pour libérer votre fermeture métallique dans les meilleurs délais à {zone}.</p>",
+      "image": "/images/gallery/depannage-rideau-metallique-creil-60.webp",
+      "imageAlt": "Déblocage manuel et motorisé rideau métallique à {zone}",
+      "imagePosition": "left"
+    },
+    {
+      "title": "<strong>Réactivité et Efficacité</strong> : Déblocage en Une Seule Intervention à {zone}",
+      "content": "<p>La réactivité est au coeur de notre service de <strong>déblocage à {zone}</strong>. Lorsque vous nous contactez au <strong>{phone}</strong>, un technicien de permanence évalue immédiatement la situation par téléphone et se met en route vers votre adresse dans le <strong>{department}</strong>. Nos <strong>véhicules ateliers</strong> sont équipés en permanence du matériel nécessaire au déblocage : outils de manoeuvre manuelle, vérins hydrauliques, clés spéciales pour déverrouillage de secours, pièces de rechange courantes comme les ressorts, lames et attaches.</p><p>Cette organisation nous permet de résoudre la grande majorité des <strong>blocages de rideau métallique à {zone}</strong> en une seule intervention, sans nécessiter de second passage. Chaque déblocage est suivi d'un <strong>diagnostic complet</strong> pour identifier la cause profonde du problème et vous proposer, si nécessaire, une <strong>réparation préventive</strong> qui évitera toute récidive.</p>",
+      "image": "/images/gallery/rideau-metallique-lame-cobra-realisation.webp",
+      "imageAlt": "Intervention déblocage rideau métallique à {zone} {department}",
+      "imagePosition": "right"
+    },
+    {
+      "title": "<strong>Déblocage Manuel et Manoeuvre de Secours</strong> à {zone} ({zonePostal})",
+      "content": "<p>Lorsqu'une <strong>panne électrique</strong> ou un <strong>défaut moteur</strong> immobilise votre rideau métallique à {zone}, le <strong>déblocage manuel</strong> est souvent la première étape indispensable pour sécuriser votre local. <strong>{name}</strong> maîtrise les procédures de <strong>manoeuvre de secours</strong> de toutes les marques : <strong>Somfy</strong>, <strong>Nice</strong>, <strong>Came</strong>, <strong>ACM</strong>, <strong>Simu</strong>, <strong>BFT</strong> et <strong>Faac</strong>.</p><p>Le <strong>déblocage manuel à {zone}</strong> ne se limite pas à tirer sur le rideau. Il faut d'abord <strong>désengager le moteur</strong> via le dispositif de déverrouillage, puis manipuler le tablier avec précaution en respectant l'équilibrage des ressorts. Nos techniciens procèdent avec méthode pour garantir un déblocage sans dommage.</p>",
+      "image": "/images/gallery/rideau-metallique-lame-pleine-france.webp",
+      "imageAlt": "Déblocage manuel de rideau métallique à lames pleines à {zone}",
+      "imagePosition": "left"
+    },
+    {
+      "title": "<strong>Formation et Autonomie</strong> : Gérez les Urgences à {zone}",
+      "content": "<p>Au-delà du déblocage immédiat, nos techniciens vous montrent comment utiliser la <strong>manoeuvre de secours</strong> de votre rideau métallique en cas de nouvelle panne électrique. Cette <strong>formation rapide sur site</strong> à {zone} vous permet de sécuriser votre local en autonomie en attendant l'intervention d'un professionnel.</p><p><strong>{name}</strong> peut également installer un <strong>système de déblocage de secours</strong> si votre rideau n'en est pas équipé, pour plus de sérénité au quotidien. Contactez-nous au <strong>{phone}</strong> pour toute demande dans le <strong>{department}</strong>.</p>",
+      "image": "/images/gallery/entretien-rideau-metallique-rideau-de-fer.webp",
+      "imageAlt": "Formation manoeuvre de secours rideau métallique à {zone}",
+      "imagePosition": "right"
+    },
+    {
+      "title": "<strong>Prévention des Blocages</strong> : Les Causes à Éviter à {zone}",
+      "content": "<p>Le meilleur déblocage est celui qui n'a pas lieu. À {zone} ({zonePostal}), les <strong>causes principales de blocage</strong> sont récurrentes et évitables : accumulation de poussière dans les glissières, corrosion de l'axe d'enroulement, usure des attaches entre les lames, perte de tension des ressorts et encrassement du moteur.</p><p>Un <strong>entretien préventif semestriel</strong> réalisé par un technicien qualifié de {name} permet de détecter et corriger ces problèmes avant qu'ils ne provoquent un blocage.</p>",
+      "image": "/images/gallery/Axe-central-motorise-rideau-metallique.webp",
+      "imageAlt": "Axe central motorisé de rideau métallique - prévention des blocages à {zone}",
+      "imagePosition": "left"
+    },
+    {
+      "title": "<strong>Contrats de Maintenance Préventive</strong> à {zone}",
+      "content": "<p><strong>{name}</strong> propose des <strong>contrats de maintenance préventive</strong> pour les commerces et professionnels de {zone} et du {department}. Ces contrats incluent une à deux visites annuelles avec graissage complet, vérification mécanique et électrique, réglage des fins de course et rapport d'état détaillé.</p><p>Les clients sous contrat bénéficient d'une <strong>priorité d'intervention</strong> et de <strong>tarifs préférentiels</strong> en cas de déblocage d'urgence. Renseignez-vous au <strong>{phone}</strong> et protégez votre activité contre les blocages imprévus.</p>",
+      "image": "/images/gallery/rideau-metallique-creil.webp",
+      "imageAlt": "Contrat maintenance rideau métallique {zone} {department}",
+      "imagePosition": "right"
+    }
+  ],
+  "reviews": [
+    {
+      "name": "Rachid M.",
+      "rating": 5,
+      "text": "Rideau métallique de ma boulangerie complètement bloqué en position basse à 4h30 du matin à {zone}. Impossible d'ouvrir pour préparer la fournée. J'ai appelé {name} en urgence et le technicien était sur place en 25 minutes. Déblocage rapide d'un ressort cassé, remplacé immédiatement. Sauvé !",
+      "date": "Mars 2025",
+      "zone": "{zone}",
+      "service": "Déblocage"
+    },
+    {
+      "name": "Catherine V.",
+      "rating": 5,
+      "text": "La grille métallique de ma pharmacie à {zone} s'est coincée à mi-hauteur un samedi matin en pleine affluence. {name} a envoyé un technicien très compétent qui a identifié une lame sortie des rails. Déblocage propre et soigneux en moins de 40 minutes. Excellent service, très professionnel.",
+      "date": "Février 2025",
+      "zone": "{zone}",
+      "service": "Déblocage"
+    },
+    {
+      "name": "Julien D.",
+      "rating": 5,
+      "text": "Mon rideau de garage professionnel ne descendait plus du tout à {zone}. L'axe d'enroulement était complètement grippé. Le technicien de {name} a dégrippe l'axe, lubrifié tout le mécanisme et le rideau fonctionne à nouveau parfaitement. Intervention rapide et tarif honnête.",
+      "date": "Janvier 2025",
+      "zone": "{zone}",
+      "service": "Déblocage"
+    },
+    {
+      "name": "Nadia B.",
+      "rating": 4,
+      "text": "Rideau métallique de mon salon d'esthétique bloqué en position haute à {zone} un vendredi soir. Situation très stressante car le local restait ouvert et non sécurisé. {name} est intervenu en urgence, le technicien a identifié un problème de fin de course et a débloqué le rideau en 30 minutes. Rassurée et satisfaite.",
+      "date": "Décembre 2024",
+      "zone": "{zone}",
+      "service": "Déblocage"
+    },
+    {
+      "name": "Thierry P.",
+      "rating": 5,
+      "text": "Déblocage du rideau métallique de mon restaurant à {zone} après une coupure de courant. Le rideau était resté à mi-course et je ne savais pas comment le manoeuvrer manuellement. Le technicien de {name} a débloqué le moteur, descendu le rideau et m'a montré la manoeuvre de secours. Très pédagogue, je recommande.",
+      "date": "Mars 2025",
+      "zone": "{zone}",
+      "service": "Déblocage"
+    },
+    {
+      "name": "Sandrine L.",
+      "rating": 5,
+      "text": "Mon commerce de fleurs à {zone} avait le rideau métallique totalement bloqué depuis deux jours. Un autre dépanneur n'avait pas réussi à le débloquer. {name} a envoyé un technicien expérimenté qui a trouvé le problème en 10 minutes : attaches cassées et lames désalignées. Tout a été remis en état le jour même.",
+      "date": "Novembre 2024",
+      "zone": "{zone}",
+      "service": "Déblocage"
+    },
+    {
+      "name": "Mohamed K.",
+      "rating": 5,
+      "text": "Appel à {name} un dimanche pour le déblocage du rideau de mon tabac-presse à {zone}. Le rideau refusait de remonter, la serrure était complètement grippée. Technicien arrivé en 35 minutes, serrure débloquée et lubrifiée. Efficace et disponible même le dimanche, bravo.",
+      "date": "Février 2025",
+      "zone": "{zone}",
+      "service": "Déblocage"
+    },
+    {
+      "name": "Isabelle F.",
+      "rating": 4,
+      "text": "Le rideau métallique de ma boutique de prêt-à-porter à {zone} se bloquait régulièrement à mi-course. {name} a effectué un déblocage complet avec diagnostic approfondi : les rails étaient encrassés et déformés. Nettoyage, redressement et lubrification. Plus aucun blocage depuis trois mois maintenant.",
+      "date": "Octobre 2024",
+      "zone": "{zone}",
+      "service": "Déblocage"
+    },
+    {
+      "name": "Alexandre G.",
+      "rating": 5,
+      "text": "Rideau industriel de mon entrepôt à {zone} bloqué en position fermée un lundi matin. Impossible de réceptionner les livraisons. Le technicien de {name} a diagnostiqué un moteur en sécurité thermique, l'a débloqué manuellement puis a remplacé le condensateur défaillant. Intervention complète en 1h15, très satisfait.",
+      "date": "Janvier 2025",
+      "zone": "{zone}",
+      "service": "Déblocage"
+    },
+    {
+      "name": "Marie-Claire R.",
+      "rating": 5,
+      "text": "Le rideau micro-perforé de mon cabinet médical à {zone} ne voulait plus descendre après un orage. {name} a envoyé rapidement un technicien qui a identifié un récepteur grillé par une surtension. Déblocage manuel immédiat pour sécuriser le cabinet, puis remplacement du récepteur le lendemain. Service irréprochable.",
+      "date": "Décembre 2024",
+      "zone": "{zone}",
+      "service": "Déblocage"
+    },
+    {
+      "name": "Yann T.",
+      "rating": 5,
+      "text": "Déblocage en urgence de la grille articulée de mon garage automobile à {zone}. Deux lames étaient sorties des rails après qu'un client a accroché le rideau avec son pare-chocs. Intervention rapide de {name}, lames remises en place et rails vérifiés. Travail sérieux et prix raisonnable.",
+      "date": "Mars 2025",
+      "zone": "{zone}",
+      "service": "Déblocage"
+    },
+    {
+      "name": "Leila A.",
+      "rating": 5,
+      "text": "Le rideau de ma boutique de bijoux à {zone} était bloqué à cause d'un boîtier de commande défectueux. Ni la télécommande ni l'interrupteur ne fonctionnaient. Le technicien de {name} a remplacé le boîtier et reprogrammé les télécommandes. Tout refonctionne parfaitement, merci pour la rapidité.",
+      "date": "Novembre 2024",
+      "zone": "{zone}",
+      "service": "Déblocage"
+    },
+    {
+      "name": "Christophe H.",
+      "rating": 4,
+      "text": "Rideau métallique de mon atelier à {zone} bloqué en plein hiver. Le froid avait grippé l'ensemble du mécanisme. {name} a procédé au dégrippage complet, graissé tous les points de friction et remplacé les attaches fatiguées. Le technicien m'a aussi conseillé un entretien avant chaque hiver. Bons conseils, bonne intervention.",
+      "date": "Janvier 2025",
+      "zone": "{zone}",
+      "service": "Déblocage"
+    },
+    {
+      "name": "Fatima Z.",
+      "rating": 5,
+      "text": "Mon magasin d'alimentation à {zone} avait le rideau à lames pleines totalement immobilisé. Deux ressorts de compensation étaient cassés. Le technicien de {name} les a remplacés en une heure et a rééquilibré le tablier. Le rideau n'a jamais aussi bien fonctionné. Service fiable et honnête.",
+      "date": "Février 2025",
+      "zone": "{zone}",
+      "service": "Déblocage"
+    },
+    {
+      "name": "Pascal J.",
+      "rating": 5,
+      "text": "Blocage du rideau de ma librairie à {zone} un jour férié. Je pensais devoir attendre le lendemain mais {name} m'a assuré une intervention dans l'heure. Le technicien a trouvé une lame tordue qui bloquait le mécanisme, l'a remplacée et tout est rentré dans l'ordre. Disponibilité exceptionnelle, même les jours fériés.",
+      "date": "Mars 2025",
+      "zone": "{zone}",
+      "service": "Déblocage"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Qui appeler pour un déblocage de rideau métallique à {zone} ?",
+      "answer": "Pour tout <strong>déblocage de rideau métallique à {zone}</strong> ({zonePostal}), contactez <strong>{name}</strong> au <strong>{phone}</strong>. Nos techniciens spécialisés dans le déblocage interviennent en urgence <strong>24h/24 et 7j/7</strong> pour libérer votre fermeture métallique bloquée en position haute, basse ou à mi-course. Que le blocage soit d'origine mécanique, électrique ou lié à un choc extérieur, nous possédons l'expertise et l'outillage pour résoudre le problème rapidement. Intervention garantie sur tout le secteur de {zone} et le {department}."
+    },
+    {
+      "question": "Combien de temps faut-il pour débloquer un rideau métallique à {zone} ?",
+      "answer": "Le délai d'arrivée moyen de nos techniciens à {zone} ({zonePostal}) est de <strong>30 minutes</strong>. Une fois sur place, le <strong>déblocage proprement dit prend généralement entre 20 minutes et 1 heure</strong> selon la complexité du problème. Un simple dégrippage ou une remise en rails se résout en 20 à 30 minutes. Un remplacement de ressort ou une réparation moteur peut nécessiter jusqu'à une heure. Dans tous les cas, nos techniciens s'efforcent de rétablir le fonctionnement de votre rideau en un seul passage."
+    },
+    {
+      "question": "Combien coûte un déblocage de rideau métallique à {zone} ?",
+      "answer": "Le coût d'un <strong>déblocage de rideau métallique à {zone}</strong> dépend de la nature du blocage, des dimensions du rideau et des pièces éventuellement à remplacer. Un blocage par dégrippage n'est pas le même qu'un blocage causé par un ressort cassé ou un moteur en panne. <strong>{name}</strong> établit systématiquement un <strong>devis gratuit et détaillé sur place</strong> avant d'intervenir, sans engagement ni frais cachés. Appelez le <strong>{phone}</strong> pour un diagnostic gratuit adapté à votre situation."
+    },
+    {
+      "question": "Peut-on débloquer un rideau métallique sans électricité à {zone} ?",
+      "answer": "Oui, nos techniciens maîtrisent parfaitement le <strong>déblocage manuel des rideaux motorisés</strong> à {zone}. Chaque motorisation (Somfy, Nice, Came, ACM, Simu) dispose d'un dispositif de déverrouillage de secours permettant de manoeuvrer le rideau à la main en cas de coupure de courant. Nos techniciens utilisent les clés et outils spécifiques à chaque marque pour désengager le moteur en toute sécurité. Nous pouvons également installer un <strong>système de manoeuvre de secours</strong> si votre rideau n'en est pas équipé."
+    },
+    {
+      "question": "Mon rideau métallique se bloque régulièrement à {zone}, que faire ?",
+      "answer": "Des <strong>blocages récurrents de rideau métallique à {zone}</strong> sont le signe d'un problème sous-jacent qui nécessite un diagnostic approfondi. Les causes fréquentes sont des rails de guidage encrassés ou déformés, des attaches entre lames usées, un ressort de compensation fatigué ou un moteur en fin de vie. <strong>{name}</strong> réalise un <strong>diagnostic complet</strong> de votre fermeture métallique pour identifier la cause racine et propose une réparation définitive. Un <strong>contrat de maintenance préventive</strong> permet ensuite d'éviter toute récidive. Appelez le <strong>{phone}</strong>."
+    },
+    {
+      "question": "Débloquez-vous tous les types de rideaux métalliques à {zone} ?",
+      "answer": "Oui, <strong>{name}</strong> intervient pour le déblocage de <strong>tous les types de fermetures métalliques</strong> à {zone} ({zonePostal}) : <strong>rideaux à lames pleines</strong> en acier ou aluminium, <strong>grilles métalliques articulées</strong>, <strong>rideaux micro-perforés</strong>, <strong>rideaux coupe-feu</strong>, <strong>portes de garage enroulables</strong>, <strong>stores métalliques</strong> et <strong>rideaux industriels</strong> de grande dimension. Que votre rideau soit manuel à manivelle, à tirage direct ou motorisé, nos techniciens disposent de l'expertise et de l'outillage adaptés pour le débloquer."
+    },
+    {
+      "question": "Le déblocage risque-t-il d'endommager mon rideau métallique à {zone} ?",
+      "answer": "Non, les techniciens de <strong>{name}</strong> à {zone} utilisent exclusivement des <strong>méthodes de déblocage professionnelles et non destructives</strong>. Contrairement au déblocage en force qui peut aggraver les dégâts, notre approche méthodique commence toujours par l'identification précise du point de blocage avant toute manipulation. Nous utilisons un outillage adapté (clés de manoeuvre, vérins, outils de remise en rails) qui préserve l'intégrité de votre fermeture métallique. En cas de pièce endommagée, elle est remplacée pour garantir un fonctionnement fiable."
+    },
+    {
+      "question": "Fournissez-vous une garantie après un déblocage à {zone} ?",
+      "answer": "Oui, chaque intervention de <strong>déblocage à {zone}</strong> réalisée par <strong>{name}</strong> est accompagnée d'une <strong>garantie</strong>. Le déblocage simple est garanti 3 mois. Si des pièces sont remplacées lors de l'intervention (ressort, lames, attaches, composants moteur), la garantie couvre les pièces et la main-d'oeuvre pour une durée de <strong>6 mois à 1 an</strong> selon les composants. Un certificat de garantie et une facture détaillée vous sont systématiquement remis à l'issue de l'intervention."
+    }
+  ],
+  "cta": {
+    "title": "Rideau métallique bloqué à {zone} ?",
+    "subtitle": "Appelez le {phone} pour un déblocage immédiat à {zone} ({zonePostal}). Service 24h/24, devis gratuit, technicien sur place en 30 minutes."
+  }
+}

@@ -1,0 +1,235 @@
+{
+  "hero": {
+    "badge": "🔧 Disponible 24/7 à {city}",
+    "title": "Dépannage Rideau Métallique {city}",
+    "subtitle": "Votre rideau métallique est bloqué ou endommagé ? Notre équipe de techniciens spécialisés intervient en urgence 7j/7 à {city} et dans tout le département de l'{department}. Dépannage, réparation, installation, fabrication sur-mesure et motorisation de rideaux métalliques pour commerces et professionnels."
+  },
+  "trustBadges": [
+    {
+      "icon": "⚡",
+      "title": "-30 min",
+      "subtitle": "Intervention rapide"
+    },
+    {
+      "icon": "🛡️",
+      "title": "Garanti",
+      "subtitle": "Pièces & main d'œuvre"
+    },
+    {
+      "icon": "📋",
+      "title": "Devis gratuit",
+      "subtitle": "Sans engagement"
+    }
+  ],
+  "deblocage": {
+    "title": "Déblocage de Rideau Métallique à {city} - Intervention Express",
+    "description": "Votre rideau métallique est bloqué en position haute, basse ou à mi-course ? Que vous soyez rue de la République, près de la gare SNCF ou dans n'importe quel quartier de la ville, nos techniciens interviennent en urgence pour débloquer votre fermeture métallique à {city} et dans l'{department}. Temps moyen d'intervention : 30-45 minutes.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Diagnostic rapide",
+        "description": "Notre technicien identifie rapidement la cause du blocage de votre rideau métallique. Pré-diagnostic possible par téléphone au {phone}."
+      },
+      {
+        "step": 2,
+        "title": "Identification de la panne",
+        "description": "Analyse précise du mécanisme : moteur, axe d'enroulement, lames, serrure ou système électrique. Devis clair et sans surprise."
+      },
+      {
+        "step": 3,
+        "title": "Réparation sur place",
+        "description": "Intervention immédiate avec les pièces de rechange les plus courantes en stock dans nos véhicules atelier."
+      },
+      {
+        "step": 4,
+        "title": "Test et mise en service",
+        "description": "Vérification complète du fonctionnement, réglages de sécurité et remise du bon d'intervention avec garantie."
+      }
+    ]
+  },
+  "pannes": {
+    "title": "Pannes de Rideau Métallique : Diagnostic et Réparation à {city}",
+    "items": [
+      {
+        "icon": "⚡",
+        "title": "Panne moteur électrique",
+        "description": "Moteur grillé, ne répond plus ou surchauffe. Diagnostic complet et remplacement rapide. Moteurs Somfy, Nice, Came disponibles.",
+        "urgency": "urgent"
+      },
+      {
+        "icon": "🔩",
+        "title": "Lames abîmées ou tordues",
+        "description": "Suite à un choc, une tentative d'effraction ou l'usure. Remplacement des lames endommagées avec matériaux identiques.",
+        "urgency": "moyen"
+      },
+      {
+        "icon": "🔄",
+        "title": "Axe d'enroulement cassé",
+        "description": "Rideau bloqué en position. Remplacement de l'axe et des ressorts de compensation. Intervention en 2-3 heures.",
+        "urgency": "urgent"
+      },
+      {
+        "icon": "🔗",
+        "title": "Attache tablier défaillante",
+        "description": "Décrochage du tablier, rideau désaxé ou sorti des glissières. Remise en place et renforcement des fixations.",
+        "urgency": "moyen"
+      },
+      {
+        "icon": "⚙️",
+        "title": "Butées de fin de course HS",
+        "description": "Arrêt incorrect du rideau en haut ou en bas. Réglage ou remplacement des butées. Intervention rapide.",
+        "urgency": "faible"
+      },
+      {
+        "icon": "📡",
+        "title": "Problème télécommande/récepteur",
+        "description": "Télécommande inopérante, récepteur défaillant. Reprogrammation ou remplacement. Toutes marques disponibles.",
+        "urgency": "faible"
+      }
+    ]
+  },
+  "urgence": {
+    "title": "Dépannage Urgence Rideau Métallique {city} - Disponible 24h/24",
+    "description": "Rideau bloqué suite à une effraction, panne totale en pleine nuit, moteur en surchauffe ? Nos techniciens positionnés dans l'Oise sont disponibles immédiatement pour toute urgence à {city} et dans l'agglomération creilloise.",
+    "stats": [
+      { "value": "127+", "label": "Interventions/mois" },
+      { "value": "98%", "label": "Résolues en 1 passage" },
+      { "value": "<30 min", "label": "Temps d'attente moyen" }
+    ],
+    "cases": [
+      "Tentative de cambriolage ou effraction sur votre commerce",
+      "Rideau bloqué en position ouverte (commerce exposé)",
+      "Panne moteur complète, rideau inutilisable",
+      "Rideau tombé de ses rails, danger pour les passants"
+    ]
+  },
+  "whyUs": {
+    "title": "Pourquoi Choisir DRM {city} ?",
+    "subtitle": "{name} : spécialistes du rideau métallique à {city} et dans l'{department} depuis plus de 12 ans.",
+    "advantages": [
+      {
+        "icon": "⚡",
+        "title": "Intervention Rapide",
+        "description": "En moins de 30 minutes à {city} et dans tout le département de l'{department}. Nos techniciens sont positionnés stratégiquement dans l'agglomération creilloise et le sud de l'Oise, 24h/24 et 7j/7."
+      },
+      {
+        "icon": "📍",
+        "title": "Expertise Locale",
+        "description": "12+ ans d'expérience à {city} et dans l'{department}. Nous intervenons à Creil, Nogent-sur-Oise, Senlis, Chantilly, et sur toute la zone commerciale Creil-Saint-Maximin."
+      },
+      {
+      "icon": "📋",
+      "title": "Devis Gratuit",
+      "description": "Devis communiqué par téléphone avant intervention. Aucune surprise, aucun frais de déplacement cachés sur {city}."
+      },
+      {
+        "icon": "🛡️",
+        "title": "Garantie Qualité",
+        "description": "Toutes nos interventions sont garanties pièces et main d'œuvre. Pièces d'origine constructeur. Certificat de conformité CE systématiquement remis."
+      }
+    ]
+  },
+  "stats": {
+    "experience": "12+",
+    "experienceLabel": "ans d'expérience",
+    "interventions": "3500+",
+    "interventionsLabel": "interventions réalisées",
+    "satisfaction": "98%",
+    "satisfactionLabel": "clients satisfaits"
+  },
+  "reviews": [
+    {
+      "name": "Laurent M.",
+      "rating": 5,
+      "text": "Intervention rapide pour un dépannage de rideau métallique dans mon magasin de prêt-à-porter rue de la République. Le technicien DRM est arrivé en 25 minutes et a réparé le moteur en 1 heure. Très professionnel, travail soigné et conforme au devis.",
+      "date": "Il y a 2 semaines",
+      "zone": "Creil centre",
+      "service": "Dépannage"
+    },
+    {
+      "name": "Sophie D.",
+      "rating": 5,
+      "text": "Rideau de mon restaurant bloqué un dimanche soir à Nogent-sur-Oise. DRM Creil est intervenu en urgence et a tout remis en état en moins de 2 heures. Service impeccable, même le week-end !",
+      "date": "Il y a 1 mois",
+      "zone": "Nogent-sur-Oise",
+      "service": "Urgence"
+    },
+    {
+      "name": "Marc T.",
+      "rating": 5,
+      "text": "Installation d'un rideau métallique micro-perforé pour ma boutique de décoration à Chantilly. Travail soigné, délais respectés, et le rideau laisse bien voir ma vitrine. L'équipe DRM connaît parfaitement le secteur de l'Oise.",
+      "date": "Il y a 3 semaines",
+      "zone": "Chantilly",
+      "service": "Installation"
+    },
+    {
+      "name": "Isabelle R.",
+      "rating": 4,
+      "text": "Contrat d'entretien formule Pro pour ma pharmacie à Senlis. Le technicien passe 2 fois par an, mon rideau fonctionne parfaitement depuis 3 ans. Aucune panne, l'entretien préventif ça vaut le coup.",
+      "date": "Il y a 2 mois",
+      "zone": "Senlis",
+      "service": "Entretien"
+    },
+    {
+      "name": "Philippe B.",
+      "rating": 5,
+      "text": "Motorisation de mon vieux rideau manuel dans mon commerce à la zone commerciale Creil-Saint-Maximin. Le moteur Somfy installé par DRM est ultra silencieux et fiable. Plus besoin de forcer le matin à 6h, un vrai confort au quotidien !",
+      "date": "Il y a 1 semaine",
+      "zone": "Zone commerciale Creil-Saint-Maximin",
+      "service": "Motorisation"
+    },
+    {
+      "name": "Nadia K.",
+      "rating": 5,
+      "text": "Suite à une tentative d'effraction sur mon commerce de bijoux fantaisie à Montataire, j'ai appelé DRM pour un dépannage d'urgence. Intervention en moins de 30 minutes, rideau sécurisé et renforcé. Un grand merci pour la réactivité !",
+      "date": "Il y a 3 jours",
+      "zone": "Montataire",
+      "service": "Dépannage urgence"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Qui appeler pour un dépannage de rideau métallique à {city} ?",
+      "answer": "Pour tout dépannage de rideau métallique à {city} et dans l'{department} ({postalCode}), contactez <strong>DRM {city}</strong> au <strong>{phone}</strong>. Nos techniciens certifiés interviennent 24h/24 et 7j/7 dans tous les quartiers de {city} et dans les communes environnantes : Nogent-sur-Oise, Montataire, Senlis, Chantilly, Saint-Maximin et toute l'agglomération creilloise. Intervention rapide en moins de 30 minutes, devis gratuit."
+    },
+    {
+      "question": "Quel est le délai d'intervention à {city} ?",
+      "answer": "Nos techniciens interviennent en <strong>30 minutes maximum</strong> sur {city} et dans l'{department}. Nous disposons de techniciens répartis dans l'agglomération creilloise et le sud de l'Oise. Que vous soyez rue de la République, près de la gare SNCF, sur l'île Saint-Maurice ou à Nogent-sur-Oise, nous sommes proches de vous."
+    },
+    {
+      "question": "Comment obtenir un devis pour un dépannage de rideau métallique dans le 60 ?",
+      "answer": "Appelez le <strong>{phone}</strong> pour obtenir un devis gratuit et sans engagement. Notre technicien évalue la panne et vous communique le devis avant toute intervention. Aucune surprise."
+    },
+    {
+      "question": "Intervenez-vous le week-end et les jours fériés à {city} ?",
+      "answer": "Oui, DRM {city} est disponible <strong>24h/24, 7j/7</strong>, y compris les week-ends et jours fériés. Nous comprenons qu'une panne de rideau métallique n'attend pas, surtout pour les commerçants. Appelez le <strong>{phone}</strong> à tout moment."
+    },
+    {
+      "question": "Quels types de rideaux métalliques réparez-vous à {city} ?",
+      "answer": "Nous intervenons sur <strong>tous les types de rideaux métalliques</strong> : lames pleines, micro-perforés, grilles articulées, rideaux coupe-feu, portes de garage enroulables. Toutes marques : Somfy, Nice, Came, Hörmann, Bubendorff, Simu. Du petit commerce au rideau industriel grande dimension."
+    }
+  ],
+  "alternatingFeatures": [
+    {
+      "title": "Spécialiste <strong>Rideau Métallique {city}</strong> depuis 12 ans",
+      "content": "<p>En tant que <strong>professionnel du rideau métallique à {city}</strong>, nous intervenons dans tous les quartiers de la ville et dans l'ensemble de l'<strong>{department}</strong>. Notre expertise couvre le <strong>dépannage rideau métallique</strong>, la <strong>réparation</strong>, l'<strong>installation</strong> et la <strong>maintenance préventive</strong>.</p><p>Que vous soyez commerçant rue de la République, propriétaire d'une boutique près de la gare SNCF ou gérant d'un local professionnel dans la zone commerciale Creil-Saint-Maximin, nous garantissons une <strong>intervention rapide en moins de 30 minutes</strong>. Notre équipe de <strong>techniciens certifiés</strong> dispose d'un stock permanent de pièces détachées pour assurer une <strong>réparation immédiate</strong> de votre <strong>rideau métallique bloqué</strong> ou défaillant.</p><p>Avec plus de <strong>3500 interventions réalisées</strong> sur {city} et ses environs, {name} s'impose comme le <strong>leader du dépannage rideau métallique</strong> dans l'{department}. Disponibles <strong>24h/24 et 7j/7</strong>, nous intervenons même les jours fériés pour sécuriser votre commerce.</p>",
+      "image": "/images/gallery/rideau-metallique-creil.webp",
+      "imageAlt": "Technicien dépannage rideau métallique Creil",
+      "imagePosition": "right"
+    },
+    {
+      "title": "<strong>Installation Rideau Métallique {city}</strong> : Sur-Mesure et Motorisation",
+      "content": "<p>Vous recherchez un <strong>installateur de rideau métallique à {city}</strong> ? {name} réalise la <strong>pose complète de rideaux métalliques</strong> pour commerces, locaux professionnels et industriels dans tout l'<strong>{department}</strong>.</p><p>Nous proposons tous les types de <strong>rideaux métalliques</strong> : à <strong>lames pleines</strong> pour une sécurité maximale, <strong>micro-perforés</strong> pour conserver la visibilité de votre vitrine, <strong>grilles articulées</strong> pour les galeries commerciales, et <strong>rideaux coupe-feu</strong> conformes aux normes ERP.</p><p>Notre processus d'<strong>installation de rideau métallique à {city}</strong> inclut une <strong>visite technique gratuite</strong>, la fabrication sur-mesure dans nos ateliers, et la <strong>pose professionnelle par des techniciens qualifiés</strong>. Nous assurons également la <strong>motorisation de rideaux métalliques</strong> avec des moteurs de grandes marques (Somfy, Nice, Came) pour un confort d'utilisation optimal.</p><p>Devis gratuit sous 24h. Appelez le <strong>{phone}</strong> pour votre projet d'<strong>installation rideau métallique {city}</strong>.</p>",
+      "image": "/images/gallery/installation-rideau-metallique-creil.webp",
+      "imageAlt": "Installation rideau métallique sur mesure Creil",
+      "imagePosition": "left"
+    },
+    {
+      "title": "<strong>Réparation et Entretien Rideau Métallique</strong> dans l'{department}",
+      "content": "<p>Un <strong>rideau métallique</strong> nécessite un <strong>entretien régulier</strong> pour garantir sa longévité et son bon fonctionnement. {name} propose des <strong>contrats d'entretien préventif</strong> adaptés à tous les professionnels de {city} et de l'<strong>{department}</strong>.</p><p>Nos interventions de <strong>maintenance rideau métallique</strong> incluent : le graissage des mécanismes, la vérification des lames et des attaches, le contrôle du moteur et des systèmes de sécurité, ainsi que le réglage des fins de course. Un <strong>entretien annuel</strong> permet de prévenir <strong>90% des pannes</strong> et d'éviter les blocages intempestifs.</p><p>En cas de panne, notre service de <strong>réparation rideau métallique à {city}</strong> intervient rapidement : remplacement de <strong>lames abîmées</strong>, réparation de <strong>moteur défaillant</strong>, déblocage d'<strong>axe d'enroulement cassé</strong>, ou remise en place du tablier sorti des rails. Toutes nos <strong>réparations</strong> sont garanties pièces et main d'œuvre.</p><p>Commerçants de {city}, protégez votre investissement avec un <strong>contrat d'entretien rideau métallique</strong>. Contactez-nous au <strong>{phone}</strong>.</p>",
+      "image": "/images/gallery/entretien-rideau-metallique-rideau-de-fer.webp",
+      "imageAlt": "Entretien et réparation rideau métallique Creil Oise",
+      "imagePosition": "right"
+    }
+  ]
+}

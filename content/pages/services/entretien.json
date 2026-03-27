@@ -1,0 +1,350 @@
+{
+  "hero": {
+    "badge": "🛠️ Maintenance préventive à {zone}",
+    "title": "Entretien Rideau Métallique {zone} ({zonePostal})",
+    "subtitle": "Contrats d'entretien et maintenance préventive pour rideaux métalliques à {zone}. Évitez les pannes et prolongez la durée de vie de vos équipements dans le {department}."
+  },
+  "intro": {
+    "title": "Entretien professionnel de rideaux métalliques à {zone}",
+    "paragraphs": [
+      "Un rideau métallique bien entretenu, c'est un rideau qui dure plus longtemps et qui tombe moins souvent en panne. {name} propose des contrats d'entretien adaptés à vos besoins à {zone} ({zonePostal}).",
+      "Nos techniciens interviennent régulièrement pour vérifier, lubrifier et ajuster votre rideau. Nous anticipons les problèmes avant qu'ils ne deviennent des urgences coûteuses. Appelez le {phone} pour un devis."
+    ]
+  },
+  "situations": {
+    "title": "Nos prestations d'entretien à {zone}",
+    "items": [
+      {
+        "icon": "🔍",
+        "title": "Inspection complète",
+        "description": "Vérification de tous les composants à {zone} : lames, axe, moteur, système de verrouillage."
+      },
+      {
+        "icon": "🛢️",
+        "title": "Lubrification",
+        "description": "Graissage des points de friction pour un fonctionnement fluide et silencieux de votre rideau."
+      },
+      {
+        "icon": "⚙️",
+        "title": "Réglages et ajustements",
+        "description": "Ajustement des fins de course, tension des ressorts, équilibrage pour fonctionnement optimal."
+      },
+      {
+        "icon": "📋",
+        "title": "Rapport d'intervention",
+        "description": "Compte-rendu détaillé avec préconisations et planification des interventions futures."
+      }
+    ]
+  },
+  "advantages": {
+    "title": "Avantages de l'entretien régulier à {zone}",
+    "items": [
+      "Réduction des pannes de 80% grâce à la maintenance préventive",
+      "Durée de vie prolongée de vos équipements (×2 en moyenne)",
+      "Intervention prioritaire en cas d'urgence pour les contrats",
+      "Réduction sur les pièces détachées (-20%)",
+      "Conformité aux normes de sécurité et obligation légale",
+      "Tranquillité d'esprit au quotidien à {zone}"
+    ]
+  },
+  "signesUsure": {
+    "title": "8 signes que votre rideau à {zone} a besoin d'entretien",
+    "subtitle": "Ne laissez pas une petite usure devenir une grosse panne. Surveillez ces signes d'alerte.",
+    "items": [
+      {
+        "icon": "🔊",
+        "signe": "Bruit anormal",
+        "description": "Grincements, claquements ou vibrations inhabituelles lors de l'ouverture/fermeture.",
+        "urgence": "Moyen"
+      },
+      {
+        "icon": "🐌",
+        "signe": "Lenteur de fonctionnement",
+        "description": "Le rideau monte ou descend plus lentement qu'avant, s'arrête par intermittence.",
+        "urgence": "Moyen"
+      },
+      {
+        "icon": "↕️",
+        "signe": "Rideau qui déraille",
+        "description": "Le rideau sort de ses guides latéraux, ne s'enroule plus correctement.",
+        "urgence": "Élevé"
+      },
+      {
+        "icon": "🔒",
+        "signe": "Verrouillage difficile",
+        "description": "La serrure force, la clé tourne mal, le verrouillage automatique ne s'enclenche plus.",
+        "urgence": "Élevé"
+      },
+      {
+        "icon": "🔋",
+        "signe": "Moteur qui chauffe",
+        "description": "Le moteur surchauffe, dégage une odeur, se coupe en cours de fonctionnement.",
+        "urgence": "Urgent"
+      },
+      {
+        "icon": "📏",
+        "signe": "Jeu dans les lames",
+        "description": "Les lames bougent latéralement, des espaces apparaissent entre elles.",
+        "urgence": "Moyen"
+      },
+      {
+        "icon": "🌧️",
+        "signe": "Traces de rouille",
+        "description": "Points de corrosion visibles sur les lames, les guides ou le coffre.",
+        "urgence": "Moyen"
+      },
+      {
+        "icon": "⚠️",
+        "signe": "Rideau qui ne finit pas sa course",
+        "description": "Le rideau ne descend/monte pas complètement, s'arrête avant la fin de course.",
+        "urgence": "Élevé"
+      }
+    ]
+  },
+  "contrats": {
+    "title": "Nos formules d'entretien à {zone}",
+    "subtitle": "Choisissez la formule adaptée à vos besoins. Tous les contrats incluent l'intervention prioritaire en cas de panne.",
+    "formules": [
+      {
+        "nom": "Essentiel",
+        "frequence": "1 visite/an",
+        "inclus": [
+          "1 visite annuelle de contrôle",
+          "Inspection complète 20 points",
+          "Lubrification de tous les points de friction",
+          "Réglage fins de course",
+          "Rapport d'intervention détaillé",
+          "Intervention prioritaire en cas de panne"
+        ],
+        "popular": false
+      },
+      {
+        "nom": "Professionnel",
+        "frequence": "2 visites/an",
+        "inclus": [
+          "2 visites par an (semestriel)",
+          "Inspection complète 40 points",
+          "Lubrification et graissage complet",
+          "Réglage et ajustement de tous les composants",
+          "Remplacement joints et petites pièces inclus",
+          "-20% sur les pièces détachées",
+          "Intervention prioritaire sous 2h",
+          "Rapport détaillé + préconisations"
+        ],
+        "popular": true
+      },
+      {
+        "nom": "Premium",
+        "frequence": "4 visites/an",
+        "inclus": [
+          "4 visites par an (trimestriel)",
+          "Inspection complète 60 points",
+          "Lubrification, graissage et nettoyage complet",
+          "Tous les réglages et ajustements",
+          "Pièces d'usure incluses (joints, galets, etc.)",
+          "-30% sur toutes les pièces détachées",
+          "Intervention d'urgence garantie sous 1h",
+          "Main d'œuvre offerte sur les réparations",
+          "Hotline dédiée 24h/24"
+        ],
+        "popular": false
+      }
+    ]
+  },
+  "economies": {
+    "title": "Entretien vs pas d'entretien : la comparaison à {zone}",
+    "sansEntretien": {
+      "dureeVie": "8-10 ans",
+      "pannesAn": "2-3 pannes/an",
+      "remplacement": "Remplacement prématuré"
+    },
+    "avecEntretien": {
+      "dureeVie": "15-20 ans",
+      "pannesAn": "0-1 panne/an",
+      "remplacement": "Durée de vie doublée"
+    }
+  },
+  "reviews": [
+    {
+      "name": "Claire D.",
+      "rating": 5,
+      "text": "Contrat d'entretien Pro pour mon commerce à {zone}. Depuis 2 ans, aucune panne ! Les techniciens de {name} sont sérieux et ponctuels.",
+      "date": "Janvier 2025",
+      "zone": "{zone}",
+      "service": "Entretien"
+    },
+    {
+      "name": "Michel P.",
+      "rating": 5,
+      "text": "Entretien annuel de nos 3 rideaux métalliques à {zone}. Le technicien a détecté un problème de ressort avant qu'il ne casse. Belle économie grâce à la prévention !",
+      "date": "Décembre 2024",
+      "zone": "{zone}",
+      "service": "Entretien"
+    },
+    {
+      "name": "Aïcha M.",
+      "rating": 5,
+      "text": "Contrat Premium pour ma pharmacie à {zone}. 4 visites par an, rideau toujours en parfait état. L'intervention prioritaire m'a sauvée une fois. Je recommande !",
+      "date": "Février 2025",
+      "zone": "{zone}",
+      "service": "Entretien"
+    },
+    {
+      "name": "Bernard L.",
+      "rating": 4,
+      "text": "Bon service d'entretien à {zone}. Le technicien prend le temps de tout vérifier et m'explique les points d'attention. Rapport clair et détaillé.",
+      "date": "Novembre 2024",
+      "zone": "{zone}",
+      "service": "Entretien"
+    },
+    {
+      "name": "Nadia F.",
+      "rating": 5,
+      "text": "Depuis que j'ai pris un contrat d'entretien avec {name} à {zone}, je n'ai plus aucun problème avec mon rideau. C'est un investissement qui vaut le coup.",
+      "date": "Janvier 2025",
+      "zone": "{zone}",
+      "service": "Entretien"
+    },
+    {
+      "name": "Dominique C.",
+      "rating": 5,
+      "text": "Entretien semestriel de mon rideau motorisé à {zone}. Le moteur fonctionne comme au premier jour grâce à la maintenance régulière. Merci {name} !",
+      "date": "Octobre 2024",
+      "zone": "{zone}",
+      "service": "Entretien"
+    },
+    {
+      "name": "Julien R.",
+      "rating": 5,
+      "text": "3 contrats d'entretien pour nos locaux à {zone}. Le technicien connaît nos installations par cœur. Service personnalisé et efficace.",
+      "date": "Décembre 2024",
+      "zone": "{zone}",
+      "service": "Entretien"
+    },
+    {
+      "name": "Monique T.",
+      "rating": 4,
+      "text": "Premier entretien réalisé à {zone}. Le technicien a été thorough et professionnel. Quelques réglages effectués et le rideau fonctionne mieux qu'avant !",
+      "date": "Septembre 2024",
+      "zone": "{zone}",
+      "service": "Entretien"
+    },
+    {
+      "name": "Samir B.",
+      "rating": 5,
+      "text": "Entretien complet de 5 rideaux pour notre copropriété de garages à {zone}. Chaque rideau a été vérifié point par point. Travail sérieux et consciencieux.",
+      "date": "Février 2025",
+      "zone": "{zone}",
+      "service": "Entretien"
+    },
+    {
+      "name": "Agnès V.",
+      "rating": 5,
+      "text": "Contrat Essentiel pour ma boutique à {zone}. Visite annuelle bien menée, rapport détaillé. Le rideau fonctionne parfaitement depuis 3 ans. Merci {name} !",
+      "date": "Novembre 2024",
+      "zone": "{zone}",
+      "service": "Entretien"
+    },
+    {
+      "name": "Jean-Marc H.",
+      "rating": 5,
+      "text": "Le contrat Premium est idéal pour mon entrepôt à {zone}. 4 passages par an, pièces d'usure incluses, intervention prioritaire. Aucune mauvaise surprise.",
+      "date": "Janvier 2025",
+      "zone": "{zone}",
+      "service": "Entretien"
+    },
+    {
+      "name": "Carole G.",
+      "rating": 4,
+      "text": "Entretien préventif bien réalisé à {zone}. Le technicien a changé un galet usé qui allait poser problème. Maintenance proactive et efficace.",
+      "date": "Octobre 2024",
+      "zone": "{zone}",
+      "service": "Entretien"
+    },
+    {
+      "name": "Fabrice E.",
+      "rating": 5,
+      "text": "Nous avons souscrit au contrat Pro pour nos 8 locaux commerciaux à {zone}. Organisation impeccable, les visites sont planifiées sans qu'on ait à y penser.",
+      "date": "Décembre 2024",
+      "zone": "{zone}",
+      "service": "Entretien"
+    },
+    {
+      "name": "Karine J.",
+      "rating": 5,
+      "text": "Mon ancien rideau à {zone} avait 12 ans et aucune panne grâce à l'entretien régulier de {name}. La preuve que la maintenance préventive marche !",
+      "date": "Février 2025",
+      "zone": "{zone}",
+      "service": "Entretien"
+    },
+    {
+      "name": "Robert S.",
+      "rating": 5,
+      "text": "Très bon contrat d'entretien à {zone}. La tranquillité d'esprit au quotidien, c'est un investissement intelligent.",
+      "date": "Novembre 2024",
+      "zone": "{zone}",
+      "service": "Entretien"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Qui appeler pour l'entretien d'un rideau métallique à {zone} ?",
+      "answer": "Pour l'entretien de votre rideau métallique à {zone} ({zonePostal}), contactez <strong>{name}</strong> au <strong>{phone}</strong>. Nous proposons des contrats d'entretien avec intervention prioritaire en cas de panne. Devis gratuit."
+    },
+    {
+      "question": "À quelle fréquence faut-il entretenir un rideau métallique à {zone} ?",
+      "answer": "Nous recommandons <strong>au minimum 1 entretien par an</strong>. Pour les rideaux très sollicités (commerces ouvrant tous les jours à {zone}), 2 à 4 entretiens par an sont conseillés."
+    },
+    {
+      "question": "Comment souscrire un contrat d'entretien à {zone} ?",
+      "answer": "Appelez le <strong>{phone}</strong> pour obtenir un devis personnalisé. Nous proposons 3 formules : Essentiel (1 visite/an), Professionnel (2 visites/an) et Premium (4 visites/an)."
+    },
+    {
+      "question": "L'entretien est-il obligatoire pour un rideau métallique à {zone} ?",
+      "answer": "L'entretien est <strong>fortement recommandé</strong> et peut être obligatoire dans certains cas (ERP, assurances). Un rideau bien entretenu dure 2 fois plus longtemps et tombe beaucoup moins souvent en panne."
+    },
+    {
+      "question": "Que comprend une visite d'entretien à {zone} ?",
+      "answer": "Une visite comprend : <strong>inspection complète</strong> de tous les composants, lubrification, réglages, vérification du moteur et du système de verrouillage, rapport détaillé avec préconisations."
+    },
+    {
+      "question": "L'intervention prioritaire est-elle vraiment garantie à {zone} ?",
+      "answer": "Oui, tous nos contrats incluent <strong>l'intervention prioritaire</strong> en cas de panne à {zone}. Selon la formule : sous 4h (Essentiel), 2h (Pro) ou 1h (Premium)."
+    },
+    {
+      "question": "Puis-je souscrire un contrat pour plusieurs rideaux à {zone} ?",
+      "answer": "Oui, nous proposons des <strong>formules adaptées</strong> pour les contrats multi-rideaux à {zone}. Idéal pour les copropriétés, centres commerciaux et entreprises avec plusieurs locaux."
+    },
+    {
+      "question": "L'entretien prolonge-t-il vraiment la durée de vie du rideau ?",
+      "answer": "Oui, un rideau entretenu régulièrement dure <strong>15 à 20 ans</strong> contre 8 à 10 ans sans entretien. L'entretien réduit les pannes de 80% et évite les remplacements prématurés coûteux."
+    }
+  ],
+  "cta": {
+    "title": "Contrat d'entretien à {zone} ?",
+    "subtitle": "Protégez votre investissement. Demandez un devis pour un contrat d'entretien adapté à vos besoins à {zone} ({zonePostal})."
+  },
+  "alternatingFeatures": [
+    {
+      "title": "<strong>Entretien Rideau Métallique {zone}</strong> : Prévenez les Pannes",
+      "content": "<p>L'<strong>entretien régulier de rideau métallique à {zone}</strong> ({zonePostal}) est essentiel pour garantir la longévité et le bon fonctionnement de votre fermeture. Un <strong>rideau métallique bien entretenu</strong> dure 15 à 20 ans, contre seulement 8 à 10 ans sans maintenance. {name} propose des <strong>contrats d'entretien préventif</strong> adaptés à tous les professionnels du <strong>{department}</strong>.</p><p>Notre <strong>maintenance préventive</strong> comprend : l'<strong>inspection complète</strong> de tous les composants (lames, glissières, axe d'enroulement), la <strong>lubrification</strong> des mécanismes, le <strong>réglage des fins de course</strong>, la vérification du <strong>moteur</strong> et du système de verrouillage, ainsi qu'un rapport détaillé avec préconisations.</p><p>Un <strong>entretien annuel</strong> permet de prévenir <strong>80% des pannes</strong> et d'éviter les blocages intempestifs qui vous obligent à fermer votre commerce. Formules adaptées : 1, 2 ou 4 visites par an selon votre usage.</p>",
+      "image": "/images/gallery/rideau-metallique-depannage-rideau-metallique.webp",
+      "imageAlt": "Entretien préventif rideau métallique {zone}",
+      "imagePosition": "right"
+    },
+    {
+      "title": "<strong>Maintenance Rideau Métallique {zone}</strong> : Intervention Prioritaire",
+      "content": "<p>Avec un <strong>contrat d'entretien rideau métallique</strong> chez {name}, vous bénéficiez d'une <strong>intervention prioritaire</strong> en cas de panne à {zone} et dans tout le <strong>{department}</strong>. Selon la formule choisie, nos techniciens interviennent sous 4h, 2h ou 1h maximum.</p><p>Notre <strong>service de maintenance</strong> détecte les signes d'usure avant qu'ils ne deviennent problématiques : <strong>lames tordues</strong>, <strong>glissières usées</strong>, <strong>moteur surchauffe</strong>, <strong>attaches tablier fragilisées</strong>, <strong>système de sécurité défaillant</strong>. Nous remplaçons les pièces d'usure avant la panne totale, vous évitant ainsi des réparations d'urgence coûteuses.</p><p>Les <strong>contrats d'entretien</strong> incluent aussi des tarifs préférentiels sur les pièces de rechange et la main d'œuvre en cas de réparation. Un investissement rentabilisé dès la première intervention évitée. Commerçants de {zone}, protégez votre commerce avec un <strong>contrat de maintenance rideau métallique</strong>.</p>",
+      "image": "/images/gallery/moteur-externe-rideau-metallique-drm.webp",
+      "imageAlt": "Maintenance professionnelle rideau métallique {zone}",
+      "imagePosition": "left"
+    },
+    {
+      "title": "<strong>Signes d'Usure Rideau Métallique</strong> : Quand Faire Appel à un Pro ?",
+      "content": "<p>Certains <strong>signes d'usure</strong> sur votre <strong>rideau métallique à {zone}</strong> doivent vous alerter : <strong>bruits anormaux</strong> (grincements, claquements), <strong>difficulté à monter ou descendre</strong>, <strong>lenteur inhabituelle</strong> du moteur, <strong>lames qui se coincent</strong> dans les glissières, ou rideau qui se désaxe régulièrement.</p><p>D'autres signaux nécessitent une <strong>intervention rapide</strong> : traces de <strong>rouille sur les lames</strong>, <strong>glissières déformées</strong>, <strong>tablier qui sort des rails</strong>, <strong>moteur qui surchauffe</strong> ou émet des odeurs de brûlé, <strong>télécommande qui ne répond plus</strong>, ou <strong>système de sécurité défaillant</strong>.</p><p>Ne laissez pas ces signes s'aggraver : une <strong>petite réparation</strong> réalisée à temps coûte 5 à 10 fois moins cher qu'un remplacement complet. {name} intervient rapidement à {zone} ({zonePostal}) pour diagnostiquer et réparer votre <strong>rideau métallique</strong> avant la panne totale. Appelez le <strong>{phone}</strong> dès les premiers symptômes.</p>",
+      "image": "/images/gallery/rideau-metallique-lame-pleine-france.webp",
+      "imageAlt": "Réparation usure rideau métallique {zone} {department}",
+      "imagePosition": "right"
+    }
+  ]
+}

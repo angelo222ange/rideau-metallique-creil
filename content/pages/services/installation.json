@@ -1,0 +1,293 @@
+{
+  "hero": {
+    "badge": "🏗️ Installation professionnelle à {zone}",
+    "title": "Installation Rideau Métallique {zone} ({zonePostal})",
+    "subtitle": "Pose de rideaux métalliques à {zone} par des professionnels qualifiés. Rideaux à lames, grilles, portes de garage pour commerces et locaux professionnels dans le {department}."
+  },
+  "intro": {
+    "title": "Votre installateur de rideaux métalliques à {zone}",
+    "paragraphs": [
+      "Vous cherchez un installateur de rideaux métalliques à {zone} ({zonePostal}) ? {name} réalise la pose complète de tous types de rideaux métalliques pour sécuriser votre commerce ou local professionnel.",
+      "Nous vous accompagnons du conseil au choix du rideau jusqu'à la pose et la mise en service. Nos techniciens interviennent à {zone} avec tout le matériel nécessaire. Appelez le {phone} pour un devis gratuit."
+    ]
+  },
+  "situations": {
+    "title": "Types de rideaux installés à {zone}",
+    "items": [
+      {
+        "icon": "🏪",
+        "title": "Rideau à lames pleines",
+        "description": "Protection maximale pour commerces à {zone}. Sécurité anti-effraction et isolation thermique optimale."
+      },
+      {
+        "icon": "👁️",
+        "title": "Rideau micro-perforé",
+        "description": "Visibilité de la vitrine même rideau fermé. Idéal pour boutiques et showrooms à {zone}."
+      },
+      {
+        "icon": "🏭",
+        "title": "Grille métallique",
+        "description": "Protection légère avec aération. Parfaite pour entrepôts et locaux techniques dans le {department}."
+      },
+      {
+        "icon": "🚗",
+        "title": "Porte de garage",
+        "description": "Portes sectionnelles, basculantes ou enroulables pour garages et parkings à {zone}."
+      }
+    ]
+  },
+  "advantages": {
+    "title": "Notre service d'installation à {zone}",
+    "items": [
+      "Étude gratuite sur site à {zone} ({zonePostal})",
+      "Fabrication sur mesure selon vos dimensions exactes",
+      "Pose par techniciens certifiés, 12+ ans d'expérience",
+      "Mise en service complète et formation à l'utilisation",
+      "Garantie fabricant de 2 à 10 ans selon le modèle",
+      "SAV et maintenance disponibles 24h/24"
+    ]
+  },
+  "typesRideaux": [
+    {
+      "name": "Rideau à lames pleines",
+      "description": "Sécurité maximale. Acier galvanisé ou aluminium, anti-effraction, isolation thermique et phonique.",
+      "icon": "🔒",
+      "ideal": "Commerces, bijouteries, pharmacies"
+    },
+    {
+      "name": "Rideau micro-perforé",
+      "description": "Visibilité de la vitrine avec rideau fermé. Perforations de 1 à 3mm. Sécurité + esthétisme.",
+      "icon": "👁️",
+      "ideal": "Boutiques, showrooms, agences"
+    },
+    {
+      "name": "Grille métallique articulée",
+      "description": "Tubes ondulés ou mailles. Protection avec ventilation et visibilité totale de la vitrine.",
+      "icon": "🔲",
+      "ideal": "Magasins, galeries commerciales"
+    },
+    {
+      "name": "Rideau coupe-feu",
+      "description": "Conforme aux normes ERP et réglementation incendie. Résistance au feu de 1h à 4h.",
+      "icon": "🔥",
+      "ideal": "ERP, parkings, industries"
+    },
+    {
+      "name": "Porte de garage enroulable",
+      "description": "Solution compacte pour garages. Aluminium laqué, motorisation intégrée, large choix de coloris.",
+      "icon": "🚗",
+      "ideal": "Garages, parkings résidentiels"
+    },
+    {
+      "name": "Rideau industriel",
+      "description": "Grande dimension pour entrepôts et quais de chargement. Motorisation haute performance.",
+      "icon": "🏭",
+      "ideal": "Entrepôts, usines, quais"
+    }
+  ],
+  "processus": [
+    {
+      "step": "1",
+      "title": "Visite technique gratuite",
+      "description": "Un technicien se déplace à {zone} pour prendre les mesures et évaluer vos besoins. Conseil personnalisé sur le type de rideau adapté."
+    },
+    {
+      "step": "2",
+      "title": "Devis détaillé",
+      "description": "Vous recevez un devis complet avec les dimensions, le type de rideau et les options de motorisation."
+    },
+    {
+      "step": "3",
+      "title": "Fabrication sur-mesure",
+      "description": "Votre rideau est fabriqué sur-mesure dans nos ateliers. Délai moyen : 5 à 10 jours ouvrés selon le modèle."
+    },
+    {
+      "step": "4",
+      "title": "Pose et mise en service",
+      "description": "Installation professionnelle à {zone}, essais de fonctionnement, réglages et formation à l'utilisation. Remise des documents de garantie."
+    }
+  ],
+  "reviews": [
+    {
+      "name": "Laurent D.",
+      "rating": 5,
+      "text": "Installation de rideau à lames pleines pour ma boutique à {zone}. Travail soigné, le rideau fonctionne parfaitement. L'équipe de {name} est très professionnelle.",
+      "date": "Janvier 2025",
+      "zone": "{zone}",
+      "service": "Installation"
+    },
+    {
+      "name": "Marie-Claire V.",
+      "rating": 5,
+      "text": "Pose d'un rideau micro-perforé sur ma vitrine à {zone}. On voit la boutique même quand c'est fermé, mes clients adorent ! Installation rapide et propre.",
+      "date": "Décembre 2024",
+      "zone": "{zone}",
+      "service": "Installation"
+    },
+    {
+      "name": "Youssef A.",
+      "rating": 5,
+      "text": "Remplacement complet d'un vieux rideau par un neuf motorisé pour mon restaurant à {zone}. La différence est spectaculaire. Merci à l'équipe !",
+      "date": "Février 2025",
+      "zone": "{zone}",
+      "service": "Installation"
+    },
+    {
+      "name": "Catherine B.",
+      "rating": 4,
+      "text": "Très bon travail d'installation à {zone}. Le technicien a pris le temps de tout m'expliquer. Le rideau est solide et silencieux. Petit délai de fabrication mais ça valait l'attente.",
+      "date": "Novembre 2024",
+      "zone": "{zone}",
+      "service": "Installation"
+    },
+    {
+      "name": "Patrick N.",
+      "rating": 5,
+      "text": "Installation de 3 grilles métalliques pour ma galerie commerciale à {zone}. Travail rapide et soigné. Je recommande {name} sans hésiter.",
+      "date": "Janvier 2025",
+      "zone": "{zone}",
+      "service": "Installation"
+    },
+    {
+      "name": "Sandrine E.",
+      "rating": 5,
+      "text": "Pose de porte de garage enroulable à {zone}. Gain de place énorme par rapport à l'ancienne basculante. Le technicien était ponctuel et très compétent.",
+      "date": "Octobre 2024",
+      "zone": "{zone}",
+      "service": "Installation"
+    },
+    {
+      "name": "Éric J.",
+      "rating": 5,
+      "text": "Nous avons fait installer un rideau coupe-feu pour notre local ERP à {zone}. Conformité totale aux normes. Installation impeccable par {name}.",
+      "date": "Décembre 2024",
+      "zone": "{zone}",
+      "service": "Installation"
+    },
+    {
+      "name": "Fatima Z.",
+      "rating": 5,
+      "text": "Installation de rideau métallique pour ma pharmacie à {zone}. Du conseil initial à la pose finale, tout a été parfait. Service client exceptionnel.",
+      "date": "Février 2025",
+      "zone": "{zone}",
+      "service": "Installation"
+    },
+    {
+      "name": "Gilles P.",
+      "rating": 4,
+      "text": "Bonne installation de rideau pour mon entrepôt à {zone}. Grand format, motorisé, le rideau est costaud. Petit bémol sur le délai de livraison mais le résultat est top.",
+      "date": "Septembre 2024",
+      "zone": "{zone}",
+      "service": "Installation"
+    },
+    {
+      "name": "Valérie M.",
+      "rating": 5,
+      "text": "Changement de rideau sur mon commerce à {zone}. L'ancien avait 20 ans ! Le nouveau est magnifique, motorisé et silencieux. Très satisfaite du travail de {name}.",
+      "date": "Novembre 2024",
+      "zone": "{zone}",
+      "service": "Installation"
+    },
+    {
+      "name": "Olivier R.",
+      "rating": 5,
+      "text": "Installation rideau aluminium laqué pour mon agence à {zone}. Rendu esthétique impeccable, fonctionnement silencieux. Le devis était précis et respecté.",
+      "date": "Janvier 2025",
+      "zone": "{zone}",
+      "service": "Installation"
+    },
+    {
+      "name": "Mélanie F.",
+      "rating": 5,
+      "text": "Pose de 2 rideaux micro-perforés pour mes boutiques à {zone}. Travail propre et rapide, les rideaux sont parfaits. Merci pour votre professionnalisme.",
+      "date": "Décembre 2024",
+      "zone": "{zone}",
+      "service": "Installation"
+    },
+    {
+      "name": "Antoine C.",
+      "rating": 4,
+      "text": "Installation de rideau motorisé pour mon garage à {zone}. Le technicien est arrivé à l'heure, tout a été fait en une demi-journée. Résultat conforme à mes attentes.",
+      "date": "Octobre 2024",
+      "zone": "{zone}",
+      "service": "Installation"
+    },
+    {
+      "name": "Stéphane W.",
+      "rating": 5,
+      "text": "Super prestation pour l'installation d'un rideau industriel dans notre entrepôt à {zone}. Équipe compétente et matériel de qualité. {name} au top !",
+      "date": "Février 2025",
+      "zone": "{zone}",
+      "service": "Installation"
+    },
+    {
+      "name": "Audrey L.",
+      "rating": 5,
+      "text": "Installation rideau métallique + motorisation pour ma boulangerie à {zone}. Un confort au quotidien incroyable. Fini de forcer chaque matin !",
+      "date": "Novembre 2024",
+      "zone": "{zone}",
+      "service": "Installation"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Qui appeler pour une installation de rideau métallique à {zone} ?",
+      "answer": "Pour toute installation de rideau métallique à {zone} ({zonePostal}), contactez <strong>{name}</strong> au <strong>{phone}</strong>. Visite technique gratuite, devis détaillé et pose par techniciens certifiés dans tout le {department}."
+    },
+    {
+      "question": "Comment obtenir un devis pour l'installation d'un rideau métallique à {zone} ?",
+      "answer": "Appelez le <strong>{phone}</strong> pour obtenir un devis gratuit et sans engagement. Notre technicien se déplace à {zone} pour évaluer vos besoins et vous remettre un devis détaillé."
+    },
+    {
+      "question": "Combien de temps dure l'installation d'un rideau métallique à {zone} ?",
+      "answer": "La pose d'un rideau métallique standard à {zone} prend <strong>une demi-journée à une journée</strong>. Comptez 5 à 10 jours ouvrés pour la fabrication sur-mesure avant la pose."
+    },
+    {
+      "question": "Proposez-vous la visite technique gratuite à {zone} ?",
+      "answer": "Oui, un technicien se déplace <strong>gratuitement</strong> à {zone} ({zonePostal}) pour prendre les mesures, évaluer vos besoins et vous conseiller sur le type de rideau adapté à votre activité."
+    },
+    {
+      "question": "Quelle garantie sur l'installation à {zone} ?",
+      "answer": "Nos installations à {zone} bénéficient d'une <strong>garantie de 2 à 10 ans</strong> selon le modèle. La pose est garantie, et notre SAV est disponible 24h/24 pour toute intervention ultérieure."
+    },
+    {
+      "question": "Installez-vous des rideaux motorisés à {zone} ?",
+      "answer": "Oui, nous installons des rideaux manuels et <strong>motorisés</strong> à {zone}. La motorisation peut être intégrée dès l'installation ou ajoutée ultérieurement. Moteurs Somfy, Nice, Came disponibles."
+    },
+    {
+      "question": "Quel type de rideau choisir pour un commerce à {zone} ?",
+      "answer": "Pour un commerce à {zone}, nous recommandons un <strong>rideau à lames pleines</strong> (sécurité maximale) ou <strong>micro-perforé</strong> (visibilité vitrine). Nos experts vous guident selon votre activité et votre budget."
+    },
+    {
+      "question": "Intervenez-vous aussi pour le remplacement d'un ancien rideau à {zone} ?",
+      "answer": "Oui, nous assurons le <strong>remplacement complet</strong> d'anciens rideaux à {zone} : dépose de l'ancien, prise de mesures, fabrication du nouveau et installation. Débarras de l'ancien rideau inclus."
+    }
+  ],
+  "cta": {
+    "title": "Projet d'installation à {zone} ?",
+    "subtitle": "Demandez un devis gratuit pour votre rideau métallique. Visite technique offerte à {zone} ({zonePostal})."
+  },
+  "alternatingFeatures": [
+    {
+      "title": "<strong>Installation Rideau Métallique {zone}</strong> : Tous Types de Fermetures",
+      "content": "<p>Spécialiste de l'<strong>installation de rideau métallique à {zone}</strong> ({zonePostal}), {name} réalise la <strong>pose complète</strong> de tous types de fermetures métalliques : <strong>rideaux à lames pleines</strong>, <strong>micro-perforés</strong>, <strong>grilles articulées</strong>, <strong>portes de garage</strong> et <strong>rideaux coupe-feu</strong>.</p><p>Notre équipe de <strong>poseurs qualifiés</strong> intervient sur {zone} avec plus de <strong>12 ans d'expérience</strong> dans l'<strong>installation de rideaux métalliques</strong> pour commerces, locaux professionnels et industriels. Chaque <strong>rideau métallique</strong> est fabriqué <strong>sur-mesure</strong> dans nos ateliers selon vos dimensions exactes et vos exigences de sécurité.</p><p>Du <strong>rideau manuel</strong> économique au <strong>rideau motorisé</strong> haute performance avec télécommande, nous vous conseillons la solution adaptée à votre activité et votre budget. <strong>Devis gratuit</strong> et <strong>visite technique offerte</strong> à {zone}.</p>",
+      "image": "/images/gallery/installation-rideau-metallique-creil.webp",
+      "imageAlt": "Installation rideau métallique professionnel {zone}",
+      "imagePosition": "right"
+    },
+    {
+      "title": "<strong>Rideau Métallique Sur-Mesure {zone}</strong> : Fabrication Française",
+      "content": "<p>L'<strong>installation d'un rideau métallique à {zone}</strong> commence toujours par une <strong>prise de mesures précise</strong>. Notre technicien se déplace gratuitement sur votre site à {zone} ({zonePostal}) pour évaluer vos besoins et relever les <strong>dimensions exactes</strong> de votre ouverture.</p><p>Nous fabriquons votre <strong>rideau métallique sur-mesure</strong> en <strong>acier galvanisé</strong>, <strong>aluminium</strong> ou <strong>inox</strong> selon vos préférences. Le choix du matériau, des lames (pleines, micro-perforées ou tubes), et du système de manœuvre (manuel, motorisé, ou débrayable) est déterminé en fonction de votre <strong>type de commerce</strong>, du passage, et du niveau de sécurité souhaité.</p><p>Délai de <strong>fabrication sur-mesure</strong> : 5 à 10 jours ouvrés. L'<strong>installation du rideau métallique</strong> est réalisée en une demi-journée à une journée selon la complexité. Garantie fabricant de <strong>2 à 10 ans</strong> selon le modèle choisi.</p>",
+      "image": "/images/gallery/rideau-metallique-micro-perforee-realisation-france.webp",
+      "imageAlt": "Fabrication sur-mesure rideau métallique {zone}",
+      "imagePosition": "left"
+    },
+    {
+      "title": "<strong>Motorisation Rideau Métallique {zone}</strong> : Confort et Sécurité",
+      "content": "<p>Lors de l'<strong>installation de votre rideau métallique à {zone}</strong>, optez pour la <strong>motorisation</strong> pour un confort d'utilisation optimal. Plus besoin de forcer matin et soir : une simple <strong>télécommande</strong> ou un <strong>interrupteur mural</strong> suffit pour ouvrir et fermer votre <strong>rideau motorisé</strong>.</p><p>Nous installons des <strong>moteurs de grandes marques</strong> : <strong>Somfy</strong>, <strong>Nice</strong>, <strong>Came</strong>, réputés pour leur fiabilité et leur silence. Le <strong>moteur tubulaire</strong> est intégré dans l'axe d'enroulement, invisible et protégé. Fonctionnalités disponibles : <strong>détection d'obstacle</strong>, <strong>verrouillage automatique</strong>, <strong>ouverture partielle</strong>, et compatibilité avec les systèmes domotiques.</p><p>La <strong>motorisation de rideau métallique</strong> améliore aussi la <strong>sécurité</strong> : le rideau se verrouille automatiquement en position fermée, rendant les tentatives d'effraction très difficiles. Idéal pour les commerces, pharmacies, bijouteries et tous commerces à {zone} et dans le <strong>{department}</strong>.</p>",
+      "image": "/images/gallery/motorisation-rideau-metallique-creil-60.webp",
+      "imageAlt": "Motorisation rideau métallique {zone} {department}",
+      "imagePosition": "right"
+    }
+  ]
+}

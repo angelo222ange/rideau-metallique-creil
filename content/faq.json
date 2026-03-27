@@ -1,0 +1,42 @@
+[
+  {
+    "question": "Qui appeler pour un dépannage de rideau métallique à {city} ?",
+    "answer": "Pour tout dépannage de rideau métallique à {city} et dans l'{department} ({postalCode}), contactez <strong>DRM {city}</strong> au <strong>{phone}</strong>. Nos techniciens certifiés interviennent 24h/24 et 7j/7 à {city} et dans les communes environnantes (Nogent-sur-Oise, Montataire, Villers-Saint-Paul, Senlis, Chantilly...). Que votre rideau soit bloqué, coincé ou endommagé, nous garantissons une intervention rapide en moins de 30 minutes. Devis gratuit."
+  },
+  {
+    "question": "Quel est le délai d'intervention de DRM {city} ?",
+    "answer": "Nos techniciens interviennent en <strong>moins de 30 minutes</strong> sur {city} et l'agglomération creilloise. Grâce à notre maillage local dans l'{department}, nous couvrons {city} ainsi que les communes voisines : Nogent-sur-Oise, Montataire, Villers-Saint-Paul, Senlis, Chantilly, Pont-Sainte-Maxence. Disponibilité 24h/24, 7j/7, y compris les week-ends et jours fériés."
+  },
+  {
+    "question": "Comment obtenir un devis pour un dépannage de rideau métallique dans l'{department} ?",
+    "answer": "Appelez le <strong>{phone}</strong> pour obtenir un devis gratuit et sans engagement. Notre technicien évalue la panne et vous communique le devis avant toute intervention. Aucune surprise."
+  },
+  {
+    "question": "Intervenez-vous le week-end et les jours fériés à {city} ?",
+    "answer": "Oui, DRM {city} est disponible <strong>24h/24, 7j/7</strong>, y compris les week-ends, jours fériés et pendant la période estivale. Nous comprenons qu'une panne de rideau métallique est une urgence pour votre commerce. Appelez le <strong>{phone}</strong> à tout moment."
+  },
+  {
+    "question": "Quels types de rideaux métalliques réparez-vous à {city} ?",
+    "answer": "Nous intervenons sur <strong>tous les types de rideaux métalliques</strong> : lames pleines (acier galvanisé, aluminium, inox), rideaux micro-perforés, grilles articulées cobra, rideaux coupe-feu, portes de garage enroulables, rideaux industriels grande dimension. Toutes marques : Somfy, Nice, Came, Hörmann, Bubendorff, Simu. Du petit commerce à l'entrepôt industriel."
+  },
+  {
+    "question": "Peut-on motoriser un rideau métallique manuel à {city} ?",
+    "answer": "Oui, <strong>tout rideau métallique manuel peut être motorisé</strong>. DRM {city} est installateur certifié Somfy, Nice et Came. Notre technicien évalue la faisabilité sur place (dimensions, poids, alimentation électrique) et vous propose la motorisation adaptée. Devis gratuit au <strong>{phone}</strong>."
+  },
+  {
+    "question": "Proposez-vous des contrats d'entretien pour les rideaux métalliques ?",
+    "answer": "Oui, DRM {city} propose 3 formules de contrat d'entretien : <strong>Essentiel</strong> avec 1 visite annuelle, <strong>Pro</strong> avec 2 visites et priorité dépannage, et <strong>Premium</strong> avec 4 visites et dépannage prioritaire garanti. L'entretien régulier prolonge la durée de vie de 40% et réduit les pannes de 70%. Appelez le <strong>{phone}</strong> pour un devis."
+  },
+  {
+    "question": "Comment fonctionne la fabrication sur-mesure de rideau métallique ?",
+    "answer": "La fabrication sur-mesure chez DRM {city} se déroule en 4 étapes : <strong>1.</strong> Prise de cotes gratuite sur site, <strong>2.</strong> Devis détaillé avec choix des matériaux et finitions, <strong>3.</strong> Fabrication en atelier (7-15 jours), <strong>4.</strong> Pose et mise en service. Matériaux disponibles : acier galvanisé, aluminium, acier inoxydable (recommandé pour les commerces exposés aux intempéries)."
+  },
+  {
+    "question": "Quelle est la zone d'intervention de DRM {city} ?",
+    "answer": "DRM {city} intervient à <strong>{city} et dans toutes les communes de l'{department}</strong> (60) : Nogent-sur-Oise, Montataire, Villers-Saint-Paul, Senlis, Chantilly, Lamorlaye, Gouvieux, Pont-Sainte-Maxence, et plus encore. Temps d'intervention moyen : 20 à 30 minutes."
+  },
+  {
+    "question": "Les interventions de DRM {city} sont-elles garanties ?",
+    "answer": "Oui, toutes nos interventions sont <strong>garanties pièces et main d'œuvre</strong>. La durée de garantie varie selon la prestation : dépannage/réparation (3-6 mois), motorisation (2-5 ans selon la marque), fabrication et installation (10 ans sur la structure, 5 ans sur la motorisation). Un bon d'intervention détaillé est systématiquement remis."
+  }
+]

@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ══════════════════════════════════════════════════════════
+   BASE — Creil Atelier
+   ══════════════════════════════════════════════════════════ */
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-white text-gray-900 antialiased font-body;
+  }
+
+  /* Serif display for main headings — the signature */
+  h1, h2 {
+    @apply font-display tracking-tight;
+    font-weight: 400; /* Serif looks best at regular weight */
+  }
+
+  h3, h4, h5, h6 {
+    @apply font-heading font-bold;
+  }
+
+  ::selection {
+    background: rgba(224, 123, 57, 0.15);
+  }
+}
+
+/* ══════════════════════════════════════════════════════════
+   COMPONENTS
+   ══════════════════════════════════════════════════════════ */
+@layer components {
+  .container {
+    @apply mx-auto px-5 sm:px-8 lg:px-12;
+    max-width: 1280px;
+  }
+
+  /* ── Blog prose ── */
+  .prose-custom a {
+    @apply text-primary-600 underline decoration-primary-600/30 hover:decoration-primary-600 transition-colors;
+  }
+
+  /* ── Sections ── */
+  .section {
+    @apply py-24 md:py-32 relative;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl lg:text-6xl text-gray-900 leading-[1.1] mb-5;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-gray-500 max-w-xl leading-relaxed;
+  }
+
+  /* ── Buttons ── */
+  .btn-primary {
+    @apply inline-flex items-center justify-center
+           px-7 py-3.5 text-[15px] font-bold text-white
+           transition-all duration-300
+           focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary-terracotta/50;
+    background: #E07B39;
+    border-radius: 4px;
+  }
+  .btn-primary:hover {
+    background: #c96a2e;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center
+           px-7 py-3.5 text-[15px] font-bold
+           text-gray-900 bg-transparent
+           transition-all duration-300;
+    border: 1.5px solid #d1d5db;
+    border-radius: 4px;
+  }
+  .btn-secondary:hover {
+    border-color: #1a1a1a;
+  }
+
+  .btn-phone {
+    @apply inline-flex items-center justify-center
+           px-7 py-3.5 text-[15px] font-bold text-white
+           transition-all duration-300;
+    background: #E07B39;
+    border-radius: 4px;
+    animation: pulseSoft 3s ease-in-out infinite;
+  }
+  .btn-phone:hover {
+    background: #c96a2e;
+    animation: none;
+  }
+
+  /* ── Divider ── */
+  .divider {
+    @apply w-full border-t border-gray-200;
+  }
+
+  /* ── Nav link ── */
+  .nav-link {
+    @apply relative text-sm tracking-wide transition-colors duration-300;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════
+   UTILITIES
+   ══════════════════════════════════════════════════════════ */
+
+/* Accent word — for highlighting "Creil" or key terms in serif */
+.text-accent {
+  color: #E07B39;
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-style: italic;
+}
+
+/* Subtle noise texture for specific elements only */
+.noise::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.025;
+  pointer-events: none;
+  z-index: 1;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 256px 256px;
+}
+
+/* Horizontal rule with terracotta accent */
+.rule-accent {
+  height: 2px;
+  width: 48px;
+  background: #E07B39;
+  border: none;
+}
+
+/* ══════════════════════════════════════════════════════════
+   PROSE STYLING — Pour le contenu HTML riche
+   ══════════════════════════════════════════════════════════ */
+.prose {
+  @apply text-gray-500;
+}
+
+.prose p {
+  @apply mb-4 leading-relaxed;
+}
+
+.prose p:last-child {
+  @apply mb-0;
+}
+
+.prose strong {
+  @apply font-bold text-gray-900;
+}
+
+.prose a {
+  @apply text-primary-600 hover:text-primary-700 transition-colors;
+}
+
+.prose ul, .prose ol {
+  @apply ml-6 mb-4;
+}
+
+.prose li {
+  @apply mb-2;
+}
+
+.prose-lg {
+  @apply text-lg;
+}
+
+.prose-lg p {
+  @apply leading-relaxed;
+}

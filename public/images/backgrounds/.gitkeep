@@ -1,0 +1,21 @@
+# Fonds et textures
+# 
+# Fichiers suggérés :
+# - pattern-metal.png (200×200) - Motif métal/industriel répétable
+# - texture-industrial.webp (1920×1080) - Texture industrielle/acier
+# - texture-lames.webp (1920×1080) - Texture lames de rideau
+# - gradient-orange.webp (1920×1080) - Dégradé orange personnalisé
+# - hero-overlay.png (1920×1080) - Overlay semi-transparent pour hero
+#
+# Utilisation :
+# - Ajouter une ambiance industrielle
+# - Créer de la profondeur aux sections
+# - Différencier visuellement des autres sites
+#
+# Idées de textures :
+# - Métal brossé
+# - Acier galvanisé
+# - Motif de lames ondulées
+#
+# Format : PNG pour motifs (transparence), WebP pour textures
+# Poids : < 50KB (motifs), < 100KB (textures)

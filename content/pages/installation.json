@@ -1,0 +1,216 @@
+{
+  "hero": {
+    "badge": "📐 Installation Professionnelle",
+    "title": "Installation Rideau Métallique {city} - Pose Certifiée",
+    "subtitle": "DRM {city} installe vos rideaux métalliques pour commerces, entrepôts et locaux professionnels à {city} et dans les {department}. Neuf ou remplacement, pose conforme aux normes CE avec garantie complète."
+  },
+  "certifications": [
+    { "icon": "🇪🇺", "label": "Norme CE" },
+    { "icon": "🏅", "label": "NF EN 13241-1" },
+    { "icon": "🛡️", "label": "Garantie 2-10 ans" }
+  ],
+  "processus": {
+    "title": "Notre processus d'installation en 4 étapes",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Visite technique gratuite",
+        "description": "Un technicien se déplace à {city} pour relever les dimensions et analyser les contraintes du bâtiment.",
+        "duree": "30 min"
+      },
+      {
+        "step": 2,
+        "title": "Devis détaillé",
+        "description": "Vous recevez un devis complet incluant matériel, pose, motorisation et travaux préparatoires.",
+        "duree": "24-48h"
+      },
+      {
+        "step": 3,
+        "title": "Fabrication sur-mesure",
+        "description": "Votre rideau est fabriqué sur-mesure avec des matériaux certifiés CE. Contrôle qualité rigoureux.",
+        "duree": "7-15 jours"
+      },
+      {
+        "step": 4,
+        "title": "Pose et mise en service",
+        "description": "Installation, motorisation, réglages de sécurité, formation et remise du certificat CE.",
+        "duree": "4-8h"
+      }
+    ]
+  },
+  "prestations": [
+    {
+      "icon": "🔒",
+      "title": "Rideau à lames pleines",
+      "description": "Sécurité maximale. Acier galvanisé ou aluminium, anti-effraction, isolation thermique et phonique.",
+      "usage": "Commerces, bijouteries"
+    },
+    {
+      "icon": "👁️",
+      "title": "Rideau micro-perforé",
+      "description": "Visibilité de la vitrine même fermé. Perforations de 1 à 3mm. Sécurité + esthétisme.",
+      "usage": "Boutiques, showrooms"
+    },
+    {
+      "icon": "🔗",
+      "title": "Grille articulée cobra",
+      "description": "Transparence totale de la devanture. Tubes ondulés ou mailles. Légère et esthétique.",
+      "usage": "Galeries, magasins"
+    },
+    {
+      "icon": "🔥",
+      "title": "Rideau coupe-feu",
+      "description": "Conforme aux normes ERP et réglementation incendie. Résistance au feu de 1h à 4h.",
+      "usage": "ERP, parkings"
+    },
+    {
+      "icon": "🚗",
+      "title": "Porte de garage enroulable",
+      "description": "Solution compacte pour garages. Aluminium laqué, motorisation intégrée, choix de coloris.",
+      "usage": "Garages, parkings"
+    },
+    {
+      "icon": "🏭",
+      "title": "Rideau industriel",
+      "description": "Grande dimension pour entrepôts et quais. Motorisation haute performance, jusqu'à 12 mètres.",
+      "usage": "Entrepôts, usines"
+    }
+  ],
+  "secteurs": {
+    "title": "Secteurs d'activité à {city}",
+    "items": [
+      {
+        "icon": "🏪",
+        "title": "Commerces de détail",
+        "description": "Boutiques, prêt-à-porter, chaussures, optique, bijouterie. Rideaux esthétiques et sécurisés pour les rues commerçantes de {city}."
+      },
+      {
+        "icon": "🍽️",
+        "title": "Restaurants et cafés",
+        "description": "Rideaux motorisés pour terrasses, devantures et accès arrière. Adaptés à l'activité quotidienne intense."
+      },
+      {
+        "icon": "🏦",
+        "title": "Banques et assurances",
+        "description": "Rideaux haute sécurité anti-effraction. Conformité aux exigences des assureurs. Certifications renforcées."
+      },
+      {
+        "icon": "🏭",
+        "title": "Entrepôts et industries",
+        "description": "Rideaux grande dimension pour zones industrielles de {city}, Montataire, Saint-Maximin. Résistance au vent et usage intensif."
+      },
+      {
+        "icon": "🚗",
+        "title": "Garages et parkings",
+        "description": "Portes enroulables, sectionnelles et basculantes. Solutions résidentielles et professionnelles dans les {department}."
+      },
+      {
+        "icon": "💊",
+        "title": "Professions libérales",
+        "description": "Pharmacies, cabinets médicaux, agences. Rideaux discrets, motorisés et conformes aux normes d'accessibilité PMR."
+      }
+    ]
+  },
+  "garanties": {
+    "title": "Nos garanties d'installation",
+    "items": [
+      {
+        "icon": "📋",
+        "title": "Certificat CE",
+        "description": "Chaque rideau installé est certifié conforme aux normes européennes. Documentation complète remise."
+      },
+      {
+        "icon": "🛡️",
+        "title": "Garantie 2-10 ans",
+        "description": "Garantie fabricant sur la structure et les composants. Garantie pose par nos techniciens certifiés."
+      },
+      {
+        "icon": "📞",
+        "title": "SAV 24h/24",
+        "description": "Service après-vente disponible 24h/24 et 7j/7 à {city} et dans les {department}. Intervention rapide garantie."
+      },
+      {
+        "icon": "💰",
+        "title": "Devis gratuit",
+        "description": "Visite technique et devis détaillé sans engagement. Devis respecté, aucune surprise."
+      }
+    ]
+  },
+  "brands": ["Somfy", "Nice", "Came", "Hörmann", "Bubendorff", "Simu", "Gaposa", "Deprat"],
+  "reviews": [
+    {
+      "name": "Jacques R.",
+      "rating": 5,
+      "text": "Installation d'un rideau lames pleines motorisé pour ma boucherie à Creil, quartier de la gare. Pose en une journée, travail propre et soigné. Le rideau est solide et silencieux.",
+      "date": "Il y a 1 semaine",
+      "zone": "Creil centre",
+      "service": "Installation"
+    },
+    {
+      "name": "Marie-Laure S.",
+      "rating": 5,
+      "text": "Remplacement de notre vieux rideau rouillé par un micro-perforé pour notre boutique de mode à Creil, rue de la République. Enfin une belle vitrine visible même fermée !",
+      "date": "Il y a 3 semaines",
+      "zone": "Creil centre",
+      "service": "Installation"
+    },
+    {
+      "name": "Éric M.",
+      "rating": 5,
+      "text": "Installation de 3 rideaux pour nos locaux dans la zone industrielle de Saint-Maximin. Grille articulée pour la vitrine et lames pleines pour les entrepôts. Chantier bien organisé.",
+      "date": "Il y a 2 mois",
+      "zone": "Saint-Maximin",
+      "service": "Installation"
+    },
+    {
+      "name": "Amira H.",
+      "rating": 4,
+      "text": "Pose d'un rideau métallique pour mon institut de beauté à Nogent-sur-Oise. Bon travail dans l'ensemble, le technicien était compétent. Petit retard le matin mais rattrapé.",
+      "date": "Il y a 6 semaines",
+      "zone": "Nogent-sur-Oise",
+      "service": "Installation"
+    },
+    {
+      "name": "Stéphane F.",
+      "rating": 5,
+      "text": "Mise aux normes CE du rideau de mon restaurant à Montataire. Ajout des sécurités anti-chute et anti-relevage. DRM m'a fourni le certificat de conformité.",
+      "date": "Il y a 10 jours",
+      "zone": "Montataire",
+      "service": "Installation"
+    },
+    {
+      "name": "Nicolas T.",
+      "rating": 5,
+      "text": "Installation d'un rideau sur-mesure pour la devanture cintrée de mon commerce à Senlis. DRM a trouvé la solution pour la forme atypique.",
+      "date": "Il y a 5 jours",
+      "zone": "Senlis",
+      "service": "Installation"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Qui appeler pour l'installation d'un rideau métallique à {city} ?",
+      "answer": "Pour l'installation d'un rideau métallique à {city} et dans les {department} (60), contactez <strong>DRM {city}</strong> au <strong>{phone}</strong>. Installation complète : prise de cotes gratuite, fabrication sur-mesure, pose et mise en service."
+    },
+    {
+      "question": "Combien de temps faut-il pour installer un rideau métallique à {city} ?",
+      "answer": "La pose d'un rideau standard à {city} prend <strong>4 à 8 heures</strong> (une journée). Pour un remplacement complet, comptez 6 à 10 heures. Les installations multiples peuvent nécessiter 2 jours."
+    },
+    {
+      "question": "Comment obtenir un devis pour l'installation d'un rideau métallique à {city} ?",
+      "answer": "Appelez le <strong>{phone}</strong> pour obtenir un devis gratuit et sans engagement. Notre technicien se déplace pour évaluer vos besoins et vous remettre un devis détaillé."
+    },
+    {
+      "question": "Faut-il un permis pour installer un rideau métallique à {city} ?",
+      "answer": "En général, <strong>pas de permis de construire</strong> pour l'installation sur un commerce existant. En zone protégée (ABF), une déclaration préalable peut être nécessaire."
+    },
+    {
+      "question": "Quelles normes doit respecter un rideau métallique installé à {city} ?",
+      "answer": "Tout rideau doit être conforme aux <strong>normes CE</strong> : norme EN 13241-1, dispositif anti-chute, anti-relevage, marquage CE. Pour les ERP, des normes de sécurité incendie s'ajoutent."
+    }
+  ],
+  "cta": {
+    "title": "Besoin d'installer un rideau métallique à {city} ?",
+    "subtitle": "Visite technique et devis gratuits dans les {department}. Installation en 1 jour, garantie complète."
+  }
+}

@@ -1,0 +1,403 @@
+{
+  "hero": {
+    "badge": "⚡ Automatisation à {zone}",
+    "title": "Motorisation Rideau Métallique {zone} ({zonePostal})",
+    "subtitle": "Motorisation et automatisation de rideaux métalliques à {zone}. Transformez votre rideau manuel en rideau électrique pour plus de confort et de sécurité dans le {department}."
+  },
+  "intro": {
+    "title": "Motorisez votre rideau métallique à {zone}",
+    "paragraphs": [
+      "Vous en avez assez de lever et baisser votre rideau manuellement à {zone} ? {name} motorise votre rideau métallique existant. Une solution simple et rapide pour gagner en confort au quotidien.",
+      "La motorisation permet également un meilleur verrouillage automatique et peut être couplée à des systèmes de domotique et de contrôle d'accès. Installation en quelques heures à {zone} ({zonePostal}). Appelez le {phone}."
+    ]
+  },
+  "situations": {
+    "title": "Solutions de motorisation à {zone}",
+    "items": [
+      {
+        "icon": "🔌",
+        "title": "Moteur tubulaire",
+        "description": "Installation dans l'axe d'enroulement à {zone}. Solution discrète et performante pour la plupart des rideaux."
+      },
+      {
+        "icon": "⚙️",
+        "title": "Moteur central",
+        "description": "Puissant et fiable. Idéal pour les rideaux de grande dimension et les utilisations intensives."
+      },
+      {
+        "icon": "📱",
+        "title": "Télécommande & domotique",
+        "description": "Contrôle à distance, programmation horaire et pilotage depuis smartphone."
+      },
+      {
+        "icon": "🔋",
+        "title": "Batterie de secours",
+        "description": "Fonctionnement garanti même en cas de coupure de courant à {zone}."
+      }
+    ]
+  },
+  "advantages": {
+    "title": "Avantages de la motorisation à {zone}",
+    "items": [
+      "Confort d'utilisation au quotidien, fini l'effort physique",
+      "Verrouillage automatique renforcé pour plus de sécurité",
+      "Moins d'usure du rideau grâce à une montée/descente régulière",
+      "Possibilité de contrôle à distance (télécommande, smartphone)",
+      "Installation rapide en quelques heures à {zone}",
+      "Compatible avec la plupart des rideaux existants"
+    ]
+  },
+  "avantagesMotorisation": {
+    "title": "Pourquoi motoriser votre rideau à {zone} ?",
+    "subtitle": "La motorisation transforme votre quotidien de commerçant. Découvrez les avantages concrets.",
+    "items": [
+      {
+        "icon": "🖐️",
+        "title": "Confort quotidien",
+        "description": "Plus besoin de forcer chaque matin et soir. Un simple bouton ou télécommande suffit pour ouvrir et fermer votre rideau à {zone}.",
+        "stat": "30 sec",
+        "statLabel": "pour ouvrir/fermer"
+      },
+      {
+        "icon": "⏱️",
+        "title": "Gain de temps",
+        "description": "Ouverture et fermeture en 30 secondes au lieu de 2-3 minutes en manuel. Vous gagnez du temps chaque jour.",
+        "stat": "5 min",
+        "statLabel": "économisées/jour"
+      },
+      {
+        "icon": "🔒",
+        "title": "Sécurité renforcée",
+        "description": "Verrouillage automatique en position basse. Impossible de forcer un rideau motorisé sans laisser de traces.",
+        "stat": "3×",
+        "statLabel": "plus sûr"
+      },
+      {
+        "icon": "📈",
+        "title": "Longévité accrue",
+        "description": "La montée et descente motorisée est plus douce et régulière, ce qui réduit l'usure de votre rideau.",
+        "stat": "+40%",
+        "statLabel": "durée de vie"
+      }
+    ]
+  },
+  "typesMoteurs": {
+    "title": "Types de moteurs disponibles à {zone}",
+    "items": [
+      {
+        "type": "Moteur tubulaire",
+        "description": "Installé dans l'axe d'enroulement. Discret, compact et silencieux. Idéal pour les rideaux de petite et moyenne dimension.",
+        "marques": "Somfy, Simu, Bubendorff",
+        "puissance": "100-300 Nm",
+        "ideal": "Commerces, boutiques"
+      },
+      {
+        "type": "Moteur central",
+        "description": "Fixé au-dessus du coffre. Puissant et robuste. Parfait pour les rideaux de grande dimension ou à usage intensif.",
+        "marques": "Nice, Came, Hörmann",
+        "puissance": "300-600 Nm",
+        "ideal": "Entrepôts, garages"
+      },
+      {
+        "type": "Moteur latéral",
+        "description": "Fixé sur le côté du rideau. Solution économique pour les espaces avec peu de hauteur au-dessus du coffre.",
+        "marques": "Somfy, Nice, Gaposa",
+        "puissance": "100-200 Nm",
+        "ideal": "Espaces réduits"
+      }
+    ]
+  },
+  "accessoires": [
+    {
+      "icon": "📱",
+      "name": "Télécommande multi-canaux",
+      "description": "Commandez jusqu'à 4 rideaux avec une seule télécommande. Portée 30-50 mètres."
+    },
+    {
+      "icon": "🔢",
+      "name": "Clavier à code",
+      "description": "Digicode extérieur résistant aux intempéries. Code personnalisable, multi-utilisateurs."
+    },
+    {
+      "icon": "👁️",
+      "name": "Détecteur d'obstacle",
+      "description": "Sécurité anti-écrasement. Le rideau s'arrête et remonte automatiquement en cas d'obstacle."
+    },
+    {
+      "icon": "🔋",
+      "name": "Batterie de secours",
+      "description": "Fonctionnement en cas de coupure de courant. Autonomie de 10 à 20 cycles."
+    },
+    {
+      "icon": "📲",
+      "name": "Module smartphone",
+      "description": "Pilotez votre rideau depuis votre téléphone via Wi-Fi. Compatible iOS et Android."
+    },
+    {
+      "icon": "⏰",
+      "name": "Horloge programmable",
+      "description": "Programmation automatique des horaires d'ouverture et fermeture. Idéal pour les commerces."
+    }
+  ],
+  "comparatif": {
+    "title": "Manuel vs Motorisé : la comparaison",
+    "criteres": [
+      {
+        "critere": "Temps d'ouverture",
+        "manuel": "2-3 minutes",
+        "motorise": "30 secondes"
+      },
+      {
+        "critere": "Effort physique",
+        "manuel": "Important (10-30 kg)",
+        "motorise": "Aucun (bouton/télécommande)"
+      },
+      {
+        "critere": "Sécurité",
+        "manuel": "Verrouillage manuel par clé",
+        "motorise": "Verrouillage automatique"
+      },
+      {
+        "critere": "Usure du rideau",
+        "manuel": "Élevée (manipulation irrégulière)",
+        "motorise": "Réduite (mouvement régulier)"
+      },
+      {
+        "critere": "Contrôle à distance",
+        "manuel": "Non",
+        "motorise": "Oui (télécommande, smartphone)"
+      },
+      {
+        "critere": "Programmation horaire",
+        "manuel": "Non",
+        "motorise": "Oui (horloge, domotique)"
+      }
+    ]
+  },
+  "marques": {
+    "title": "Marques de moteurs installées à {zone}",
+    "subtitle": "Nous installons uniquement des moteurs de grandes marques pour garantir fiabilité et durabilité.",
+    "items": [
+      {
+        "nom": "Somfy",
+        "description": "Leader français de la motorisation. Fiabilité, silence et large gamme d'accessoires.",
+        "origine": "🇫🇷 France",
+        "garantie": "5 ans"
+      },
+      {
+        "nom": "Nice",
+        "description": "Marque italienne reconnue pour ses solutions innovantes et sa qualité de fabrication.",
+        "origine": "🇮🇹 Italie",
+        "garantie": "3 ans"
+      },
+      {
+        "nom": "Came",
+        "description": "Spécialiste des automatismes, robustesse et performance pour usages intensifs.",
+        "origine": "🇮🇹 Italie",
+        "garantie": "3 ans"
+      },
+      {
+        "nom": "Hörmann",
+        "description": "Qualité allemande pour les grandes dimensions et les applications industrielles.",
+        "origine": "🇩🇪 Allemagne",
+        "garantie": "5 ans"
+      },
+      {
+        "nom": "Simu",
+        "description": "Gamme française complète, fiabilité et performance pour les commerces.",
+        "origine": "🇫🇷 France",
+        "garantie": "3 ans"
+      }
+    ]
+  },
+  "reviews": [
+    {
+      "name": "Stéphanie D.",
+      "rating": 5,
+      "text": "Motorisation de mon rideau de boutique à {zone}. Le confort est incomparable ! J'ouvre et ferme avec une télécommande en 30 secondes. Merci {name} !",
+      "date": "Janvier 2025",
+      "zone": "{zone}",
+      "service": "Motorisation"
+    },
+    {
+      "name": "Richard P.",
+      "rating": 5,
+      "text": "Installation d'un moteur Somfy sur mon rideau existant à {zone}. Silencieux, rapide et fiable. Le technicien a fait un travail impeccable.",
+      "date": "Décembre 2024",
+      "zone": "{zone}",
+      "service": "Motorisation"
+    },
+    {
+      "name": "Leila A.",
+      "rating": 5,
+      "text": "Motorisation + télécommande + batterie de secours pour ma pharmacie à {zone}. Plus jamais bloquée en cas de coupure ! Installation en 3h.",
+      "date": "Février 2025",
+      "zone": "{zone}",
+      "service": "Motorisation"
+    },
+    {
+      "name": "Pascal M.",
+      "rating": 4,
+      "text": "Bon travail de motorisation à {zone}. Moteur central puissant pour mon rideau de garage. Seul bémol : un peu bruyant les premiers jours, mais c'est réglé.",
+      "date": "Novembre 2024",
+      "zone": "{zone}",
+      "service": "Motorisation"
+    },
+    {
+      "name": "Virginie L.",
+      "rating": 5,
+      "text": "Motorisation de 2 rideaux pour mon restaurant à {zone}. Le matin et le soir, c'est un vrai gain de temps. Le module smartphone est top !",
+      "date": "Janvier 2025",
+      "zone": "{zone}",
+      "service": "Motorisation"
+    },
+    {
+      "name": "Kamel B.",
+      "rating": 5,
+      "text": "Remplacement de mon vieux moteur par un Somfy neuf à {zone}. Plus silencieux et plus rapide. Le technicien de {name} a été très professionnel.",
+      "date": "Octobre 2024",
+      "zone": "{zone}",
+      "service": "Motorisation"
+    },
+    {
+      "name": "Anne-Marie C.",
+      "rating": 5,
+      "text": "J'ai fait motoriser le rideau de ma boutique à {zone}. C'est le meilleur investissement que j'ai fait ! Fini de forcer chaque matin. Le clavier à code est très pratique.",
+      "date": "Décembre 2024",
+      "zone": "{zone}",
+      "service": "Motorisation"
+    },
+    {
+      "name": "Yannick T.",
+      "rating": 5,
+      "text": "Motorisation de notre rideau industriel à {zone}. Moteur central Hörmann puissant et silencieux. Installation propre et rapide par {name}.",
+      "date": "Février 2025",
+      "zone": "{zone}",
+      "service": "Motorisation"
+    },
+    {
+      "name": "Mireille F.",
+      "rating": 4,
+      "text": "Bonne motorisation à {zone}. Le technicien a pris le temps d'expliquer le fonctionnement de la télécommande et de l'horloge programmable. Très satisfaite.",
+      "date": "Septembre 2024",
+      "zone": "{zone}",
+      "service": "Motorisation"
+    },
+    {
+      "name": "Damien R.",
+      "rating": 5,
+      "text": "Motorisation avec module Wi-Fi pour piloter depuis mon téléphone à {zone}. C'est magique ! Je peux ouvrir le rideau avant d'arriver au magasin.",
+      "date": "Novembre 2024",
+      "zone": "{zone}",
+      "service": "Motorisation"
+    },
+    {
+      "name": "Salima H.",
+      "rating": 5,
+      "text": "Changement de motorisation pour un moteur plus récent et silencieux à {zone}. Le nouveau système est incomparable avec l'ancien. Merci {name} !",
+      "date": "Janvier 2025",
+      "zone": "{zone}",
+      "service": "Motorisation"
+    },
+    {
+      "name": "Nicolas G.",
+      "rating": 5,
+      "text": "Installation moteur + détecteur d'obstacle + batterie de secours à {zone}. Sécurité maximale pour mon commerce. Prestation au top.",
+      "date": "Décembre 2024",
+      "zone": "{zone}",
+      "service": "Motorisation"
+    },
+    {
+      "name": "Hélène J.",
+      "rating": 4,
+      "text": "Motorisation de mon rideau de garage à {zone}. Moteur latéral car peu de place au-dessus. Solution ingénieuse proposée par le technicien. Résultat parfait.",
+      "date": "Octobre 2024",
+      "zone": "{zone}",
+      "service": "Motorisation"
+    },
+    {
+      "name": "Arnaud W.",
+      "rating": 5,
+      "text": "3 rideaux motorisés pour notre local commercial à {zone}. Programme horaire automatique, le matin tout s'ouvre à 8h30 et se ferme à 19h. Un bonheur !",
+      "date": "Février 2025",
+      "zone": "{zone}",
+      "service": "Motorisation"
+    },
+    {
+      "name": "Joséphine E.",
+      "rating": 5,
+      "text": "Meilleur investissement pour ma boulangerie à {zone}. Motorisation Somfy ultra silencieuse. Mes voisins ne m'entendent plus ouvrir à 5h du matin !",
+      "date": "Novembre 2024",
+      "zone": "{zone}",
+      "service": "Motorisation"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Qui appeler pour motoriser un rideau métallique à {zone} ?",
+      "answer": "Pour la motorisation de votre rideau métallique à {zone} ({zonePostal}), contactez <strong>{name}</strong> au <strong>{phone}</strong>. Étude de faisabilité gratuite, installation en quelques heures."
+    },
+    {
+      "question": "Peut-on motoriser un rideau manuel existant à {zone} ?",
+      "answer": "Oui, dans <strong>90% des cas</strong>, il est possible de motoriser un rideau manuel existant à {zone}. Un technicien évalue la faisabilité gratuitement avant toute intervention."
+    },
+    {
+      "question": "Comment obtenir un devis pour la motorisation à {zone} ?",
+      "answer": "Appelez le <strong>{phone}</strong> pour un devis gratuit et sans engagement. Notre technicien évalue votre rideau sur place et vous propose la motorisation la mieux adaptée."
+    },
+    {
+      "question": "Combien de temps dure l'installation d'un moteur à {zone} ?",
+      "answer": "L'installation d'un moteur à {zone} prend <strong>2 à 4 heures</strong> en moyenne. Le rideau est opérationnel le jour même. Aucune modification structurelle nécessaire."
+    },
+    {
+      "question": "Quelle marque de moteur conseillez-vous à {zone} ?",
+      "answer": "Nous recommandons <strong>Somfy</strong> (français, fiable, silencieux) pour la plupart des commerces à {zone}. Pour les grandes dimensions : Nice ou Hörmann. Nos techniciens vous guident selon vos besoins."
+    },
+    {
+      "question": "Que se passe-t-il en cas de coupure de courant à {zone} ?",
+      "answer": "Avec une <strong>batterie de secours</strong>, votre rideau fonctionne même sans courant. Sans batterie, un déverrouillage manuel de secours est toujours disponible."
+    },
+    {
+      "question": "Puis-je commander mon rideau depuis mon téléphone à {zone} ?",
+      "answer": "Oui, avec un <strong>module Wi-Fi</strong>, vous pouvez piloter votre rideau depuis votre smartphone via une application. Compatible iOS et Android, accessible de partout."
+    },
+    {
+      "question": "La motorisation est-elle garantie à {zone} ?",
+      "answer": "Oui, les moteurs bénéficient d'une <strong>garantie fabricant de 3 à 5 ans</strong> selon la marque. La pose est garantie par {name}. SAV disponible 24h/24 à {zone}."
+    }
+  ],
+  "cta": {
+    "title": "Motorisation de votre rideau à {zone} ?",
+    "subtitle": "Demandez une étude de faisabilité gratuite à {zone} ({zonePostal}). Installation en quelques heures !"
+  },
+  "alternatingFeatures": [
+    {
+      "title": "<strong>Motorisation Rideau Métallique {zone}</strong> : Confort et Modernité",
+      "content": "<p>La <strong>motorisation de rideau métallique à {zone}</strong> ({zonePostal}) transforme radicalement votre quotidien de commerçant. Fini l'effort physique matin et soir pour lever et baisser votre <strong>rideau métallique manuel</strong> : avec un <strong>moteur électrique</strong>, une simple pression sur la <strong>télécommande</strong> ou l'<strong>interrupteur mural</strong> suffit.</p><p>{name} motorise tous types de <strong>rideaux métalliques</strong> à {zone} : lames pleines, micro-perforés, grilles articulées, et portes de garage. Nous installons des <strong>moteurs tubulaires</strong> de grandes marques (<strong>Somfy</strong>, <strong>Nice</strong>, <strong>Came</strong>) reconnus pour leur <strong>fiabilité</strong>, leur <strong>silence</strong> et leur longévité.</p><p>L'<strong>installation de motorisation</strong> est rapide (2 à 4 heures) et ne nécessite aucune modification structurelle majeure. Compatible avec <strong>90% des rideaux manuels existants</strong>. Évaluation gratuite à {zone}.</p>",
+      "image": "/images/gallery/motorisation-rideau-metallique-creil-60.webp",
+      "imageAlt": "Motorisation rideau métallique {zone} {department}",
+      "imagePosition": "right"
+    },
+    {
+      "title": "<strong>Rideau Métallique Motorisé {zone}</strong> : Sécurité Renforcée",
+      "content": "<p>Au-delà du confort, la <strong>motorisation de rideau métallique</strong> améliore considérablement la <strong>sécurité</strong> de votre commerce à {zone}. Le <strong>verrouillage automatique</strong> en position fermée rend les tentatives d'effraction beaucoup plus difficiles. Nos systèmes intègrent des <strong>détecteurs d'obstacles</strong> qui protègent personnes et marchandises.</p><p>La <strong>montée et descente régulières</strong> assurées par le moteur réduisent l'usure mécanique et prolongent la durée de vie de votre rideau.</p>",
+      "image": "/images/gallery/moteur-tubulaire-rideau-metallique-drm.webp",
+      "imageAlt": "Sécurité rideau métallique motorisé {zone}",
+      "imagePosition": "left"
+    },
+    {
+      "title": "<strong>Options de Motorisation</strong> à {zone}",
+      "content": "<p>De nombreuses options sont disponibles pour personnaliser votre <strong>motorisation à {zone}</strong> : <strong>batterie de secours</strong> pour fonctionner en cas de coupure électrique, <strong>programmation horaire</strong> pour une ouverture/fermeture automatiques, et <strong>débrayage manuel</strong> de sécurité.</p><p>Installation par techniciens certifiés dans tout le <strong>{department}</strong>. Contactez <strong>{name}</strong> au <strong>{phone}</strong> pour une étude gratuite.</p>",
+      "image": "/images/gallery/rideau-metallique-lame-cobra-realisation.webp",
+      "imageAlt": "Options motorisation rideau métallique {zone}",
+      "imagePosition": "right"
+    },
+    {
+      "title": "<strong>Domotique et Contrôle à Distance</strong> : Pilotez votre rideau depuis {zone}",
+      "content": "<p>La <strong>motorisation moderne de rideau métallique</strong> va bien au-delà de la simple télécommande. À {zone} et dans le <strong>{department}</strong>, {name} installe des <strong>systèmes connectés</strong> qui permettent de piloter votre <strong>rideau motorisé</strong> depuis votre <strong>smartphone</strong>, où que vous soyez.</p><p>Avec un <strong>module Wi-Fi</strong> ou une <strong>box domotique</strong>, ouvrez ou fermez votre rideau à distance, programmez des horaires d'ouverture, recevez des alertes en cas de tentative d'intrusion, et intégrez votre rideau à votre système de sécurité global. Compatible avec <strong>Google Home</strong>, <strong>Alexa</strong>, et les principales plateformes domotiques.</p><p>Idéal pour les commerçants multi-sites, les gérants absents, ou simplement pour contrôler l'accès à votre commerce depuis chez vous. La <strong>motorisation connectée</strong> offre une tranquillité d'esprit totale. Devis gratuit pour <strong>motorisation domotique à {zone}</strong> au <strong>{phone}</strong>.</p>",
+      "image": "/images/gallery/Axe-central-motorise-rideau-metallique.webp",
+      "imageAlt": "Contrôle smartphone rideau métallique motorisé {zone}",
+      "imagePosition": "left"
+    }
+  ]
+}

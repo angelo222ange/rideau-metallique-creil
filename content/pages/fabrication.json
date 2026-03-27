@@ -1,0 +1,244 @@
+{
+  "hero": {
+    "badge": "🏭 Fabrication Sur-Mesure",
+    "title": "Fabrication Rideau Métallique Sur-Mesure à {city}",
+    "subtitle": "DRM {city} conçoit et fabrique vos rideaux métalliques sur-mesure pour commerces, entrepôts et locaux professionnels à {city} et dans les {department}. Lames pleines, micro-perforées, grilles articulées."
+  },
+  "certifications": [
+    { "icon": "🏅", "label": "NF EN 13241-1" },
+    { "icon": "🇪🇺", "label": "Marquage CE" },
+    { "icon": "🛡️", "label": "Anti-effraction" }
+  ],
+  "stats": [
+    { "value": "100%", "label": "Sur-Mesure" },
+    { "value": "10 ans", "label": "Garantie structure" },
+    { "value": "✓", "label": "Devis gratuit" }
+  ],
+  "surMesure": {
+    "title": "Le sur-mesure : un rideau parfaitement adapté",
+    "description": "Chaque local est unique. Un rideau sur-mesure garantit un ajustement parfait, une sécurité optimale et une esthétique irréprochable pour votre commerce à {city}.",
+    "avantages": [
+      {
+        "icon": "📐",
+        "title": "Mesures exactes",
+        "description": "Un technicien se déplace à {city} pour prendre les mesures au millimètre près."
+      },
+      {
+        "icon": "🎨",
+        "title": "Personnalisation totale",
+        "description": "Choix du matériau, du type de lames, du coloris RAL et des options de motorisation."
+      },
+      {
+        "icon": "🏭",
+        "title": "Fabrication en atelier",
+        "description": "Production dans nos ateliers avec contrôle qualité rigoureux à chaque étape."
+      },
+      {
+        "icon": "✅",
+        "title": "Conformité garantie",
+        "description": "Chaque rideau est certifié conforme aux normes NF EN 13241-1 et marquage CE."
+      }
+    ],
+    "comparatif": [
+      {
+        "critere": "Dimensions",
+        "surMesure": "Au millimètre près",
+        "standard": "Tailles prédéfinies"
+      },
+      {
+        "critere": "Sécurité",
+        "surMesure": "Aucun jeu, protection max",
+        "standard": "Espaces possibles"
+      },
+      {
+        "critere": "Esthétique",
+        "surMesure": "Finitions parfaites, coloris RAL",
+        "standard": "Coloris limités"
+      },
+      {
+        "critere": "Durabilité",
+        "surMesure": "Matériaux adaptés, longue durée",
+        "standard": "Usure plus rapide"
+      },
+      {
+        "critere": "Installation",
+        "surMesure": "Pose rapide, aucun ajustement",
+        "standard": "Adaptations nécessaires"
+      }
+    ]
+  },
+  "types": [
+    {
+      "icon": "🔒",
+      "title": "Rideau à lames pleines",
+      "description": "Sécurité maximale pour commerces et entrepôts. Acier galvanisé ou aluminium, isolation thermique et phonique.",
+      "usage": "Bijouteries, pharmacies, tabacs"
+    },
+    {
+      "icon": "👁️",
+      "title": "Rideau micro-perforé",
+      "description": "Visibilité vitrine même fermé grâce aux micro-perforations. Sécurité + esthétisme pour les boutiques de {city}.",
+      "usage": "Boutiques, optique, mode"
+    },
+    {
+      "icon": "🔗",
+      "title": "Grille articulée cobra",
+      "description": "Transparence totale de la devanture. Très demandée dans les centres commerciaux des {department}.",
+      "usage": "Galeries, centres commerciaux"
+    },
+    {
+      "icon": "🔥",
+      "title": "Rideau coupe-feu",
+      "description": "Homologué protection incendie. Conforme aux normes ERP. Résistance au feu de 1h à 4h.",
+      "usage": "ERP, parkings, industries"
+    },
+    {
+      "icon": "🏭",
+      "title": "Rideau industriel",
+      "description": "Pour entrepôts, ateliers et zones industrielles de {city}. Largeurs jusqu'à 12 mètres, motorisation haute performance.",
+      "usage": "Entrepôts, quais, ateliers"
+    },
+    {
+      "icon": "🚗",
+      "title": "Porte de garage enroulable",
+      "description": "Solution compacte en aluminium laqué. Motorisation intégrée, large choix de coloris RAL.",
+      "usage": "Garages, parkings résidentiels"
+    }
+  ],
+  "materiaux": [
+    {
+      "icon": "⚙️",
+      "name": "Acier galvanisé",
+      "description": "Le plus répandu, excellent rapport qualité-performance. Résistant à la corrosion, idéal pour le climat de la vallée de l'Oise à {city}."
+    },
+    {
+      "icon": "✨",
+      "name": "Aluminium",
+      "description": "Léger et résistant à la corrosion. Finitions laquées dans la couleur de votre choix. Parfait pour les grandes dimensions."
+    },
+    {
+      "icon": "💎",
+      "name": "Acier inoxydable",
+      "description": "Résistance maximale à la corrosion. Idéal pour les commerces exigeant une finition haut de gamme à Creil, Senlis et Chantilly."
+    }
+  ],
+  "processus": [
+    {
+      "step": 1,
+      "title": "Prise de cotes sur site",
+      "description": "Un technicien se déplace gratuitement à {city} pour relever les dimensions exactes et analyser les contraintes techniques."
+    },
+    {
+      "step": 2,
+      "title": "Devis et choix matériaux",
+      "description": "Devis détaillé avec le choix des matériaux (acier galvanisé, aluminium, inox), des finitions et de la motorisation."
+    },
+    {
+      "step": 3,
+      "title": "Fabrication en atelier",
+      "description": "Votre rideau est fabriqué sur-mesure avec des matériaux certifiés CE. Délai moyen : 7 à 15 jours ouvrés."
+    },
+    {
+      "step": 4,
+      "title": "Pose et mise en service",
+      "description": "Installation par nos techniciens à {city}, mise en service, réglages de sécurité et formation à l'utilisation."
+    }
+  ],
+  "normes": {
+    "title": "Normes et certifications de nos rideaux",
+    "items": [
+      {
+        "norme": "NF EN 13241-1",
+        "description": "Norme européenne pour les portes et portails industriels, commerciaux et de garage."
+      },
+      {
+        "norme": "Marquage CE",
+        "description": "Conformité aux exigences européennes de sécurité, santé et protection environnementale."
+      },
+      {
+        "norme": "Certification coupe-feu",
+        "description": "Résistance au feu certifiée de 1h à 4h. Obligatoire pour les ERP."
+      },
+      {
+        "norme": "Anti-effraction NF EN 1627",
+        "description": "Résistance aux tentatives d'effraction, classes RC1 à RC4."
+      },
+      {
+        "norme": "Accessibilité PMR",
+        "description": "Rideaux motorisés compatibles avec les exigences d'accessibilité."
+      },
+      {
+        "norme": "Déclaration de performance",
+        "description": "Document attestant des caractéristiques techniques et de la conformité."
+      }
+    ]
+  },
+  "reviews": [
+    {
+      "name": "Marc T.",
+      "rating": 5,
+      "text": "Fabrication et pose d'un rideau micro-perforé pour ma boutique de décoration à Creil centre. Le rendu est superbe, on voit parfaitement ma vitrine même fermé.",
+      "date": "Il y a 3 semaines",
+      "zone": "Creil centre",
+      "service": "Fabrication"
+    },
+    {
+      "name": "Jean-Pierre L.",
+      "rating": 5,
+      "text": "Rideau sur-mesure pour mon atelier automobile à Pont-Sainte-Maxence. Largeur de 5 mètres, motorisation automatique. DRM a géré de A à Z. Résultat parfait.",
+      "date": "Il y a 1 mois",
+      "zone": "Pont-Sainte-Maxence",
+      "service": "Fabrication"
+    },
+    {
+      "name": "Fatima A.",
+      "rating": 5,
+      "text": "Fabrication d'une grille articulée cobra pour mon salon de coiffure à Montataire. Le résultat est exactement ce que j'avais demandé, avec la couleur personnalisée.",
+      "date": "Il y a 2 mois",
+      "zone": "Montataire",
+      "service": "Fabrication"
+    },
+    {
+      "name": "Antoine G.",
+      "rating": 4,
+      "text": "Rideau coupe-feu pour le parking souterrain de notre copropriété à Nogent-sur-Oise. Dossier technique complet, conformité ERP respectée. Travail irréprochable.",
+      "date": "Il y a 6 semaines",
+      "zone": "Nogent-sur-Oise",
+      "service": "Fabrication"
+    },
+    {
+      "name": "Sandra V.",
+      "rating": 5,
+      "text": "Magnifique rideau en acier inoxydable pour ma bijouterie à Senlis. DRM m'a conseillé l'inox pour une finition impeccable. 2 ans après, pas une trace de corrosion.",
+      "date": "Il y a 5 jours",
+      "zone": "Senlis",
+      "service": "Fabrication"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Qui appeler pour la fabrication d'un rideau métallique sur-mesure à {city} ?",
+      "answer": "Pour la fabrication d'un rideau sur-mesure à {city} et dans les {department} (60), contactez <strong>DRM {city}</strong> au <strong>{phone}</strong>. Nous fabriquons tous types : lames pleines, micro-perforés, grilles articulées, coupe-feu et industriels."
+    },
+    {
+      "question": "Quel est le délai de fabrication d'un rideau métallique à {city} ?",
+      "answer": "Le délai moyen est de <strong>7 à 15 jours ouvrés</strong> après validation du devis. Service express disponible en 5 jours ouvrés."
+    },
+    {
+      "question": "Quel type de rideau choisir pour mon commerce à {city} ?",
+      "answer": "Le choix dépend de vos besoins : <strong>lames pleines</strong> pour la sécurité maximale, <strong>micro-perforé</strong> pour garder la visibilité vitrine, <strong>grille articulée</strong> pour la transparence totale. Conseil gratuit sur place."
+    },
+    {
+      "question": "Quel matériau choisir pour un rideau métallique à {city} ?",
+      "answer": "À {city}, nous recommandons l'<strong>acier galvanisé</strong> (robuste et polyvalent), l'<strong>aluminium</strong> (léger) ou l'<strong>acier inoxydable</strong> pour une finition haut de gamme."
+    },
+    {
+      "question": "Comment obtenir un devis pour un rideau métallique sur-mesure à {city} ?",
+      "answer": "Appelez le <strong>{phone}</strong> pour obtenir un devis gratuit et sans engagement. Notre technicien se déplace pour la prise de cotes et vous remet un devis détaillé."
+    }
+  ],
+  "cta": {
+    "title": "Un projet de rideau métallique sur-mesure à {city} ?",
+    "subtitle": "Devis gratuit et prise de cotes sur site dans les {department}. Appelez maintenant pour discuter de votre projet."
+  }
+}
