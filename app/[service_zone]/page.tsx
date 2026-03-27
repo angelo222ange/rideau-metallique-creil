@@ -21,6 +21,8 @@ import { MarquesMoteurs } from "@/components/subcity/MarquesMoteurs";
 import { AlternatingFeatures } from "@/components/sections/AlternatingFeatures";
 import { ZoneLocalSection } from "@/components/subcity/ZoneLocalSection";
 import { zoneLocalData } from "@/content/zones-local";
+import { getZoneServiceContent } from "@/content/zone-service";
+import type { ZoneServiceContent, ZoneServiceRecentCase } from "@/content/zone-service";
 
 // Import des contenus de chaque service
 import depannageContent from "@/content/pages/services/depannage.json";
@@ -223,6 +225,9 @@ export default function ServiceZonePage({ params }: Props) {
   const zoneFaq: FAQItem[] = content.faq
     ? getZoneContent(content.faq as FAQItem[], zone.slug, 5)
     : [];
+
+  // Contenu unique zone × service
+  const zoneServiceContent = getZoneServiceContent(zone.slug, service.slug);
 
   // Maillage interne : autres zones et services
   const neighborZones = getNeighborZones(zone.slug, 8);
@@ -876,6 +881,130 @@ export default function ServiceZonePage({ params }: Props) {
       {/* ─── SECTIONS ALTERNÉES SEO ─── */}
       {content.alternatingFeatures && (
         <AlternatingFeatures features={content.alternatingFeatures} bgColor="bg-secondary-sable" />
+      )}
+
+      {/* ═══════════════════════════════════════════════════════════════════
+          CONTENU UNIQUE ZONE × SERVICE (généré par analyse SERP)
+          ═══════════════════════════════════════════════════════════════════ */}
+
+      {/* ─── ZONE INTRO UNIQUE ─── */}
+      {zoneServiceContent?.zoneIntro && (
+        <section className="section bg-white">
+          <div className="container">
+            <div className="max-w-4xl mx-auto">
+              <div className="rule-accent mb-6" />
+              <div
+                className="text-gray-600 text-lg leading-relaxed prose prose-a:text-primary-600 prose-a:no-underline hover:prose-a:underline prose-strong:text-gray-900"
+                dangerouslySetInnerHTML={{ __html: zoneServiceContent.zoneIntro }}
+              />
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ─── ZONE FEATURES ALTERNÉES UNIQUES ─── */}
+      {zoneServiceContent?.zoneFeatures && zoneServiceContent.zoneFeatures.length > 0 && (
+        <>
+          {zoneServiceContent.zoneFeatures.map((feature, index) => (
+            <section
+              key={index}
+              className={index % 2 === 0 ? "section bg-secondary-sable" : "section bg-white"}
+            >
+              <div className="container">
+                <div className={`grid lg:grid-cols-2 gap-12 items-center ${
+                  feature.imagePosition === "left" ? "" : "lg:grid-flow-dense"
+                }`}>
+                  {feature.imagePosition === "left" && (
+                    <div className="relative hidden lg:block">
+                      <div className="relative aspect-[4/3] overflow-hidden" style={{ borderRadius: '2px' }}>
+                        <Image
+                          src={feature.image}
+                          alt={feature.imageAlt}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                    </div>
+                  )}
+                  <div className="max-w-xl">
+                    <div className="rule-accent mb-6" />
+                    <h2
+                      className="section-title"
+                      dangerouslySetInnerHTML={{ __html: feature.title }}
+                    />
+                    <div
+                      className="mt-6 text-gray-500 text-lg leading-relaxed prose prose-a:text-primary-600 prose-a:no-underline hover:prose-a:underline prose-strong:text-gray-900"
+                      dangerouslySetInnerHTML={{ __html: feature.content }}
+                    />
+                  </div>
+                  {feature.imagePosition === "right" && (
+                    <div className="relative hidden lg:block">
+                      <div className="relative aspect-[4/3] overflow-hidden" style={{ borderRadius: '2px' }}>
+                        <Image
+                          src={feature.image}
+                          alt={feature.imageAlt}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </section>
+          ))}
+        </>
+      )}
+
+      {/* ─── CAS D'INTERVENTIONS RÉCENTES ─── */}
+      {zoneServiceContent?.recentCases && zoneServiceContent.recentCases.length > 0 && (
+        <section className="section bg-dark">
+          <div className="container">
+            <div className="max-w-xl mb-14">
+              <div className="rule-accent mb-6" style={{ background: '#E07B39' }} />
+              <h2 className="font-display text-3xl md:text-4xl text-white leading-[1.1]">
+                Interventions récentes à {zone.name}
+              </h2>
+              <p className="text-white/40 mt-4">
+                Découvrez nos dernières interventions de {service.name.toLowerCase()} à {zone.name} et dans les environs.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/[0.06]">
+              {zoneServiceContent.recentCases.map((cas: ZoneServiceRecentCase, index: number) => (
+                <div key={index} className="bg-dark p-8">
+                  <span className="text-xs font-bold uppercase tracking-wider text-secondary-terracotta">{cas.date}</span>
+                  <h3 className="font-heading font-bold text-white mt-2 mb-3">{cas.lieu}</h3>
+                  <div className="space-y-2 text-sm">
+                    <p className="text-white/50"><span className="text-white/30 font-bold">Problème :</span> {cas.probleme}</p>
+                    <p className="text-white/50"><span className="text-white/30 font-bold">Solution :</span> {cas.solution}</p>
+                    <p className="text-white/50"><span className="text-white/30 font-bold">Durée :</span> {cas.duree}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ─── CONTEXTE TARIFS ZONE ─── */}
+      {zoneServiceContent?.tarifContext && (
+        <section className="section bg-secondary-sable">
+          <div className="container">
+            <div className="max-w-4xl mx-auto">
+              <div className="rule-accent mb-6" />
+              <h2 className="section-title">Tarifs {service.name.toLowerCase()} à {zone.name}</h2>
+              <div
+                className="mt-6 text-gray-500 text-lg leading-relaxed prose prose-strong:text-gray-900"
+                dangerouslySetInnerHTML={{ __html: zoneServiceContent.tarifContext }}
+              />
+              <div className="mt-8">
+                <a href={siteConfig.phoneLink} className="btn-primary">
+                  Devis gratuit : {siteConfig.phone}
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
       )}
 
       {/* ─── CONTENU HYPER-LOCAL ─── */}
