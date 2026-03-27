@@ -29,8 +29,8 @@ export const siteConfig = {
   departmentCode: "60",
   region: "Hauts-de-France",
   /** Adresse complète — À DÉFINIR par Angelo */
-  address: "À définir, 60100 Creil",
-  streetAddress: "À définir",
+  address: "3 rue de Verdun, 60100 Creil",
+  streetAddress: "3 rue de Verdun",
 
   geo: {
     lat: 49.2583,
@@ -134,6 +134,8 @@ export const zones = [
 export const navigation = [
   { label: "Accueil", href: "/" },
   { label: "Zones", href: "/zones" },
+  { label: "Avis", href: "/avis" },
+  { label: "À propos", href: "/a-propos" },
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ] as const;
