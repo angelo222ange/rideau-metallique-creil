@@ -95,7 +95,7 @@ export default function AProposPage() {
       </section>
 
       {/* ─── CHIFFRES CLES ─── */}
-      <section className="section bg-white bg-crosshatch">
+      <section className="section bg-white">
         <div className="container">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
@@ -117,7 +117,7 @@ export default function AProposPage() {
       </section>
 
       {/* ─── NOTRE HISTOIRE ─── */}
-      <section className="section bg-gray-50 bg-dots-pattern">
+      <section className="section bg-gray-50">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -215,7 +215,7 @@ export default function AProposPage() {
       </section>
 
       {/* ─── NOS SERVICES ─── */}
-      <section className="section bg-gray-50 bg-crosshatch">
+      <section className="section bg-gray-50">
         <div className="container">
           <div className="max-w-2xl mb-14">
             <p className="section-label">Nos services</p>

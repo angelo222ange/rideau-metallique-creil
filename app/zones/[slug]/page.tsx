@@ -137,7 +137,7 @@ export default function ZonePage({ params }: Props) {
       </section>
 
       {/* ─── SERVICES DISPONIBLES ─── */}
-      <section className="section bg-white bg-crosshatch">
+      <section className="section bg-white">
         <div className="container">
           <div className="mb-12">
             <p className="section-label">Nos services</p>
@@ -170,7 +170,7 @@ export default function ZonePage({ params }: Props) {
       )}
 
       {/* ─── INFOS LOCALES ─── */}
-      <section className="section bg-gray-50 bg-dots-pattern">
+      <section className="section bg-gray-50">
         <div className="container">
           <div className="max-w-3xl">
             <p className="section-label">Expertise locale</p>

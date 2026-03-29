@@ -21,9 +21,9 @@ export function FloatingButton() {
                  ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0 pointer-events-none'}`}
       style={{
         background: '#1B7A4E',
-        borderRadius: '8px',
-        boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3), 0 4px 16px rgba(27, 122, 78, 0.4)',
-        border: '2px solid rgba(255, 255, 255, 0.2)',
+        borderRadius: '14px',
+        boxShadow: '0 8px 32px rgba(27, 122, 78, 0.35), 0 4px 16px rgba(0, 0, 0, 0.15)',
+        border: '1px solid rgba(255, 255, 255, 0.2)',
       }}
       aria-label={`Appeler le ${siteConfig.phone}`}
     >

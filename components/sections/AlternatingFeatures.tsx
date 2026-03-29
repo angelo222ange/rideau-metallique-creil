@@ -21,24 +21,30 @@ export function AlternatingFeatures({ features }: AlternatingFeaturesProps) {
       {features.map((feature, index) => {
         const isImageLeft = feature.imagePosition === "left";
         const isEven = index % 2 === 0;
-        const sectionBg = isEven ? "bg-white bg-crosshatch" : "bg-gray-50 bg-dots-pattern";
+        const sectionBg = isEven ? "bg-white" : "bg-gray-50";
 
         return (
           <section key={index} className={`py-20 md:py-28 ${sectionBg} relative overflow-hidden`}>
             <div className="container relative">
-              {/* Section label with number */}
-              <div className="mb-10">
+              {/* Section label */}
+              <div className="mb-8">
                 <span className="section-label">
-                  {String(index + 1).padStart(2, "0")} — Detail
+                  <span className="w-2 h-2 bg-primary-500" style={{ borderRadius: '50%' }} />
+                  Section {String(index + 1).padStart(2, "0")}
                 </span>
               </div>
 
-              <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+              <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
                 {/* Image block */}
                 <div className={`lg:col-span-5 ${isImageLeft ? "lg:order-1" : "lg:order-2"}`}>
                   <div className="relative group">
-                    {/* Main image -- angles nets, pas de borderRadius */}
-                    <div className="relative aspect-[4/3] overflow-hidden shadow-2xl shadow-gray-900/10 group-hover:shadow-gray-900/20 transition-shadow duration-500">
+                    <div
+                      className="relative aspect-[4/3] overflow-hidden transition-shadow duration-500"
+                      style={{
+                        borderRadius: '16px',
+                        boxShadow: '0 4px 24px rgba(0,0,0,0.08)',
+                      }}
+                    >
                       <Image
                         src={feature.image}
                         alt={feature.imageAlt}
@@ -47,12 +53,7 @@ export function AlternatingFeatures({ features }: AlternatingFeaturesProps) {
                         sizes="(max-width: 1024px) 100vw, 40vw"
                         className="object-cover group-hover:scale-[1.03] transition-transform duration-700"
                       />
-                      {/* Subtle inner shadow */}
-                      <div className="absolute inset-0 shadow-[inset_0_0_60px_rgba(0,0,0,0.08)]" />
                     </div>
-
-                    {/* Decorative accent bar */}
-                    <div className={`absolute ${isImageLeft ? "-right-3 top-0" : "-left-3 top-0"} w-1.5 h-full bg-primary-600`} />
                   </div>
                 </div>
 
@@ -63,8 +64,7 @@ export function AlternatingFeatures({ features }: AlternatingFeaturesProps) {
                     dangerouslySetInnerHTML={{ __html: feature.title }}
                   />
 
-                  {/* Divider industrial */}
-                  <div className="divider-industrial mb-8" />
+                  <div className="w-12 h-1 bg-primary-500 mb-8" style={{ borderRadius: '2px' }} />
 
                   <div
                     className="prose prose-lg max-w-none text-gray-500 leading-[1.85] [&_p]:mb-5 [&_p:last-child]:mb-0 [&_strong]:text-gray-800 [&_strong]:font-bold [&_a]:text-primary-600 [&_a]:font-medium [&_a]:no-underline hover:[&_a]:underline [&_a]:transition-colors"
@@ -74,7 +74,7 @@ export function AlternatingFeatures({ features }: AlternatingFeaturesProps) {
               </div>
             </div>
 
-            {/* Bottom decorative divider between sections */}
+            {/* Soft divider between sections */}
             {index < features.length - 1 && (
               <div className="container mt-20 md:mt-28">
                 <div className="h-px bg-gray-200" />

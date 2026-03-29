@@ -45,7 +45,7 @@ export default function NotFound() {
       </section>
 
       {/* ─── LIENS UTILES ─── */}
-      <section className="section bg-gray-50 bg-dots-pattern">
+      <section className="section bg-gray-50">
         <div className="container">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <p className="section-label">Navigation</p>

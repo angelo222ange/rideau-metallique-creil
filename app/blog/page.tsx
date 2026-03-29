@@ -71,7 +71,7 @@ export default function BlogPage() {
       </section>
 
       {/* ─── ARTICLES GRID ─── */}
-      <section className="section bg-gray-50 bg-dots-pattern">
+      <section className="section bg-gray-50">
         <div className="container">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {sortedArticles.map((article) => (

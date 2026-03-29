@@ -144,7 +144,7 @@ export default function AvisPage() {
       </section>
 
       {/* ─── STATS GLOBALES ─── */}
-      <section className="section bg-white bg-crosshatch">
+      <section className="section bg-white">
         <div className="container">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
@@ -180,7 +180,7 @@ export default function AvisPage() {
       </section>
 
       {/* ─── TOUS LES AVIS ─── */}
-      <section className="section bg-gray-50 bg-dots-pattern">
+      <section className="section bg-gray-50">
         <div className="container">
           <div className="text-center mb-16">
             <p className="section-label">Retours d&apos;experience</p>

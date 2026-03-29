@@ -51,19 +51,26 @@ export function Header() {
 
   return (
     <>
-      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-gray-900 shadow-lg shadow-black/20'
-          : 'bg-gray-900'
-      }`}>
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled
+            ? 'bg-white/95 backdrop-blur-md shadow-soft-lg'
+            : 'bg-white'
+        }`}
+        style={{ borderBottom: isScrolled ? '1px solid rgba(0,0,0,0.06)' : '1px solid transparent' }}
+      >
         <div className="container">
           <div className="flex items-center justify-between h-16 md:h-[72px]">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2.5 group">
-              <div className="w-9 h-9 md:w-10 md:h-10 overflow-hidden border-2 border-white/20 group-hover:border-primary-500 transition-colors">
+              <div
+                className="w-9 h-9 md:w-10 md:h-10 overflow-hidden group-hover:opacity-80 transition-opacity"
+                style={{ borderRadius: '10px' }}
+              >
                 <Image
                   src="/images/logos/depannage-rideau-metallique-creil.webp"
                   alt={`Logo ${siteConfig.name}`}
+                  title={`Logo ${siteConfig.name}`}
                   width={40}
                   height={40}
                   className="w-full h-full object-cover"
@@ -73,22 +80,23 @@ export function Header() {
                 />
               </div>
               <div className="hidden sm:block">
-                <span className="font-bold text-white text-sm uppercase tracking-wide leading-none">
+                <span className="font-bold text-gray-900 text-sm leading-none">
                   {siteConfig.name}
                 </span>
-                <span className="block text-[10px] uppercase tracking-[0.2em] text-gray-400 mt-0.5">
+                <span className="block text-[10px] text-gray-400 mt-0.5">
                   Rideau Metallique
                 </span>
               </div>
             </Link>
 
             {/* Nav Desktop */}
-            <nav className="hidden lg:flex items-center gap-0">
+            <nav className="hidden lg:flex items-center gap-1">
               <Link
                 href="/"
-                className={`px-3 py-2 text-xs font-bold uppercase tracking-wider transition-colors ${
-                  pathname === '/' ? 'text-primary-400' : 'text-white/70 hover:text-white'
+                className={`px-3 py-2 text-sm font-medium transition-colors ${
+                  pathname === '/' ? 'text-primary-600' : 'text-gray-600 hover:text-gray-900'
                 }`}
+                style={{ borderRadius: '8px' }}
               >
                 Accueil
               </Link>
@@ -100,12 +108,13 @@ export function Header() {
                 onMouseLeave={handleServicesLeave}
               >
                 <button
-                  className={`px-3 py-2 text-xs font-bold uppercase tracking-wider flex items-center gap-1 transition-colors ${
-                    pathname.includes('-rideau-metallique-') ? 'text-primary-400' : 'text-white/70 hover:text-white'
+                  className={`px-3 py-2 text-sm font-medium flex items-center gap-1 transition-colors ${
+                    pathname.includes('-rideau-metallique-') ? 'text-primary-600' : 'text-gray-600 hover:text-gray-900'
                   }`}
+                  style={{ borderRadius: '8px' }}
                 >
                   Services
-                  <svg className={`w-3 h-3 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className={`w-3.5 h-3.5 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
@@ -113,14 +122,17 @@ export function Header() {
                 <div className={`absolute top-full left-0 pt-2 transition-all duration-200 ${
                   isServicesOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-1 pointer-events-none'
                 }`}>
-                  <div className="bg-gray-800 border border-white/10 py-1.5 min-w-[240px]">
+                  <div
+                    className="bg-white border border-gray-100 py-2 min-w-[240px]"
+                    style={{ borderRadius: '12px', boxShadow: '0 8px 32px rgba(0,0,0,0.1)' }}
+                  >
                     {services.filter(s => s.hasPage).map((service) => {
                       const href = getServiceHref(service.slug);
                       return (
                         <Link
                           key={service.id}
                           href={href}
-                          className="flex items-center gap-3 px-4 py-2.5 text-sm text-white/60 hover:text-primary-400 hover:bg-white/5 transition-colors"
+                          className="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-600 hover:text-primary-600 hover:bg-primary-50 transition-colors"
                         >
                           <span className="font-medium">{service.name}</span>
                         </Link>
@@ -134,9 +146,10 @@ export function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`px-3 py-2 text-xs font-bold uppercase tracking-wider transition-colors ${
-                    isActive(item.href) ? 'text-primary-400' : 'text-white/70 hover:text-white'
+                  className={`px-3 py-2 text-sm font-medium transition-colors ${
+                    isActive(item.href) ? 'text-primary-600' : 'text-gray-600 hover:text-gray-900'
                   }`}
+                  style={{ borderRadius: '8px' }}
                 >
                   {item.label}
                 </Link>
@@ -146,8 +159,8 @@ export function Header() {
             {/* CTA + Mobile */}
             <div className="flex items-center gap-3">
               {/* Badge en ligne - Desktop */}
-              <span className="hidden md:flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest text-green-400">
-                <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+              <span className="hidden md:flex items-center gap-1.5 text-[11px] font-semibold text-primary-600">
+                <span className="w-2 h-2 bg-primary-500 rounded-full animate-pulse" />
                 En ligne
               </span>
 
@@ -167,9 +180,10 @@ export function Header() {
               {/* Menu Mobile Button */}
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="lg:hidden p-2 text-white hover:text-primary-400 transition-colors"
+                className="lg:hidden p-2 text-gray-600 hover:text-primary-600 transition-colors"
                 aria-label="Menu"
                 aria-expanded={isMenuOpen}
+                style={{ borderRadius: '8px' }}
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   {isMenuOpen ? (
@@ -182,16 +196,13 @@ export function Header() {
             </div>
           </div>
         </div>
-
-        {/* Bande primary en bas */}
-        <div className="h-[2px] bg-primary-600" />
       </header>
 
       {/* Mobile Menu Overlay */}
       <div className={`fixed inset-0 z-[60] transition-opacity duration-300 ${
         isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
       }`}>
-        <div className="absolute inset-0 bg-gray-900/95 backdrop-blur-sm" onClick={() => setIsMenuOpen(false)} />
+        <div className="absolute inset-0 bg-white/98 backdrop-blur-sm" onClick={() => setIsMenuOpen(false)} />
 
         <div className={`absolute inset-0 flex flex-col items-center justify-center transition-all duration-300 ${
           isMenuOpen ? 'opacity-100' : 'opacity-0'
@@ -199,18 +210,19 @@ export function Header() {
           {/* Close button */}
           <button
             onClick={() => setIsMenuOpen(false)}
-            className="absolute top-5 right-5 p-3 text-white/60 hover:text-white"
+            className="absolute top-5 right-5 p-3 text-gray-400 hover:text-gray-900"
             aria-label="Fermer"
+            style={{ borderRadius: '12px' }}
           >
             <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
 
-          <nav className="flex flex-col items-center gap-2">
+          <nav className="flex flex-col items-center gap-3">
             <Link href="/" onClick={() => setIsMenuOpen(false)}
-              className={`text-2xl font-bold uppercase tracking-wider transition-colors ${
-                pathname === '/' ? 'text-primary-400' : 'text-white/70 hover:text-white'
+              className={`text-2xl font-bold transition-colors ${
+                pathname === '/' ? 'text-primary-600' : 'text-gray-900 hover:text-primary-600'
               }`}>
               Accueil
             </Link>
@@ -219,7 +231,7 @@ export function Header() {
             <div className="flex flex-col items-center">
               <button
                 onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
-                className="text-2xl font-bold uppercase tracking-wider text-white/70 hover:text-white transition-colors flex items-center gap-2"
+                className="text-2xl font-bold text-gray-900 hover:text-primary-600 transition-colors flex items-center gap-2"
               >
                 Services
                 <svg className={`w-5 h-5 transition-transform ${isMobileServicesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -234,7 +246,7 @@ export function Header() {
                       key={service.id}
                       href={getServiceHref(service.slug)}
                       onClick={() => setIsMenuOpen(false)}
-                      className="text-base text-white/40 hover:text-primary-400 transition-colors"
+                      className="text-base text-gray-400 hover:text-primary-600 transition-colors"
                     >
                       {service.name}
                     </Link>
@@ -248,8 +260,8 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setIsMenuOpen(false)}
-                className={`text-2xl font-bold uppercase tracking-wider transition-colors ${
-                  isActive(item.href) ? 'text-primary-400' : 'text-white/70 hover:text-white'
+                className={`text-2xl font-bold transition-colors ${
+                  isActive(item.href) ? 'text-primary-600' : 'text-gray-900 hover:text-primary-600'
                 }`}
               >
                 {item.label}

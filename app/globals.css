@@ -2,14 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
- * ═══════════════════════════════════════════════════════════════════════════
- * DESIGN SYSTEM — DRM CREIL
- * Style Industriel Picardie : robuste, vert forêt, terre, professionnel
- * Inspiré du design Argenteuil, adapté pour Creil (vallée de l'Oise)
- * ═══════════════════════════════════════════════════════════════════════════
- */
+/* ============================================
+   VARIABLES CSS - Design System DRM Creil
+   Clean, moderne, arrondi, soft shadows
+   ============================================ */
+:root {
+  /* Couleurs principales */
+  --primary: #1B7A4E;
+  --primary-hover: #155E3B;
+  --primary-light: #ecfdf5;
+  --accent-red: #DC2626;
+  --accent-red-hover: #B91C1C;
+  --text-dark: #111827;
+  --text-body: #4B5563;
+  --text-muted: #9CA3AF;
 
+  /* Rayons de bordure */
+  --radius-button: 12px;
+  --radius-card: 16px;
+  --radius-badge: 9999px;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow: 350ms ease;
+
+  /* Espacements */
+  --container-padding: 1rem;
+
+  /* Z-index */
+  --z-dropdown: 100;
+  --z-header: 50;
+  --z-mobile-menu: 200;
+  --z-overlay: 150;
+}
+
+@media (min-width: 640px) {
+  :root { --container-padding: 1.5rem; }
+}
+@media (min-width: 1024px) {
+  :root { --container-padding: 2rem; }
+}
+
+/* ============================================
+   STYLES DE BASE
+   ============================================ */
 @layer base {
   html {
     @apply scroll-smooth;
@@ -20,64 +57,93 @@
 
   body {
     @apply bg-white text-gray-900 antialiased;
-    font-family: 'Inter', 'DM Sans', system-ui, sans-serif;
+    font-family: 'DM Sans', 'Plus Jakarta Sans', system-ui, sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', 'DM Sans', system-ui, sans-serif;
     @apply font-bold;
     letter-spacing: -0.02em;
-    text-rendering: optimizeLegibility;
+    color: var(--text-dark);
+    line-height: 1.2;
   }
 
-  h1 { @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.05]; }
-  h2 { @apply text-2xl sm:text-3xl md:text-4xl leading-tight; }
-  h3 { @apply text-xl sm:text-2xl; }
+  h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+  h2 { font-size: clamp(1.5rem, 4vw, 2.5rem); }
+  h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
 
   ::selection {
     background: rgba(27, 122, 78, 0.15);
   }
+
+  /* Focus accessibility */
+  input[type="checkbox"]:focus,
+  input[type="radio"]:focus {
+    outline: none;
+    box-shadow: none;
+  }
 }
 
+/* ============================================
+   COMPOSANTS UTILITAIRES
+   ============================================ */
 @layer components {
-  .container {
-    @apply mx-auto px-5 sm:px-6 lg:px-8;
-    max-width: 1200px;
+  /* Scrollbar hide */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
   }
 
-  /* ─── BOUTONS ─── */
+  /* Container responsive — max 1280px */
+  .container {
+    @apply w-full mx-auto px-5 sm:px-6 lg:px-8;
+    max-width: 1280px;
+  }
+
+  /* ---- BOUTONS ---- */
+  .btn {
+    @apply inline-flex items-center justify-center font-semibold
+           transition-all duration-250 cursor-pointer
+           disabled:opacity-50 disabled:cursor-not-allowed;
+    border-radius: var(--radius-button);
+  }
+
   .btn-primary {
-    @apply inline-flex items-center justify-center
-           bg-primary-600 px-7 py-3.5
-           text-sm font-bold text-white uppercase tracking-wide
-           border-2 border-primary-700
-           hover:bg-primary-700
-           transition-all duration-150;
+    @apply btn bg-primary-600 text-white px-7 py-3.5 text-sm font-bold
+           hover:bg-primary-700 hover:-translate-y-0.5;
+    box-shadow: 0 4px 16px rgba(27, 122, 78, 0.2);
+  }
+  .btn-primary:hover {
+    box-shadow: 0 6px 24px rgba(27, 122, 78, 0.3);
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center
-           border-2 border-gray-900
-           px-7 py-3.5 text-sm font-bold uppercase tracking-wide
-           text-gray-900 bg-transparent
-           hover:bg-gray-900 hover:text-white
-           transition-all duration-150;
+    @apply btn border-2 border-primary-600 text-primary-600 bg-transparent px-7 py-3.5 text-sm font-bold
+           hover:bg-primary-600 hover:text-white hover:-translate-y-0.5;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  }
+  .btn-secondary:hover {
+    box-shadow: 0 4px 16px rgba(27, 122, 78, 0.2);
   }
 
   .btn-phone {
     @apply inline-flex items-center justify-center gap-2
-           bg-primary-600 px-7 py-3.5
-           text-sm font-bold text-white uppercase tracking-wide
-           border-2 border-primary-700
-           hover:bg-primary-700
-           transition-all duration-150;
-    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.15);
+           bg-primary-600 px-6 py-3 text-sm font-bold text-white
+           hover:bg-primary-700 hover:-translate-y-0.5 transition-all duration-250;
+    border-radius: var(--radius-button);
+    box-shadow: 0 4px 16px rgba(27, 122, 78, 0.25);
   }
   .btn-phone:hover {
-    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.15);
-    transform: translate(2px, 2px);
+    box-shadow: 0 6px 24px rgba(27, 122, 78, 0.35);
   }
 
-  /* ─── SECTIONS ─── */
+  .btn-sm { @apply text-sm px-4 py-2; }
+  .btn-lg { @apply text-lg px-8 py-4; }
+
+  /* ---- SECTIONS ---- */
   .section {
     @apply py-16 md:py-24;
   }
@@ -87,7 +153,7 @@
   }
 
   .section-label {
-    @apply text-xs font-bold uppercase tracking-[0.2em] text-primary-600 mb-3;
+    @apply inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.15em] text-primary-600 mb-3;
   }
 
   .section-subtitle {
@@ -95,64 +161,46 @@
     line-height: 1.7;
   }
 
-  /* ─── SÉPARATEUR INDUSTRIEL ─── */
+  /* ---- DIVIDERS (legacy compat, clean style) ---- */
   .divider-industrial {
-    @apply w-16 h-1 bg-primary-600;
+    @apply w-10 h-1 bg-primary-500;
+    border-radius: 2px;
   }
-
   .divider-industrial-lg {
-    @apply w-24 h-1.5 bg-primary-600;
+    @apply w-14 h-1.5 bg-primary-500;
+    border-radius: 2px;
   }
 
-  /* ─── STATS ─── */
+  /* ---- STATS ---- */
   .stat-number {
-    @apply text-4xl md:text-6xl font-black leading-none;
+    @apply text-4xl md:text-5xl font-extrabold leading-none;
     letter-spacing: -0.04em;
   }
 
   .stat-label {
-    @apply text-xs font-bold uppercase tracking-widest text-gray-400 mt-1;
+    @apply text-xs font-semibold uppercase tracking-widest text-gray-400 mt-1;
   }
 
-  /* ─── CARDS ─── */
+  /* ---- CARDS ---- */
   .card {
-    @apply bg-white p-6
-           border-l-4 border-l-primary-500 border border-gray-200
-           hover:border-l-primary-700
-           transition-colors duration-200;
+    @apply bg-white p-6 border border-gray-100 transition-all duration-250;
+    border-radius: var(--radius-card);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.06);
+  }
+  .card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08), 0 8px 32px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
   }
 
-  /* ─── NAV ─── */
+  /* ---- NAV ---- */
   .nav-link {
     @apply relative text-sm font-medium transition-colors duration-200;
   }
 }
 
-/* ═══════════════════════════════════════════════════════════════════════════
-   PATTERNS INDUSTRIELS
-   ═══════════════════════════════════════════════════════════════════════════ */
-.bg-crosshatch {
-  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.03'%3E%3Cpath d='M0 0h40v40H0V0zm1 1v38h38V1H1z'/%3E%3C/g%3E%3C/svg%3E");
-}
-
-.bg-diagonal-lines {
-  background-image: repeating-linear-gradient(
-    -45deg,
-    transparent,
-    transparent 10px,
-    rgba(0, 0, 0, 0.02) 10px,
-    rgba(0, 0, 0, 0.02) 11px
-  );
-}
-
-.bg-dots-pattern {
-  background-image: radial-gradient(circle, rgba(0,0,0,0.06) 1px, transparent 1px);
-  background-size: 20px 20px;
-}
-
-/* ═══════════════════════════════════════════════════════════════════════════
-   PROSE — Contenu SEO riche
-   ═══════════════════════════════════════════════════════════════════════════ */
+/* ============================================
+   PROSE - Contenu SEO riche
+   ============================================ */
 .prose {
   @apply text-gray-500;
 }
@@ -175,9 +223,24 @@
   @apply mb-2;
 }
 
-/* ═══════════════════════════════════════════════════════════════════════════
+/* ============================================
    ANIMATIONS
-   ═══════════════════════════════════════════════════════════════════════════ */
+   ============================================ */
+@layer utilities {
+  .animate-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out forwards;
+  }
+  .hover-lift {
+    @apply transition-transform duration-250 hover:-translate-y-1;
+  }
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-primary-900;
+  }
+}
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -185,4 +248,76 @@
 @keyframes slideUp {
   from { opacity: 0; transform: translateY(12px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* Bouton flottant pulsant */
+@keyframes pulseShadow {
+  0%, 100% { box-shadow: 0 4px 20px rgba(27, 122, 78, 0.4); }
+  50% { box-shadow: 0 4px 30px rgba(27, 122, 78, 0.6); }
+}
+.animate-pulse-shadow {
+  animation: pulseShadow 2s infinite;
+}
+
+/* ============================================
+   SCROLLBAR
+   ============================================ */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F3F4F6;
+}
+::-webkit-scrollbar-thumb {
+  background: #9CA3AF;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6B7280;
+}
+
+/* ============================================
+   RESPONSIVE IMAGES
+   ============================================ */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ============================================
+   FORMULAIRES
+   ============================================ */
+input, textarea, select {
+  @apply w-full px-4 py-3 border border-gray-300 transition-all duration-250
+         focus:outline-none focus:border-primary-600 focus:ring-2 focus:ring-primary-600/20;
+  border-radius: var(--radius-button);
+}
+input::placeholder, textarea::placeholder {
+  @apply text-gray-400;
+}
+
+/* ============================================
+   ACCESSIBILITE
+   ============================================ */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

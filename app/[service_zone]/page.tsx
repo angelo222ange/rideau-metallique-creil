@@ -292,7 +292,7 @@ export default function ServiceZonePage({ params }: Props) {
         </section>
 
         {/* Services dans cette zone */}
-        <section className="relative py-20 md:py-28 bg-white bg-crosshatch overflow-hidden">
+        <section className="relative py-20 md:py-28 bg-white overflow-hidden">
           <div className="container relative z-10">
             <div className="mb-12">
               <span className="section-label block mb-3">Nos services</span>
@@ -320,7 +320,7 @@ export default function ServiceZonePage({ params }: Props) {
 
         {/* Infos zone */}
         {zoneLocal && (
-          <section className="relative py-20 md:py-28 bg-gray-50 bg-dots-pattern overflow-hidden">
+          <section className="relative py-20 md:py-28 bg-gray-50 overflow-hidden">
             <div className="container relative z-10">
               <div className="max-w-3xl">
                 <span className="section-label block mb-3">A propos</span>
@@ -353,7 +353,7 @@ export default function ServiceZonePage({ params }: Props) {
         )}
 
         {/* Zones voisines */}
-        <section className="py-20 md:py-28 bg-white bg-crosshatch">
+        <section className="py-20 md:py-28 bg-white">
           <div className="container">
             <span className="section-label block mb-3">Zones voisines</span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-4">Rideau métallique dans l&apos;{siteConfig.department}</h2>
@@ -1105,7 +1105,7 @@ export default function ServiceZonePage({ params }: Props) {
 
       {/* ─── ZONE INTRO UNIQUE ─── */}
       {zoneServiceContent?.zoneIntro && (
-        <section className="relative py-20 md:py-28 bg-white bg-crosshatch overflow-hidden">
+        <section className="relative py-20 md:py-28 bg-white overflow-hidden">
           <div className="container relative z-10">
             <div className="grid lg:grid-cols-12 gap-12 items-center max-w-6xl mx-auto">
               {/* Texte */}
@@ -1143,7 +1143,7 @@ export default function ServiceZonePage({ params }: Props) {
           {zoneServiceContent.zoneFeatures.map((feature, index) => (
             <section
               key={index}
-              className={`relative py-20 md:py-28 overflow-hidden ${index % 2 === 0 ? "bg-white bg-crosshatch" : "bg-gray-50 bg-dots-pattern"}`}
+              className={`relative py-20 md:py-28 overflow-hidden ${index % 2 === 0 ? "bg-white" : "bg-gray-50"}`}
             >
               <div className="container relative z-10">
                 {/* Section label with number */}
@@ -1233,7 +1233,7 @@ export default function ServiceZonePage({ params }: Props) {
 
       {/* ─── CONTEXTE TARIFS ZONE ─── */}
       {zoneServiceContent?.tarifContext && (
-        <section className="relative py-20 md:py-28 bg-gray-50 bg-dots-pattern overflow-hidden">
+        <section className="relative py-20 md:py-28 bg-gray-50 overflow-hidden">
           <div className="container relative z-10">
             <div className="max-w-4xl mx-auto">
               <div className="bg-white border-l-4 border-l-primary-500 border border-gray-200 p-8 md:p-12">
@@ -1289,7 +1289,7 @@ export default function ServiceZonePage({ params }: Props) {
       )}
 
       {/* ─── MAILLAGE : AUTRES SERVICES À [ZONE] ─── */}
-      <section className="relative py-20 md:py-28 bg-white bg-crosshatch overflow-hidden">
+      <section className="relative py-20 md:py-28 bg-white overflow-hidden">
         <div className="container relative z-10">
           <div className="max-w-xl mb-12">
             <span className="section-label block mb-3">Nos services</span>
@@ -1322,7 +1322,7 @@ export default function ServiceZonePage({ params }: Props) {
       </section>
 
       {/* ─── MAILLAGE : CE SERVICE DANS D'AUTRES ZONES ─── */}
-      <section className="py-20 md:py-28 bg-gray-50 bg-dots-pattern">
+      <section className="py-20 md:py-28 bg-gray-50">
         <div className="container">
           <div className="max-w-xl mb-12">
             <span className="section-label block mb-3">Zones voisines</span>

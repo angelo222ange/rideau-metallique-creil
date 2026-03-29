@@ -28,10 +28,24 @@ module.exports = {
         dark: '#0C1B2A',
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        heading: ['Inter', 'sans-serif'],
-        body: ['Source Sans 3', 'system-ui', 'sans-serif'],
-        display: ['Playfair Display', 'Georgia', 'Times New Roman', 'serif'],
+        sans: ['Plus Jakarta Sans', 'DM Sans', 'system-ui', 'sans-serif'],
+        heading: ['Plus Jakarta Sans', 'DM Sans', 'sans-serif'],
+        body: ['DM Sans', 'system-ui', 'sans-serif'],
+        display: ['DM Serif Display', 'Georgia', 'serif'],
+      },
+      borderRadius: {
+        'button': '12px',
+        'card': '16px',
+      },
+      boxShadow: {
+        'card': '0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.06)',
+        'card-hover': '0 4px 12px rgba(0,0,0,0.08), 0 8px 32px rgba(0,0,0,0.1)',
+        'button-hover': '0 4px 16px rgba(27,122,78,0.25)',
+        'soft': '0 2px 8px rgba(0,0,0,0.06)',
+        'soft-lg': '0 4px 24px rgba(0,0,0,0.08)',
+      },
+      transitionDuration: {
+        '250': '250ms',
       },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-out forwards',
@@ -48,8 +62,8 @@ module.exports = {
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
         pulseSoft: {
-          '0%, 100%': { boxShadow: '0 0 0 0 rgba(180, 83, 9, 0.3)' },
-          '50%': { boxShadow: '0 0 0 10px rgba(180, 83, 9, 0)' },
+          '0%, 100%': { boxShadow: '0 0 0 0 rgba(27, 122, 78, 0.3)' },
+          '50%': { boxShadow: '0 0 0 10px rgba(27, 122, 78, 0)' },
         },
       },
     },

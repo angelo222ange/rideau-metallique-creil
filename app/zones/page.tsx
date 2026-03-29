@@ -69,7 +69,7 @@ export default function ZonesPage() {
 
       {/* ─── VILLE PRINCIPALE ─── */}
       {mainCity && (
-        <section className="section bg-white bg-crosshatch">
+        <section className="section bg-white">
           <div className="container">
             <div className="max-w-3xl">
               <p className="section-label">Ville principale</p>
@@ -90,7 +90,7 @@ export default function ZonesPage() {
       )}
 
       {/* ─── TOUTES LES ZONES ─── */}
-      <section className="section bg-gray-50 bg-dots-pattern">
+      <section className="section bg-gray-50">
         <div className="container">
           <div className="max-w-xl mb-14">
             <p className="section-label">Communes</p>

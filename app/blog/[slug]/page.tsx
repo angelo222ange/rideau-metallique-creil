@@ -219,7 +219,7 @@ export default function BlogArticlePage({ params }: Props) {
       </section>
 
       {/* ─── ARTICLE CONTENT ─── */}
-      <section className="section bg-gray-50 bg-dots-pattern">
+      <section className="section bg-gray-50">
         <div className="container">
           <div className="grid lg:grid-cols-12 gap-12">
             {/* Main Content */}

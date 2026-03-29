@@ -86,7 +86,7 @@ export default function ContactPage() {
       </section>
 
       {/* ─── CONTACT GRID ─── */}
-      <section className="section bg-white bg-crosshatch">
+      <section className="section bg-white">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Left -- Coordonnees */}
@@ -184,7 +184,7 @@ export default function ContactPage() {
       </section>
 
       {/* ─── CONFIANCE ─── */}
-      <section className="section bg-gray-50 bg-dots-pattern">
+      <section className="section bg-gray-50">
         <div className="container">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <p className="section-label">Confiance</p>

@@ -188,7 +188,7 @@ export default function TarifsPage() {
       </section>
 
       {/* ─── RESUME TARIFS ─── */}
-      <section className="section bg-white bg-crosshatch">
+      <section className="section bg-white">
         <div className="container">
           <div className="card p-8 max-w-3xl">
             <h2 className="font-bold text-gray-900 text-xl mb-5">Tarifs en bref</h2>
@@ -217,7 +217,7 @@ export default function TarifsPage() {
       </section>
 
       {/* ─── TARIFS DEPANNAGE ─── */}
-      <section className="section bg-gray-50 bg-dots-pattern">
+      <section className="section bg-gray-50">
         <div className="container">
           <TarifTable
             title={`Tarifs Depannage Rideau Metallique ${siteConfig.city}`}
@@ -253,7 +253,7 @@ export default function TarifsPage() {
       </section>
 
       {/* ─── TARIFS MOTORISATION ─── */}
-      <section className="section bg-gray-50 bg-crosshatch">
+      <section className="section bg-gray-50">
         <div className="container">
           <TarifTable
             title="Tarifs Motorisation Rideau Metallique"
@@ -322,7 +322,7 @@ export default function TarifsPage() {
       </section>
 
       {/* ─── TEXTE SEO ─── */}
-      <section className="section bg-gray-50 bg-dots-pattern">
+      <section className="section bg-gray-50">
         <div className="container">
           <div className="max-w-3xl mx-auto">
             <p className="section-label">Guide</p>
