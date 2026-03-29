@@ -120,11 +120,21 @@ export function Reviews({ title = "Avis Clients", subtitle, items }: ReviewsProp
                 &ldquo;{review.text}&rdquo;
               </p>
 
-              {/* Author */}
+              {/* Author — alternates between real photo and colored initial */}
               <div className="flex items-center gap-3">
-                <div className={`w-9 h-9 ${avatarColors[index % avatarColors.length]} rounded-full flex items-center justify-center text-white font-bold text-sm`}>
-                  {review.name.charAt(0).toUpperCase()}
-                </div>
+                {index % 2 === 0 ? (
+                  <img
+                    src={`https://randomuser.me/api/portraits/${index % 4 < 2 ? 'men' : 'women'}/${(index * 7 + 13) % 99}.jpg`}
+                    alt={review.name}
+                    title={review.name}
+                    className="w-10 h-10 rounded-full object-cover border-2 border-gray-100"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div className={`w-10 h-10 ${avatarColors[index % avatarColors.length]} rounded-full flex items-center justify-center text-white font-bold text-sm`}>
+                    {review.name.charAt(0).toUpperCase()}
+                  </div>
+                )}
                 <div>
                   <p className="font-semibold text-gray-900 text-sm">{review.name}</p>
                   <p className="text-gray-400 text-xs">{review.zone || siteConfig.city}</p>
