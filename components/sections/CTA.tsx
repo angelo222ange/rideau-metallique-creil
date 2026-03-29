@@ -7,81 +7,85 @@ interface CTAProps {
 }
 
 export function CTA({ title, subtitle, variant = "default" }: CTAProps) {
-  const defaults = {
-    default: {
-      title: `Besoin d'un spécialiste à ${siteConfig.city} ?`,
-      subtitle: `Intervention 24h/24, 7j/7 dans tout ${siteConfig.city} et les ${siteConfig.department}.`,
-    },
-    urgence: {
-      title: `Urgence rideau métallique ?`,
-      subtitle: `Rideau bloqué, moteur en panne ? Nos techniciens sont disponibles immédiatement.`,
-    },
-    devis: {
-      title: `Demandez votre devis gratuit`,
-      subtitle: `Devis détaillé communiqué par téléphone. Sans engagement.`,
-    },
-  };
-
-  const displayTitle = title || defaults[variant].title;
-  const displaySubtitle = subtitle || defaults[variant].subtitle;
+  const defaultTitle = `Besoin d'un spécialiste rideau métallique à ${siteConfig.city} ?`;
+  const defaultSubtitle = `Intervention rapide dans tout le département de l'${siteConfig.department}. Devis gratuit, sans engagement.`;
 
   return (
-    <section className="relative py-24 md:py-32 bg-dark overflow-hidden">
-      {/* Subtle noise texture */}
-      <div className="noise absolute inset-0" />
+    <section className="relative overflow-hidden bg-primary-600">
+      {/* Subtle dot pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0" style={{
+          backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)',
+          backgroundSize: '24px 24px'
+        }} />
+      </div>
 
-      <div className="container relative z-10 text-center">
-        {variant === "urgence" && (
-          <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-red-400 mb-6">
-            <span className="w-1.5 h-1.5 bg-red-400 rounded-full animate-pulse" />
-            Urgence 24h/24
-          </span>
-        )}
+      <div className="container relative py-16 md:py-20">
+        <div className="grid lg:grid-cols-2 gap-10 items-center">
+          {/* Left — content */}
+          <div>
+            {variant === "urgence" && (
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/20 text-white text-sm font-medium mb-5" style={{ borderRadius: '6px' }}>
+                <span className="w-2 h-2 bg-white rounded-full animate-pulse" />
+                Urgence 24h/24
+              </div>
+            )}
+            <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight mb-4">
+              {title || defaultTitle}
+            </h2>
+            <p className="text-white/70 text-lg leading-relaxed mb-6">
+              {subtitle || defaultSubtitle}
+            </p>
 
-        <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-5 max-w-3xl mx-auto">
-          {displayTitle}
-        </h2>
-        <p className="text-white/40 text-lg max-w-xl mx-auto mb-12">
-          {displaySubtitle}
-        </p>
+            {/* Trust points */}
+            <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/60">
+              {["Devis gratuit", "Intervention 30-60 min", "Garantie pièces et main-d'œuvre"].map((item, i) => (
+                <span key={i} className="flex items-center gap-1.5">
+                  <svg className="w-4 h-4 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
 
-        {/* Giant phone number */}
-        <a href={siteConfig.phoneLink} className="inline-block group mb-10">
-          <span className="block font-display text-5xl md:text-7xl lg:text-8xl text-white group-hover:text-secondary-terracotta transition-colors duration-300">
-            {siteConfig.phone}
-          </span>
-          <span className="block text-xs text-white/25 mt-2 tracking-wide uppercase">
-            Cliquez pour appeler — Disponible 24h/24
-          </span>
-        </a>
+          {/* Right — action card */}
+          <div className="bg-white p-8" style={{ borderRadius: '12px' }}>
+            <h3 className="text-xl font-bold text-gray-900 mb-2">Appelez maintenant</h3>
+            <p className="text-gray-500 text-sm mb-6">Un technicien prend en charge votre demande immédiatement.</p>
 
-        {/* Buttons */}
-        <div className="flex flex-col sm:flex-row gap-3 justify-center">
-          <a href={siteConfig.phoneLink}
-            className="inline-flex items-center justify-center gap-2 px-8 py-4 text-[15px] font-bold text-dark bg-white hover:bg-gray-100 transition-colors"
-            style={{ borderRadius: '4px' }}>
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5}
-                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-            </svg>
-            Appeler maintenant
-          </a>
-          <a href="/contact"
-            className="inline-flex items-center justify-center px-8 py-4 text-[15px] font-bold text-white/60 border border-white/15 hover:border-white/40 transition-colors"
-            style={{ borderRadius: '4px' }}>
-            Demander un devis gratuit
-          </a>
-        </div>
+            <a
+              href={siteConfig.phoneLink}
+              className="flex items-center justify-center gap-3 w-full py-4 bg-primary-600 text-white text-xl font-bold hover:bg-primary-700 transition-colors shadow-lg shadow-primary-600/25 mb-4"
+              style={{ borderRadius: '8px' }}
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              {siteConfig.phone}
+            </a>
 
-        {/* Minimal trust */}
-        <div className="flex flex-wrap justify-center gap-6 mt-12 text-xs text-white/20 uppercase tracking-wider">
-          <span>Devis gratuit</span>
-          <span>·</span>
-          <span>Sans engagement</span>
-          <span>·</span>
-          <span>24h/24</span>
-          <span>·</span>
-          <span>{siteConfig.reviews.rating}/5 ({siteConfig.reviews.count} avis)</span>
+            <div className="text-center">
+              <span className="text-gray-400 text-xs">ou</span>
+            </div>
+
+            <a
+              href="/contact"
+              className="flex items-center justify-center gap-2 w-full py-3.5 bg-gray-50 text-gray-700 font-semibold border border-gray-200 hover:border-primary-300 hover:text-primary-700 transition-all mt-3"
+              style={{ borderRadius: '8px' }}
+            >
+              Demander un devis en ligne
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+
+            <p className="text-center text-gray-400 text-xs mt-4">
+              {siteConfig.address} · Disponible 24h/24
+            </p>
+          </div>
         </div>
       </div>
     </section>

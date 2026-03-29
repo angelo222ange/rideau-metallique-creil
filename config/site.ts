@@ -214,7 +214,7 @@ export const services = [
     image: "/images/services/reparation-rideau-metallique-creil.webp",
     hasPage: true,
   },
-] as const;
+];
 
 // ─────────────────────────────────────────────────────────────────────────
 // TYPES DE RIDEAUX
