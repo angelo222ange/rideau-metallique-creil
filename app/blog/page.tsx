@@ -44,7 +44,7 @@ export default function BlogPage() {
       <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 bg-dark overflow-hidden">
         <div className="hidden" />
         <div className="container relative z-10 text-center">
-          <div className="rule-accent mx-auto mb-8"  />
+          <div className="w-12 h-1 bg-primary-600 mx-auto mb-8" style={{borderRadius:"4px"}}/>
           <h1 className="font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-4">
             Blog
           </h1>

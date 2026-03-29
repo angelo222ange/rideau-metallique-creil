@@ -172,7 +172,7 @@ export default function BlogArticlePage({ params }: Props) {
       />
 
       {/* Hero */}
-      <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 bg-dark overflow-hidden">
+      <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 bg-gray-900 overflow-hidden">
         <div className="hidden" />
         <div className="container relative z-10">
           {/* Breadcrumb */}
@@ -187,7 +187,7 @@ export default function BlogArticlePage({ params }: Props) {
           </nav>
 
           <div className="max-w-3xl">
-            <div className="rule-accent mb-8"  />
+            <div className="w-12 h-1 bg-primary-600 mb-8" style={{borderRadius:"4px"}}/>
 
             {/* Meta */}
             <div className="flex items-center gap-3 text-xs text-white/30 mb-6">
@@ -251,7 +251,7 @@ export default function BlogArticlePage({ params }: Props) {
             <aside className="lg:col-span-4">
               <div className="sticky top-28 space-y-8">
                 {/* CTA Box */}
-                <div className="bg-dark p-6 text-center" style={{ borderRadius: '8px' }}>
+                <div className="bg-gray-900 p-6 text-center" style={{ borderRadius: '8px' }}>
                   <p className="text-white font-heading font-bold text-lg mb-2">
                     Besoin d&apos;un devis ?
                   </p>

@@ -39,7 +39,7 @@ export default function ZonesPage() {
       <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 bg-dark overflow-hidden">
         <div className="hidden" />
         <div className="container relative z-10 text-center">
-          <div className="rule-accent mx-auto mb-8"  />
+          <div className="w-12 h-1 bg-primary-600 mx-auto mb-8" style={{borderRadius:"4px"}}/>
           <h1 className="font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-4">
             Zones d&apos;intervention
           </h1>
@@ -54,7 +54,7 @@ export default function ZonesPage() {
         <section className="section bg-white">
           <div className="container">
             <div className="max-w-3xl">
-              <div className="rule-accent mb-6" />
+              <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
               <h2 className="font-bold text-3xl md:text-4xl text-gray-900 mb-4">{mainCity.name}</h2>
               <p className="text-gray-400 text-lg mb-8 leading-relaxed">
                 Basés à {mainCity.name}, nous intervenons en 1 heure maximum pour tous vos besoins en rideau métallique.
@@ -69,7 +69,7 @@ export default function ZonesPage() {
       <section className="section bg-gray-50">
         <div className="container">
           <div className="max-w-xl mb-14">
-            <div className="rule-accent mb-6" />
+            <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
             <h2 className="section-title">Toutes nos zones</h2>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-px bg-gray-200">

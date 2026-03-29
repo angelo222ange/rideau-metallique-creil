@@ -13,7 +13,7 @@ export function WhyChooseUs({ title, items, zoneName, zonePostal }: WhyChooseUsP
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           <div>
-            <div className="rule-accent mb-6" />
+            <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
             <h2 className="section-title">{title}</h2>
 
             <div className="mt-8 divide-y divide-gray-200">

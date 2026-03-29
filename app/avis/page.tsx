@@ -110,7 +110,7 @@ export default function AvisPage() {
             </ol>
           </nav>
           <div className="max-w-3xl">
-            <div className="rule-accent mb-8"  />
+            <div className="w-12 h-1 bg-primary-600 mb-8" style={{borderRadius:"4px"}}/>
             <h1 className="font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-5">
               Avis Clients {siteConfig.name}
             </h1>

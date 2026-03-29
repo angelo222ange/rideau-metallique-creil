@@ -20,10 +20,10 @@ export function FloatingButton() {
                  transition-all duration-400 shadow-2xl
                  ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0 pointer-events-none'}`}
       style={{
-        background: '#E07B39',
+        background: '#1B7A4E',
         borderRadius: '8px',
-        boxShadow: '0 8px 32px rgba(0, 0, 0, 0.6), 0 4px 16px rgba(224, 123, 57, 0.8)',
-        border: '2px solid rgba(255, 255, 255, 0.3)',
+        boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3), 0 4px 16px rgba(27, 122, 78, 0.4)',
+        border: '2px solid rgba(255, 255, 255, 0.2)',
       }}
       aria-label={`Appeler le ${siteConfig.phone}`}
     >

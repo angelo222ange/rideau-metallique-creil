@@ -13,7 +13,7 @@ export default function NotFound() {
           </span>
 
           <div className="relative -mt-16 md:-mt-24">
-            <div className="rule-accent mx-auto mb-8"  />
+            <div className="w-12 h-1 bg-primary-600 mx-auto mb-8" style={{borderRadius:"4px"}}/>
             <h1 className="font-bold text-3xl md:text-5xl text-white leading-[1.1] mb-4">
               Page introuvable
             </h1>
@@ -44,7 +44,7 @@ export default function NotFound() {
       <section className="section bg-gray-50">
         <div className="container">
           <div className="text-center max-w-xl mx-auto mb-14">
-            <div className="rule-accent mx-auto mb-6" />
+            <div className="w-12 h-1 bg-primary-600 mx-auto mb-6" style={{borderRadius:"4px"}} />
             <h2 className="section-title">Nos services à {siteConfig.city}</h2>
             <p className="section-subtitle">
               Retrouvez rapidement ce que vous cherchez parmi nos services de rideau métallique.

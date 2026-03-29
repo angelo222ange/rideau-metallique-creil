@@ -15,7 +15,7 @@ export function Zones({ title = "Zones d'intervention", limit = 12 }: ZonesProps
         <div className="grid lg:grid-cols-3 gap-16 items-start">
           {/* Left — Title */}
           <div className="lg:col-span-1">
-            <div className="rule-accent mb-6" />
+            <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
             <h2 className="section-title">{title}</h2>
             <p className="section-subtitle">
               Intervention rapide à {siteConfig.city} et dans toute l&apos;agglomération.

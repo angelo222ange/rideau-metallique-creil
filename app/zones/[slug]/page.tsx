@@ -91,7 +91,7 @@ export default function ZonePage({ params }: Props) {
       <section className="section bg-white">
         <div className="container">
           <div className="max-w-3xl">
-            <div className="rule-accent mb-6" />
+            <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
             <h2 className="section-title">Rideau métallique à {zone.name}</h2>
             <div className="mt-6 space-y-4">
               <p className="text-gray-500 text-lg leading-relaxed">

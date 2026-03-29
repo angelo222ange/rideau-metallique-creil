@@ -18,7 +18,7 @@ export function TypesRideaux({ title, zoneName, items }: TypesRideauxProps) {
     <section className="section bg-gray-50">
       <div className="container">
         <div className="max-w-xl mb-14">
-          <div className="rule-accent mb-6" />
+          <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
           <h2 className="section-title">{title || `Types de rideaux métalliques à ${zoneName}`}</h2>
           <p className="section-subtitle">
             Découvrez notre gamme complète de rideaux métalliques disponibles à {zoneName} et dans le {siteConfig.department}.

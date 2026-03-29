@@ -30,7 +30,7 @@ export function WhyUs() {
 
           {/* Content */}
           <div className="order-1 lg:order-2">
-            <div className="rule-accent mb-6" />
+            <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
             <h2 className="section-title">{content.whyUs.title}</h2>
             <p className="section-subtitle mb-10">{content.whyUs.subtitle}</p>
 

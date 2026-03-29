@@ -55,10 +55,10 @@ export default function ContactPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Hero */}
-      <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 bg-dark overflow-hidden">
+      <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 bg-gray-900 overflow-hidden">
         <div className="hidden" />
         <div className="container relative z-10 text-center">
-          <div className="rule-accent mx-auto mb-8"  />
+          <div className="w-12 h-1 bg-primary-600 mx-auto mb-8" style={{borderRadius:"4px"}}/>
           <h1 className="font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-4">{content.hero.title}</h1>
           <p className="text-white/40 text-lg max-w-lg mx-auto">{content.hero.subtitle}</p>
         </div>
@@ -136,7 +136,7 @@ export default function ContactPage() {
       <section className="section bg-gray-50">
         <div className="container">
           <div className="text-center max-w-xl mx-auto mb-14">
-            <div className="rule-accent mx-auto mb-6" />
+            <div className="w-12 h-1 bg-primary-600 mx-auto mb-6" style={{borderRadius:"4px"}} />
             <h2 className="section-title">{content.confiance.title}</h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-gray-200 max-w-5xl mx-auto">
@@ -155,7 +155,7 @@ export default function ContactPage() {
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <div className="rule-accent mb-6" />
+              <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
               <h2 className="section-title">{content.engagements.title}</h2>
               <ul className="space-y-3 mt-6">
                 {content.engagements.items.map((item, index) => (

@@ -19,7 +19,7 @@ export function ContratEntretien({ title, subtitle, formules, zoneName }: Contra
     <section className="section bg-gray-50">
       <div className="container">
         <div className="text-center max-w-xl mx-auto mb-14">
-          <div className="rule-accent mx-auto mb-6" />
+          <div className="w-12 h-1 bg-primary-600 mx-auto mb-6" style={{borderRadius:"4px"}} />
           <h2 className="section-title">{title}</h2>
           <p className="section-subtitle mx-auto">{subtitle}</p>
         </div>

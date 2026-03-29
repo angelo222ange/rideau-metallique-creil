@@ -23,7 +23,7 @@ export function ZoneLocalSection({
     <section className="section bg-white">
       <div className="container">
         <div className="max-w-3xl">
-          <div className="rule-accent mb-6" />
+          <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
           <h2 className="section-title">
             {serviceName} rideau métallique dans les quartiers de {zoneName}
           </h2>

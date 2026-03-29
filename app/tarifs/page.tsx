@@ -115,7 +115,7 @@ export default function TarifsPage() {
             </ol>
           </nav>
           <div className="max-w-3xl">
-            <div className="rule-accent mb-8"  />
+            <div className="w-12 h-1 bg-primary-600 mb-8" style={{borderRadius:"4px"}}/>
             <h1 className="font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-5">
               Prix Rideau Métallique {siteConfig.city}
             </h1>
@@ -164,7 +164,7 @@ export default function TarifsPage() {
       <section className="section bg-white">
         <div className="container">
           <div className="max-w-xl mb-10">
-            <div className="rule-accent mb-6" />
+            <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
             <h2 className="section-title">Tarifs Dépannage Rideau Métallique {siteConfig.city}</h2>
             <p className="section-subtitle">
               Prix indicatifs pour les interventions de dépannage et réparation. Le devis exact est communiqué avant toute intervention.
@@ -202,7 +202,7 @@ export default function TarifsPage() {
       <section className="section bg-gray-50">
         <div className="container">
           <div className="max-w-xl mb-10">
-            <div className="rule-accent mb-6" />
+            <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
             <h2 className="section-title">Tarifs Installation Rideau Métallique {siteConfig.city}</h2>
             <p className="section-subtitle">
               Prix fourniture + pose pour les rideaux métalliques neufs. Fabrication sur-mesure, garantie 2 à 10 ans.
@@ -240,7 +240,7 @@ export default function TarifsPage() {
       <section className="section bg-white">
         <div className="container">
           <div className="max-w-xl mb-10">
-            <div className="rule-accent mb-6" />
+            <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
             <h2 className="section-title">Tarifs Motorisation Rideau Métallique</h2>
             <p className="section-subtitle">
               Motorisez votre rideau métallique existant. Installation rapide, moteurs grandes marques.
@@ -273,7 +273,7 @@ export default function TarifsPage() {
       <section className="section bg-gray-50">
         <div className="container">
           <div className="max-w-xl mb-10">
-            <div className="rule-accent mb-6" />
+            <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
             <h2 className="section-title">Contrats d&apos;Entretien {siteConfig.city}</h2>
             <p className="section-subtitle">
               Prévenez les pannes et prolongez la durée de vie de votre rideau métallique avec un contrat d&apos;entretien.
@@ -295,7 +295,7 @@ export default function TarifsPage() {
       <section className="section bg-white">
         <div className="container">
           <div className="max-w-3xl mx-auto space-y-6">
-            <div className="rule-accent mb-6" />
+            <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
             <h2 className="section-title">Comprendre les prix des rideaux métalliques à {siteConfig.city}</h2>
             <p className="text-gray-600 text-[16px] leading-[1.85]">
               Le <strong>prix d&apos;un rideau métallique à {siteConfig.city}</strong> dépend de plusieurs facteurs : le type de rideau (lames pleines, micro-perforées, grille articulée), les dimensions exactes de l&apos;ouverture, le matériau (acier galvanisé, aluminium, inox), le mode de manoeuvre (manuel ou motorisé) et les options de sécurité choisies. C&apos;est pourquoi il est impossible de donner un prix fixe sans avoir vu votre installation.
