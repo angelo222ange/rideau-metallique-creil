@@ -57,23 +57,29 @@ interface Props {
  * - installation-rideau-metallique-nogent-sur-oise
  * ═══════════════════════════════════════════════════════════════════════════
  */
-function parseServiceZone(serviceZone: string): { service: string; zone: string } | null {
-  const match = serviceZone.match(/^(.+)-rideau-metallique-(.+)$/);
-
-  if (!match) {
-    return null;
+function parseServiceZone(serviceZone: string): { service: string | null; zone: string } | null {
+  // Pattern 1: service-rideau-metallique-zone (page service×zone)
+  const serviceMatch = serviceZone.match(/^(.+)-rideau-metallique-(.+)$/);
+  if (serviceMatch) {
+    const [, serviceSlug, zoneSlug] = serviceMatch;
+    const service = getServiceBySlug(serviceSlug);
+    const zone = getZoneBySlug(zoneSlug);
+    if (service && zone) {
+      return { service: serviceSlug, zone: zoneSlug };
+    }
   }
 
-  const [, serviceSlug, zoneSlug] = match;
-
-  const service = getServiceBySlug(serviceSlug);
-  const zone = getZoneBySlug(zoneSlug);
-
-  if (!service || !zone) {
-    return null;
+  // Pattern 2: rideau-metallique-zone (page zone overview — SEO URL)
+  const zoneMatch = serviceZone.match(/^rideau-metallique-(.+)$/);
+  if (zoneMatch) {
+    const [, zoneSlug] = zoneMatch;
+    const zone = getZoneBySlug(zoneSlug);
+    if (zone) {
+      return { service: null, zone: zoneSlug };
+    }
   }
 
-  return { service: serviceSlug, zone: zoneSlug };
+  return null;
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -82,15 +88,23 @@ function parseServiceZone(serviceZone: string): { service: string; zone: string 
 export function generateStaticParams() {
   const params: { service_zone: string }[] = [];
 
+  // Pages service×zone : depannage-rideau-metallique-chambly, etc.
   for (const service of services) {
     if (!service.hasPage) continue;
     for (const zone of zones) {
-      // La homepage couvre déjà "dépannage creil" → skip la zone principale pour dépannage
       if (service.slug === "depannage" && 'isMain' in zone) continue;
       params.push({
         service_zone: `${service.slug}-rideau-metallique-${zone.slug}`,
       });
     }
+  }
+
+  // Pages zone overview : rideau-metallique-chambly, etc.
+  for (const zone of zones) {
+    if ('isMain' in zone) continue; // Homepage couvre Creil
+    params.push({
+      service_zone: `rideau-metallique-${zone.slug}`,
+    });
   }
 
   return params;
@@ -106,10 +120,26 @@ export function generateMetadata({ params }: Props): Metadata {
     return { title: "Page non trouvée" };
   }
 
-  const service = getServiceBySlug(parsed.service);
   const zone = getZoneBySlug(parsed.zone);
+  if (!zone) {
+    return { title: "Page non trouvée" };
+  }
 
-  if (!service || !zone) {
+  // Page zone overview (rideau-metallique-chambly)
+  if (!parsed.service) {
+    const title = `Rideau Métallique ${zone.name} (${zone.postalCode}) - Dépannage & Installation`;
+    const description = `Rideau métallique à ${zone.name} (${zone.postalCode}) ✓ Dépannage 24h/24 ✓ Installation ✓ Réparation ✓ ${siteConfig.reviews.rating}/5 (${siteConfig.reviews.count} avis). ${siteConfig.phone}`;
+    return {
+      title,
+      description,
+      alternates: { canonical: `${siteConfig.url}/rideau-metallique-${zone.slug}/` },
+      openGraph: { title, description, type: "website", url: `${siteConfig.url}/rideau-metallique-${zone.slug}` },
+    };
+  }
+
+  const service = getServiceBySlug(parsed.service);
+
+  if (!service) {
     return { title: "Page non trouvée" };
   }
 
@@ -181,10 +211,137 @@ export default function ServiceZonePage({ params }: Props) {
     notFound();
   }
 
-  const service = getServiceBySlug(parsed.service);
   const zone = getZoneBySlug(parsed.zone);
+  if (!zone) {
+    notFound();
+  }
 
-  if (!service || !zone) {
+  // ═══ PAGE ZONE OVERVIEW (rideau-metallique-chambly) ═══
+  if (!parsed.service) {
+    const neighborZones = getNeighborZones(zone.slug, 8);
+    const zoneLocal = zoneLocalData[zone.slug];
+
+    return (
+      <main>
+        {/* Hero */}
+        <section className="bg-white border-b border-gray-100">
+          <div className="h-1 bg-gradient-to-r from-primary-600 via-emerald-500 to-primary-700" />
+          <div className="container py-12 md:py-16">
+            <nav className="mb-6" aria-label="Fil d'Ariane">
+              <ol className="flex items-center gap-2 text-xs text-gray-400">
+                <li><Link href="/" className="hover:text-primary-600 transition-colors">Accueil</Link></li>
+                <li>/</li>
+                <li className="text-gray-900 font-medium">Rideau Métallique {zone.name}</li>
+              </ol>
+            </nav>
+            <div className="max-w-3xl">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-primary-50 border border-primary-100 text-primary-700 text-sm font-medium mb-5" style={{ borderRadius: '8px' }}>
+                <span className="w-2 h-2 bg-primary-500 rounded-full animate-pulse" />
+                {zone.name} ({zone.postalCode})
+              </div>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-[1.1] mb-5">
+                Rideau Métallique <span className="text-primary-600">{zone.name}</span>
+              </h1>
+              <p className="text-gray-500 text-lg leading-relaxed mb-8">
+                {zoneLocal?.description || `${siteConfig.name} intervient à ${zone.name} (${zone.postalCode}) pour le dépannage, l'installation, la réparation et l'entretien de vos rideaux métalliques. Intervention rapide, devis gratuit.`}
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <a href={siteConfig.phoneLink} className="btn-primary">
+                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  {siteConfig.phone}
+                </a>
+                <Link href="/contact" className="btn-secondary">Devis gratuit</Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Services dans cette zone */}
+        <section className="py-16 bg-gray-50">
+          <div className="container">
+            <div className="mb-10">
+              <p className="text-primary-600 text-sm font-semibold uppercase tracking-wider mb-2">Nos services</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Services rideau métallique à {zone.name}</h2>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {services.filter(s => s.hasPage).map((s) => (
+                <Link
+                  key={s.id}
+                  href={`/${s.slug}-rideau-metallique-${zone.slug}`}
+                  className="group bg-white p-6 border border-gray-100 hover:border-primary-200 hover:shadow-md transition-all"
+                  style={{ borderRadius: '10px' }}
+                >
+                  <h3 className="font-bold text-gray-900 mb-1 group-hover:text-primary-600 transition-colors">{s.name}</h3>
+                  <p className="text-gray-400 text-sm">{s.shortDesc}</p>
+                  <span className="text-primary-600 text-sm font-medium mt-3 inline-flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                    {s.name} à {zone.name}
+                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Infos zone */}
+        {zoneLocal && (
+          <section className="py-16 bg-white">
+            <div className="container">
+              <div className="max-w-3xl">
+                <p className="text-primary-600 text-sm font-semibold uppercase tracking-wider mb-2">À propos</p>
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">{zone.name} — {zone.postalCode}</h2>
+                <p className="text-gray-500 text-lg leading-relaxed mb-6">{zoneLocal.description}</p>
+                {zoneLocal.quartiers && (
+                  <div className="mb-4">
+                    <p className="font-semibold text-gray-900 text-sm mb-2">Quartiers desservis :</p>
+                    <div className="flex flex-wrap gap-2">
+                      {zoneLocal.quartiers.map((q, i) => (
+                        <span key={i} className="px-3 py-1 bg-gray-50 text-gray-600 text-sm border border-gray-200" style={{ borderRadius: '6px' }}>{q}</span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {zoneLocal.landmarks && (
+                  <div>
+                    <p className="font-semibold text-gray-900 text-sm mb-2">Points de repère :</p>
+                    <div className="flex flex-wrap gap-2">
+                      {zoneLocal.landmarks.map((l, i) => (
+                        <span key={i} className="px-3 py-1 bg-primary-50 text-primary-700 text-sm border border-primary-100" style={{ borderRadius: '6px' }}>{l}</span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Zones voisines */}
+        <section className="py-16 bg-gray-50">
+          <div className="container">
+            <p className="text-primary-600 text-sm font-semibold uppercase tracking-wider mb-2">Zones voisines</p>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Rideau métallique dans l&apos;{siteConfig.department}</h2>
+            <div className="flex flex-wrap gap-2">
+              {neighborZones.map((z) => (
+                <Link key={z.slug} href={`/rideau-metallique-${z.slug}`}
+                  className="px-4 py-2.5 bg-white text-gray-600 text-sm border border-gray-200 hover:border-primary-300 hover:text-primary-700 transition-all" style={{ borderRadius: '8px' }}>
+                  {z.name} <span className="text-gray-300 ml-1">{z.postalCode}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <CTA title={`Besoin d'un rideau métallique à ${zone.name} ?`} subtitle={`Appelez le ${siteConfig.phone} pour une intervention rapide.`} />
+      </main>
+    );
+  }
+
+  // ═══ PAGE SERVICE × ZONE (depannage-rideau-metallique-chambly) ═══
+  const service = getServiceBySlug(parsed.service);
+  if (!service) {
     notFound();
   }
 
