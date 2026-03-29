@@ -223,11 +223,16 @@ export default function ServiceZonePage({ params }: Props) {
 
     return (
       <main>
-        {/* Hero dark compact */}
-        <section className="relative overflow-hidden bg-gray-950">
-          {/* Crosshatch pattern */}
-          <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'repeating-linear-gradient(45deg, #fff 0, #fff 1px, transparent 0, transparent 50%), repeating-linear-gradient(-45deg, #fff 0, #fff 1px, transparent 0, transparent 50%)', backgroundSize: '20px 20px' }} />
-          {/* Blob décoratif */}
+        {/* Hero with background image */}
+        <section className="relative overflow-hidden">
+          <Image
+            src="/images/gallery/hero-bg-technicien-drm.webp"
+            alt={`Rideau métallique ${zone.name}`}
+            title={`Rideau métallique ${zone.name}`}
+            fill
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gray-950/90" />
           <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-primary-600/10 rounded-full blur-3xl" />
 
           <div className="container relative z-10 py-14 md:py-20">
@@ -511,10 +516,18 @@ export default function ServiceZonePage({ params }: Props) {
         />
       )}
 
-      {/* ─── HERO DARK COMPACT ─── */}
-      <section className="relative overflow-hidden bg-gray-950">
-        {/* Crosshatch pattern */}
-        <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'repeating-linear-gradient(45deg, #fff 0, #fff 1px, transparent 0, transparent 50%), repeating-linear-gradient(-45deg, #fff 0, #fff 1px, transparent 0, transparent 50%)', backgroundSize: '20px 20px' }} />
+      {/* ─── HERO WITH BACKGROUND IMAGE ─── */}
+      <section className="relative overflow-hidden">
+        {/* Background image */}
+        <Image
+          src="/images/gallery/hero-bg-technicien-drm.webp"
+          alt={`${service.name} rideau métallique ${zone.name}`}
+          title={`${service.name} rideau métallique ${zone.name}`}
+          fill
+          className="object-cover"
+        />
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-gray-950/90" />
         {/* Blob décoratif */}
         <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-primary-600/10 rounded-full blur-3xl" />
 
