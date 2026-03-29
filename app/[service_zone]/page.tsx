@@ -371,8 +371,8 @@ export default function ServiceZonePage({ params }: Props) {
         </div>
       </section>
 
-      {/* ─── INTRODUCTION ─── */}
-      {service.slug === "reparation" ? (
+      {/* ─── INTRODUCTION (masqué si contenu zone-spécifique) ─── */}
+      {!zoneServiceContent && service.slug === "reparation" ? (
         <>
           {/* Section 1 : Image gauche, texte droite */}
           <section className="section bg-secondary-sable">
@@ -478,9 +478,8 @@ export default function ServiceZonePage({ params }: Props) {
         </section>
       )}
 
-      {/* ─── SITUATIONS / TYPES D'INTERVENTION ─── */}
-      {/* Masqué pour les services qui ont une section dédiée plus complète (typesRideaux, typesReparation, pannes, etc.) */}
-      {!["installation", "reparation", "depannage", "deblocage", "motorisation"].includes(service.slug) && (
+      {/* ─── SITUATIONS / TYPES D'INTERVENTION (masqué si contenu zone-spécifique) ─── */}
+      {!zoneServiceContent && !["installation", "reparation", "depannage", "deblocage", "motorisation"].includes(service.slug) && (
         <section className="section bg-white">
           <div className="container">
             <div className="max-w-xl mb-14">
@@ -511,8 +510,8 @@ export default function ServiceZonePage({ params }: Props) {
           SECTIONS SPÉCIFIQUES DÉPANNAGE
           ═══════════════════════════════════════════════════════════════════ */}
 
-      {/* ── DEPANNAGE : Étapes de déblocage ── */}
-      {service.slug === "depannage" && content.deblocage && (
+      {/* ── DEPANNAGE : Étapes de déblocage (masqué si contenu zone-spécifique) ── */}
+      {!zoneServiceContent && service.slug === "depannage" && content.deblocage && (
         <section className="section bg-secondary-sable">
           <div className="container">
             <div className="max-w-xl mb-14">
@@ -538,8 +537,8 @@ export default function ServiceZonePage({ params }: Props) {
         </section>
       )}
 
-      {/* ── DEPANNAGE : Pannes courantes ── */}
-      {service.slug === "depannage" && content.pannes && (
+      {/* ── DEPANNAGE : Pannes courantes (masqué si contenu zone-spécifique) ── */}
+      {!zoneServiceContent && service.slug === "depannage" && content.pannes && (
         <section className="section bg-white">
           <div className="container">
             <div className="max-w-xl mb-14">
@@ -576,8 +575,8 @@ export default function ServiceZonePage({ params }: Props) {
         </section>
       )}
 
-      {/* ── DEPANNAGE : Urgence 24/7 ── */}
-      {service.slug === "depannage" && content.urgence && (
+      {/* ── DEPANNAGE : Urgence 24/7 (masqué si contenu zone-spécifique) ── */}
+      {!zoneServiceContent && service.slug === "depannage" && content.urgence && (
         <section className="relative py-24 md:py-32 bg-dark overflow-hidden">
           <div className="noise absolute inset-0" />
           <div className="container relative z-10">
@@ -628,8 +627,8 @@ export default function ServiceZonePage({ params }: Props) {
           SECTIONS SPÉCIFIQUES DÉBLOCAGE
           ═══════════════════════════════════════════════════════════════════ */}
 
-      {/* ── DEBLOCAGE : Étapes de déblocage ── */}
-      {service.slug === "deblocage" && content.deblocage && (
+      {/* ── DEBLOCAGE : Étapes de déblocage (masqué si contenu zone-spécifique) ── */}
+      {!zoneServiceContent && service.slug === "deblocage" && content.deblocage && (
         <section className="section bg-secondary-sable">
           <div className="container">
             <div className="max-w-xl mb-14">
@@ -656,7 +655,7 @@ export default function ServiceZonePage({ params }: Props) {
       )}
 
       {/* ── DEBLOCAGE : Pannes courantes ── */}
-      {service.slug === "deblocage" && content.pannes && (
+      {!zoneServiceContent && service.slug === "deblocage" && content.pannes && (
         <section className="section bg-white">
           <div className="container">
             <div className="max-w-xl mb-14">
@@ -694,7 +693,7 @@ export default function ServiceZonePage({ params }: Props) {
       )}
 
       {/* ── DEBLOCAGE : Urgence 24/7 ── */}
-      {service.slug === "deblocage" && content.urgence && (
+      {!zoneServiceContent && service.slug === "deblocage" && content.urgence && (
         <section className="relative py-24 md:py-32 bg-dark overflow-hidden">
           <div className="noise absolute inset-0" />
           <div className="container relative z-10">
@@ -743,7 +742,7 @@ export default function ServiceZonePage({ params }: Props) {
           ═══════════════════════════════════════════════════════════════════ */}
 
       {/* ── REPARATION : Types de réparation ── */}
-      {service.slug === "reparation" && content.typesReparation && (
+      {!zoneServiceContent && service.slug === "reparation" && content.typesReparation && (
         <section className="section bg-secondary-sable">
           <div className="container">
             <div className="max-w-xl mb-14">
@@ -776,7 +775,7 @@ export default function ServiceZonePage({ params }: Props) {
       )}
 
       {/* ── REPARATION : Processus de réparation ── */}
-      {service.slug === "reparation" && content.processus && (
+      {!zoneServiceContent && service.slug === "reparation" && content.processus && (
         <ProcessusInstallation
           zoneName={zone.name}
           items={content.processus.items}
@@ -789,7 +788,7 @@ export default function ServiceZonePage({ params }: Props) {
           ═══════════════════════════════════════════════════════════════════ */}
 
       {/* ── INSTALLATION : Types de rideaux ── */}
-      {service.slug === "installation" && content.typesRideaux && (
+      {!zoneServiceContent && service.slug === "installation" && content.typesRideaux && (
         <TypesRideaux
           zoneName={zone.name}
           items={content.typesRideaux}
@@ -798,7 +797,7 @@ export default function ServiceZonePage({ params }: Props) {
       )}
 
       {/* ── INSTALLATION : Processus d'installation ── */}
-      {service.slug === "installation" && content.processus && (
+      {!zoneServiceContent && service.slug === "installation" && content.processus && (
         <ProcessusInstallation
           zoneName={zone.name}
           items={content.processus}
@@ -807,7 +806,7 @@ export default function ServiceZonePage({ params }: Props) {
       )}
 
       {/* ── FABRICATION : Sur-mesure ── */}
-      {service.slug === "fabrication" && content.surMesure && (
+      {!zoneServiceContent && service.slug === "fabrication" && content.surMesure && (
         <SurMesureLocal
           title={content.surMesure.title}
           subtitle={content.surMesure.subtitle}
@@ -818,7 +817,7 @@ export default function ServiceZonePage({ params }: Props) {
       )}
 
       {/* ── FABRICATION : Normes et certifications ── */}
-      {service.slug === "fabrication" && content.normes && (
+      {!zoneServiceContent && service.slug === "fabrication" && content.normes && (
         <NormesCertifications
           title={content.normes.title}
           subtitle={content.normes.subtitle}
@@ -827,7 +826,7 @@ export default function ServiceZonePage({ params }: Props) {
       )}
 
       {/* ── ENTRETIEN : Signes d'usure ── */}
-      {service.slug === "entretien" && content.signesUsure && (
+      {!zoneServiceContent && service.slug === "entretien" && content.signesUsure && (
         <SignesUsure
           title={content.signesUsure.title}
           subtitle={content.signesUsure.subtitle}
@@ -837,7 +836,7 @@ export default function ServiceZonePage({ params }: Props) {
       )}
 
       {/* ── ENTRETIEN : Contrats d'entretien ── */}
-      {service.slug === "entretien" && content.contrats && (
+      {!zoneServiceContent && service.slug === "entretien" && content.contrats && (
         <ContratEntretien
           title={content.contrats.title}
           subtitle={content.contrats.subtitle}
@@ -847,7 +846,7 @@ export default function ServiceZonePage({ params }: Props) {
       )}
 
       {/* ── MOTORISATION : Avantages + comparatif ── */}
-      {service.slug === "motorisation" && content.avantagesMotorisation && (
+      {!zoneServiceContent && service.slug === "motorisation" && content.avantagesMotorisation && (
         <AvantagesMotorisation
           title={content.avantagesMotorisation.title}
           subtitle={content.avantagesMotorisation.subtitle}
@@ -858,7 +857,7 @@ export default function ServiceZonePage({ params }: Props) {
       )}
 
       {/* ── MOTORISATION : Marques de moteurs ── */}
-      {service.slug === "motorisation" && content.marques && (
+      {!zoneServiceContent && service.slug === "motorisation" && content.marques && (
         <MarquesMoteurs
           title={content.marques.title}
           subtitle={content.marques.subtitle}
@@ -870,16 +869,18 @@ export default function ServiceZonePage({ params }: Props) {
           SECTIONS COMMUNES À TOUS LES SERVICES
           ═══════════════════════════════════════════════════════════════════ */}
 
-      {/* ─── POURQUOI NOUS CHOISIR ─── */}
-      <WhyChooseUs
-        title={content.advantages.title}
-        items={content.advantages.items}
-        zoneName={zone.name}
-        zonePostal={zone.postalCode}
-      />
+      {/* ─── POURQUOI NOUS CHOISIR (masqué si contenu zone-spécifique existe) ─── */}
+      {!zoneServiceContent && (
+        <WhyChooseUs
+          title={content.advantages.title}
+          items={content.advantages.items}
+          zoneName={zone.name}
+          zonePostal={zone.postalCode}
+        />
+      )}
 
-      {/* ─── SECTIONS ALTERNÉES SEO ─── */}
-      {content.alternatingFeatures && (
+      {/* ─── SECTIONS ALTERNÉES SEO (masqué si contenu zone-spécifique existe) ─── */}
+      {!zoneServiceContent && content.alternatingFeatures && (
         <AlternatingFeatures features={content.alternatingFeatures} bgColor="bg-secondary-sable" />
       )}
 
