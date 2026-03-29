@@ -650,12 +650,7 @@ export default function HomePage() {
       </section>
 
       {/* ===================================================================
-          10. FAQ
-          =================================================================== */}
-      <FAQ items={faq.slice(0, 6)} title={`Questions Frequentes - Rideau Metallique ${siteConfig.city}`} />
-
-      {/* ===================================================================
-          11. REVIEWS
+          10. REVIEWS (avant FAQ)
           =================================================================== */}
       <Reviews
         title={`Avis Clients ${siteConfig.city}`}
@@ -664,7 +659,50 @@ export default function HomePage() {
       />
 
       {/* ===================================================================
-          12. CTA FINAL
+          11. FAQ (toujours juste avant le CTA)
+          =================================================================== */}
+      <FAQ items={faq.slice(0, 6)} title={`Questions Frequentes - Rideau Metallique ${siteConfig.city}`} />
+
+      {/* ===================================================================
+          12. BLOG PREVIEW
+          =================================================================== */}
+      <section className="py-20 bg-gray-50">
+        <div className="container">
+          <div className="flex items-end justify-between mb-12">
+            <div>
+              <p className="text-primary-600 text-sm font-semibold uppercase tracking-widest mb-2">Blog</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Nos derniers articles</h2>
+            </div>
+            <Link href="/blog" className="text-primary-600 hover:text-primary-700 text-sm font-semibold flex items-center gap-2 transition-colors">
+              Tous les articles
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+            </Link>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              { title: "Guide entretien rideau métallique 2026", slug: "guide-entretien-rideau-metallique-2026", image: "/images/gallery/entretien-rideau-metallique-rideau-de-fer.webp" },
+              { title: "Signes qu'un dépannage urgent est nécessaire", slug: "signes-depannage-rideau-metallique-urgent", image: "/images/gallery/depannage-rideau-metallique-DRM-reparation.webp" },
+              { title: "Rideau électrique vs manuel : le guide", slug: "rideau-metallique-electrique-vs-manuel-guide", image: "/images/gallery/moteur-tubulaire-rideau-metallique-drm.webp" },
+            ].map((article) => (
+              <Link key={article.slug} href={`/blog/${article.slug}`} className="group">
+                <div className="relative h-48 overflow-hidden" style={{ borderRadius: '16px' }}>
+                  <Image
+                    src={article.image}
+                    alt={article.title}
+                    title={article.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <h3 className="font-bold text-gray-900 mt-4 group-hover:text-primary-600 transition-colors">{article.title}</h3>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ===================================================================
+          13. CTA FINAL
           =================================================================== */}
       <CTA
         title={`Besoin d'un depannage rideau metallique a ${siteConfig.city} ?`}
