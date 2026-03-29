@@ -31,7 +31,7 @@ export default function HomePage() {
       <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Background image */}
         <Image
-          src="/images/gallery/realisation-rideau-metallique-lame-pleine-commerce.webp"
+          src="/images/gallery/hero-bg-technicien-drm.webp"
           alt={`Rideau metallique commerce ${siteConfig.city}`}
           title={`Rideau metallique commerce ${siteConfig.city}`}
           fill
@@ -750,8 +750,8 @@ export default function HomePage() {
         </div>
       </section>
 
+      <FAQ items={content.faq.length > 0 ? content.faq : faq} title="Questions Fréquentes" />
       <Reviews items={content.reviews} title={`Avis Clients ${siteConfig.city}`} />
-      <FAQ items={content.faq.length > 0 ? content.faq : faq} title="Questions Frequentes" />
       <CTA />
     </main>
   );
