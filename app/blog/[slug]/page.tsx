@@ -52,7 +52,7 @@ function renderContentBlock(block: ContentBlock, index: number) {
         );
       }
       return (
-        <h3 key={index} className="font-heading font-bold text-xl text-gray-900 mt-8 mb-4">
+        <h3 key={index} className="font-bold text-xl text-gray-900 mt-8 mb-4">
           {block.text}
         </h3>
       );
@@ -94,7 +94,7 @@ function renderContentBlock(block: ContentBlock, index: number) {
             <thead>
               <tr className="bg-gray-50">
                 {block.headers.map((header, i) => (
-                  <th key={i} className="text-left font-heading font-bold text-gray-900 px-4 py-3 border-b-2 border-gray-200">
+                  <th key={i} className="text-left font-bold text-gray-900 px-4 py-3 border-b-2 border-gray-200">
                     {header}
                   </th>
                 ))}
@@ -172,25 +172,25 @@ export default function BlogArticlePage({ params }: Props) {
       />
 
       {/* Hero */}
-      <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 bg-gray-900 overflow-hidden">
-        <div className="hidden" />
-        <div className="container relative z-10">
+      <section className="relative overflow-hidden bg-white">
+        <div className="h-1 bg-gradient-to-r from-primary-600 via-emerald-500 to-primary-700" />
+        <div className="container py-16 md:py-20 lg:py-24">
           {/* Breadcrumb */}
           <nav className="mb-8" aria-label="Fil d'Ariane">
-            <ol className="flex items-center gap-2 text-xs text-white/30 flex-wrap">
-              <li><Link href="/" className="hover:text-white/60 transition-colors">Accueil</Link></li>
+            <ol className="flex items-center gap-2 text-xs text-gray-400 flex-wrap">
+              <li><Link href="/" className="hover:text-primary-600 transition-colors">Accueil</Link></li>
               <li>/</li>
-              <li><Link href="/blog" className="hover:text-white/60 transition-colors">Blog</Link></li>
+              <li><Link href="/blog" className="hover:text-primary-600 transition-colors">Blog</Link></li>
               <li>/</li>
-              <li className="text-white/70 font-bold truncate max-w-[200px]">{article.title}</li>
+              <li className="text-gray-700 font-bold truncate max-w-[200px]">{article.title}</li>
             </ol>
           </nav>
 
           <div className="max-w-3xl">
-            <div className="w-12 h-1 bg-primary-600 mb-8" style={{borderRadius:"4px"}}/>
+            <span className="inline-block px-3 py-1 bg-primary-50 text-primary-700 text-xs font-semibold uppercase tracking-wider mb-4" style={{borderRadius:'6px'}}>Article</span>
 
             {/* Meta */}
-            <div className="flex items-center gap-3 text-xs text-white/30 mb-6">
+            <div className="flex items-center gap-3 text-xs text-gray-400 mb-6">
               <time dateTime={article.date}>
                 {new Date(article.date).toLocaleDateString('fr-FR', {
                   day: 'numeric',
@@ -202,7 +202,7 @@ export default function BlogArticlePage({ params }: Props) {
               <span>{article.readTime} de lecture</span>
             </div>
 
-            <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl text-white leading-[1.1]">
+            <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl text-gray-900 leading-[1.1]">
               {article.title}
             </h1>
           </div>
@@ -210,13 +210,13 @@ export default function BlogArticlePage({ params }: Props) {
       </section>
 
       {/* Article Content */}
-      <section className="section bg-white">
+      <section className="py-20 md:py-28 bg-gray-50">
         <div className="container">
           <div className="grid lg:grid-cols-12 gap-12">
             {/* Main Content */}
             <div className="lg:col-span-8">
               {/* Featured Image */}
-              <div className="relative aspect-[16/9] overflow-hidden mb-10 bg-gray-100" style={{ borderRadius: '8px' }}>
+              <div className="relative aspect-[16/9] overflow-hidden mb-10 bg-gray-100" style={{ borderRadius: '10px' }}>
                 <Image
                   src={article.image}
                   alt={article.imageAlt}
@@ -227,8 +227,8 @@ export default function BlogArticlePage({ params }: Props) {
               </div>
 
               {/* Summary Box */}
-              <div className="bg-gray-50 border-l-4 border-primary-600 p-6 md:p-8 mb-10" style={{ borderRadius: '8px' }}>
-                <h2 className="font-heading font-bold text-gray-900 text-lg mb-4">
+              <div className="bg-white border border-gray-100 border-l-4 border-l-primary-600 p-6 md:p-8 mb-10" style={{ borderRadius: '10px' }}>
+                <h2 className="font-bold text-gray-900 text-lg mb-4">
                   {article.summary.title}
                 </h2>
                 <ul className="space-y-2">
@@ -242,7 +242,7 @@ export default function BlogArticlePage({ params }: Props) {
               </div>
 
               {/* Content Blocks */}
-              <div className="prose-custom">
+              <div className="prose-custom bg-white border border-gray-100 p-6 md:p-10" style={{ borderRadius: '10px' }}>
                 {article.content.map((block, index) => renderContentBlock(block, index))}
               </div>
             </div>
@@ -251,17 +251,29 @@ export default function BlogArticlePage({ params }: Props) {
             <aside className="lg:col-span-4">
               <div className="sticky top-28 space-y-8">
                 {/* CTA Box */}
-                <div className="bg-gray-900 p-6 text-center" style={{ borderRadius: '8px' }}>
-                  <p className="text-white font-heading font-bold text-lg mb-2">
+                <div className="bg-white border border-gray-100 p-6 text-center" style={{ borderRadius: '10px' }}>
+                  <span className="inline-block px-3 py-1 bg-primary-50 text-primary-700 text-xs font-semibold uppercase tracking-wider mb-4" style={{borderRadius:'6px'}}>Contact</span>
+                  <p className="font-bold text-gray-900 text-lg mb-2">
                     Besoin d&apos;un devis ?
                   </p>
-                  <p className="text-white/40 text-sm mb-5">
+                  <p className="text-gray-500 text-sm mb-5">
                     Intervention 24h/24 à {siteConfig.city}
                   </p>
-                  <a href={siteConfig.phoneLink} className="btn-phone w-full justify-center text-sm mb-3">
+                  <a
+                    href={siteConfig.phoneLink}
+                    className="flex items-center justify-center gap-2 w-full px-6 py-3 text-sm font-semibold text-white bg-primary-600 hover:bg-primary-700 transition-all shadow-lg shadow-primary-600/25 mb-3"
+                    style={{ borderRadius: '8px' }}
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
                     {siteConfig.phone}
                   </a>
-                  <Link href="/contact" className="btn-secondary w-full justify-center text-sm border-white/15 text-white/60 hover:text-white hover:border-white/40">
+                  <Link
+                    href="/contact"
+                    className="flex items-center justify-center w-full px-6 py-3 text-sm font-semibold text-gray-700 bg-white border-2 border-gray-200 hover:border-primary-300 hover:text-primary-700 transition-all"
+                    style={{ borderRadius: '8px' }}
+                  >
                     Devis gratuit
                   </Link>
                 </div>
@@ -269,7 +281,7 @@ export default function BlogArticlePage({ params }: Props) {
                 {/* Related Articles */}
                 {relatedArticles.length > 0 && (
                   <div>
-                    <h3 className="font-heading font-bold text-gray-900 text-sm uppercase tracking-wider mb-4">
+                    <h3 className="font-bold text-gray-900 text-sm uppercase tracking-wider mb-4">
                       Articles similaires
                     </h3>
                     <div className="space-y-4">
@@ -277,9 +289,10 @@ export default function BlogArticlePage({ params }: Props) {
                         <Link
                           key={related.slug}
                           href={`/blog/${related.slug}`}
-                          className="block group"
+                          className="block group bg-white border border-gray-100 hover:border-primary-200 overflow-hidden transition-all"
+                          style={{ borderRadius: '10px' }}
                         >
-                          <div className="relative aspect-[16/9] overflow-hidden mb-2 bg-gray-100" style={{ borderRadius: '8px' }}>
+                          <div className="relative aspect-[16/9] overflow-hidden bg-gray-100">
                             <Image
                               src={related.image}
                               alt={related.imageAlt}
@@ -287,9 +300,11 @@ export default function BlogArticlePage({ params }: Props) {
                               className="object-cover group-hover:scale-105 transition-transform duration-500"
                             />
                           </div>
-                          <h4 className="font-heading font-bold text-gray-900 text-sm group-hover:text-primary-600 transition-colors leading-snug">
-                            {related.title}
-                          </h4>
+                          <div className="p-3">
+                            <h4 className="font-bold text-gray-900 text-sm group-hover:text-primary-600 transition-colors leading-snug">
+                              {related.title}
+                            </h4>
+                          </div>
                         </Link>
                       ))}
                     </div>

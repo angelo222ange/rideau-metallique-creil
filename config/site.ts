@@ -151,7 +151,7 @@ export const services = [
     shortDesc: "Intervention urgence 24h/24",
     longDesc: "Dépannage et réparation de rideaux métalliques en urgence à Creil et dans l'Oise. Déblocage, réparation moteur, lames, serrure.",
     icon: "wrench",
-    image: "/images/gallery/gemini-service-depannage-rideau.webp",
+    image: "/images/gallery/depannage-rideau-metallique-DRM-reparation.webp",
     hasPage: true,
   },
   {
@@ -161,7 +161,7 @@ export const services = [
     shortDesc: "Pose de rideaux métalliques",
     longDesc: "Installation complète de rideaux métalliques pour commerces et locaux professionnels à Creil et ses environs.",
     icon: "hammer",
-    image: "/images/gallery/gemini-service-installation-pose.webp",
+    image: "/images/gallery/installation-rideau-metallique-drm.webp",
     hasPage: true,
   },
   {
@@ -171,7 +171,7 @@ export const services = [
     shortDesc: "Rideaux métalliques sur-mesure",
     longDesc: "Fabrication de rideaux métalliques sur-mesure à Creil. Acier galvanisé, aluminium, inox.",
     icon: "factory",
-    image: "/images/gallery/gemini-service-fabrication-atelier.webp",
+    image: "/images/gallery/realisation-rideau-metallique-lame-pleine-commerce.webp",
     hasPage: true,
   },
   {
@@ -181,7 +181,7 @@ export const services = [
     shortDesc: "Maintenance préventive",
     longDesc: "Contrats d'entretien et maintenance préventive pour rideaux métalliques à Creil et dans l'Oise.",
     icon: "settings",
-    image: "/images/gallery/gemini-service-entretien-maintenance.webp",
+    image: "/images/gallery/entretien-rideau-metallique-rideau-de-fer.webp",
     hasPage: true,
   },
   {
@@ -191,7 +191,7 @@ export const services = [
     shortDesc: "Automatisation de votre rideau",
     longDesc: "Motorisation et automatisation de rideaux métalliques existants ou neufs à Creil et dans le département de l'Oise.",
     icon: "zap",
-    image: "/images/gallery/gemini-service-motorisation-tubulaire.webp",
+    image: "/images/gallery/moteur-tubulaire-rideau-metallique-drm.webp",
     hasPage: true,
   },
   {
@@ -201,7 +201,7 @@ export const services = [
     shortDesc: "Déblocage en urgence",
     longDesc: "Déblocage de rideaux métalliques bloqués en urgence à Creil. Intervention rapide 24h/24, 7j/7.",
     icon: "unlock",
-    image: "/images/gallery/gemini-service-deblocage-urgence.webp",
+    image: "/images/gallery/depannage-rideau-metallique-drm-france-rm.webp",
     hasPage: true,
   },
   {
@@ -211,7 +211,7 @@ export const services = [
     shortDesc: "Remise en état complète",
     longDesc: "Réparation de rideaux métalliques à Creil. Lames, moteur, axe, serrure : tous composants.",
     icon: "tool",
-    image: "/images/gallery/gemini-service-reparation-lames.webp",
+    image: "/images/gallery/realisation-drm-rideau-metallique-lame-pleine.webp",
     hasPage: true,
   },
 ];

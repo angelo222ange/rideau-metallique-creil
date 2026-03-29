@@ -104,29 +104,40 @@ export default function TarifsPage() {
       />
 
       {/* Hero */}
-      <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 bg-dark overflow-hidden">
-        <div className="hidden" />
-        <div className="container relative z-10">
-          <nav className="mb-8" aria-label="Fil d'Ariane">
-            <ol className="flex items-center gap-2 text-xs text-white/30">
-              <li><Link href="/" className="hover:text-white/60 transition-colors">Accueil</Link></li>
+      <section className="relative overflow-hidden bg-white">
+        <div className="h-1 bg-gradient-to-r from-primary-600 via-emerald-500 to-primary-700" />
+        <div className="container py-16 md:py-20 lg:py-24">
+          <nav className="mb-6" aria-label="Fil d'Ariane">
+            <ol className="flex items-center gap-2 text-xs text-gray-400">
+              <li><Link href="/" className="hover:text-primary-600 transition-colors">Accueil</Link></li>
               <li>/</li>
-              <li className="text-white/70 font-bold">Tarifs</li>
+              <li className="text-gray-700 font-bold">Tarifs</li>
             </ol>
           </nav>
           <div className="max-w-3xl">
-            <div className="w-12 h-1 bg-primary-600 mb-8" style={{borderRadius:"4px"}}/>
-            <h1 className="font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-5">
+            <span className="inline-block px-3 py-1 bg-primary-50 text-primary-700 text-xs font-semibold uppercase tracking-wider mb-4" style={{borderRadius:'6px'}}>Tarifs 2026</span>
+            <h1 className="font-bold text-4xl md:text-5xl lg:text-6xl text-gray-900 leading-[1.1] mb-5">
               Prix Rideau Métallique {siteConfig.city}
             </h1>
-            <p className="text-white/40 text-lg leading-relaxed mb-8">
+            <p className="text-gray-500 text-lg leading-relaxed mb-8">
               Tarifs indicatifs 2026 pour le dépannage, l&apos;installation, la motorisation et l&apos;entretien de rideaux métalliques à {siteConfig.city} et dans les {siteConfig.department}. Devis gratuit et sans engagement.
             </p>
             <div className="flex flex-wrap gap-3">
-              <a href={siteConfig.phoneLink} className="btn-phone">
+              <a
+                href={siteConfig.phoneLink}
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-semibold text-white bg-primary-600 hover:bg-primary-700 transition-all shadow-lg shadow-primary-600/25"
+                style={{ borderRadius: '8px' }}
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
                 {siteConfig.phone}
               </a>
-              <Link href="/contact" className="btn-secondary border-white/15 text-white/60 hover:text-white hover:border-white/40">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-6 py-3.5 text-sm font-semibold text-gray-700 bg-white border-2 border-gray-200 hover:border-primary-300 hover:text-primary-700 transition-all"
+                style={{ borderRadius: '8px' }}
+              >
                 Demander un devis
               </Link>
             </div>
@@ -135,10 +146,10 @@ export default function TarifsPage() {
       </section>
 
       {/* Encadré résumé */}
-      <section className="section bg-gray-50">
+      <section className="py-20 md:py-28 bg-gray-50">
         <div className="container">
-          <div className="bg-white border-l-4 border-primary-600 p-6 md:p-8 max-w-3xl" style={{ borderRadius: '8px' }}>
-            <h2 className="font-heading font-bold text-gray-900 text-lg mb-4">
+          <div className="bg-white border border-gray-100 border-l-4 border-l-primary-600 p-6 md:p-8 max-w-3xl" style={{ borderRadius: '10px' }}>
+            <h2 className="font-bold text-gray-900 text-lg mb-4">
               Tarifs en bref
             </h2>
             <ul className="space-y-2">
@@ -161,22 +172,22 @@ export default function TarifsPage() {
       </section>
 
       {/* Tarifs Dépannage */}
-      <section className="section bg-white">
+      <section className="py-20 md:py-28 bg-white">
         <div className="container">
           <div className="max-w-xl mb-10">
-            <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
-            <h2 className="section-title">Tarifs Dépannage Rideau Métallique {siteConfig.city}</h2>
-            <p className="section-subtitle">
+            <span className="inline-block px-3 py-1 bg-primary-50 text-primary-700 text-xs font-semibold uppercase tracking-wider mb-4" style={{borderRadius:'6px'}}>Dépannage</span>
+            <h2 className="font-bold text-3xl md:text-4xl text-gray-900">Tarifs Dépannage Rideau Métallique {siteConfig.city}</h2>
+            <p className="text-gray-500 mt-3">
               Prix indicatifs pour les interventions de dépannage et réparation. Le devis exact est communiqué avant toute intervention.
             </p>
           </div>
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto bg-white border border-gray-100" style={{ borderRadius: '10px' }}>
             <table className="w-full text-sm border-collapse">
               <thead>
                 <tr className="bg-gray-50">
-                  <th className="text-left font-heading font-bold text-gray-900 px-4 py-3 border-b-2 border-gray-200">Prestation</th>
-                  <th className="text-left font-heading font-bold text-gray-900 px-4 py-3 border-b-2 border-gray-200">Tarif indicatif</th>
-                  <th className="text-left font-heading font-bold text-gray-900 px-4 py-3 border-b-2 border-gray-200 hidden md:table-cell">Détails</th>
+                  <th className="text-left font-bold text-gray-900 px-4 py-3 border-b-2 border-gray-200">Prestation</th>
+                  <th className="text-left font-bold text-gray-900 px-4 py-3 border-b-2 border-gray-200">Tarif indicatif</th>
+                  <th className="text-left font-bold text-gray-900 px-4 py-3 border-b-2 border-gray-200 hidden md:table-cell">Détails</th>
                 </tr>
               </thead>
               <tbody>
@@ -184,14 +195,18 @@ export default function TarifsPage() {
                   <tr key={i} className="border-b border-gray-100 hover:bg-gray-50/50">
                     <td className="text-gray-900 font-medium px-4 py-3">{item.prestation}</td>
                     <td className="text-primary-600 font-bold px-4 py-3 whitespace-nowrap">{item.fourchette}</td>
-                    <td className="text-gray-400 px-4 py-3 hidden md:table-cell">{item.details}</td>
+                    <td className="text-gray-500 px-4 py-3 hidden md:table-cell">{item.details}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
           <div className="mt-8">
-            <a href={siteConfig.phoneLink} className="btn-primary">
+            <a
+              href={siteConfig.phoneLink}
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-primary-600 hover:bg-primary-700 transition-all shadow-lg shadow-primary-600/25"
+              style={{ borderRadius: '8px' }}
+            >
               Devis dépannage gratuit : {siteConfig.phone}
             </a>
           </div>
@@ -199,37 +214,41 @@ export default function TarifsPage() {
       </section>
 
       {/* Tarifs Installation */}
-      <section className="section bg-gray-50">
+      <section className="py-20 md:py-28 bg-gray-50">
         <div className="container">
           <div className="max-w-xl mb-10">
-            <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
-            <h2 className="section-title">Tarifs Installation Rideau Métallique {siteConfig.city}</h2>
-            <p className="section-subtitle">
+            <span className="inline-block px-3 py-1 bg-primary-50 text-primary-700 text-xs font-semibold uppercase tracking-wider mb-4" style={{borderRadius:'6px'}}>Installation</span>
+            <h2 className="font-bold text-3xl md:text-4xl text-gray-900">Tarifs Installation Rideau Métallique {siteConfig.city}</h2>
+            <p className="text-gray-500 mt-3">
               Prix fourniture + pose pour les rideaux métalliques neufs. Fabrication sur-mesure, garantie 2 à 10 ans.
             </p>
           </div>
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto bg-white border border-gray-100" style={{ borderRadius: '10px' }}>
             <table className="w-full text-sm border-collapse">
               <thead>
-                <tr className="bg-white">
-                  <th className="text-left font-heading font-bold text-gray-900 px-4 py-3 border-b-2 border-gray-200">Type de rideau</th>
-                  <th className="text-left font-heading font-bold text-gray-900 px-4 py-3 border-b-2 border-gray-200">Tarif indicatif</th>
-                  <th className="text-left font-heading font-bold text-gray-900 px-4 py-3 border-b-2 border-gray-200 hidden md:table-cell">Détails</th>
+                <tr className="bg-gray-50">
+                  <th className="text-left font-bold text-gray-900 px-4 py-3 border-b-2 border-gray-200">Type de rideau</th>
+                  <th className="text-left font-bold text-gray-900 px-4 py-3 border-b-2 border-gray-200">Tarif indicatif</th>
+                  <th className="text-left font-bold text-gray-900 px-4 py-3 border-b-2 border-gray-200 hidden md:table-cell">Détails</th>
                 </tr>
               </thead>
               <tbody>
                 {tarifs.installation.map((item, i) => (
-                  <tr key={i} className="border-b border-gray-100 hover:bg-white/50">
+                  <tr key={i} className="border-b border-gray-100 hover:bg-gray-50/50">
                     <td className="text-gray-900 font-medium px-4 py-3">{item.prestation}</td>
                     <td className="text-primary-600 font-bold px-4 py-3 whitespace-nowrap">{item.fourchette}</td>
-                    <td className="text-gray-400 px-4 py-3 hidden md:table-cell">{item.details}</td>
+                    <td className="text-gray-500 px-4 py-3 hidden md:table-cell">{item.details}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
           <div className="mt-8">
-            <Link href="/contact" className="btn-primary">
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white bg-primary-600 hover:bg-primary-700 transition-all shadow-lg shadow-primary-600/25"
+              style={{ borderRadius: '8px' }}
+            >
               Demander un devis installation
             </Link>
           </div>
@@ -237,22 +256,22 @@ export default function TarifsPage() {
       </section>
 
       {/* Tarifs Motorisation */}
-      <section className="section bg-white">
+      <section className="py-20 md:py-28 bg-white">
         <div className="container">
           <div className="max-w-xl mb-10">
-            <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
-            <h2 className="section-title">Tarifs Motorisation Rideau Métallique</h2>
-            <p className="section-subtitle">
+            <span className="inline-block px-3 py-1 bg-primary-50 text-primary-700 text-xs font-semibold uppercase tracking-wider mb-4" style={{borderRadius:'6px'}}>Motorisation</span>
+            <h2 className="font-bold text-3xl md:text-4xl text-gray-900">Tarifs Motorisation Rideau Métallique</h2>
+            <p className="text-gray-500 mt-3">
               Motorisez votre rideau métallique existant. Installation rapide, moteurs grandes marques.
             </p>
           </div>
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto bg-white border border-gray-100" style={{ borderRadius: '10px' }}>
             <table className="w-full text-sm border-collapse">
               <thead>
                 <tr className="bg-gray-50">
-                  <th className="text-left font-heading font-bold text-gray-900 px-4 py-3 border-b-2 border-gray-200">Prestation</th>
-                  <th className="text-left font-heading font-bold text-gray-900 px-4 py-3 border-b-2 border-gray-200">Tarif indicatif</th>
-                  <th className="text-left font-heading font-bold text-gray-900 px-4 py-3 border-b-2 border-gray-200 hidden md:table-cell">Détails</th>
+                  <th className="text-left font-bold text-gray-900 px-4 py-3 border-b-2 border-gray-200">Prestation</th>
+                  <th className="text-left font-bold text-gray-900 px-4 py-3 border-b-2 border-gray-200">Tarif indicatif</th>
+                  <th className="text-left font-bold text-gray-900 px-4 py-3 border-b-2 border-gray-200 hidden md:table-cell">Détails</th>
                 </tr>
               </thead>
               <tbody>
@@ -260,7 +279,7 @@ export default function TarifsPage() {
                   <tr key={i} className="border-b border-gray-100 hover:bg-gray-50/50">
                     <td className="text-gray-900 font-medium px-4 py-3">{item.prestation}</td>
                     <td className="text-primary-600 font-bold px-4 py-3 whitespace-nowrap">{item.fourchette}</td>
-                    <td className="text-gray-400 px-4 py-3 hidden md:table-cell">{item.details}</td>
+                    <td className="text-gray-500 px-4 py-3 hidden md:table-cell">{item.details}</td>
                   </tr>
                 ))}
               </tbody>
@@ -270,21 +289,21 @@ export default function TarifsPage() {
       </section>
 
       {/* Tarifs Entretien */}
-      <section className="section bg-gray-50">
+      <section className="py-20 md:py-28 bg-gray-50">
         <div className="container">
           <div className="max-w-xl mb-10">
-            <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
-            <h2 className="section-title">Contrats d&apos;Entretien {siteConfig.city}</h2>
-            <p className="section-subtitle">
+            <span className="inline-block px-3 py-1 bg-primary-50 text-primary-700 text-xs font-semibold uppercase tracking-wider mb-4" style={{borderRadius:'6px'}}>Entretien</span>
+            <h2 className="font-bold text-3xl md:text-4xl text-gray-900">Contrats d&apos;Entretien {siteConfig.city}</h2>
+            <p className="text-gray-500 mt-3">
               Prévenez les pannes et prolongez la durée de vie de votre rideau métallique avec un contrat d&apos;entretien.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {tarifs.entretien.map((formule, i) => (
-              <div key={i} className="bg-white p-6 border border-gray-200" style={{ borderRadius: '8px' }}>
-                <h3 className="font-heading font-bold text-gray-900 mb-2">{formule.prestation}</h3>
+              <div key={i} className="bg-white p-6 border border-gray-100 hover:border-primary-200 transition-colors" style={{ borderRadius: '10px' }}>
+                <h3 className="font-bold text-gray-900 mb-2">{formule.prestation}</h3>
                 <p className="font-bold text-2xl text-primary-600 mb-3">{formule.fourchette}</p>
-                <p className="text-gray-400 text-sm">{formule.details}</p>
+                <p className="text-gray-500 text-sm">{formule.details}</p>
               </div>
             ))}
           </div>
@@ -292,11 +311,11 @@ export default function TarifsPage() {
       </section>
 
       {/* Texte SEO */}
-      <section className="section bg-white">
+      <section className="py-20 md:py-28 bg-white">
         <div className="container">
           <div className="max-w-3xl mx-auto space-y-6">
-            <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
-            <h2 className="section-title">Comprendre les prix des rideaux métalliques à {siteConfig.city}</h2>
+            <span className="inline-block px-3 py-1 bg-primary-50 text-primary-700 text-xs font-semibold uppercase tracking-wider mb-4" style={{borderRadius:'6px'}}>Guide</span>
+            <h2 className="font-bold text-3xl md:text-4xl text-gray-900">Comprendre les prix des rideaux métalliques à {siteConfig.city}</h2>
             <p className="text-gray-600 text-[16px] leading-[1.85]">
               Le <strong>prix d&apos;un rideau métallique à {siteConfig.city}</strong> dépend de plusieurs facteurs : le type de rideau (lames pleines, micro-perforées, grille articulée), les dimensions exactes de l&apos;ouverture, le matériau (acier galvanisé, aluminium, inox), le mode de manoeuvre (manuel ou motorisé) et les options de sécurité choisies. C&apos;est pourquoi il est impossible de donner un prix fixe sans avoir vu votre installation.
             </p>

@@ -318,50 +318,74 @@ export default function ServiceZonePage({ params }: Props) {
       )}
 
       {/* ─── HERO ─── */}
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-gray-900 overflow-hidden">
-        <div className="hidden" />
-        <div className="container relative z-10">
+      <section className="bg-white border-b border-gray-100">
+        <div className="h-1 bg-gradient-to-r from-primary-600 via-emerald-500 to-primary-700" />
+        <div className="container py-12 md:py-16">
           {/* Breadcrumb */}
-          <nav className="mb-8" aria-label="Fil d'Ariane">
-            <ol className="flex items-center gap-2 text-xs text-white/30 flex-wrap">
-              <li><Link href="/" className="hover:text-white/60 transition-colors">Accueil</Link></li>
+          <nav className="mb-6" aria-label="Fil d'Ariane">
+            <ol className="flex items-center gap-2 text-xs text-gray-400 flex-wrap">
+              <li><Link href="/" className="hover:text-primary-600 transition-colors">Accueil</Link></li>
               <li>/</li>
-              <li className="text-white/70 font-bold">{service.name} {zone.name}</li>
+              <li><Link href={`/zones/${zone.slug}`} className="hover:text-primary-600 transition-colors">{zone.name}</Link></li>
+              <li>/</li>
+              <li className="text-gray-900 font-medium">{service.name}</li>
             </ol>
           </nav>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="w-12 h-1 bg-primary-600 mb-8" style={{borderRadius:"4px"}}  />
+          <div className="grid lg:grid-cols-12 gap-8 items-center">
+            <div className="lg:col-span-7">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-primary-50 border border-primary-100 text-primary-700 text-sm font-medium mb-5" style={{ borderRadius: '8px' }}>
+                <span className="w-2 h-2 bg-primary-500 rounded-full animate-pulse" />
+                {service.name} à {zone.name}
+              </div>
 
-              <h1 className="font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-5">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-[1.1] mb-5 tracking-tight">
                 {content.hero.title}
               </h1>
 
-              <p className="text-white/40 text-lg mb-8 leading-relaxed">
+              <p className="text-gray-500 text-lg mb-8 leading-relaxed max-w-xl">
                 {content.hero.subtitle}
               </p>
 
-              {/* Trust badges */}
-              <div className="flex flex-wrap gap-6 mb-10 text-xs font-bold uppercase tracking-widest text-white/25">
-                <span>{siteConfig.reviews.rating}/5 — {siteConfig.reviews.count} avis</span>
-                <span>Intervention rapide</span>
-                <span>Garanti</span>
-              </div>
-
-              <div className="flex flex-wrap gap-3">
-                <a href={siteConfig.phoneLink} className="btn-phone">
+              <div className="flex flex-wrap gap-3 mb-8">
+                <a
+                  href={siteConfig.phoneLink}
+                  className="inline-flex items-center gap-2 px-6 py-3.5 bg-primary-600 text-white font-semibold hover:bg-primary-700 transition-colors shadow-lg shadow-primary-600/25"
+                  style={{ borderRadius: '8px' }}
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
                   {siteConfig.phone}
                 </a>
-                <Link href="/contact" className="btn-secondary border-white/15 text-white/60 hover:text-white hover:border-white/40">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 px-6 py-3.5 bg-white text-gray-700 font-semibold border-2 border-gray-200 hover:border-primary-300 hover:text-primary-700 transition-all"
+                  style={{ borderRadius: '8px' }}
+                >
                   Devis gratuit
                 </Link>
               </div>
+
+              <div className="flex gap-6 text-sm text-gray-400">
+                <span className="flex items-center gap-1.5">
+                  <svg className="w-4 h-4 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                  {siteConfig.reviews.rating}/5 ({siteConfig.reviews.count} avis)
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <svg className="w-4 h-4 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                  Intervention rapide
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <svg className="w-4 h-4 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                  Garanti
+                </span>
+              </div>
             </div>
 
-            {/* Image du service */}
-            <div className="relative hidden lg:block">
-              <div className="relative aspect-[4/3] overflow-hidden" style={{ borderRadius: '8px' }}>
+            <div className="lg:col-span-5 relative hidden lg:block">
+              <div className="relative aspect-[4/5] overflow-hidden" style={{ borderRadius: '12px' }}>
                 <Image
                   src={service.image}
                   alt={`${service.name} rideau métallique ${zone.name}`}
@@ -369,7 +393,9 @@ export default function ServiceZonePage({ params }: Props) {
                   className="object-cover"
                   priority
                 />
+                <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-black/40 to-transparent" />
               </div>
+              <div className="absolute -z-10 -top-3 -right-3 w-full h-full bg-primary-100 opacity-40" style={{ borderRadius: '12px' }} />
             </div>
           </div>
         </div>

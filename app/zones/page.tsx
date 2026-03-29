@@ -35,15 +35,23 @@ export default function ZonesPage() {
   return (
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+
       {/* Hero */}
-      <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 bg-dark overflow-hidden">
-        <div className="hidden" />
-        <div className="container relative z-10 text-center">
-          <div className="w-12 h-1 bg-primary-600 mx-auto mb-8" style={{borderRadius:"4px"}}/>
-          <h1 className="font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-4">
+      <section className="relative overflow-hidden bg-white">
+        <div className="h-1 bg-gradient-to-r from-primary-600 via-emerald-500 to-primary-700" />
+        <div className="container py-16 md:py-20 lg:py-24 text-center">
+          <nav className="mb-6" aria-label="Fil d'Ariane">
+            <ol className="flex items-center justify-center gap-2 text-xs text-gray-400">
+              <li><Link href="/" className="hover:text-primary-600 transition-colors">Accueil</Link></li>
+              <li>/</li>
+              <li className="text-gray-700 font-bold">Zones d&apos;intervention</li>
+            </ol>
+          </nav>
+          <span className="inline-block px-3 py-1 bg-primary-50 text-primary-700 text-xs font-semibold uppercase tracking-wider mb-4" style={{borderRadius:'6px'}}>Nos zones</span>
+          <h1 className="font-bold text-4xl md:text-5xl lg:text-6xl text-gray-900 leading-[1.1] mb-4">
             Zones d&apos;intervention
           </h1>
-          <p className="text-white/40 text-lg max-w-lg mx-auto">
+          <p className="text-gray-500 text-lg max-w-lg mx-auto">
             Intervention rapide sur {siteConfig.city} et toute l&apos;agglomération.
           </p>
         </div>
@@ -51,32 +59,42 @@ export default function ZonesPage() {
 
       {/* Main city */}
       {mainCity && (
-        <section className="section bg-white">
+        <section className="py-20 md:py-28 bg-gray-50">
           <div className="container">
             <div className="max-w-3xl">
-              <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
+              <span className="inline-block px-3 py-1 bg-primary-50 text-primary-700 text-xs font-semibold uppercase tracking-wider mb-4" style={{borderRadius:'6px'}}>Ville principale</span>
               <h2 className="font-bold text-3xl md:text-4xl text-gray-900 mb-4">{mainCity.name}</h2>
-              <p className="text-gray-400 text-lg mb-8 leading-relaxed">
+              <p className="text-gray-500 text-lg mb-8 leading-relaxed">
                 Basés à {mainCity.name}, nous intervenons en 1 heure maximum pour tous vos besoins en rideau métallique.
               </p>
-              <a href={siteConfig.phoneLink} className="btn-phone">{siteConfig.phone}</a>
+              <a
+                href={siteConfig.phoneLink}
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-primary-600 hover:bg-primary-700 transition-all shadow-lg shadow-primary-600/25"
+                style={{ borderRadius: '8px' }}
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                {siteConfig.phone}
+              </a>
             </div>
           </div>
         </section>
       )}
 
       {/* All zones */}
-      <section className="section bg-gray-50">
+      <section className="py-20 md:py-28 bg-white">
         <div className="container">
           <div className="max-w-xl mb-14">
-            <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
-            <h2 className="section-title">Toutes nos zones</h2>
+            <span className="inline-block px-3 py-1 bg-primary-50 text-primary-700 text-xs font-semibold uppercase tracking-wider mb-4" style={{borderRadius:'6px'}}>Communes</span>
+            <h2 className="font-bold text-3xl md:text-4xl text-gray-900">Toutes nos zones</h2>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-px bg-gray-200">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
             {otherZones.map((zone) => (
               <Link key={zone.slug} href={`/zones/${zone.slug}`}
-                className="bg-gray-50 p-4 text-center hover:bg-white transition-colors group">
-                <h3 className="font-heading font-bold text-gray-900 text-sm group-hover:text-primary-600 transition-colors">{zone.name}</h3>
+                className="bg-white border border-gray-100 p-4 text-center hover:border-primary-200 transition-colors group"
+                style={{ borderRadius: '10px' }}>
+                <h3 className="font-bold text-gray-900 text-sm group-hover:text-primary-600 transition-colors">{zone.name}</h3>
                 <p className="text-xs text-gray-400">{zone.postalCode}</p>
               </Link>
             ))}

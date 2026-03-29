@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import { siteConfig, zones } from "@/config/site";
 import { Hero } from "@/components/sections/Hero";
 import { Services } from "@/components/sections/Services";
@@ -88,11 +89,11 @@ export default function ZonePage({ params }: Props) {
         <AlternatingFeatures features={content.alternatingFeatures} bgColor="bg-gray-50" />
       )}
 
-      <section className="section bg-white">
+      <section className="py-20 md:py-28 bg-white">
         <div className="container">
           <div className="max-w-3xl">
-            <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
-            <h2 className="section-title">Rideau métallique à {zone.name}</h2>
+            <span className="inline-block px-3 py-1 bg-primary-50 text-primary-700 text-xs font-semibold uppercase tracking-wider mb-4" style={{borderRadius:'6px'}}>Expertise locale</span>
+            <h2 className="font-bold text-3xl md:text-4xl text-gray-900">Rideau métallique à {zone.name}</h2>
             <div className="mt-6 space-y-4">
               <p className="text-gray-500 text-lg leading-relaxed">
                 Vous recherchez un spécialiste du <strong className="text-gray-900">rideau métallique à {zone.name}</strong> ?
@@ -101,18 +102,18 @@ export default function ZonePage({ params }: Props) {
               </p>
             </div>
 
-            <div className="mt-10 divide-y divide-gray-200">
+            <div className="mt-10 space-y-4">
               {[
                 { title: "Intervention en 1 heure", desc: `sur ${zone.name}` },
                 { title: "Disponible 24h/24", desc: "y compris week-ends et jours fériés" },
                 { title: "Devis gratuit", desc: "avant intervention" },
                 { title: "Techniciens qualifiés", desc: "toutes marques" },
               ].map((item, i) => (
-                <div key={i} className="flex items-center gap-4 py-4">
-                  <span className="font-bold text-2xl text-gray-200">{String(i + 1).padStart(2, '0')}</span>
+                <div key={i} className="flex items-center gap-4 p-4 bg-gray-50 border border-gray-100" style={{borderRadius:'10px'}}>
+                  <span className="w-10 h-10 flex items-center justify-center bg-primary-50 text-primary-700 font-bold text-sm flex-shrink-0" style={{borderRadius:'8px'}}>{String(i + 1).padStart(2, '0')}</span>
                   <div>
-                    <p className="font-heading font-bold text-gray-900 text-[15px]">{item.title}</p>
-                    <p className="text-gray-400 text-sm">{item.desc}</p>
+                    <p className="font-bold text-gray-900 text-[15px]">{item.title}</p>
+                    <p className="text-gray-500 text-sm">{item.desc}</p>
                   </div>
                 </div>
               ))}
