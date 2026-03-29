@@ -26,16 +26,16 @@ fs.mkdirSync(OUTPUT_DIR, { recursive: true });
 const IMAGE_PROMPTS: Record<string, string> = {
   // ── SERVICES ──────────────────────────────────────────────
   "service-depannage-rideau":
-    "Professional photograph of a locksmith technician in dark blue work clothes repairing a commercial grey metal rolling shutter (rideau métallique) on a French town storefront. The shutter is stuck halfway open. The technician is crouched, using a wrench on the bottom guide rail. A tool bag is on the ground. The shop sign says 'Boulangerie'. Daytime, overcast sky, realistic northern French street with stone buildings.",
+    "Professional photograph of a locksmith technician wearing a blue polo shirt with white DRM letters on the back, repairing a commercial grey metal rolling shutter (rideau métallique) on a French town storefront. The shutter is stuck halfway open. The technician is crouched, using a wrench on the bottom guide rail. A tool bag is on the ground. The shop sign says 'Boulangerie'. Daytime, overcast sky, realistic northern French street with stone buildings.",
 
   "service-installation-pose":
-    "Professional photograph of two technicians installing a new galvanized steel rolling shutter on a French pharmacy storefront. One technician on a short ladder is mounting the steel guide rail (coulisse) to the wall. The new silver shutter lames (horizontal slats) are stacked nearby. The pharmacy has a green cross sign. Realistic, daytime, French town center.",
+    "Professional photograph of two technicians wearing blue polo shirts with white DRM letters on the back, installing a new galvanized steel rolling shutter on a French pharmacy storefront. One technician on a short ladder is mounting the steel guide rail (coulisse) to the wall. The new silver shutter lames (horizontal slats) are stacked nearby. The pharmacy has a green cross sign. Realistic, daytime, French town center.",
 
   "service-fabrication-atelier":
     "Professional photograph inside a metal workshop. Galvanized steel rolling shutter slats (lames) of 57mm width are being fed through a bending/forming machine. Stacks of finished slats on metal racks. A worker wears protective gloves and safety glasses. Industrial fluorescent lighting. Clean workshop with metal shavings on the floor.",
 
   "service-entretien-maintenance":
-    "Professional photograph of a technician performing preventive maintenance on a commercial metal rolling shutter. He sprays lubricant on the vertical guide rail (coulisse en U) while the shutter is half-open. A clipboard with a checklist is visible. The shop front is a French tabac-presse. Daylight, realistic.",
+    "Professional photograph of a technician wearing a blue polo shirt with white DRM letters on the back, performing preventive maintenance on a commercial metal rolling shutter. He sprays lubricant on the vertical guide rail (coulisse en U) while the shutter is half-open. A clipboard with a checklist is visible. The shop front is a French tabac-presse. Daylight, realistic.",
 
   "service-motorisation-tubulaire":
     "Professional close-up photograph of a Somfy tubular motor (cylindrical shape, ~60mm diameter, ~500mm long) being inserted into the hollow steel axle tube of a rolling shutter. The technician's gloved hands guide the motor. Electrical wires (brown, blue, yellow-green) are visible. Inside a metal coffre (housing box) above a shop entrance. Well-lit, realistic.",
@@ -44,10 +44,10 @@ const IMAGE_PROMPTS: Record<string, string> = {
     "Professional photograph of an ACM central motor unit (rectangular grey metal housing ~300mm, with chain drive mechanism) mounted on a steel bracket (drapeau/platine) above a rolling shutter coffre. The motor drives the axle via a steel chain. An electrical control box is wired next to it. Industrial setting, close-up, realistic.",
 
   "service-deblocage-urgence":
-    "Professional photograph of an emergency metal shutter repair situation. A French shop on a commercial street has its rolling metal shutter stuck in a half-open position at an angle. A locksmith technician in a reflective vest is using manual winding tools to free the mechanism. Early morning light, some urgency in the scene. Realistic.",
+    "Professional photograph of an emergency metal shutter repair situation. A French shop on a commercial street has its rolling metal shutter stuck in a half-open position at an angle. A locksmith technician wearing a blue polo shirt with white DRM letters on the back is using manual winding tools to free the mechanism. Early morning light, some urgency in the scene. Realistic.",
 
   "service-reparation-lames":
-    "Professional photograph of a technician replacing damaged galvanized steel slats (lames) on a metal rolling shutter. Two old rusty/bent slats have been removed and lie on the ground. The technician clips a new shiny galvanized slat into place using special pliers. French shop context. Close-up on hands and slats. Realistic.",
+    "Professional photograph of a technician wearing a blue polo shirt with white DRM letters on the back, replacing damaged galvanized steel slats (lames) on a metal rolling shutter. Two old rusty/bent slats have been removed and lie on the ground. The technician clips a new shiny galvanized slat into place using special pliers. French shop context. Close-up on hands and slats. Realistic.",
 
   // ── TYPES DE RIDEAUX ──────────────────────────────────────
   "type-lames-pleines":
