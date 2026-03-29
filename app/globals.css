@@ -2,117 +2,186 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ══════════════════════════════════════════════════════════
-   BASE — DRM Creil (Design System C: Modern Industrial)
-   ══════════════════════════════════════════════════════════ */
+/*
+ * ═══════════════════════════════════════════════════════════════════════════
+ * DESIGN SYSTEM — DRM CREIL
+ * Style Industriel Picardie : robuste, vert forêt, terre, professionnel
+ * Inspiré du design Argenteuil, adapté pour Creil (vallée de l'Oise)
+ * ═══════════════════════════════════════════════════════════════════════════
+ */
+
 @layer base {
   html {
     @apply scroll-smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
   body {
     @apply bg-white text-gray-900 antialiased;
-    font-family: 'Inter', 'Source Sans 3', system-ui, sans-serif;
+    font-family: 'Inter', 'DM Sans', system-ui, sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold tracking-tight;
+    @apply font-bold;
+    letter-spacing: -0.02em;
+    text-rendering: optimizeLegibility;
   }
+
+  h1 { @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.05]; }
+  h2 { @apply text-2xl sm:text-3xl md:text-4xl leading-tight; }
+  h3 { @apply text-xl sm:text-2xl; }
 
   ::selection {
     background: rgba(27, 122, 78, 0.15);
   }
 }
 
-/* ══════════════════════════════════════════════════════════
-   COMPONENTS
-   ══════════════════════════════════════════════════════════ */
 @layer components {
   .container {
     @apply mx-auto px-5 sm:px-6 lg:px-8;
     max-width: 1200px;
   }
 
-  /* ── Blog prose ── */
-  .prose-custom a {
-    @apply text-primary-600 underline decoration-primary-600/30 hover:decoration-primary-600 transition-colors;
-  }
-
-  /* ── Buttons ── */
+  /* ─── BOUTONS ─── */
   .btn-primary {
     @apply inline-flex items-center justify-center
-           px-6 py-3 text-sm font-semibold text-white
-           bg-primary-600 hover:bg-primary-700
-           transition-all duration-200
-           shadow-lg shadow-primary-600/20
-           focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500;
-    border-radius: 8px;
+           bg-primary-600 px-7 py-3.5
+           text-sm font-bold text-white uppercase tracking-wide
+           border-2 border-primary-700
+           hover:bg-primary-700
+           transition-all duration-150;
   }
 
   .btn-secondary {
     @apply inline-flex items-center justify-center
-           px-6 py-3 text-sm font-semibold
-           text-gray-700 bg-white
-           border-2 border-gray-200
-           hover:border-primary-300 hover:text-primary-700
-           transition-all duration-200;
-    border-radius: 8px;
+           border-2 border-gray-900
+           px-7 py-3.5 text-sm font-bold uppercase tracking-wide
+           text-gray-900 bg-transparent
+           hover:bg-gray-900 hover:text-white
+           transition-all duration-150;
   }
 
   .btn-phone {
     @apply inline-flex items-center justify-center gap-2
-           px-6 py-3 text-sm font-semibold text-white
-           bg-primary-600 hover:bg-primary-700
-           transition-all duration-200
-           shadow-lg shadow-primary-600/20;
-    border-radius: 8px;
+           bg-primary-600 px-7 py-3.5
+           text-sm font-bold text-white uppercase tracking-wide
+           border-2 border-primary-700
+           hover:bg-primary-700
+           transition-all duration-150;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.15);
+  }
+  .btn-phone:hover {
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.15);
+    transform: translate(2px, 2px);
   }
 
-  /* ── Nav link ── */
+  /* ─── SECTIONS ─── */
+  .section {
+    @apply py-16 md:py-24;
+  }
+
+  .section-title {
+    @apply text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4;
+  }
+
+  .section-label {
+    @apply text-xs font-bold uppercase tracking-[0.2em] text-primary-600 mb-3;
+  }
+
+  .section-subtitle {
+    @apply text-base md:text-lg text-gray-500 max-w-xl;
+    line-height: 1.7;
+  }
+
+  /* ─── SÉPARATEUR INDUSTRIEL ─── */
+  .divider-industrial {
+    @apply w-16 h-1 bg-primary-600;
+  }
+
+  .divider-industrial-lg {
+    @apply w-24 h-1.5 bg-primary-600;
+  }
+
+  /* ─── STATS ─── */
+  .stat-number {
+    @apply text-4xl md:text-6xl font-black leading-none;
+    letter-spacing: -0.04em;
+  }
+
+  .stat-label {
+    @apply text-xs font-bold uppercase tracking-widest text-gray-400 mt-1;
+  }
+
+  /* ─── CARDS ─── */
+  .card {
+    @apply bg-white p-6
+           border-l-4 border-l-primary-500 border border-gray-200
+           hover:border-l-primary-700
+           transition-colors duration-200;
+  }
+
+  /* ─── NAV ─── */
   .nav-link {
     @apply relative text-sm font-medium transition-colors duration-200;
   }
 }
 
-/* ══════════════════════════════════════════════════════════
-   PROSE STYLING — Pour le contenu HTML riche
-   ══════════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════════════════════════════
+   PATTERNS INDUSTRIELS
+   ═══════════════════════════════════════════════════════════════════════════ */
+.bg-crosshatch {
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.03'%3E%3Cpath d='M0 0h40v40H0V0zm1 1v38h38V1H1z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.bg-diagonal-lines {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 10px,
+    rgba(0, 0, 0, 0.02) 10px,
+    rgba(0, 0, 0, 0.02) 11px
+  );
+}
+
+.bg-dots-pattern {
+  background-image: radial-gradient(circle, rgba(0,0,0,0.06) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   PROSE — Contenu SEO riche
+   ═══════════════════════════════════════════════════════════════════════════ */
 .prose {
   @apply text-gray-500;
 }
-
 .prose p {
   @apply mb-4 leading-relaxed;
 }
-
 .prose p:last-child {
   @apply mb-0;
 }
-
 .prose strong {
   @apply font-bold text-gray-900;
 }
-
 .prose a {
   @apply text-primary-600 hover:text-primary-700 transition-colors;
 }
-
 .prose ul, .prose ol {
   @apply ml-6 mb-4;
 }
-
 .prose li {
   @apply mb-2;
 }
 
-/* ══════════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════════════════════════════
    ANIMATIONS
-   ══════════════════════════════════════════════════════════ */
+   ═══════════════════════════════════════════════════════════════════════════ */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
-
 @keyframes slideUp {
   from { opacity: 0; transform: translateY(12px); }
   to { opacity: 1; transform: translateY(0); }

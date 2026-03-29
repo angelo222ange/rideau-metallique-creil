@@ -46,7 +46,7 @@ function renderContentBlock(block: ContentBlock, index: number) {
     case 'heading':
       if (block.level === 2) {
         return (
-          <h2 key={index} className="font-extrabold text-2xl md:text-3xl text-gray-900 mt-12 mb-5 tracking-tight">
+          <h2 key={index} className="font-bold text-2xl md:text-3xl text-gray-900 mt-12 mb-5">
             {block.text}
           </h2>
         );
@@ -90,11 +90,11 @@ function renderContentBlock(block: ContentBlock, index: number) {
     case 'table':
       return (
         <div key={index} className="overflow-x-auto mb-8 -mx-4 px-4">
-          <table className="w-full text-sm border-collapse" style={{ borderRadius: '10px' }}>
+          <table className="w-full text-sm border-collapse border border-gray-200">
             <thead>
-              <tr className="bg-gray-50">
+              <tr className="bg-gray-900">
                 {block.headers.map((header, i) => (
-                  <th key={i} className="text-left font-bold text-gray-900 px-4 py-3 border-b-2 border-gray-200">
+                  <th key={i} className="text-left font-bold text-white px-4 py-3 uppercase tracking-wide text-xs">
                     {header}
                   </th>
                 ))}
@@ -102,7 +102,7 @@ function renderContentBlock(block: ContentBlock, index: number) {
             </thead>
             <tbody>
               {block.rows.map((row, i) => (
-                <tr key={i} className="border-b border-gray-100 hover:bg-gray-50/50">
+                <tr key={i} className="border-b border-gray-100 hover:bg-gray-50">
                   {row.map((cell, j) => (
                     <td key={j} className="text-gray-600 px-4 py-3" dangerouslySetInnerHTML={{ __html: cell }} />
                   ))}
@@ -171,34 +171,30 @@ export default function BlogArticlePage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      {/* Hero dark compact */}
-      <section className="relative overflow-hidden">
+      {/* ─── HERO ─── */}
+      <section className="relative overflow-hidden bg-gray-900">
         <Image
           src="/images/gallery/hero-bg-technicien-drm.webp"
           alt={`${article.title} - ${siteConfig.name}`}
           title={`${article.title} - ${siteConfig.name}`}
           fill
-          className="object-cover"
+          className="object-cover opacity-20"
         />
-        <div className="absolute inset-0 bg-gray-950/90" />
-        <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-primary-600/10 rounded-full blur-3xl" />
-
-        <div className="container relative z-10 py-14 md:py-20">
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/90 to-gray-900/70" />
+        <div className="container relative z-10 py-16 md:py-20">
           {/* Breadcrumb */}
           <nav className="mb-8" aria-label="Fil d'Ariane">
-            <ol className="flex items-center gap-2 text-xs text-white/30 flex-wrap">
-              <li><Link href="/" className="hover:text-primary-400 transition-colors">Accueil</Link></li>
+            <ol className="flex items-center gap-2 text-sm text-white/40 flex-wrap">
+              <li><Link href="/" className="hover:text-white/60 transition-colors">Accueil</Link></li>
               <li>/</li>
-              <li><Link href="/blog" className="hover:text-primary-400 transition-colors">Blog</Link></li>
+              <li><Link href="/blog" className="hover:text-white/60 transition-colors">Blog</Link></li>
               <li>/</li>
-              <li className="text-white/60 font-medium truncate max-w-[200px]">{article.title}</li>
+              <li className="text-white/70 font-semibold truncate max-w-[200px]">{article.title}</li>
             </ol>
           </nav>
 
           <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/[0.06] border border-white/[0.08] text-white/70 text-sm font-medium mb-5" style={{ borderRadius: '100px' }}>
-              Article
-            </span>
+            <p className="section-label text-primary-400">Article</p>
 
             {/* Meta */}
             <div className="flex items-center gap-3 text-xs text-white/30 mb-6">
@@ -213,21 +209,23 @@ export default function BlogArticlePage({ params }: Props) {
               <span>{article.readTime} de lecture</span>
             </div>
 
-            <h1 className="font-extrabold text-3xl md:text-4xl lg:text-5xl text-white leading-[1.1] tracking-tight">
+            <h1 className="text-white">
               {article.title}
             </h1>
+            <div className="divider-industrial-lg mt-4" />
           </div>
         </div>
+        <div className="absolute top-0 right-0 w-1 h-full bg-primary-600 hidden lg:block" />
       </section>
 
-      {/* Article Content */}
-      <section className="py-20 md:py-28 bg-gray-50">
+      {/* ─── ARTICLE CONTENT ─── */}
+      <section className="section bg-gray-50 bg-dots-pattern">
         <div className="container">
           <div className="grid lg:grid-cols-12 gap-12">
             {/* Main Content */}
             <div className="lg:col-span-8">
               {/* Featured Image */}
-              <div className="relative aspect-[16/9] overflow-hidden mb-10 bg-gray-100 shadow-2xl" style={{ borderRadius: '16px' }}>
+              <div className="relative aspect-[16/9] overflow-hidden mb-10 bg-gray-100 border border-gray-200">
                 <Image
                   src={article.image}
                   alt={article.imageAlt} title={article.imageAlt}
@@ -238,10 +236,11 @@ export default function BlogArticlePage({ params }: Props) {
               </div>
 
               {/* Summary Box */}
-              <div className="bg-white border border-gray-100 border-l-4 border-l-primary-600 p-6 md:p-8 mb-10 shadow-sm" style={{ borderRadius: '16px' }}>
-                <h2 className="font-extrabold text-gray-900 text-lg mb-4 tracking-tight">
+              <div className="card p-6 md:p-8 mb-10">
+                <h2 className="font-bold text-gray-900 text-lg mb-4">
                   {article.summary.title}
                 </h2>
+                <div className="divider-industrial mb-4" />
                 <ul className="space-y-2">
                   {article.summary.points.map((point, i) => (
                     <li key={i} className="flex items-start gap-3 text-gray-700 text-[15px]">
@@ -253,7 +252,7 @@ export default function BlogArticlePage({ params }: Props) {
               </div>
 
               {/* Content Blocks */}
-              <div className="prose-custom bg-white border border-gray-100 p-6 md:p-10 shadow-sm" style={{ borderRadius: '16px' }}>
+              <div className="bg-white border border-gray-200 p-6 md:p-10">
                 {article.content.map((block, index) => renderContentBlock(block, index))}
               </div>
             </div>
@@ -262,29 +261,25 @@ export default function BlogArticlePage({ params }: Props) {
             <aside className="lg:col-span-4">
               <div className="sticky top-28 space-y-8">
                 {/* CTA Box */}
-                <div className="bg-white border border-gray-100 p-6 text-center shadow-sm" style={{ borderRadius: '16px' }}>
-                  <p className="text-primary-600 text-sm font-semibold uppercase tracking-widest mb-3">Contact</p>
-                  <p className="font-extrabold text-gray-900 text-lg mb-2 tracking-tight">
+                <div className="bg-white border-l-4 border-l-primary-500 border border-gray-200 p-6 text-center">
+                  <p className="section-label">Contact</p>
+                  <p className="font-bold text-gray-900 text-lg mb-2">
                     Besoin d&apos;un devis ?
                   </p>
+                  <div className="divider-industrial mx-auto mb-4" />
                   <p className="text-gray-500 text-sm mb-5">
                     Intervention 24h/24 à {siteConfig.city}
                   </p>
                   <a
                     href={siteConfig.phoneLink}
-                    className="flex items-center justify-center gap-2 w-full px-6 py-3 text-sm font-semibold text-white bg-primary-600 hover:bg-primary-700 transition-all shadow-lg shadow-primary-600/25 mb-3"
-                    style={{ borderRadius: '8px' }}
+                    className="btn-primary w-full mb-3"
                   >
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
                     {siteConfig.phone}
                   </a>
-                  <Link
-                    href="/contact"
-                    className="flex items-center justify-center w-full px-6 py-3 text-sm font-semibold text-gray-700 bg-white border-2 border-gray-200 hover:border-primary-300 hover:text-primary-700 transition-all"
-                    style={{ borderRadius: '8px' }}
-                  >
+                  <Link href="/contact" className="btn-secondary w-full">
                     Devis gratuit
                   </Link>
                 </div>
@@ -292,16 +287,16 @@ export default function BlogArticlePage({ params }: Props) {
                 {/* Related Articles */}
                 {relatedArticles.length > 0 && (
                   <div>
-                    <h3 className="font-bold text-gray-900 text-sm uppercase tracking-widest mb-4">
+                    <h3 className="font-bold text-gray-900 text-xs uppercase tracking-widest mb-4">
                       Articles similaires
                     </h3>
+                    <div className="divider-industrial mb-4" />
                     <div className="space-y-4">
                       {relatedArticles.map((related) => (
                         <Link
                           key={related.slug}
                           href={`/blog/${related.slug}`}
-                          className="block group bg-white border border-gray-100 hover:border-primary-200 hover:shadow-lg hover:-translate-y-1 overflow-hidden transition-all duration-300"
-                          style={{ borderRadius: '16px' }}
+                          className="block group bg-white border-l-4 border-l-primary-500 border border-gray-200 hover:border-l-primary-700 overflow-hidden transition-all"
                         >
                           <div className="relative aspect-[16/9] overflow-hidden bg-gray-100">
                             <Image

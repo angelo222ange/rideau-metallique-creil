@@ -114,16 +114,16 @@ export default function AvisPage() {
       />
 
       {/* ─── HERO ─── */}
-      <section className="pt-32 pb-16 relative overflow-hidden">
+      <section className="relative overflow-hidden bg-gray-900">
         <Image
           src="/images/gallery/hero-bg-technicien-drm.webp"
           alt={`Avis clients ${siteConfig.name} rideau metallique ${siteConfig.city}`}
           title={`Avis clients ${siteConfig.name} rideau metallique ${siteConfig.city}`}
           fill
-          className="object-cover"
+          className="object-cover opacity-20"
         />
-        <div className="absolute inset-0 bg-gray-950/90" />
-        <div className="container relative z-10">
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/90 to-gray-900/70" />
+        <div className="container relative z-10 py-16 md:py-20">
           <nav className="mb-6" aria-label="Fil d'Ariane">
             <ol className="flex items-center gap-2 text-sm text-white/40">
               <li><Link href="/" className="hover:text-white/60 transition-colors">Accueil</Link></li>
@@ -131,20 +131,21 @@ export default function AvisPage() {
               <li className="text-white/70 font-semibold">Avis clients</li>
             </ol>
           </nav>
-          <p className="text-primary-400 text-sm font-semibold uppercase tracking-widest mb-3">Temoignages</p>
-          <h1 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">
+          <p className="section-label text-primary-400">Temoignages</p>
+          <h1 className="text-white">
             Avis Clients {siteConfig.name}
           </h1>
-          <p className="text-white/50 text-lg max-w-2xl">
+          <div className="divider-industrial-lg mt-4" />
+          <p className="text-white/60 mt-4 text-lg max-w-2xl">
             Decouvrez les temoignages de nos clients a {siteConfig.city} et dans l&apos;{siteConfig.department}. {uniqueReviews.length} avis verifies, note moyenne de {avgRating}/5.
           </p>
         </div>
+        <div className="absolute top-0 right-0 w-1 h-full bg-primary-600 hidden lg:block" />
       </section>
 
       {/* ─── STATS GLOBALES ─── */}
-      <section className="py-20 bg-white relative overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary-50 rounded-full blur-3xl opacity-30" />
-        <div className="container relative">
+      <section className="section bg-white bg-crosshatch">
+        <div className="container">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { value: `${avgRating}/5`, label: "Note moyenne", highlight: true },
@@ -154,15 +155,14 @@ export default function AvisPage() {
             ].map((stat, i) => (
               <div
                 key={i}
-                className={`border hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-8 text-center ${
+                className={`p-8 text-center border-l-4 transition-colors ${
                   stat.highlight
-                    ? 'bg-primary-600 border-primary-600 text-white'
-                    : 'bg-white border-gray-100 hover:border-gray-200'
+                    ? 'bg-primary-600 border-l-primary-800 text-white'
+                    : 'bg-white border-l-primary-500 border border-gray-200'
                 }`}
-                style={{ borderRadius: '16px' }}
               >
-                <p className={`text-4xl font-extrabold mb-2 ${stat.highlight ? 'text-white' : 'text-gray-900'}`}>{stat.value}</p>
-                <p className={`text-sm font-medium ${stat.highlight ? 'text-white/70' : 'text-gray-500'}`}>{stat.label}</p>
+                <p className={`stat-number mb-2 ${stat.highlight ? 'text-white' : 'text-gray-900'}`}>{stat.value}</p>
+                <p className={`stat-label ${stat.highlight ? 'text-white/70' : ''}`}>{stat.label}</p>
               </div>
             ))}
           </div>
@@ -180,29 +180,28 @@ export default function AvisPage() {
       </section>
 
       {/* ─── TOUS LES AVIS ─── */}
-      <section className="py-24 bg-gray-50 relative overflow-hidden">
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary-50 rounded-full blur-3xl opacity-30" />
-        <div className="container relative">
+      <section className="section bg-gray-50 bg-dots-pattern">
+        <div className="container">
           <div className="text-center mb-16">
-            <p className="text-primary-600 text-sm font-semibold uppercase tracking-widest mb-3">Retours d&apos;experience</p>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">
+            <p className="section-label">Retours d&apos;experience</p>
+            <h2 className="section-title">
               Ce que disent nos clients
             </h2>
+            <div className="divider-industrial mx-auto mt-4" />
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {uniqueReviews.map((review, index) => {
               const isMale = isMasculineName(review.name);
               const usePhoto = index % 2 === 0;
               const photoGender = isMale ? "men" : "women";
-              const photoIndex = (index * 7 + 3) % 80; // deterministic varied index
+              const photoIndex = (index * 7 + 3) % 80;
               const colorClass = initialColors[index % initialColors.length];
               const initial = review.name.charAt(0).toUpperCase();
 
               return (
                 <div
                   key={index}
-                  className="bg-white border border-gray-100 hover:border-gray-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-8 flex flex-col"
-                  style={{ borderRadius: '16px' }}
+                  className="card p-8 flex flex-col"
                 >
                   {/* Stars */}
                   <div className="flex items-center gap-1 mb-4">
@@ -252,36 +251,26 @@ export default function AvisPage() {
       </section>
 
       {/* ─── POURQUOI NOUS CHOISIR ─── */}
-      <section className="py-24 bg-white relative overflow-hidden">
-        <div className="absolute top-20 right-0 w-80 h-80 bg-primary-50 rounded-full blur-3xl opacity-30" />
-        <div className="container relative">
+      <section className="section bg-white">
+        <div className="container">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <p className="text-primary-600 text-sm font-semibold uppercase tracking-widest mb-3">Confiance</p>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">
+            <p className="section-label">Confiance</p>
+            <h2 className="section-title">
               Pourquoi nos clients nous recommandent
             </h2>
+            <div className="divider-industrial mx-auto mt-4" />
           </div>
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {[
-              { title: "Intervention rapide", desc: `30 a 60 min sur ${siteConfig.city}. 24h/24, 7j/7, jours feries inclus.`, icon: (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-              )},
-              { title: "Devis gratuit", desc: "Diagnostic offert, prix communiques avant intervention. Pas de surprise.", icon: (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-              )},
-              { title: "Garantie", desc: "Pieces d'origine, garantie pieces et main-d'oeuvre sur chaque intervention.", icon: (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
-              )},
+              { title: "Intervention rapide", desc: `30 a 60 min sur ${siteConfig.city}. 24h/24, 7j/7, jours feries inclus.` },
+              { title: "Devis gratuit", desc: "Diagnostic offert, prix communiques avant intervention. Pas de surprise." },
+              { title: "Garantie", desc: "Pieces d'origine, garantie pieces et main-d'oeuvre sur chaque intervention." },
             ].map((item, i) => (
               <div
                 key={i}
-                className="bg-white border border-gray-100 hover:border-gray-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-8 text-center"
-                style={{ borderRadius: '16px' }}
+                className="card p-8 text-center"
               >
-                <div className="w-14 h-14 bg-primary-50 text-primary-600 flex items-center justify-center mx-auto mb-5" style={{ borderRadius: '14px' }}>
-                  {item.icon}
-                </div>
-                <h3 className="font-extrabold text-gray-900 text-lg mb-2">{item.title}</h3>
+                <h3 className="font-bold text-gray-900 text-lg mb-2">{item.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}

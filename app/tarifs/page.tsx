@@ -99,26 +99,24 @@ function TarifTable({ title, label, description, items, columnTitle }: TarifTabl
   return (
     <div>
       <div className="max-w-xl mb-10">
-        <p className="text-primary-600 text-sm font-semibold uppercase tracking-widest mb-3">{label}</p>
-        <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">{title}</h2>
+        <p className="section-label">{label}</p>
+        <h2 className="section-title">{title}</h2>
+        <div className="divider-industrial mt-4" />
         <p className="text-gray-500 mt-3">{description}</p>
       </div>
-      <div
-        className="bg-white border border-gray-100 overflow-hidden shadow-xl"
-        style={{ borderRadius: '16px' }}
-      >
-        <div className="bg-primary-600 px-6 py-4">
+      <div className="bg-white border border-gray-200 overflow-hidden">
+        <div className="bg-gray-900 px-6 py-4">
           <div className="grid grid-cols-3 gap-4">
-            <p className="text-white font-bold text-sm">{columnTitle}</p>
-            <p className="text-white font-bold text-sm">Tarif indicatif</p>
-            <p className="text-white/70 font-bold text-sm hidden md:block">Details</p>
+            <p className="text-white font-bold text-sm uppercase tracking-wide">{columnTitle}</p>
+            <p className="text-white font-bold text-sm uppercase tracking-wide">Tarif indicatif</p>
+            <p className="text-white/70 font-bold text-sm uppercase tracking-wide hidden md:block">Details</p>
           </div>
         </div>
         <div>
           {items.map((item, i) => (
             <div
               key={i}
-              className={`grid grid-cols-3 gap-4 px-6 py-4 ${i !== items.length - 1 ? 'border-b border-gray-100' : ''} hover:bg-gray-50/50 transition-colors`}
+              className={`grid grid-cols-3 gap-4 px-6 py-4 ${i !== items.length - 1 ? 'border-b border-gray-100' : ''} hover:bg-gray-50 transition-colors`}
             >
               <p className="text-gray-900 font-medium text-sm">{item.prestation}</p>
               <p className="text-primary-600 font-bold text-sm whitespace-nowrap">{item.fourchette}</p>
@@ -149,16 +147,16 @@ export default function TarifsPage() {
       />
 
       {/* ─── HERO ─── */}
-      <section className="pt-32 pb-16 relative overflow-hidden">
+      <section className="relative overflow-hidden bg-gray-900">
         <Image
           src="/images/gallery/hero-bg-technicien-drm.webp"
           alt={`Tarifs rideau metallique ${siteConfig.city}`}
           title={`Tarifs rideau metallique ${siteConfig.city}`}
           fill
-          className="object-cover"
+          className="object-cover opacity-20"
         />
-        <div className="absolute inset-0 bg-gray-950/90" />
-        <div className="container relative z-10">
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/90 to-gray-900/70" />
+        <div className="container relative z-10 py-16 md:py-20">
           <nav className="mb-6" aria-label="Fil d'Ariane">
             <ol className="flex items-center gap-2 text-sm text-white/40">
               <li><Link href="/" className="hover:text-white/60 transition-colors">Accueil</Link></li>
@@ -166,44 +164,35 @@ export default function TarifsPage() {
               <li className="text-white/70 font-semibold">Tarifs</li>
             </ol>
           </nav>
-          <p className="text-primary-400 text-sm font-semibold uppercase tracking-widest mb-3">Tarifs 2026</p>
-          <h1 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">
+          <p className="section-label text-primary-400">Tarifs 2026</p>
+          <h1 className="text-white">
             Prix Rideau Metallique {siteConfig.city}
           </h1>
-          <p className="text-white/50 text-lg max-w-2xl mb-8">
+          <div className="divider-industrial-lg mt-4" />
+          <p className="text-white/60 mt-4 text-lg max-w-2xl mb-8">
             Tarifs indicatifs 2026 pour le depannage, l&apos;installation, la motorisation et l&apos;entretien de rideaux metalliques a {siteConfig.city} et dans l&apos;{siteConfig.department}. Devis gratuit et sans engagement.
           </p>
           <div className="flex flex-wrap gap-3">
-            <a
-              href={siteConfig.phoneLink}
-              className="px-6 py-3 bg-primary-600 text-white font-semibold hover:bg-primary-700 transition-colors inline-flex items-center gap-2"
-              style={{ borderRadius: '8px' }}
-            >
+            <a href={siteConfig.phoneLink} className="btn-phone">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
               {siteConfig.phone}
             </a>
-            <Link
-              href="/contact"
-              className="px-6 py-3 bg-white text-gray-700 font-medium border border-gray-200 hover:border-primary-300 transition-colors"
-              style={{ borderRadius: '8px' }}
-            >
+            <Link href="/contact" className="btn-secondary border-white/30 text-white hover:bg-white hover:text-gray-900">
               Demander un devis
             </Link>
           </div>
         </div>
+        <div className="absolute top-0 right-0 w-1 h-full bg-primary-600 hidden lg:block" />
       </section>
 
       {/* ─── RESUME TARIFS ─── */}
-      <section className="py-20 bg-white relative overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary-50 rounded-full blur-3xl opacity-30" />
-        <div className="container relative">
-          <div
-            className="bg-white border border-gray-100 border-l-4 border-l-primary-600 p-8 max-w-3xl shadow-xl"
-            style={{ borderRadius: '16px' }}
-          >
-            <h2 className="font-extrabold text-gray-900 text-xl mb-5">Tarifs en bref</h2>
+      <section className="section bg-white bg-crosshatch">
+        <div className="container">
+          <div className="card p-8 max-w-3xl">
+            <h2 className="font-bold text-gray-900 text-xl mb-5">Tarifs en bref</h2>
+            <div className="divider-industrial mb-5" />
             <ul className="space-y-3">
               {[
                 `Depannage / deblocage : a partir de 150 EUR (diagnostic gratuit)`,
@@ -214,7 +203,7 @@ export default function TarifsPage() {
                 `Prix final communique apres diagnostic sur place -- pas de surprise`,
               ].map((point, i) => (
                 <li key={i} className="flex items-start gap-3 text-gray-700 text-[15px]">
-                  <div className="w-5 h-5 bg-primary-50 text-primary-600 flex items-center justify-center flex-shrink-0 mt-0.5" style={{ borderRadius: '6px' }}>
+                  <div className="w-5 h-5 bg-primary-600 text-white flex items-center justify-center flex-shrink-0 mt-0.5">
                     <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                     </svg>
@@ -228,9 +217,8 @@ export default function TarifsPage() {
       </section>
 
       {/* ─── TARIFS DEPANNAGE ─── */}
-      <section className="py-24 bg-gray-50 relative overflow-hidden">
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary-50 rounded-full blur-3xl opacity-30" />
-        <div className="container relative">
+      <section className="section bg-gray-50 bg-dots-pattern">
+        <div className="container">
           <TarifTable
             title={`Tarifs Depannage Rideau Metallique ${siteConfig.city}`}
             label="Depannage"
@@ -239,11 +227,7 @@ export default function TarifsPage() {
             columnTitle="Prestation"
           />
           <div className="mt-8">
-            <a
-              href={siteConfig.phoneLink}
-              className="px-6 py-3 bg-primary-600 text-white font-semibold hover:bg-primary-700 transition-colors inline-flex items-center gap-2"
-              style={{ borderRadius: '8px' }}
-            >
+            <a href={siteConfig.phoneLink} className="btn-primary">
               Devis depannage gratuit : {siteConfig.phone}
             </a>
           </div>
@@ -251,9 +235,8 @@ export default function TarifsPage() {
       </section>
 
       {/* ─── TARIFS INSTALLATION ─── */}
-      <section className="py-24 bg-white relative overflow-hidden">
-        <div className="absolute top-20 right-0 w-80 h-80 bg-primary-50 rounded-full blur-3xl opacity-30" />
-        <div className="container relative">
+      <section className="section bg-white">
+        <div className="container">
           <TarifTable
             title={`Tarifs Installation Rideau Metallique ${siteConfig.city}`}
             label="Installation"
@@ -262,11 +245,7 @@ export default function TarifsPage() {
             columnTitle="Type de rideau"
           />
           <div className="mt-8">
-            <Link
-              href="/contact"
-              className="px-6 py-3 bg-primary-600 text-white font-semibold hover:bg-primary-700 transition-colors inline-block"
-              style={{ borderRadius: '8px' }}
-            >
+            <Link href="/contact" className="btn-primary">
               Demander un devis installation
             </Link>
           </div>
@@ -274,9 +253,8 @@ export default function TarifsPage() {
       </section>
 
       {/* ─── TARIFS MOTORISATION ─── */}
-      <section className="py-24 bg-gray-50 relative overflow-hidden">
-        <div className="absolute -top-20 -left-40 w-80 h-80 bg-primary-50 rounded-full blur-3xl opacity-30" />
-        <div className="container relative">
+      <section className="section bg-gray-50 bg-crosshatch">
+        <div className="container">
           <TarifTable
             title="Tarifs Motorisation Rideau Metallique"
             label="Motorisation"
@@ -288,14 +266,14 @@ export default function TarifsPage() {
       </section>
 
       {/* ─── TARIFS ENTRETIEN ─── */}
-      <section className="py-24 bg-white relative overflow-hidden">
-        <div className="absolute bottom-0 right-0 w-80 h-80 bg-primary-50 rounded-full blur-3xl opacity-30" />
-        <div className="container relative">
+      <section className="section bg-white">
+        <div className="container">
           <div className="max-w-xl mb-10">
-            <p className="text-primary-600 text-sm font-semibold uppercase tracking-widest mb-3">Entretien</p>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">
+            <p className="section-label">Entretien</p>
+            <h2 className="section-title">
               Contrats d&apos;Entretien {siteConfig.city}
             </h2>
+            <div className="divider-industrial mt-4" />
             <p className="text-gray-500 mt-3">
               Prevenez les pannes et prolongez la duree de vie de votre rideau metallique avec un contrat d&apos;entretien.
             </p>
@@ -306,22 +284,21 @@ export default function TarifsPage() {
               return (
                 <div
                   key={i}
-                  className={`relative border hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-8 ${
+                  className={`relative p-8 border-l-4 transition-colors ${
                     isPopular
-                      ? 'bg-primary-600 border-primary-600 text-white'
-                      : 'bg-white border-gray-100 hover:border-gray-200'
+                      ? 'bg-primary-600 border-l-primary-800 text-white'
+                      : 'bg-white border-l-primary-500 border border-gray-200 hover:border-l-primary-700'
                   }`}
-                  style={{ borderRadius: '16px' }}
                 >
                   {isPopular && (
-                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-white text-primary-600 text-xs font-bold px-3 py-1 uppercase tracking-wider" style={{ borderRadius: '6px' }}>
+                    <span className="absolute -top-3 left-6 bg-white text-primary-600 text-xs font-bold px-3 py-1 uppercase tracking-wider">
                       Populaire
                     </span>
                   )}
-                  <h3 className={`font-extrabold text-lg mb-3 ${isPopular ? 'text-white' : 'text-gray-900'}`}>
+                  <h3 className={`font-bold text-lg mb-3 ${isPopular ? 'text-white' : 'text-gray-900'}`}>
                     {formule.prestation}
                   </h3>
-                  <p className={`font-extrabold text-3xl mb-4 ${isPopular ? 'text-white' : 'text-primary-600'}`}>
+                  <p className={`font-black text-3xl mb-4 ${isPopular ? 'text-white' : 'text-primary-600'}`}>
                     {formule.fourchette}
                   </p>
                   <p className={`text-sm ${isPopular ? 'text-white/70' : 'text-gray-500'}`}>
@@ -329,12 +306,11 @@ export default function TarifsPage() {
                   </p>
                   <a
                     href={siteConfig.phoneLink}
-                    className={`mt-6 block text-center px-6 py-3 font-semibold transition-colors ${
+                    className={`mt-6 block text-center px-6 py-3 font-bold uppercase tracking-wide text-sm transition-colors ${
                       isPopular
                         ? 'bg-white text-primary-700 hover:bg-gray-50'
                         : 'bg-primary-600 text-white hover:bg-primary-700'
                     }`}
-                    style={{ borderRadius: '8px' }}
                   >
                     Souscrire
                   </a>
@@ -346,25 +322,25 @@ export default function TarifsPage() {
       </section>
 
       {/* ─── TEXTE SEO ─── */}
-      <section className="py-24 bg-gray-50 relative overflow-hidden">
-        <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-primary-50 rounded-full blur-3xl opacity-30" />
-        <div className="container relative">
+      <section className="section bg-gray-50 bg-dots-pattern">
+        <div className="container">
           <div className="max-w-3xl mx-auto">
-            <p className="text-primary-600 text-sm font-semibold uppercase tracking-widest mb-3">Guide</p>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-8">
+            <p className="section-label">Guide</p>
+            <h2 className="section-title">
               Comprendre les prix des rideaux metalliques a {siteConfig.city}
             </h2>
-            <div className="space-y-6">
-              <p className="text-gray-600 text-[16px] leading-[1.85]">
+            <div className="divider-industrial mt-4 mb-8" />
+            <div className="prose">
+              <p>
                 Le <strong>prix d&apos;un rideau metallique a {siteConfig.city}</strong> depend de plusieurs facteurs : le type de rideau (lames pleines, micro-perforees, grille articulee), les dimensions exactes de l&apos;ouverture, le materiau (acier galvanise, aluminium, inox), le mode de manoeuvre (manuel ou motorise) et les options de securite choisies. C&apos;est pourquoi il est impossible de donner un prix fixe sans avoir vu votre installation.
               </p>
-              <p className="text-gray-600 text-[16px] leading-[1.85]">
+              <p>
                 Pour le <strong>depannage d&apos;un rideau metallique a {siteConfig.city}</strong>, le prix depend de la cause exacte de la panne. Un rideau peut etre bloque pour de multiples raisons : lame sortie des rails, moteur en panne, axe voile, ressort casse, serrure grippee... Chaque situation demande une intervention differente. Chez <strong>{siteConfig.name}</strong>, le diagnostic est toujours <strong>gratuit</strong> et le devis est communique <strong>avant toute intervention</strong>, sans surprise.
               </p>
-              <p className="text-gray-600 text-[16px] leading-[1.85]">
+              <p>
                 Les prix indicatifs affiches sur cette page sont des <strong>tarifs de depart</strong>, donnes a titre de reference. Le prix final est systematiquement etabli apres un diagnostic sur place par notre technicien, en fonction des dimensions de votre rideau, de l&apos;etat des composants et de la complexite de l&apos;intervention.
               </p>
-              <p className="text-gray-600 text-[16px] leading-[1.85]">
+              <p>
                 Nous intervenons sur l&apos;ensemble de {siteConfig.city} et dans les communes environnantes de l&apos;{siteConfig.department} : Nogent-sur-Oise, Montataire, Senlis, Chantilly, Lamorlaye, Gouvieux et toute l&apos;agglomeration creilloise. <strong>Aucun frais de deplacement</strong> dans un rayon de 30 km.
               </p>
             </div>

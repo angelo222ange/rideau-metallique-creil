@@ -224,16 +224,15 @@ export default function ServiceZonePage({ params }: Props) {
     return (
       <main>
         {/* Hero with background image */}
-        <section className="relative overflow-hidden">
+        <section className="relative overflow-hidden bg-gray-900">
           <Image
             src="/images/gallery/hero-bg-technicien-drm.webp"
             alt={`Rideau métallique ${zone.name}`}
             title={`Rideau métallique ${zone.name}`}
             fill
-            className="object-cover"
+            className="object-cover opacity-20"
           />
-          <div className="absolute inset-0 bg-gray-950/90" />
-          <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-primary-600/10 rounded-full blur-3xl" />
+          <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/90 to-gray-900/70" />
 
           <div className="container relative z-10 py-14 md:py-20">
             <nav className="mb-6" aria-label="Fil d'Ariane">
@@ -245,74 +244,67 @@ export default function ServiceZonePage({ params }: Props) {
             </nav>
 
             <div className="max-w-3xl">
-              <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/[0.06] border border-white/[0.08] text-white/70 text-sm font-medium mb-5" style={{ borderRadius: '100px' }}>
-                <span className="w-2 h-2 bg-primary-400 rounded-full animate-pulse" />
-                Rideau Métallique - {zone.name} ({zone.postalCode})
+              <span className="section-label text-primary-400 mb-4 block">
+                Rideau Métallique — {zone.name} ({zone.postalCode})
               </span>
 
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-[1.1] mb-5 tracking-tight">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-[1.1] mb-4 tracking-tight">
                 Rideau Métallique <span className="text-primary-400">{zone.name}</span>
               </h1>
 
-              <p className="text-white/40 text-lg leading-relaxed mb-8 max-w-xl">
+              <div className="divider-industrial-lg mb-6" />
+
+              <p className="text-white/50 text-lg leading-relaxed mb-8 max-w-xl">
                 {zoneLocal?.description || `${siteConfig.name} intervient à ${zone.name} (${zone.postalCode}) pour le dépannage, l'installation, la réparation et l'entretien de vos rideaux métalliques. Intervention rapide, devis gratuit.`}
               </p>
 
-              {/* Stats inline */}
-              <div className="flex flex-wrap gap-6 text-sm text-white/30 mb-8">
-                <span className="flex items-center gap-1.5">
-                  <svg className="w-4 h-4 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" /></svg>
-                  <span className="text-white/60">{siteConfig.reviews.rating}/5</span> ({siteConfig.reviews.count} avis)
-                </span>
-                <span className="flex items-center gap-1.5">
-                  <svg className="w-4 h-4 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                  <span className="text-white/60">Intervention -30 min</span>
-                </span>
-                <span className="flex items-center gap-1.5">
-                  <svg className="w-4 h-4 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
-                  <span className="text-white/60">Garantie incluse</span>
-                </span>
-              </div>
-
-              <div className="flex flex-wrap gap-3">
-                <a
-                  href={siteConfig.phoneLink}
-                  className="inline-flex items-center gap-2 px-6 py-3.5 bg-white text-gray-900 font-semibold hover:bg-gray-100 transition-colors"
-                  style={{ borderRadius: '8px' }}
-                >
+              <div className="flex flex-wrap gap-3 mb-10">
+                <a href={siteConfig.phoneLink} className="btn-phone">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                   {siteConfig.phone}
                 </a>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 text-white font-semibold border border-white/20 hover:bg-white/10 transition-colors"
-                  style={{ borderRadius: '8px' }}
-                >
+                <Link href="/contact" className="btn-secondary border-white/20 text-white hover:bg-white hover:text-gray-900">
                   Devis gratuit
                 </Link>
               </div>
+
+              {/* Trust stats */}
+              <div className="flex flex-wrap gap-8 text-sm">
+                <div>
+                  <span className="text-white font-bold">{siteConfig.reviews.rating}/5</span>
+                  <span className="text-white/40 ml-1">({siteConfig.reviews.count} avis)</span>
+                </div>
+                <div>
+                  <span className="text-white font-bold">-30 min</span>
+                  <span className="text-white/40 ml-1">intervention</span>
+                </div>
+                <div>
+                  <span className="text-white font-bold">24h/24</span>
+                  <span className="text-white/40 ml-1">7j/7</span>
+                </div>
+              </div>
             </div>
           </div>
+
+          <div className="absolute top-0 right-0 w-1 h-full bg-primary-600 hidden lg:block" />
         </section>
 
         {/* Services dans cette zone */}
-        <section className="relative py-20 md:py-28 bg-white overflow-hidden">
-          {/* Blob décoratif */}
-          <div className="absolute -bottom-32 -left-32 w-[400px] h-[400px] bg-primary-50 rounded-full blur-3xl" />
+        <section className="relative py-20 md:py-28 bg-white bg-crosshatch overflow-hidden">
           <div className="container relative z-10">
             <div className="mb-12">
-              <p className="text-primary-600 text-sm font-semibold uppercase tracking-widest mb-3">Nos services</p>
+              <span className="section-label block mb-3">Nos services</span>
               <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">Services rideau métallique à {zone.name}</h2>
+              <div className="divider-industrial mt-4" />
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
               {services.filter(s => s.hasPage).map((s) => (
                 <Link
                   key={s.id}
                   href={`/${s.slug}-rideau-metallique-${zone.slug}`}
-                  className="group bg-white p-6 border border-gray-100 hover:border-primary-200 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
-                  style={{ borderRadius: '16px' }}
+                  className="group bg-white p-6 border-l-4 border-l-primary-500 border border-gray-200 hover:border-l-primary-700 hover:-translate-y-1 transition-all duration-300"
                 >
                   <h3 className="font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">{s.name}</h3>
                   <p className="text-gray-400 text-sm mb-4">{s.shortDesc}</p>
@@ -328,19 +320,19 @@ export default function ServiceZonePage({ params }: Props) {
 
         {/* Infos zone */}
         {zoneLocal && (
-          <section className="relative py-20 md:py-28 bg-gray-50 overflow-hidden">
-            <div className="absolute top-20 right-0 w-[350px] h-[350px] bg-primary-100/40 rounded-full blur-3xl" />
+          <section className="relative py-20 md:py-28 bg-gray-50 bg-dots-pattern overflow-hidden">
             <div className="container relative z-10">
               <div className="max-w-3xl">
-                <p className="text-primary-600 text-sm font-semibold uppercase tracking-widest mb-3">A propos</p>
-                <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-6">{zone.name} — {zone.postalCode}</h2>
+                <span className="section-label block mb-3">A propos</span>
+                <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-4">{zone.name} — {zone.postalCode}</h2>
+                <div className="divider-industrial mb-6" />
                 <p className="text-gray-500 text-lg leading-relaxed mb-8">{zoneLocal.description}</p>
                 {zoneLocal.quartiers && (
                   <div className="mb-6">
                     <p className="font-semibold text-gray-900 text-sm mb-3">Quartiers desservis :</p>
                     <div className="flex flex-wrap gap-2">
                       {zoneLocal.quartiers.map((q, i) => (
-                        <span key={i} className="px-3 py-1.5 bg-white text-gray-600 text-sm border border-gray-200 shadow-sm" style={{ borderRadius: '100px' }}>{q}</span>
+                        <span key={i} className="px-3 py-1.5 bg-white text-gray-600 text-sm border border-gray-200">{q}</span>
                       ))}
                     </div>
                   </div>
@@ -350,7 +342,7 @@ export default function ServiceZonePage({ params }: Props) {
                     <p className="font-semibold text-gray-900 text-sm mb-3">Points de repère :</p>
                     <div className="flex flex-wrap gap-2">
                       {zoneLocal.landmarks.map((l, i) => (
-                        <span key={i} className="px-3 py-1.5 bg-primary-50 text-primary-700 text-sm border border-primary-100" style={{ borderRadius: '100px' }}>{l}</span>
+                        <span key={i} className="px-3 py-1.5 bg-primary-50 text-primary-700 text-sm border border-primary-100">{l}</span>
                       ))}
                     </div>
                   </div>
@@ -361,14 +353,15 @@ export default function ServiceZonePage({ params }: Props) {
         )}
 
         {/* Zones voisines */}
-        <section className="py-20 md:py-28 bg-white">
+        <section className="py-20 md:py-28 bg-white bg-crosshatch">
           <div className="container">
-            <p className="text-primary-600 text-sm font-semibold uppercase tracking-widest mb-3">Zones voisines</p>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-8">Rideau métallique dans l&apos;{siteConfig.department}</h2>
+            <span className="section-label block mb-3">Zones voisines</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-4">Rideau métallique dans l&apos;{siteConfig.department}</h2>
+            <div className="divider-industrial mb-8" />
             <div className="flex flex-wrap gap-2">
               {neighborZones.map((z) => (
                 <Link key={z.slug} href={`/rideau-metallique-${z.slug}`}
-                  className="px-4 py-2.5 bg-gray-50 text-gray-600 text-sm border border-gray-200 hover:border-primary-300 hover:text-primary-700 hover:-translate-y-1 transition-all duration-300 shadow-sm" style={{ borderRadius: '100px' }}>
+                  className="px-4 py-2.5 bg-white text-gray-600 text-sm border border-gray-200 hover:border-primary-300 hover:text-primary-700 hover:-translate-y-1 transition-all duration-300">
                   {z.name} <span className="text-gray-300 ml-1">{z.postalCode}</span>
                 </Link>
               ))}
@@ -517,19 +510,16 @@ export default function ServiceZonePage({ params }: Props) {
       )}
 
       {/* ─── HERO WITH BACKGROUND IMAGE ─── */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden bg-gray-900">
         {/* Background image */}
         <Image
           src="/images/gallery/hero-bg-technicien-drm.webp"
           alt={`${service.name} rideau métallique ${zone.name}`}
           title={`${service.name} rideau métallique ${zone.name}`}
           fill
-          className="object-cover"
+          className="object-cover opacity-20"
         />
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-gray-950/90" />
-        {/* Blob décoratif */}
-        <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-primary-600/10 rounded-full blur-3xl" />
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/90 to-gray-900/70" />
 
         <div className="container relative z-10 py-14 md:py-20">
           {/* Breadcrumb */}
@@ -544,58 +534,52 @@ export default function ServiceZonePage({ params }: Props) {
           </nav>
 
           <div className="max-w-3xl">
-            {/* Badge pill */}
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/[0.06] border border-white/[0.08] text-white/70 text-sm font-medium mb-5" style={{ borderRadius: '100px' }}>
-              <span className="w-2 h-2 bg-primary-400 rounded-full animate-pulse" />
-              {service.name} - {zone.name}
+            <span className="section-label text-primary-400 mb-4 block">
+              {service.name} — {zone.name} ({zone.postalCode})
             </span>
 
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-[1.1] mb-5 tracking-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-[1.1] mb-4 tracking-tight">
               {content.hero.title.replace(zone.name, '')} <span className="text-primary-400">{zone.name}</span>
             </h1>
 
-            <p className="text-white/40 text-lg mb-8 leading-relaxed max-w-xl">
+            <div className="divider-industrial-lg mb-6" />
+
+            <p className="text-white/50 text-lg mb-8 leading-relaxed max-w-xl">
               {content.hero.subtitle}
             </p>
 
-            {/* Stats inline */}
-            <div className="flex flex-wrap gap-6 text-sm text-white/30 mb-8">
-              <span className="flex items-center gap-1.5">
-                <svg className="w-4 h-4 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" /></svg>
-                <span className="text-white/60">{siteConfig.reviews.rating}/5</span> ({siteConfig.reviews.count} avis)
-              </span>
-              <span className="flex items-center gap-1.5">
-                <svg className="w-4 h-4 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                <span className="text-white/60">Intervention -30 min</span>
-              </span>
-              <span className="flex items-center gap-1.5">
-                <svg className="w-4 h-4 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
-                <span className="text-white/60">Garantie incluse</span>
-              </span>
-            </div>
-
-            <div className="flex flex-wrap gap-3">
-              <a
-                href={siteConfig.phoneLink}
-                className="inline-flex items-center gap-2 px-6 py-3.5 bg-white text-gray-900 font-semibold hover:bg-gray-100 transition-colors"
-                style={{ borderRadius: '8px' }}
-              >
+            <div className="flex flex-wrap gap-3 mb-10">
+              <a href={siteConfig.phoneLink} className="btn-phone">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
                 {siteConfig.phone}
               </a>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 px-6 py-3.5 text-white font-semibold border border-white/20 hover:bg-white/10 transition-colors"
-                style={{ borderRadius: '8px' }}
-              >
+              <Link href="/contact" className="btn-secondary border-white/20 text-white hover:bg-white hover:text-gray-900">
                 Devis gratuit
               </Link>
             </div>
+
+            {/* Trust stats */}
+            <div className="flex flex-wrap gap-8 text-sm">
+              <div>
+                <span className="text-white font-bold">{siteConfig.reviews.rating}/5</span>
+                <span className="text-white/40 ml-1">({siteConfig.reviews.count} avis)</span>
+              </div>
+              <div>
+                <span className="text-white font-bold">-30 min</span>
+                <span className="text-white/40 ml-1">intervention</span>
+              </div>
+              <div>
+                <span className="text-white font-bold">24h/24</span>
+                <span className="text-white/40 ml-1">7j/7</span>
+              </div>
+            </div>
           </div>
         </div>
+
+        <div className="absolute top-0 right-0 w-1 h-full bg-primary-600 hidden lg:block" />
       </section>
 
       {/* ─── INTRODUCTION (masqué si contenu zone-spécifique) ─── */}
@@ -1121,15 +1105,13 @@ export default function ServiceZonePage({ params }: Props) {
 
       {/* ─── ZONE INTRO UNIQUE ─── */}
       {zoneServiceContent?.zoneIntro && (
-        <section className="relative py-20 md:py-28 bg-white overflow-hidden">
-          {/* Blob décoratif */}
-          <div className="absolute -top-24 -left-24 w-[400px] h-[400px] bg-primary-50 rounded-full blur-3xl" />
+        <section className="relative py-20 md:py-28 bg-white bg-crosshatch overflow-hidden">
           <div className="container relative z-10">
             <div className="grid lg:grid-cols-12 gap-12 items-center max-w-6xl mx-auto">
               {/* Texte */}
               <div className="lg:col-span-7">
-                <div className="bg-white border border-gray-100 p-8 md:p-10 shadow-sm" style={{ borderRadius: '20px' }}>
-                  <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
+                <div className="bg-white border-l-4 border-l-primary-500 border border-gray-200 p-8 md:p-10">
+                  <div className="divider-industrial mb-6" />
                   <div
                     className="text-gray-600 text-lg leading-relaxed prose prose-a:text-primary-600 prose-a:no-underline hover:prose-a:underline prose-strong:text-gray-900"
                     dangerouslySetInnerHTML={{ __html: zoneServiceContent.zoneIntro }}
@@ -1138,7 +1120,7 @@ export default function ServiceZonePage({ params }: Props) {
               </div>
               {/* Image */}
               <div className="lg:col-span-5 hidden lg:block">
-                <div className="relative aspect-[4/3] overflow-hidden shadow-2xl" style={{ borderRadius: '16px' }}>
+                <div className="relative aspect-[4/3] overflow-hidden shadow-2xl">
                   <Image
                     src="/images/gallery/rideau-metallique-creil.webp"
                     alt={`${service.name} rideau metallique ${zone.name}`}
@@ -1147,8 +1129,8 @@ export default function ServiceZonePage({ params }: Props) {
                     className="object-cover"
                   />
                 </div>
-                {/* Offset décoratif */}
-                <div className="absolute -z-10 -bottom-4 -left-4 w-full h-full bg-primary-100/40" style={{ borderRadius: '16px' }} />
+                {/* Vertical accent bar */}
+                <div className="absolute -z-10 top-0 -right-3 w-1.5 h-full bg-primary-600" />
               </div>
             </div>
           </div>
@@ -1161,21 +1143,20 @@ export default function ServiceZonePage({ params }: Props) {
           {zoneServiceContent.zoneFeatures.map((feature, index) => (
             <section
               key={index}
-              className={`relative py-20 md:py-28 overflow-hidden ${index % 2 === 0 ? "bg-white" : "bg-gray-50"}`}
+              className={`relative py-20 md:py-28 overflow-hidden ${index % 2 === 0 ? "bg-white bg-crosshatch" : "bg-gray-50 bg-dots-pattern"}`}
             >
-              {/* Blob décoratif */}
-              <div className={`absolute w-[350px] h-[350px] rounded-full blur-3xl ${index % 2 === 0 ? 'bg-primary-50 -bottom-20 -right-20' : 'bg-primary-50/60 -top-20 -left-20'}`} />
               <div className="container relative z-10">
-                {/* Numéro gradient en haut */}
-                <span className="block text-[80px] md:text-[100px] font-extrabold leading-none mb-[-20px] md:mb-[-30px] bg-gradient-to-b from-gray-200 to-transparent bg-clip-text text-transparent select-none">
-                  {String(index + 1).padStart(2, '0')}
+                {/* Section label with number */}
+                <span className="section-label mb-3 block">
+                  {String(index + 1).padStart(2, '0')} — {service.name}
                 </span>
+
                 <div className={`grid lg:grid-cols-2 gap-12 lg:gap-16 items-center ${
                   feature.imagePosition === "left" ? "" : "lg:grid-flow-dense"
                 }`}>
                   {feature.imagePosition === "left" && (
                     <div className="relative hidden lg:block">
-                      <div className="relative aspect-[4/3] overflow-hidden shadow-2xl" style={{ borderRadius: '16px' }}>
+                      <div className="relative aspect-[4/3] overflow-hidden shadow-2xl">
                         <Image
                           src={feature.image}
                           alt={feature.imageAlt} title={feature.imageAlt}
@@ -1183,8 +1164,8 @@ export default function ServiceZonePage({ params }: Props) {
                           className="object-cover"
                         />
                       </div>
-                      {/* Offset décoratif */}
-                      <div className="absolute -z-10 -bottom-4 -right-4 w-full h-full bg-primary-100/50" style={{ borderRadius: '16px' }} />
+                      {/* Vertical accent bar */}
+                      <div className="absolute -z-10 top-0 -right-3 w-1.5 h-full bg-primary-600" />
                     </div>
                   )}
                   <div className="max-w-xl">
@@ -1192,14 +1173,15 @@ export default function ServiceZonePage({ params }: Props) {
                       className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight tracking-tight"
                       dangerouslySetInnerHTML={{ __html: feature.title }}
                     />
+                    <div className="divider-industrial mt-4 mb-6" />
                     <div
-                      className="mt-6 text-gray-500 text-lg leading-relaxed prose prose-a:text-primary-600 prose-a:no-underline hover:prose-a:underline prose-strong:text-gray-900"
+                      className="text-gray-500 text-lg leading-relaxed prose prose-a:text-primary-600 prose-a:no-underline hover:prose-a:underline prose-strong:text-gray-900"
                       dangerouslySetInnerHTML={{ __html: feature.content }}
                     />
                   </div>
                   {feature.imagePosition === "right" && (
                     <div className="relative hidden lg:block">
-                      <div className="relative aspect-[4/3] overflow-hidden shadow-2xl" style={{ borderRadius: '16px' }}>
+                      <div className="relative aspect-[4/3] overflow-hidden shadow-2xl">
                         <Image
                           src={feature.image}
                           alt={feature.imageAlt} title={feature.imageAlt}
@@ -1207,8 +1189,8 @@ export default function ServiceZonePage({ params }: Props) {
                           className="object-cover"
                         />
                       </div>
-                      {/* Offset décoratif */}
-                      <div className="absolute -z-10 -bottom-4 -left-4 w-full h-full bg-primary-100/50" style={{ borderRadius: '16px' }} />
+                      {/* Vertical accent bar */}
+                      <div className="absolute -z-10 top-0 -left-3 w-1.5 h-full bg-primary-600" />
                     </div>
                   )}
                 </div>
@@ -1220,28 +1202,27 @@ export default function ServiceZonePage({ params }: Props) {
 
       {/* ─── CAS D'INTERVENTIONS RÉCENTES ─── */}
       {zoneServiceContent?.recentCases && zoneServiceContent.recentCases.length > 0 && (
-        <section className="relative py-20 md:py-28 bg-gray-950 overflow-hidden">
-          {/* Blob décoratif */}
-          <div className="absolute -top-32 -left-32 w-[400px] h-[400px] bg-primary-600/5 rounded-full blur-3xl" />
+        <section className="relative py-20 md:py-28 bg-gray-900 overflow-hidden">
           <div className="container relative z-10">
             <div className="max-w-xl mb-14">
-              <p className="text-primary-400 text-sm font-semibold uppercase tracking-widest mb-3">Cas récents</p>
+              <span className="section-label text-primary-400 block mb-3">Cas recents</span>
               <h2 className="font-extrabold text-3xl md:text-4xl text-white leading-[1.1] tracking-tight">
                 Interventions récentes à {zone.name}
               </h2>
+              <div className="divider-industrial mt-4" />
               <p className="text-white/40 mt-4">
                 Découvrez nos dernières interventions de {service.name.toLowerCase()} à {zone.name} et dans les environs.
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
               {zoneServiceContent.recentCases.map((cas: ZoneServiceRecentCase, index: number) => (
-                <div key={index} className="bg-white/[0.03] backdrop-blur-sm border border-white/[0.06] p-8 hover:-translate-y-1 transition-all duration-300" style={{ borderRadius: '16px' }}>
+                <div key={index} className="bg-white/[0.03] border-l-4 border-l-primary-500 border border-white/[0.06] p-8 hover:-translate-y-1 transition-all duration-300">
                   <span className="text-xs font-bold uppercase tracking-widest text-primary-400">{cas.date}</span>
-                  <h3 className="font-heading font-bold text-white mt-2 mb-4">{cas.lieu}</h3>
+                  <h3 className="font-bold text-white mt-2 mb-4">{cas.lieu}</h3>
                   <div className="space-y-3 text-sm">
                     <p className="text-white/50"><span className="text-white/30 font-bold">Probleme :</span> {cas.probleme}</p>
                     <p className="text-white/50"><span className="text-white/30 font-bold">Solution :</span> {cas.solution}</p>
-                    <p className="text-white/50"><span className="text-white/30 font-bold">Durée :</span> {cas.duree}</p>
+                    <p className="text-white/50"><span className="text-white/30 font-bold">Duree :</span> {cas.duree}</p>
                   </div>
                 </div>
               ))}
@@ -1252,23 +1233,19 @@ export default function ServiceZonePage({ params }: Props) {
 
       {/* ─── CONTEXTE TARIFS ZONE ─── */}
       {zoneServiceContent?.tarifContext && (
-        <section className="relative py-20 md:py-28 bg-gray-50 overflow-hidden">
-          <div className="absolute -bottom-20 -right-20 w-[300px] h-[300px] bg-primary-50 rounded-full blur-3xl" />
+        <section className="relative py-20 md:py-28 bg-gray-50 bg-dots-pattern overflow-hidden">
           <div className="container relative z-10">
             <div className="max-w-4xl mx-auto">
-              <div className="bg-white border border-gray-200 p-8 md:p-12 shadow-sm" style={{ borderRadius: '20px' }}>
-                <p className="text-primary-600 text-sm font-semibold uppercase tracking-widest mb-3">Tarifs</p>
+              <div className="bg-white border-l-4 border-l-primary-500 border border-gray-200 p-8 md:p-12">
+                <span className="section-label block mb-3">Tarifs</span>
                 <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight tracking-tight">Tarifs {service.name.toLowerCase()} à {zone.name}</h2>
+                <div className="divider-industrial mt-4 mb-6" />
                 <div
-                  className="mt-6 text-gray-500 text-lg leading-relaxed prose prose-strong:text-gray-900"
+                  className="text-gray-500 text-lg leading-relaxed prose prose-strong:text-gray-900"
                   dangerouslySetInnerHTML={{ __html: zoneServiceContent.tarifContext }}
                 />
                 <div className="mt-8">
-                  <a
-                    href={siteConfig.phoneLink}
-                    className="inline-flex items-center gap-2 px-6 py-3.5 bg-primary-600 text-white font-semibold hover:bg-primary-700 transition-colors shadow-lg shadow-primary-600/25"
-                    style={{ borderRadius: '8px' }}
-                  >
+                  <a href={siteConfig.phoneLink} className="btn-phone">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
@@ -1312,14 +1289,14 @@ export default function ServiceZonePage({ params }: Props) {
       )}
 
       {/* ─── MAILLAGE : AUTRES SERVICES À [ZONE] ─── */}
-      <section className="relative py-20 md:py-28 bg-white overflow-hidden">
-        <div className="absolute -bottom-24 -left-24 w-[350px] h-[350px] bg-primary-50/60 rounded-full blur-3xl" />
+      <section className="relative py-20 md:py-28 bg-white bg-crosshatch overflow-hidden">
         <div className="container relative z-10">
           <div className="max-w-xl mb-12">
-            <p className="text-primary-600 text-sm font-semibold uppercase tracking-widest mb-3">Nos services</p>
+            <span className="section-label block mb-3">Nos services</span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">
               Nos autres services à {zone.name}
             </h2>
+            <div className="divider-industrial mt-4" />
             <p className="text-gray-500 text-lg mt-4 max-w-xl">
               {siteConfig.name} propose une gamme complète de services pour rideaux métalliques à {zone.name}.
             </p>
@@ -1329,8 +1306,7 @@ export default function ServiceZonePage({ params }: Props) {
               <Link
                 key={s.id}
                 href={`/${s.slug}-rideau-metallique-${zone.slug}`}
-                className="group flex items-center justify-between p-5 bg-white border border-gray-100 hover:border-primary-200 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
-                style={{ borderRadius: '16px' }}
+                className="group flex items-center justify-between p-5 bg-white border-l-4 border-l-primary-500 border border-gray-200 hover:border-l-primary-700 hover:-translate-y-1 transition-all duration-300"
               >
                 <div>
                   <span className="font-bold text-gray-900 group-hover:text-primary-600 transition-colors block">{s.name}</span>
@@ -1346,13 +1322,14 @@ export default function ServiceZonePage({ params }: Props) {
       </section>
 
       {/* ─── MAILLAGE : CE SERVICE DANS D'AUTRES ZONES ─── */}
-      <section className="py-20 md:py-28 bg-gray-50">
+      <section className="py-20 md:py-28 bg-gray-50 bg-dots-pattern">
         <div className="container">
           <div className="max-w-xl mb-12">
-            <p className="text-primary-600 text-sm font-semibold uppercase tracking-widest mb-3">Zones voisines</p>
+            <span className="section-label block mb-3">Zones voisines</span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">
               {service.name} dans les zones voisines
             </h2>
+            <div className="divider-industrial mt-4" />
             <p className="text-gray-500 text-lg mt-4 max-w-xl">
               {siteConfig.name} intervient pour {service.name.toLowerCase()} dans tout le {siteConfig.department}.
             </p>
@@ -1362,8 +1339,7 @@ export default function ServiceZonePage({ params }: Props) {
               <Link
                 key={z.slug}
                 href={`/${service.slug}-rideau-metallique-${z.slug}`}
-                className="px-4 py-2.5 bg-white text-gray-600 text-sm border border-gray-200 hover:border-primary-300 hover:text-primary-700 hover:-translate-y-1 transition-all duration-300 shadow-sm"
-                style={{ borderRadius: '100px' }}
+                className="px-4 py-2.5 bg-white text-gray-600 text-sm border border-gray-200 hover:border-primary-300 hover:text-primary-700 hover:-translate-y-1 transition-all duration-300"
               >
                 {service.name} {z.name}
               </Link>
@@ -1371,7 +1347,6 @@ export default function ServiceZonePage({ params }: Props) {
             <Link
               href="/"
               className="px-4 py-2.5 bg-gray-900 text-white text-sm font-bold hover:bg-gray-800 transition-colors"
-              style={{ borderRadius: '100px' }}
             >
               Toutes les zones
             </Link>
