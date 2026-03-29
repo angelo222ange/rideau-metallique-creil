@@ -582,6 +582,25 @@ export default function ServiceZonePage({ params }: Props) {
         <div className="absolute top-0 right-0 w-1 h-full bg-primary-600 hidden lg:block" />
       </section>
 
+      {/* ─── STATS BAR sous le hero ─── */}
+      <section className="py-6 bg-gradient-to-r from-primary-50 via-gray-50 to-primary-50 border-b border-gray-100">
+        <div className="container">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            {[
+              { value: siteConfig.experience, label: "ans d'expérience" },
+              { value: siteConfig.interventions, label: "interventions" },
+              { value: "-30 min", label: "délai moyen" },
+              { value: `${siteConfig.reviews.rating}/5`, label: `${siteConfig.reviews.count} avis` },
+            ].map((s, i) => (
+              <div key={i}>
+                <p className="text-2xl md:text-3xl font-extrabold text-gray-900">{s.value}</p>
+                <p className="text-xs text-gray-400 font-medium uppercase tracking-wider mt-0.5">{s.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ─── INTRODUCTION (masqué si contenu zone-spécifique) ─── */}
       {!zoneServiceContent && service.slug === "reparation" ? (
         <>
@@ -732,14 +751,14 @@ export default function ServiceZonePage({ params }: Props) {
             <div className="max-w-xl mb-14">
               <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">{content.deblocage.title}</h2>
-              <p className="text-gray-500 text-lg mt-4 max-w-xl">{content.deblocage.description}</p>
+              <p className="text-gray-500 text-lg mt-4 max-w-xl" dangerouslySetInnerHTML={{ __html: content.deblocage.description }} />
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-0 divide-y lg:divide-y-0 lg:divide-x divide-gray-200">
               {content.deblocage.steps.map((step: any, index: number) => (
                 <div key={index} className="py-6 lg:py-0 lg:px-8 first:lg:pl-0 last:lg:pr-0">
                   <span className="font-bold text-5xl text-gray-200 block mb-3">{step.step}</span>
                   <h3 className="font-heading font-bold text-gray-900 mb-2">{step.title}</h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">{step.description}</p>
+                  <p className="text-gray-400 text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: step.description }} />
                 </div>
               ))}
             </div>
@@ -780,7 +799,7 @@ export default function ServiceZonePage({ params }: Props) {
                           </span>
                         )}
                       </div>
-                      <p className="text-gray-400 text-sm leading-relaxed">{panne.description}</p>
+                      <p className="text-gray-400 text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: panne.description }} />
                     </div>
                   </div>
                 </div>
@@ -804,7 +823,7 @@ export default function ServiceZonePage({ params }: Props) {
                 <h2 className="font-bold text-4xl md:text-5xl text-white leading-[1.1] mb-5">
                   {content.urgence.title}
                 </h2>
-                <p className="text-white/40 text-lg mb-10 leading-relaxed">{content.urgence.description}</p>
+                <p className="text-white/40 text-lg mb-10 leading-relaxed" dangerouslySetInnerHTML={{ __html: content.urgence.description }} />
 
                 <div className="flex gap-8 mb-10">
                   {content.urgence.stats.map((stat: any, index: number) => (
@@ -849,14 +868,14 @@ export default function ServiceZonePage({ params }: Props) {
             <div className="max-w-xl mb-14">
               <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">{content.deblocage.title}</h2>
-              <p className="text-gray-500 text-lg mt-4 max-w-xl">{content.deblocage.description}</p>
+              <p className="text-gray-500 text-lg mt-4 max-w-xl" dangerouslySetInnerHTML={{ __html: content.deblocage.description }} />
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-0 divide-y lg:divide-y-0 lg:divide-x divide-gray-200">
               {content.deblocage.steps.map((step: any, index: number) => (
                 <div key={index} className="py-6 lg:py-0 lg:px-8 first:lg:pl-0 last:lg:pr-0">
                   <span className="font-bold text-5xl text-gray-200 block mb-3">{step.step}</span>
                   <h3 className="font-heading font-bold text-gray-900 mb-2">{step.title}</h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">{step.description}</p>
+                  <p className="text-gray-400 text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: step.description }} />
                 </div>
               ))}
             </div>
@@ -897,7 +916,7 @@ export default function ServiceZonePage({ params }: Props) {
                           </span>
                         )}
                       </div>
-                      <p className="text-gray-400 text-sm leading-relaxed">{panne.description}</p>
+                      <p className="text-gray-400 text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: panne.description }} />
                     </div>
                   </div>
                 </div>
@@ -921,7 +940,7 @@ export default function ServiceZonePage({ params }: Props) {
                 <h2 className="font-bold text-4xl md:text-5xl text-white leading-[1.1] mb-5">
                   {content.urgence.title}
                 </h2>
-                <p className="text-white/40 text-lg mb-10 leading-relaxed">{content.urgence.description}</p>
+                <p className="text-white/40 text-lg mb-10 leading-relaxed" dangerouslySetInnerHTML={{ __html: content.urgence.description }} />
                 <div className="flex gap-8 mb-10">
                   {content.urgence.stats.map((stat: any, index: number) => (
                     <div key={index}>
