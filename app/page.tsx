@@ -196,29 +196,27 @@ export default function HomePage() {
               </div>
             </Link>
 
-            {/* Right side — 2 columns of smaller cards */}
+            {/* Right side — cards with prominent images */}
             {displayServices.slice(1).map((service) => (
               <Link
                 key={service.id}
                 href={`/${service.slug}-rideau-metallique-creil`}
-                className="group relative flex items-center gap-5 p-6 bg-gray-50 border border-gray-100 hover:bg-white hover:border-gray-200 hover:shadow-xl hover:shadow-gray-200/50 transition-all duration-300 hover:-translate-y-0.5"
+                className="group relative overflow-hidden bg-white border border-gray-100 hover:border-gray-200 hover:shadow-xl hover:shadow-gray-200/50 transition-all duration-300 hover:-translate-y-1"
                 style={{ borderRadius: '16px' }}
               >
-                <div className="relative w-16 h-16 flex-shrink-0 overflow-hidden bg-gray-200" style={{ borderRadius: '12px' }}>
+                <div className="relative h-36 overflow-hidden">
                   <Image
                     src={service.image}
-                    alt={service.name}
+                    alt={`${service.name} rideau métallique ${siteConfig.city}`}
                     fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
                 </div>
-                <div className="flex-1 min-w-0">
+                <div className="px-5 pb-5 -mt-4 relative">
                   <h3 className="font-bold text-gray-900 group-hover:text-primary-600 transition-colors">{service.name}</h3>
                   <p className="text-gray-400 text-sm mt-0.5 line-clamp-1">{service.shortDesc}</p>
                 </div>
-                <svg className="w-5 h-5 text-gray-300 group-hover:text-primary-500 group-hover:translate-x-1 transition-all flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
               </Link>
             ))}
           </div>
