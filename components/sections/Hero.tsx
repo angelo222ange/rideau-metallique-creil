@@ -92,6 +92,7 @@ export function Hero({ title, subtitle, sideImage }: HeroProps) {
               <Image
                 src={sideImage || "/images/gallery/rideau-metallique-creil.webp"}
                 alt={`Dépannage rideau métallique ${siteConfig.city}`}
+                title={`Dépannage rideau métallique ${siteConfig.city}`}
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover"

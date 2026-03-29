@@ -37,7 +37,7 @@ export function AlternatingFeatures({ features, bgColor = "bg-white" }: Alternat
                     <div className="relative aspect-[4/3] overflow-hidden shadow-2xl shadow-gray-200/50" style={{ borderRadius: '20px' }}>
                       <Image
                         src={feature.image}
-                        alt={feature.imageAlt}
+                        alt={feature.imageAlt} title={feature.imageAlt}
                         fill
                         sizes="(max-width: 1024px) 100vw, 40vw"
                         className="object-cover"

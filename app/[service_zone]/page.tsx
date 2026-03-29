@@ -546,6 +546,7 @@ export default function ServiceZonePage({ params }: Props) {
                 <Image
                   src={service.image}
                   alt={`${service.name} rideau métallique ${zone.name}`}
+                  title={`${service.name} rideau métallique ${zone.name}`}
                   fill
                   className="object-cover"
                   priority
@@ -569,6 +570,7 @@ export default function ServiceZonePage({ params }: Props) {
                   <Image
                     src="/images/gallery/installation-rideau-metallique-paris-1-drm-paris.webp"
                     alt={`Technicien réparation rideau métallique ${zone.name}`}
+                    title={`Technicien réparation rideau métallique ${zone.name}`}
                     width={800}
                     height={600}
                     className="w-full h-auto"
@@ -601,6 +603,7 @@ export default function ServiceZonePage({ params }: Props) {
                   <Image
                     src="/images/gallery/depannage-rideau-metallique-creil.webp"
                     alt={`Réparation lames rideau métallique ${zone.name}`}
+                    title={`Réparation lames rideau métallique ${zone.name}`}
                     width={800}
                     height={600}
                     className="w-full h-auto"
@@ -620,6 +623,7 @@ export default function ServiceZonePage({ params }: Props) {
                   <Image
                     src="/images/gallery/Drapeau-rideau-metallique-motorisation-centrale-3D.webp"
                     alt={`Fabrication rideau métallique sur-mesure ${zone.name}`}
+                    title={`Fabrication rideau métallique sur-mesure ${zone.name}`}
                     fill
                     className="object-cover"
                   />
@@ -655,6 +659,7 @@ export default function ServiceZonePage({ params }: Props) {
                   <Image
                     src="/images/gallery/rideau-metallique-lame-pleine-france.webp"
                     alt={`Rideau métallique ${zone.name}`}
+                    title={`Rideau métallique ${zone.name}`}
                     fill
                     className="object-cover"
                   />
@@ -1107,7 +1112,7 @@ export default function ServiceZonePage({ params }: Props) {
                       <div className="relative aspect-[4/3] overflow-hidden" style={{ borderRadius: '8px' }}>
                         <Image
                           src={feature.image}
-                          alt={feature.imageAlt}
+                          alt={feature.imageAlt} title={feature.imageAlt}
                           fill
                           className="object-cover"
                         />
@@ -1130,7 +1135,7 @@ export default function ServiceZonePage({ params }: Props) {
                       <div className="relative aspect-[4/3] overflow-hidden" style={{ borderRadius: '8px' }}>
                         <Image
                           src={feature.image}
-                          alt={feature.imageAlt}
+                          alt={feature.imageAlt} title={feature.imageAlt}
                           fill
                           className="object-cover"
                         />

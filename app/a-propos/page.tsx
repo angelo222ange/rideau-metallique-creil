@@ -102,6 +102,7 @@ export default function AProposPage() {
                 <Image
                   src="/images/gallery/depannage-rideau-metallique-creil-60.webp"
                   alt={`Équipe ${siteConfig.name} à ${siteConfig.city}`}
+                  title={`Équipe ${siteConfig.name} à ${siteConfig.city}`}
                   fill
                   className="object-cover"
                   priority
@@ -136,6 +137,7 @@ export default function AProposPage() {
                 <Image
                   src="/images/gallery/rideau-metallique-creil.webp"
                   alt={`Intervention ${siteConfig.name} sur rideau métallique`}
+                  title={`Intervention ${siteConfig.name} sur rideau métallique`}
                   fill
                   className="object-cover"
                 />

@@ -219,7 +219,7 @@ export default function BlogArticlePage({ params }: Props) {
               <div className="relative aspect-[16/9] overflow-hidden mb-10 bg-gray-100" style={{ borderRadius: '10px' }}>
                 <Image
                   src={article.image}
-                  alt={article.imageAlt}
+                  alt={article.imageAlt} title={article.imageAlt}
                   fill
                   className="object-cover"
                   priority
@@ -295,7 +295,7 @@ export default function BlogArticlePage({ params }: Props) {
                           <div className="relative aspect-[16/9] overflow-hidden bg-gray-100">
                             <Image
                               src={related.image}
-                              alt={related.imageAlt}
+                              alt={related.imageAlt} title={related.imageAlt}
                               fill
                               className="object-cover group-hover:scale-105 transition-transform duration-500"
                             />

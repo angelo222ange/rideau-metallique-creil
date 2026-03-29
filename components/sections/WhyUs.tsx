@@ -16,6 +16,7 @@ export function WhyUs() {
               <Image
                 src="/images/gallery/rideau-metallique-creil.webp"
                 alt={`Technicien rideau métallique ${siteConfig.city}`}
+                title={`Technicien rideau métallique ${siteConfig.city}`}
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"

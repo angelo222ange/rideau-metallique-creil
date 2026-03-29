@@ -44,6 +44,7 @@ export function Services({ title = "Nos Services", subtitle, zoneSlug }: Service
                 <Image
                   src={service.image}
                   alt={`${service.name} rideau métallique ${siteConfig.city}`}
+                  title={`${service.name} rideau métallique ${siteConfig.city}`}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />

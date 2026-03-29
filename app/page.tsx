@@ -32,6 +32,7 @@ export default function HomePage() {
         <Image
           src="/images/gallery/realisation-rideau-metallique-lame-pleine-commerce.webp"
           alt={`Rideau métallique commerce ${siteConfig.city}`}
+          title={`Rideau métallique commerce ${siteConfig.city}`}
           fill
           className="object-cover"
           priority
@@ -139,6 +140,7 @@ export default function HomePage() {
               <Image
                 src="/images/gallery/hero-rideau-lame-pleine.webp"
                 alt="Rideau métallique lame pleine sur-mesure DRM"
+                title="Rideau métallique lame pleine sur-mesure DRM"
                 width={500}
                 height={600}
                 className="relative z-10 drop-shadow-2xl object-contain w-full h-auto"
@@ -200,6 +202,7 @@ export default function HomePage() {
                 <Image
                   src={displayServices[0].image}
                   alt={`${displayServices[0].name} rideau métallique ${siteConfig.city}`}
+                  title={`${displayServices[0].name} rideau métallique ${siteConfig.city}`}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700 brightness-[0.5] group-hover:brightness-[0.6]"
                 />
@@ -230,12 +233,12 @@ export default function HomePage() {
                   <Image
                     src={service.image}
                     alt={`${service.name} rideau métallique ${siteConfig.city}`}
+                    title={`${service.name} rideau métallique ${siteConfig.city}`}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
                 </div>
-                <div className="px-5 pb-5 -mt-4 relative">
+                <div className="p-5">
                   <h3 className="font-bold text-gray-900 group-hover:text-primary-600 transition-colors">{service.name}</h3>
                   <p className="text-gray-400 text-sm mt-0.5 line-clamp-1">{service.shortDesc}</p>
                 </div>
@@ -386,6 +389,7 @@ export default function HomePage() {
               <Image
                 src="/images/gallery/installation-rideau-metallique-drm.webp"
                 alt={`Technicien DRM installation rideau métallique ${siteConfig.city}`}
+                title={`Technicien DRM installation rideau métallique ${siteConfig.city}`}
                 width={640}
                 height={480}
                 className="w-full h-auto object-cover shadow-2xl"
