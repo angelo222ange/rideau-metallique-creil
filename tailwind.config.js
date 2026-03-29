@@ -31,25 +31,17 @@ module.exports = {
         sans: ['Plus Jakarta Sans', 'DM Sans', 'system-ui', 'sans-serif'],
         heading: ['Plus Jakarta Sans', 'DM Sans', 'sans-serif'],
         body: ['DM Sans', 'system-ui', 'sans-serif'],
-        display: ['DM Serif Display', 'Georgia', 'serif'],
-      },
-      borderRadius: {
-        'button': '12px',
-        'card': '16px',
       },
       boxShadow: {
         'card': '0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.06)',
         'card-hover': '0 4px 12px rgba(0,0,0,0.08), 0 8px 32px rgba(0,0,0,0.1)',
-        'button-hover': '0 4px 16px rgba(27,122,78,0.25)',
         'soft': '0 2px 8px rgba(0,0,0,0.06)',
         'soft-lg': '0 4px 24px rgba(0,0,0,0.08)',
-      },
-      transitionDuration: {
-        '250': '250ms',
       },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-out forwards',
         'slide-up': 'slideUp 0.5s ease-out forwards',
+        'float': 'float 3s ease-in-out infinite',
         'pulse-soft': 'pulseSoft 3s ease-in-out infinite',
       },
       keyframes: {
@@ -60,6 +52,10 @@ module.exports = {
         slideUp: {
           '0%': { opacity: '0', transform: 'translateY(16px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
         },
         pulseSoft: {
           '0%, 100%': { boxShadow: '0 0 0 0 rgba(27, 122, 78, 0.3)' },

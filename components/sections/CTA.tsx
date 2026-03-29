@@ -7,26 +7,33 @@ interface CTAProps {
 }
 
 export function CTA({ title, subtitle, variant = "default" }: CTAProps) {
-  const defaultTitle = `Besoin d'un spécialiste rideau métallique à ${siteConfig.city} ?`;
-  const defaultSubtitle = `Intervention rapide dans tout le département de l'${siteConfig.department}. Devis gratuit, sans engagement.`;
+  const defaultTitle = `Besoin d'un specialiste rideau metallique a ${siteConfig.city} ?`;
+  const defaultSubtitle = `Intervention rapide dans tout le departement de l'${siteConfig.department}. Devis gratuit, sans engagement.`;
 
   return (
     <section className="relative overflow-hidden bg-primary-600">
-      {/* Subtle dot pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)',
-          backgroundSize: '24px 24px'
-        }} />
+      {/* Pattern SVG "+" en blanc opacity-10 */}
+      <div className="absolute inset-0 opacity-10" aria-hidden="true">
+        <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="cta-plus-pattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+              <path d="M20 14v12M14 20h12" stroke="white" strokeWidth="1.5" fill="none" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#cta-plus-pattern)" />
+        </svg>
       </div>
 
       <div className="container relative py-16 md:py-20">
         <div className="grid lg:grid-cols-2 gap-10 items-center">
-          {/* Left — content */}
+          {/* Left -- content */}
           <div>
             {variant === "urgence" && (
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/20 text-white text-sm font-medium mb-5" style={{ borderRadius: '6px' }}>
-                <span className="w-2 h-2 bg-white rounded-full animate-pulse" />
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/15 backdrop-blur-sm border border-white/20 text-white text-sm font-medium rounded-full mb-5">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+                </span>
                 Urgence 24h/24
               </div>
             )}
@@ -39,7 +46,7 @@ export function CTA({ title, subtitle, variant = "default" }: CTAProps) {
 
             {/* Trust points */}
             <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/60">
-              {["Devis gratuit", "Intervention 30-60 min", "Garantie pièces et main-d'œuvre"].map((item, i) => (
+              {["Devis gratuit", "Intervention 30-60 min", "Garantie pieces et main-d'oeuvre"].map((item, i) => (
                 <span key={i} className="flex items-center gap-1.5">
                   <svg className="w-4 h-4 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -50,15 +57,14 @@ export function CTA({ title, subtitle, variant = "default" }: CTAProps) {
             </div>
           </div>
 
-          {/* Right — action card */}
-          <div className="bg-white p-8" style={{ borderRadius: '12px' }}>
+          {/* Right -- action card */}
+          <div className="bg-white rounded-2xl p-8 shadow-xl">
             <h3 className="text-xl font-bold text-gray-900 mb-2">Appelez maintenant</h3>
-            <p className="text-gray-500 text-sm mb-6">Un technicien prend en charge votre demande immédiatement.</p>
+            <p className="text-gray-500 text-sm mb-6">Un technicien prend en charge votre demande immediatement.</p>
 
             <a
               href={siteConfig.phoneLink}
-              className="flex items-center justify-center gap-3 w-full py-4 bg-primary-600 text-white text-xl font-bold hover:bg-primary-700 transition-colors shadow-lg shadow-primary-600/25 mb-4"
-              style={{ borderRadius: '8px' }}
+              className="flex items-center justify-center gap-3 w-full py-4 rounded-full bg-primary-600 text-white text-xl font-bold hover:bg-primary-700 transition-colors shadow-lg shadow-primary-600/25 mb-4"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
@@ -73,8 +79,7 @@ export function CTA({ title, subtitle, variant = "default" }: CTAProps) {
 
             <a
               href="/contact"
-              className="flex items-center justify-center gap-2 w-full py-3.5 bg-gray-50 text-gray-700 font-semibold border border-gray-200 hover:border-primary-300 hover:text-primary-700 transition-all mt-3"
-              style={{ borderRadius: '8px' }}
+              className="flex items-center justify-center gap-2 w-full py-3.5 rounded-full bg-gray-50 text-gray-700 font-semibold border border-gray-200 hover:border-primary-300 hover:text-primary-700 transition-all mt-3"
             >
               Demander un devis en ligne
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -83,7 +88,7 @@ export function CTA({ title, subtitle, variant = "default" }: CTAProps) {
             </a>
 
             <p className="text-center text-gray-400 text-xs mt-4">
-              {siteConfig.address} · Disponible 24h/24
+              {siteConfig.address} -- Disponible 24h/24
             </p>
           </div>
         </div>
