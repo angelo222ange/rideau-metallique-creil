@@ -16,8 +16,8 @@ export function ProcessusInstallation({ title, zoneName, items }: ProcessusInsta
       <div className="container">
         <div className="max-w-xl mb-14">
           <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
-          <h2 className="section-title">{title || `Processus d'installation à ${zoneName}`}</h2>
-          <p className="section-subtitle">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">{title || `Processus d'installation à ${zoneName}`}</h2>
+          <p className="text-gray-500 text-lg mt-3">
             De la visite technique à la mise en service, un accompagnement complet pour votre installation à {zoneName}.
           </p>
         </div>

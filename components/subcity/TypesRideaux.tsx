@@ -19,8 +19,8 @@ export function TypesRideaux({ title, zoneName, items }: TypesRideauxProps) {
       <div className="container">
         <div className="max-w-xl mb-14">
           <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
-          <h2 className="section-title">{title || `Types de rideaux métalliques à ${zoneName}`}</h2>
-          <p className="section-subtitle">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">{title || `Types de rideaux métalliques à ${zoneName}`}</h2>
+          <p className="text-gray-500 text-lg mt-3">
             Découvrez notre gamme complète de rideaux métalliques disponibles à {zoneName} et dans le {siteConfig.department}.
           </p>
         </div>

@@ -31,8 +31,8 @@ export function AvantagesMotorisation({ title, subtitle, avantages, comparatif, 
       <div className="container">
         <div className="max-w-xl mb-14">
           <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
-          <h2 className="section-title">{title}</h2>
-          <p className="section-subtitle">{subtitle}</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">{title}</h2>
+          <p className="text-gray-500 text-lg mt-3">{subtitle}</p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-gray-200 mb-16">
@@ -54,7 +54,7 @@ export function AvantagesMotorisation({ title, subtitle, avantages, comparatif, 
             <div className="border border-gray-200" style={{ borderRadius: '8px' }}>
               <table className="w-full">
                 <thead>
-                  <tr className="bg-dark">
+                  <tr className="bg-gray-900">
                     <th className="px-5 py-3 text-left text-xs font-bold text-white uppercase tracking-wider">Critère</th>
                     <th className="px-5 py-3 text-center text-xs font-bold text-white/40 uppercase tracking-wider">Manuel</th>
                     <th className="px-5 py-3 text-center text-xs font-bold text-primary-600 uppercase tracking-wider">Motorisé</th>

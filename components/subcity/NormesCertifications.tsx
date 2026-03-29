@@ -16,8 +16,8 @@ export function NormesCertifications({ title, subtitle, items }: NormesCertifica
       <div className="container">
         <div className="max-w-xl mb-14">
           <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
-          <h2 className="section-title">{title}</h2>
-          <p className="section-subtitle">{subtitle}</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">{title}</h2>
+          <p className="text-gray-500 text-lg mt-3">{subtitle}</p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-200 max-w-4xl">

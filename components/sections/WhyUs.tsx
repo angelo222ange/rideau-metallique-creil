@@ -22,7 +22,7 @@ export function WhyUs() {
               />
             </div>
             {/* Floating stat — minimal */}
-            <div className="absolute -bottom-6 right-4 md:right-8 bg-dark px-6 py-5" style={{ borderRadius: '8px' }}>
+            <div className="absolute -bottom-6 right-4 md:right-8 bg-gray-900 px-6 py-5" style={{ borderRadius: '8px' }}>
               <p className="font-bold text-4xl text-primary-600">{content.stats.experience}</p>
               <p className="text-white/40 text-xs mt-0.5">{content.stats.experienceLabel}</p>
             </div>
@@ -31,8 +31,8 @@ export function WhyUs() {
           {/* Content */}
           <div className="order-1 lg:order-2">
             <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
-            <h2 className="section-title">{content.whyUs.title}</h2>
-            <p className="section-subtitle mb-10">{content.whyUs.subtitle}</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">{content.whyUs.title}</h2>
+            <p className="text-gray-500 text-lg mt-3 mb-10">{content.whyUs.subtitle}</p>
 
             <div className="space-y-0 divide-y divide-gray-100">
               {content.whyUs.advantages.map((advantage, index) => (
