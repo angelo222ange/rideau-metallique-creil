@@ -657,7 +657,7 @@ export default function ServiceZonePage({ params }: Props) {
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">{content.intro.title}</h2>
                 <div className="mt-6 space-y-4">
                   {content.intro.paragraphs.map((p: string, i: number) => (
-                    <p key={i} className="text-gray-500 text-lg leading-relaxed">{p}</p>
+                    <p key={i} className="text-gray-500 text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: p }} />
                   ))}
                 </div>
               </div>
@@ -673,7 +673,7 @@ export default function ServiceZonePage({ params }: Props) {
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">{content.intro.title}</h2>
                 <div className="mt-6 space-y-4">
                   {content.intro.paragraphs.map((p: string, i: number) => (
-                    <p key={i} className="text-gray-500 text-lg leading-relaxed">{p}</p>
+                    <p key={i} className="text-gray-500 text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: p }} />
                   ))}
                 </div>
               </div>
