@@ -57,7 +57,7 @@ export const siteConfig = {
   // ─────────────────────────────────────────────────────────────────────────
   reviews: {
     rating: 4.8,
-    count: 94,
+    count: 127,
     googleUrl: "",
   },
 

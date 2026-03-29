@@ -68,7 +68,7 @@ export default function HomePage() {
             sizes="100vw"
           />
           <div className="absolute inset-0 bg-primary-900/70" />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary-900/85 via-primary-800/60 to-primary-700/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/70 to-gray-900/40" />
         </div>
 
         <div className="container relative z-10 pt-28 pb-16 md:pt-32 md:pb-20 lg:pt-36 lg:pb-24">
@@ -207,7 +207,7 @@ export default function HomePage() {
               return (
                 <Link
                   key={service.id}
-                  href={`/${service.slug}`}
+                  href={`/${service.slug}-rideau-metallique-creil`}
                   className="group relative overflow-hidden rounded-2xl min-h-[300px] transition-all duration-300 hover:shadow-xl hover:scale-[1.02]"
                 >
                   {/* Image de fond */}

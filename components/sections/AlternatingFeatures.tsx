@@ -37,7 +37,7 @@ export function AlternatingFeatures({ features }: AlternatingFeaturesProps) {
                         title={feature.imageAlt}
                         fill
                         sizes="(max-width: 1024px) 100vw, 50vw"
-                        className="object-contain group-hover:scale-[1.03] transition-transform duration-700"
+                        className="object-cover group-hover:scale-[1.03] transition-transform duration-700"
                       />
                     </div>
                   </div>
