@@ -70,10 +70,10 @@
    "type": "table",
    "headers": ["Type de moteur", "Niveau sonore moyen", "Duree de vie", "Cout indicatif", "Recommande pour"],
    "rows": [
-    ["Moteur tubulaire standard", "65 a 75 dB(A)", "8 a 12 ans", "350 a 600 euros", "Zones commerciales non residentielles"],
+    ["Moteur tubulaire standard", "65 a 75 dB(A)", "8 a 25 ans", "350 a 600 euros", "Zones commerciales non residentielles"],
     ["Moteur tubulaire silencieux", "50 a 60 dB(A)", "10 a 15 ans", "600 a 1 000 euros", "Commerces en zone d'habitation"],
     ["Moteur central a arbre", "55 a 70 dB(A)", "10 a 15 ans", "500 a 900 euros", "Rideaux de grande dimension"],
-    ["Moteur lateral (debrayable)", "60 a 70 dB(A)", "8 a 12 ans", "400 a 700 euros", "Petits rideaux, acces frequent"],
+    ["Moteur lateral (debrayable)", "60 a 70 dB(A)", "8 a 25 ans", "400 a 700 euros", "Petits rideaux, acces frequent"],
     ["Moteur tubulaire premium (DC)", "45 a 55 dB(A)", "12 a 18 ans", "900 a 1 500 euros", "Pharmacies, cabinets, residences"]
    ]
   },

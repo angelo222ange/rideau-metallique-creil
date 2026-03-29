@@ -272,7 +272,7 @@
     {
       "name": "Karine J.",
       "rating": 5,
-      "text": "Mon ancien rideau à {zone} avait 12 ans et aucune panne grâce à l'entretien régulier de {name}. La preuve que la maintenance préventive marche !",
+      "text": "Mon ancien rideau à {zone} avait 25 ans et aucune panne grâce à l'entretien régulier de {name}. La preuve que la maintenance préventive marche !",
       "date": "Février 2025",
       "zone": "{zone}",
       "service": "Entretien"

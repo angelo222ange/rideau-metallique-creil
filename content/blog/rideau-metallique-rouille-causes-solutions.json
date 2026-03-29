@@ -11,7 +11,7 @@
  "summary": {
   "title": "Pas le temps de tout lire ? L'essentiel en bref",
   "points": [
-   "A Creil, l'humidite et les conditions climatiques accelerent la corrosion des rideaux metalliques : un rideau non traite peut presenter des signes de rouille en 2 a 5 ans seulement, contre 8 a 12 ans dans une ville interieure.",
+   "A Creil, l'humidite et les conditions climatiques accelerent la corrosion des rideaux metalliques : un rideau non traite peut presenter des signes de rouille en 2 a 5 ans seulement, contre 8 a 25 ans dans une ville interieure.",
    "Le traitement de la rouille dependra de son stade : un simple nettoyage et une retouche de peinture suffisent en stade precoce, tandis qu'un tablier gravement corrode devra etre remplace.",
    "La prevention est la meilleure strategie : galvanisation, laquage, graissage regulier et contrat d'entretien annuel permettent de doubler la duree de vie de votre fermeture metallique.",
    "DRM Creil propose des traitements anti-corrosion et des contrats d'entretien adaptes au climat continental picard. Contactez-nous au {phone}."
@@ -108,7 +108,7 @@
   },
   {
    "type": "paragraph",
-   "text": "Apres le traitement anti-rouille, la remise en peinture est essentielle pour assurer une protection durable. La peinture agit comme une barriere physique entre le metal et l'environnement agressif. Pour les rideaux metalliques a Creil, nous recommandons un systeme en trois couches : primaire anti-corrosion, couche intermediaire d'accroche, et finition polyurethane ou epoxy resistant aux UV et au humidite. Ce systeme garantit une protection de 8 a 12 ans dans l'environnement creillois."
+   "text": "Apres le traitement anti-rouille, la remise en peinture est essentielle pour assurer une protection durable. La peinture agit comme une barriere physique entre le metal et l'environnement agressif. Pour les rideaux metalliques a Creil, nous recommandons un systeme en trois couches : primaire anti-corrosion, couche intermediaire d'accroche, et finition polyurethane ou epoxy resistant aux UV et au humidite. Ce systeme garantit une protection de 8 a 25 ans dans l'environnement creillois."
   },
   {
    "type": "table",
@@ -116,7 +116,7 @@
    "rows": [
     ["Peinture glycerophtalique standard", "Faible", "2 a 4 ans", "15 a 25 euros", "Deconseille en zone humide"],
     ["Peinture epoxy 2 composants", "Bonne", "6 a 10 ans", "30 a 50 euros", "Adapte a l'interieur des terres"],
-    ["Peinture polyurethane marine", "Excellente", "8 a 12 ans", "40 a 65 euros", "Recommande pour tout Creil"],
+    ["Peinture polyurethane marine", "Excellente", "8 a 25 ans", "40 a 65 euros", "Recommande pour tout Creil"],
     ["Laquage industriel (thermolaquage)", "Excellente", "10 a 15 ans", "50 a 80 euros", "Ideal, applique en usine sur rideau neuf"],
     ["Galvanisation a chaud + peinture", "Exceptionnelle", "15 a 25 ans", "70 a 100 euros", "Solution optimale pour le littoral creillois"]
    ]
@@ -182,7 +182,7 @@
    "rows": [
     ["Nettoyage + graissage", "Nettoyage complet, lubrification des mecanismes", "80 a 150 euros", "2 fois par an"],
     ["Traitement anti-rouille localisee", "Ponage, convertisseur de rouille, retouche peinture", "150 a 400 euros", "Des apparition de rouille"],
-    ["Decapage + remise en peinture complete", "Decapage integral, primaire anti-corrosion, 2 couches de finition", "600 a 1 500 euros", "Tous les 8 a 12 ans"],
+    ["Decapage + remise en peinture complete", "Decapage integral, primaire anti-corrosion, 2 couches de finition", "600 a 1 500 euros", "Tous les 8 a 25 ans"],
     ["Remplacement de lames corrodees", "Depose des lames endommagees, fourniture et pose de lames neuves", "80 a 150 euros par lame", "Selon etat"],
     ["Contrat entretien annuel", "2 visites par an : nettoyage, graissage, inspection, petites retouches", "180 a 350 euros par an", "Annuel"],
     ["Remplacement complet", "Depose ancien rideau, fourniture et pose rideau neuf galvanise ou laque", "1 500 a 4 500 euros", "Tous les 15 a 25 ans"]

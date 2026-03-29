@@ -150,6 +150,28 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════
+          STATS — Juste sous le hero
+          ═══════════════════════════════════════════════════════════ */}
+      <section className="py-12 bg-gradient-to-r from-primary-700 via-primary-600 to-emerald-600 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '32px 32px' }} />
+        <div className="container relative">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+            {[
+              { value: `${siteConfig.experience}`, label: "Années d'expérience" },
+              { value: `${siteConfig.interventions}`, label: "Interventions réalisées" },
+              { value: "-30min", label: "Délai d'intervention" },
+              { value: `${siteConfig.reviews.rating}/5`, label: `${siteConfig.reviews.count} avis Google` },
+            ].map((stat, i) => (
+              <div key={i} className="text-center">
+                <p className="text-3xl md:text-4xl font-extrabold text-white tracking-tight">{stat.value}</p>
+                <p className="text-white/60 text-sm mt-1">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════
           SERVICES — Bento grid, light bg, featured card left
           ═══════════════════════════════════════════════════════════ */}
       <section className="py-24 bg-white relative overflow-hidden">
@@ -229,28 +251,6 @@ export default function HomePage() {
       {content.alternatingFeatures && (
         <AlternatingFeatures features={content.alternatingFeatures} bgColor="bg-gray-50" />
       )}
-
-      {/* ═══════════════════════════════════════════════════════════
-          STATS — Full width gradient strip
-          ═══════════════════════════════════════════════════════════ */}
-      <section className="py-16 bg-gradient-to-r from-primary-700 via-primary-600 to-emerald-600 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '32px 32px' }} />
-        <div className="container relative">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
-            {[
-              { value: `${siteConfig.experience}+`, label: "Années d'expérience" },
-              { value: `${siteConfig.interventions}`, label: "Interventions réalisées" },
-              { value: "-30min", label: "Délai d'intervention" },
-              { value: `${siteConfig.reviews.rating}/5`, label: `${siteConfig.reviews.count} avis Google` },
-            ].map((stat, i) => (
-              <div key={i} className="text-center">
-                <p className="text-3xl md:text-4xl font-extrabold text-white tracking-tight">{stat.value}</p>
-                <p className="text-white/60 text-sm mt-1">{stat.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ═══════════════════════════════════════════════════════════
           COMMENT ÇA MARCHE — Timeline with numbered circles
@@ -403,7 +403,7 @@ export default function HomePage() {
             <div>
               <p className="text-primary-600 text-sm font-semibold uppercase tracking-widest mb-3">Pourquoi nous choisir</p>
               <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-10">
-                {siteConfig.experience}+ ans d&apos;expertise en rideau métallique
+                {siteConfig.experience} ans d&apos;expertise en rideau métallique
               </h2>
 
               <div className="space-y-4">

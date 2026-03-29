@@ -105,7 +105,7 @@
   },
   "whyUs": {
     "title": "Pourquoi Choisir DRM {city} ?",
-    "subtitle": "{name} : spécialistes du rideau métallique à {city} et dans l'{department} depuis plus de 12 ans.",
+    "subtitle": "{name} : spécialistes du rideau métallique à {city} et dans l'{department} depuis plus de 25 ans.",
     "advantages": [
       {
         "icon": "⚡",
@@ -115,7 +115,7 @@
       {
         "icon": "📍",
         "title": "Expertise Locale",
-        "description": "12+ ans d'expérience à {city} et dans l'{department}. Nous intervenons à Creil, Nogent-sur-Oise, Senlis, Chantilly, et sur toute la zone commerciale Creil-Saint-Maximin."
+        "description": "25+ ans d'expérience à {city} et dans l'{department}. Nous intervenons à Creil, Nogent-sur-Oise, Senlis, Chantilly, et sur toute la zone commerciale Creil-Saint-Maximin."
       },
       {
       "icon": "📋",
@@ -130,7 +130,7 @@
     ]
   },
   "stats": {
-    "experience": "12+",
+    "experience": "25+",
     "experienceLabel": "ans d'expérience",
     "interventions": "3500+",
     "interventionsLabel": "interventions réalisées",
@@ -211,7 +211,7 @@
   ],
   "alternatingFeatures": [
     {
-      "title": "Spécialiste <strong>Rideau Métallique {city}</strong> depuis 12 ans",
+      "title": "Spécialiste <strong>Rideau Métallique {city}</strong> depuis 25 ans",
       "content": "<p>En tant que <strong>professionnel du rideau métallique à {city}</strong>, nous intervenons dans tous les quartiers de la ville et dans l'ensemble de l'<strong>{department}</strong>. Notre expertise couvre le <strong>dépannage rideau métallique</strong>, la <strong>réparation</strong>, l'<strong>installation</strong> et la <strong>maintenance préventive</strong>.</p><p>Que vous soyez commerçant rue de la République, propriétaire d'une boutique près de la gare SNCF ou gérant d'un local professionnel dans la zone commerciale Creil-Saint-Maximin, nous garantissons une <strong>intervention rapide en moins de 30 minutes</strong>. Notre équipe de <strong>techniciens certifiés</strong> dispose d'un stock permanent de pièces détachées pour assurer une <strong>réparation immédiate</strong> de votre <strong>rideau métallique bloqué</strong> ou défaillant.</p><p>Avec plus de <strong>3500 interventions réalisées</strong> sur {city} et ses environs, {name} s'impose comme le <strong>leader du dépannage rideau métallique</strong> dans l'{department}. Disponibles <strong>24h/24 et 7j/7</strong>, nous intervenons même les jours fériés pour sécuriser votre commerce.</p>",
       "image": "/images/gallery/rideau-metallique-creil.webp",
       "imageAlt": "Technicien dépannage rideau métallique Creil",
