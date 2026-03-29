@@ -54,11 +54,11 @@ export default function HomePage() {
             </div>
 
             {/* Heading with gradient */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.05] mb-6 tracking-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-6">
               Dépannage Rideau{' '}
               <br className="hidden sm:block" />
               Métallique à{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-primary-400 to-emerald-300">
+              <span className="text-primary-400">
                 {siteConfig.city}
               </span>
             </h1>
@@ -72,10 +72,10 @@ export default function HomePage() {
             <div className="flex flex-wrap gap-4 mb-12">
               <a
                 href={siteConfig.phoneLink}
-                className="group inline-flex items-center gap-3 px-8 py-4 bg-primary-600 text-white font-semibold text-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(27,122,78,0.4)]"
-                style={{ borderRadius: '12px' }}
+                className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-white text-gray-900 font-semibold text-base transition-all duration-200 hover:bg-gray-100 shadow-lg"
+                style={{ borderRadius: '8px' }}
               >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4.5 h-4.5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
@@ -83,26 +83,27 @@ export default function HomePage() {
               </a>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-md text-white font-semibold text-lg border border-white/20 transition-all duration-300 hover:-translate-y-1 hover:bg-white/20 hover:shadow-lg"
-                style={{ borderRadius: '12px' }}
+                className="inline-flex items-center gap-2 px-7 py-3.5 text-white font-medium text-base border border-white/25 transition-all duration-200 hover:bg-white/10"
+                style={{ borderRadius: '8px' }}
               >
                 Devis gratuit en ligne
-                <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </Link>
             </div>
 
-            {/* Trust signals — avatar stack + stars + stats */}
+            {/* Trust signals — avatar stack (alternating photo/initial) + stars + stats */}
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
               {/* Reviews */}
               <div className="flex items-center gap-3">
                 <div className="flex -space-x-3">
-                  {['bg-emerald-500', 'bg-blue-500', 'bg-amber-500', 'bg-violet-500', 'bg-rose-500'].map((color, i) => (
-                    <div key={i} className={`w-10 h-10 ${color} rounded-full border-2 border-gray-900 flex items-center justify-center text-white text-xs font-bold`}>
-                      {['K', 'S', 'M', 'N', 'A'][i]}
-                    </div>
-                  ))}
+                  {/* Photo homme, initiale, photo femme, initiale, photo homme */}
+                  <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Karim" className="w-10 h-10 rounded-full border-2 border-gray-900 object-cover" loading="lazy" />
+                  <div className="w-10 h-10 bg-blue-500 rounded-full border-2 border-gray-900 flex items-center justify-center text-white text-xs font-bold">S</div>
+                  <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Nathalie" className="w-10 h-10 rounded-full border-2 border-gray-900 object-cover" loading="lazy" />
+                  <div className="w-10 h-10 bg-amber-500 rounded-full border-2 border-gray-900 flex items-center justify-center text-white text-xs font-bold">M</div>
+                  <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Antoine" className="w-10 h-10 rounded-full border-2 border-gray-900 object-cover" loading="lazy" />
                 </div>
                 <div>
                   <div className="flex items-center gap-1">
