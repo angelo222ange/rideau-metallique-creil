@@ -1125,12 +1125,31 @@ export default function ServiceZonePage({ params }: Props) {
           {/* Blob décoratif */}
           <div className="absolute -top-24 -left-24 w-[400px] h-[400px] bg-primary-50 rounded-full blur-3xl" />
           <div className="container relative z-10">
-            <div className="max-w-4xl mx-auto">
-              <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
-              <div
-                className="text-gray-600 text-lg leading-relaxed prose prose-a:text-primary-600 prose-a:no-underline hover:prose-a:underline prose-strong:text-gray-900"
-                dangerouslySetInnerHTML={{ __html: zoneServiceContent.zoneIntro }}
-              />
+            <div className="grid lg:grid-cols-12 gap-12 items-center max-w-6xl mx-auto">
+              {/* Texte */}
+              <div className="lg:col-span-7">
+                <div className="bg-white border border-gray-100 p-8 md:p-10 shadow-sm" style={{ borderRadius: '20px' }}>
+                  <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
+                  <div
+                    className="text-gray-600 text-lg leading-relaxed prose prose-a:text-primary-600 prose-a:no-underline hover:prose-a:underline prose-strong:text-gray-900"
+                    dangerouslySetInnerHTML={{ __html: zoneServiceContent.zoneIntro }}
+                  />
+                </div>
+              </div>
+              {/* Image */}
+              <div className="lg:col-span-5 hidden lg:block">
+                <div className="relative aspect-[4/3] overflow-hidden shadow-2xl" style={{ borderRadius: '16px' }}>
+                  <Image
+                    src="/images/gallery/rideau-metallique-creil.webp"
+                    alt={`${service.name} rideau metallique ${zone.name}`}
+                    title={`${service.name} rideau metallique ${zone.name}`}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                {/* Offset décoratif */}
+                <div className="absolute -z-10 -bottom-4 -left-4 w-full h-full bg-primary-100/40" style={{ borderRadius: '16px' }} />
+              </div>
             </div>
           </div>
         </section>
@@ -1274,6 +1293,15 @@ export default function ServiceZonePage({ params }: Props) {
         />
       )}
 
+      {/* ─── FAQ LOCALE ─── */}
+      {zoneFaq.length > 0 && (
+        <FAQ
+          items={zoneFaq}
+          title={`Questions fréquentes - ${service.name} à ${zone.name}`}
+          subtitle={`Retrouvez les réponses aux questions les plus fréquentes sur le service de ${service.name.toLowerCase()} à ${zone.name} (${zone.postalCode}).`}
+        />
+      )}
+
       {/* ─── AVIS CLIENTS ─── */}
       {zoneReviews.length > 0 && (
         <Reviews
@@ -1350,15 +1378,6 @@ export default function ServiceZonePage({ params }: Props) {
           </div>
         </div>
       </section>
-
-      {/* ─── FAQ LOCALE ─── */}
-      {zoneFaq.length > 0 && (
-        <FAQ
-          items={zoneFaq}
-          title={`Questions fréquentes - ${service.name} à ${zone.name}`}
-          subtitle={`Retrouvez les réponses aux questions les plus fréquentes sur le service de ${service.name.toLowerCase()} à ${zone.name} (${zone.postalCode}).`}
-        />
-      )}
 
       {/* ─── CTA FINAL ─── */}
       <CTA

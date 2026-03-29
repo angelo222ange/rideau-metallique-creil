@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig, zones, services } from "@/config/site";
 import { FAQ } from "@/components/sections/FAQ";
 import { CTA } from "@/components/sections/CTA";
@@ -76,9 +77,15 @@ export default function ZonePage({ params }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Hero dark compact */}
-      <section className="relative overflow-hidden bg-gray-950">
-        {/* Crosshatch pattern */}
-        <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'repeating-linear-gradient(45deg, #fff 0, #fff 1px, transparent 0, transparent 50%), repeating-linear-gradient(-45deg, #fff 0, #fff 1px, transparent 0, transparent 50%)', backgroundSize: '20px 20px' }} />
+      <section className="relative overflow-hidden">
+        <Image
+          src="/images/gallery/hero-bg-technicien-drm.webp"
+          alt={`Rideau metallique ${zone.name}`}
+          title={`Rideau metallique ${zone.name}`}
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gray-950/90" />
         <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-primary-600/10 rounded-full blur-3xl" />
 
         <div className="container relative z-10 py-14 md:py-20">

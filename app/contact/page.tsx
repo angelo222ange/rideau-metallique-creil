@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/config/site";
 import { getPageContent } from "@/lib/content";
 import { FAQ } from "@/components/sections/FAQ";
@@ -55,9 +56,16 @@ export default function ContactPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* ─── HERO ─── */}
-      <section className="pt-32 pb-16 bg-gray-950 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.03]" style={{backgroundImage:'repeating-linear-gradient(45deg, white 0, white 1px, transparent 0, transparent 8px)'}} />
-        <div className="container relative">
+      <section className="pt-32 pb-16 relative overflow-hidden">
+        <Image
+          src="/images/gallery/hero-bg-technicien-drm.webp"
+          alt={`Contact ${siteConfig.name} rideau metallique ${siteConfig.city}`}
+          title={`Contact ${siteConfig.name} rideau metallique ${siteConfig.city}`}
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gray-950/90" />
+        <div className="container relative z-10">
           <nav className="mb-6" aria-label="Fil d'Ariane">
             <ol className="flex items-center gap-2 text-sm text-white/40">
               <li><Link href="/" className="hover:text-white/60 transition-colors">Accueil</Link></li>
