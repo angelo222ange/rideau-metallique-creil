@@ -40,22 +40,27 @@ export default function BlogPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      {/* Hero */}
-      <section className="relative overflow-hidden bg-white">
-        <div className="h-1 bg-gradient-to-r from-primary-600 via-emerald-500 to-primary-700" />
-        <div className="container py-16 md:py-20 lg:py-24 text-center">
+      {/* Hero dark compact */}
+      <section className="relative overflow-hidden bg-gray-950">
+        <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'repeating-linear-gradient(45deg, #fff 0, #fff 1px, transparent 0, transparent 50%), repeating-linear-gradient(-45deg, #fff 0, #fff 1px, transparent 0, transparent 50%)', backgroundSize: '20px 20px' }} />
+        <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-primary-600/10 rounded-full blur-3xl" />
+
+        <div className="container relative z-10 py-14 md:py-20 text-center">
           <nav className="mb-6" aria-label="Fil d'Ariane">
-            <ol className="flex items-center justify-center gap-2 text-xs text-gray-400">
-              <li><Link href="/" className="hover:text-primary-600 transition-colors">Accueil</Link></li>
+            <ol className="flex items-center justify-center gap-2 text-xs text-white/30">
+              <li><Link href="/" className="hover:text-primary-400 transition-colors">Accueil</Link></li>
               <li>/</li>
-              <li className="text-gray-700 font-bold">Blog</li>
+              <li className="text-white/60 font-medium">Blog</li>
             </ol>
           </nav>
-          <span className="inline-block px-3 py-1 bg-primary-50 text-primary-700 text-xs font-semibold uppercase tracking-wider mb-4" style={{borderRadius:'6px'}}>Actualités</span>
-          <h1 className="font-bold text-4xl md:text-5xl lg:text-6xl text-gray-900 leading-[1.1] mb-4">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/[0.06] border border-white/[0.08] text-white/70 text-sm font-medium mb-5" style={{ borderRadius: '100px' }}>
+            <span className="w-2 h-2 bg-primary-400 rounded-full animate-pulse" />
+            Actualités
+          </span>
+          <h1 className="font-extrabold text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-4 tracking-tight">
             Blog
           </h1>
-          <p className="text-gray-500 text-lg max-w-lg mx-auto">
+          <p className="text-white/40 text-lg max-w-lg mx-auto">
             Conseils, guides et actualités sur les rideaux métalliques à {siteConfig.city}.
           </p>
         </div>
@@ -64,13 +69,13 @@ export default function BlogPage() {
       {/* Articles Grid */}
       <section className="py-20 md:py-28 bg-gray-50">
         <div className="container">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {sortedArticles.map((article) => (
               <Link
                 key={article.slug}
                 href={`/blog/${article.slug}`}
-                className="group block bg-white border border-gray-100 hover:border-primary-200 transition-all overflow-hidden"
-                style={{ borderRadius: '10px' }}
+                className="group block bg-white border border-gray-100 hover:border-primary-200 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 overflow-hidden"
+                style={{ borderRadius: '16px' }}
               >
                 <article>
                   {/* Image */}
@@ -93,7 +98,7 @@ export default function BlogPage() {
                           year: 'numeric',
                         })}
                       </time>
-                      <span className="text-gray-200">|</span>
+                      <span className="w-1 h-1 bg-gray-300 rounded-full" />
                       <span>{article.readTime} de lecture</span>
                     </div>
 
@@ -123,19 +128,21 @@ export default function BlogPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 md:py-28 bg-white">
-        <div className="container text-center">
-          <span className="inline-block px-3 py-1 bg-primary-50 text-primary-700 text-xs font-semibold uppercase tracking-wider mb-4" style={{borderRadius:'6px'}}>Professionnel</span>
-          <h2 className="font-bold text-3xl md:text-4xl text-gray-900 mb-4">
+      <section className="relative py-20 md:py-28 bg-gray-950 overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'repeating-linear-gradient(45deg, #fff 0, #fff 1px, transparent 0, transparent 50%), repeating-linear-gradient(-45deg, #fff 0, #fff 1px, transparent 0, transparent 50%)', backgroundSize: '20px 20px' }} />
+        <div className="absolute -bottom-32 -right-32 w-[400px] h-[400px] bg-primary-600/10 rounded-full blur-3xl" />
+        <div className="container relative z-10 text-center">
+          <p className="text-primary-400 text-sm font-semibold uppercase tracking-widest mb-3">Professionnel</p>
+          <h2 className="font-extrabold text-3xl md:text-4xl text-white mb-4 tracking-tight">
             Besoin d&apos;un professionnel ?
           </h2>
-          <p className="text-gray-500 text-lg mb-8 max-w-lg mx-auto">
+          <p className="text-white/40 text-lg mb-8 max-w-lg mx-auto">
             {siteConfig.name} intervient 24h/24 pour tous vos besoins en rideau métallique à {siteConfig.city}.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <a
               href={siteConfig.phoneLink}
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-primary-600 hover:bg-primary-700 transition-all shadow-lg shadow-primary-600/25"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 font-semibold text-gray-900 bg-white hover:bg-gray-100 transition-all"
               style={{ borderRadius: '8px' }}
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -145,7 +152,7 @@ export default function BlogPage() {
             </a>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-gray-700 bg-white border-2 border-gray-200 hover:border-primary-300 hover:text-primary-700 transition-all"
+              className="inline-flex items-center justify-center px-6 py-3.5 font-semibold text-white border border-white/20 hover:bg-white/10 transition-all"
               style={{ borderRadius: '8px' }}
             >
               Devis gratuit

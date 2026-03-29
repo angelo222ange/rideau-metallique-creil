@@ -15,7 +15,7 @@ import { replaceVariables } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: `Avis Clients - ${siteConfig.name} | ${siteConfig.reviews.rating}/5 (${siteConfig.reviews.count} avis)`,
-  description: `Découvrez les avis clients de ${siteConfig.name} à ${siteConfig.city}. Note ${siteConfig.reviews.rating}/5 sur ${siteConfig.reviews.count} avis. Dépannage, installation, réparation de rideaux métalliques. ${siteConfig.phone}`,
+  description: `Decouvrez les avis clients de ${siteConfig.name} a ${siteConfig.city}. Note ${siteConfig.reviews.rating}/5 sur ${siteConfig.reviews.count} avis. Depannage, installation, reparation de rideaux metalliques. ${siteConfig.phone}`,
   alternates: {
     canonical: `${siteConfig.url}/avis/`,
   },
@@ -30,16 +30,30 @@ interface Review {
   service?: string;
 }
 
+// Noms masculins courants
+const masculineNames = ["Laurent", "Ahmed", "Thomas", "Philippe", "Nicolas", "Pierre", "Jean", "Marc", "Patrick", "David", "Christophe", "Michel", "Franck", "Julien", "Stephane", "Bruno", "Eric", "Olivier", "Alain", "Bernard", "Yves", "Gerard", "Jacques", "Thierry", "Daniel", "Claude", "Romain", "Frederic", "Antoine", "Hugo"];
+
+function isMasculineName(name: string): boolean {
+  const firstName = name.split(" ")[0].replace(/[^a-zA-ZÀ-ÿ]/g, "");
+  return masculineNames.some((m) => firstName.toLowerCase() === m.toLowerCase());
+}
+
+// Couleurs pour les initiales
+const initialColors = [
+  "bg-primary-600", "bg-emerald-600", "bg-amber-600", "bg-rose-600",
+  "bg-violet-600", "bg-sky-600", "bg-teal-600", "bg-orange-600",
+];
+
 export default function AvisPage() {
   // Collecter tous les avis de tous les services
   const allServiceContents = [
-    { slug: "depannage", name: "Dépannage", data: depannageContent },
+    { slug: "depannage", name: "Depannage", data: depannageContent },
     { slug: "installation", name: "Installation", data: installationContent },
     { slug: "fabrication", name: "Fabrication", data: fabricationContent },
     { slug: "entretien", name: "Entretien", data: entretienContent },
     { slug: "motorisation", name: "Motorisation", data: motorisationContent },
-    { slug: "deblocage", name: "Déblocage", data: deblocageContent },
-    { slug: "reparation", name: "Réparation", data: reparationContent },
+    { slug: "deblocage", name: "Deblocage", data: deblocageContent },
+    { slug: "reparation", name: "Reparation", data: reparationContent },
   ];
 
   const allReviews: (Review & { serviceName: string })[] = [];
@@ -57,7 +71,7 @@ export default function AvisPage() {
     }
   }
 
-  // Déduplier par nom
+  // Deduplier par nom
   const seen = new Set<string>();
   const uniqueReviews = allReviews.filter((r) => {
     if (seen.has(r.name)) return false;
@@ -99,75 +113,168 @@ export default function AvisPage() {
       />
 
       {/* ─── HERO ─── */}
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-gray-900 overflow-hidden">
-        <div className="hidden" />
-        <div className="container relative z-10">
-          <nav className="mb-8" aria-label="Fil d'Ariane">
-            <ol className="flex items-center gap-2 text-xs text-white/30">
+      <section className="pt-32 pb-16 bg-gray-950 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.03]" style={{backgroundImage:'repeating-linear-gradient(45deg, white 0, white 1px, transparent 0, transparent 8px)'}} />
+        <div className="container relative">
+          <nav className="mb-6" aria-label="Fil d'Ariane">
+            <ol className="flex items-center gap-2 text-sm text-white/40">
               <li><Link href="/" className="hover:text-white/60 transition-colors">Accueil</Link></li>
               <li>/</li>
-              <li className="text-white/70 font-bold">Avis clients</li>
+              <li className="text-white/70 font-semibold">Avis clients</li>
             </ol>
           </nav>
-          <div className="max-w-3xl">
-            <div className="w-12 h-1 bg-primary-600 mb-8" style={{borderRadius:"4px"}}/>
-            <h1 className="font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-5">
-              Avis Clients {siteConfig.name}
-            </h1>
-            <p className="text-white/40 text-lg leading-relaxed">
-              Découvrez les témoignages de nos clients à {siteConfig.city} et dans l&apos;{siteConfig.department}. {uniqueReviews.length} avis vérifiés, note moyenne de {avgRating}/5.
-            </p>
+          <p className="text-primary-400 text-sm font-semibold uppercase tracking-widest mb-3">Temoignages</p>
+          <h1 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">
+            Avis Clients {siteConfig.name}
+          </h1>
+          <p className="text-white/50 text-lg max-w-2xl">
+            Decouvrez les temoignages de nos clients a {siteConfig.city} et dans l&apos;{siteConfig.department}. {uniqueReviews.length} avis verifies, note moyenne de {avgRating}/5.
+          </p>
+        </div>
+      </section>
 
-            {/* Stats rapides */}
-            <div className="flex gap-8 mt-10">
-              <div>
-                <p className="font-bold text-4xl text-primary-600">{avgRating}/5</p>
-                <p className="text-white/30 text-xs mt-0.5">Note moyenne</p>
+      {/* ─── STATS GLOBALES ─── */}
+      <section className="py-20 bg-white relative overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary-50 rounded-full blur-3xl opacity-30" />
+        <div className="container relative">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { value: `${avgRating}/5`, label: "Note moyenne", highlight: true },
+              { value: String(uniqueReviews.length), label: "Avis clients" },
+              { value: String(count5), label: "Notes 5/5" },
+              { value: String(count4), label: "Notes 4/5" },
+            ].map((stat, i) => (
+              <div
+                key={i}
+                className={`border hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-8 text-center ${
+                  stat.highlight
+                    ? 'bg-primary-600 border-primary-600 text-white'
+                    : 'bg-white border-gray-100 hover:border-gray-200'
+                }`}
+                style={{ borderRadius: '16px' }}
+              >
+                <p className={`text-4xl font-extrabold mb-2 ${stat.highlight ? 'text-white' : 'text-gray-900'}`}>{stat.value}</p>
+                <p className={`text-sm font-medium ${stat.highlight ? 'text-white/70' : 'text-gray-500'}`}>{stat.label}</p>
               </div>
-              <div>
-                <p className="font-bold text-4xl text-white">{uniqueReviews.length}</p>
-                <p className="text-white/30 text-xs mt-0.5">Avis clients</p>
-              </div>
-              <div>
-                <p className="font-bold text-4xl text-white">{count5}</p>
-                <p className="text-white/30 text-xs mt-0.5">Notes 5/5</p>
-              </div>
-              <div>
-                <p className="font-bold text-4xl text-white">{count4}</p>
-                <p className="text-white/30 text-xs mt-0.5">Notes 4/5</p>
-              </div>
-            </div>
+            ))}
+          </div>
+
+          {/* Stars display */}
+          <div className="flex items-center justify-center gap-2 mt-10">
+            {Array.from({ length: 5 }).map((_, i) => (
+              <svg key={i} className="w-8 h-8 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+            ))}
+            <span className="text-gray-400 text-sm ml-2 font-medium">({uniqueReviews.length} avis verifies)</span>
           </div>
         </div>
       </section>
 
       {/* ─── TOUS LES AVIS ─── */}
-      <section className="section bg-gray-50">
-        <div className="container">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-200">
-            {uniqueReviews.map((review, index) => (
-              <div key={index} className="bg-white p-8">
-                <div className="flex items-center gap-1 mb-3">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <svg
-                      key={i}
-                      className={`w-4 h-4 ${i < review.rating ? 'text-yellow-400' : 'text-gray-200'}`}
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                  <span className="text-xs text-gray-400 ml-2">{review.rating}/5</span>
-                </div>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">{review.text}</p>
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="font-heading font-bold text-gray-900 text-sm">{review.name}</p>
-                    <p className="text-gray-400 text-xs">{review.serviceName} — {review.zone}</p>
+      <section className="py-24 bg-gray-50 relative overflow-hidden">
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary-50 rounded-full blur-3xl opacity-30" />
+        <div className="container relative">
+          <div className="text-center mb-16">
+            <p className="text-primary-600 text-sm font-semibold uppercase tracking-widest mb-3">Retours d&apos;experience</p>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">
+              Ce que disent nos clients
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {uniqueReviews.map((review, index) => {
+              const isMale = isMasculineName(review.name);
+              const usePhoto = index % 2 === 0;
+              const photoGender = isMale ? "men" : "women";
+              const photoIndex = (index * 7 + 3) % 80; // deterministic varied index
+              const colorClass = initialColors[index % initialColors.length];
+              const initial = review.name.charAt(0).toUpperCase();
+
+              return (
+                <div
+                  key={index}
+                  className="bg-white border border-gray-100 hover:border-gray-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-8 flex flex-col"
+                  style={{ borderRadius: '16px' }}
+                >
+                  {/* Stars */}
+                  <div className="flex items-center gap-1 mb-4">
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <svg
+                        key={i}
+                        className={`w-4 h-4 ${i < review.rating ? 'text-yellow-400' : 'text-gray-200'}`}
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    ))}
+                    <span className="text-xs text-gray-400 ml-1">{review.rating}/5</span>
                   </div>
-                  <span className="text-gray-300 text-xs">{review.date}</span>
+
+                  {/* Review text */}
+                  <p className="text-gray-600 text-sm leading-relaxed mb-6 flex-1">&ldquo;{review.text}&rdquo;</p>
+
+                  {/* Author */}
+                  <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
+                    {usePhoto ? (
+                      <img
+                        src={`https://randomuser.me/api/portraits/${photoGender}/${photoIndex}.jpg`}
+                        alt={review.name}
+                        title={review.name}
+                        className="w-10 h-10 object-cover flex-shrink-0"
+                        style={{ borderRadius: '50%' }}
+                        loading="lazy"
+                      />
+                    ) : (
+                      <div className={`w-10 h-10 ${colorClass} text-white flex items-center justify-center font-bold text-sm flex-shrink-0`} style={{ borderRadius: '50%' }}>
+                        {initial}
+                      </div>
+                    )}
+                    <div className="min-w-0">
+                      <p className="font-bold text-gray-900 text-sm truncate">{review.name}</p>
+                      <p className="text-gray-400 text-xs truncate">{review.serviceName} -- {review.zone}</p>
+                    </div>
+                    <span className="text-gray-300 text-xs ml-auto flex-shrink-0">{review.date}</span>
+                  </div>
                 </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── POURQUOI NOUS CHOISIR ─── */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="absolute top-20 right-0 w-80 h-80 bg-primary-50 rounded-full blur-3xl opacity-30" />
+        <div className="container relative">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <p className="text-primary-600 text-sm font-semibold uppercase tracking-widest mb-3">Confiance</p>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">
+              Pourquoi nos clients nous recommandent
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {[
+              { title: "Intervention rapide", desc: `30 a 60 min sur ${siteConfig.city}. 24h/24, 7j/7, jours feries inclus.`, icon: (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+              )},
+              { title: "Devis gratuit", desc: "Diagnostic offert, prix communiques avant intervention. Pas de surprise.", icon: (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              )},
+              { title: "Garantie", desc: "Pieces d'origine, garantie pieces et main-d'oeuvre sur chaque intervention.", icon: (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+              )},
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="bg-white border border-gray-100 hover:border-gray-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-8 text-center"
+                style={{ borderRadius: '16px' }}
+              >
+                <div className="w-14 h-14 bg-primary-50 text-primary-600 flex items-center justify-center mx-auto mb-5" style={{ borderRadius: '14px' }}>
+                  {item.icon}
+                </div>
+                <h3 className="font-extrabold text-gray-900 text-lg mb-2">{item.title}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -176,8 +283,8 @@ export default function AvisPage() {
 
       {/* ─── CTA ─── */}
       <CTA
-        title={`Satisfait de notre service à ${siteConfig.city} ?`}
-        subtitle={`Appelez le ${siteConfig.phone} pour votre rideau métallique. Devis gratuit, intervention 24h/24.`}
+        title={`Satisfait de notre service a ${siteConfig.city} ?`}
+        subtitle={`Appelez le ${siteConfig.phone} pour votre rideau metallique. Devis gratuit, intervention 24h/24.`}
       />
     </main>
   );

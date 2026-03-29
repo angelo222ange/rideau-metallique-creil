@@ -5,7 +5,7 @@ import { CTA } from "@/components/sections/CTA";
 
 export const metadata: Metadata = {
   title: `Zones d'Intervention Rideau Métallique ${siteConfig.city} et ${siteConfig.department}`,
-  description: `Dépannage rideau métallique à ${siteConfig.city} et environs : 16 arrondissements + 15 communes (${siteConfig.department}). Intervention rapide 24h/24. ☎️ ${siteConfig.phone}`,
+  description: `Dépannage rideau métallique à ${siteConfig.city} et environs : 16 arrondissements + 15 communes (${siteConfig.department}). Intervention rapide 24h/24. ${siteConfig.phone}`,
   keywords: `rideau métallique ${siteConfig.city}, zones intervention ${siteConfig.department}, dépannage rideau ${siteConfig.departmentCode}`,
   openGraph: {
     title: `Zones d'Intervention Rideau Métallique ${siteConfig.city} et ${siteConfig.department}`,
@@ -32,26 +32,41 @@ export default function ZonesPage() {
     ],
   };
 
+  // Couleurs alternées pour les cards zones
+  const cardColors = [
+    'from-primary-600/10 to-primary-600/5',
+    'from-emerald-600/10 to-emerald-600/5',
+    'from-teal-600/10 to-teal-600/5',
+    'from-green-600/10 to-green-600/5',
+    'from-primary-700/10 to-primary-700/5',
+  ];
+
   return (
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-      {/* Hero */}
-      <section className="relative overflow-hidden bg-white">
-        <div className="h-1 bg-gradient-to-r from-primary-600 via-emerald-500 to-primary-700" />
-        <div className="container py-16 md:py-20 lg:py-24 text-center">
+      {/* Hero dark compact */}
+      <section className="relative overflow-hidden bg-gray-950">
+        {/* Crosshatch pattern */}
+        <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'repeating-linear-gradient(45deg, #fff 0, #fff 1px, transparent 0, transparent 50%), repeating-linear-gradient(-45deg, #fff 0, #fff 1px, transparent 0, transparent 50%)', backgroundSize: '20px 20px' }} />
+        <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-primary-600/10 rounded-full blur-3xl" />
+
+        <div className="container relative z-10 py-14 md:py-20 text-center">
           <nav className="mb-6" aria-label="Fil d'Ariane">
-            <ol className="flex items-center justify-center gap-2 text-xs text-gray-400">
-              <li><Link href="/" className="hover:text-primary-600 transition-colors">Accueil</Link></li>
+            <ol className="flex items-center justify-center gap-2 text-xs text-white/30">
+              <li><Link href="/" className="hover:text-primary-400 transition-colors">Accueil</Link></li>
               <li>/</li>
-              <li className="text-gray-700 font-bold">Zones d&apos;intervention</li>
+              <li className="text-white/60 font-medium">Zones d&apos;intervention</li>
             </ol>
           </nav>
-          <span className="inline-block px-3 py-1 bg-primary-50 text-primary-700 text-xs font-semibold uppercase tracking-wider mb-4" style={{borderRadius:'6px'}}>Nos zones</span>
-          <h1 className="font-bold text-4xl md:text-5xl lg:text-6xl text-gray-900 leading-[1.1] mb-4">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/[0.06] border border-white/[0.08] text-white/70 text-sm font-medium mb-5" style={{ borderRadius: '100px' }}>
+            <span className="w-2 h-2 bg-primary-400 rounded-full animate-pulse" />
+            Nos zones
+          </span>
+          <h1 className="font-extrabold text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-4 tracking-tight">
             Zones d&apos;intervention
           </h1>
-          <p className="text-gray-500 text-lg max-w-lg mx-auto">
+          <p className="text-white/40 text-lg max-w-lg mx-auto">
             Intervention rapide sur {siteConfig.city} et toute l&apos;agglomération.
           </p>
         </div>
@@ -59,17 +74,18 @@ export default function ZonesPage() {
 
       {/* Main city */}
       {mainCity && (
-        <section className="py-20 md:py-28 bg-gray-50">
-          <div className="container">
+        <section className="relative py-20 md:py-28 bg-white overflow-hidden">
+          <div className="absolute -bottom-24 -left-24 w-[400px] h-[400px] bg-primary-50 rounded-full blur-3xl" />
+          <div className="container relative z-10">
             <div className="max-w-3xl">
-              <span className="inline-block px-3 py-1 bg-primary-50 text-primary-700 text-xs font-semibold uppercase tracking-wider mb-4" style={{borderRadius:'6px'}}>Ville principale</span>
-              <h2 className="font-bold text-3xl md:text-4xl text-gray-900 mb-4">{mainCity.name}</h2>
+              <p className="text-primary-600 text-sm font-semibold uppercase tracking-widest mb-3">Ville principale</p>
+              <h2 className="font-extrabold text-3xl md:text-4xl text-gray-900 tracking-tight mb-4">{mainCity.name}</h2>
               <p className="text-gray-500 text-lg mb-8 leading-relaxed">
                 Basés à {mainCity.name}, nous intervenons en 1 heure maximum pour tous vos besoins en rideau métallique.
               </p>
               <a
                 href={siteConfig.phoneLink}
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-primary-600 hover:bg-primary-700 transition-all shadow-lg shadow-primary-600/25"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-semibold text-white bg-primary-600 hover:bg-primary-700 transition-all shadow-lg shadow-primary-600/25"
                 style={{ borderRadius: '8px' }}
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -82,20 +98,27 @@ export default function ZonesPage() {
         </section>
       )}
 
-      {/* All zones */}
-      <section className="py-20 md:py-28 bg-white">
+      {/* All zones grid */}
+      <section className="py-20 md:py-28 bg-gray-50">
         <div className="container">
           <div className="max-w-xl mb-14">
-            <span className="inline-block px-3 py-1 bg-primary-50 text-primary-700 text-xs font-semibold uppercase tracking-wider mb-4" style={{borderRadius:'6px'}}>Communes</span>
-            <h2 className="font-bold text-3xl md:text-4xl text-gray-900">Toutes nos zones</h2>
+            <p className="text-primary-600 text-sm font-semibold uppercase tracking-widest mb-3">Communes</p>
+            <h2 className="font-extrabold text-3xl md:text-4xl text-gray-900 tracking-tight">Toutes nos zones</h2>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-            {otherZones.map((zone) => (
+            {otherZones.map((zone, i) => (
               <Link key={zone.slug} href={`/zones/${zone.slug}`}
-                className="bg-white border border-gray-100 p-4 text-center hover:border-primary-200 transition-colors group"
-                style={{ borderRadius: '10px' }}>
-                <h3 className="font-bold text-gray-900 text-sm group-hover:text-primary-600 transition-colors">{zone.name}</h3>
-                <p className="text-xs text-gray-400">{zone.postalCode}</p>
+                className="group relative overflow-hidden bg-white border border-gray-100 p-5 text-center hover:border-primary-200 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                style={{ borderRadius: '16px' }}>
+                {/* Gradient background */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${cardColors[i % cardColors.length]} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
+                <div className="relative z-10">
+                  <h3 className="font-bold text-gray-900 text-sm group-hover:text-primary-600 transition-colors">{zone.name}</h3>
+                  <p className="text-xs text-gray-400 mt-0.5">{zone.postalCode}</p>
+                  {'distance' in zone && (
+                    <p className="text-[10px] text-gray-300 mt-1">{(zone as { distance: string }).distance}</p>
+                  )}
+                </div>
               </Link>
             ))}
           </div>

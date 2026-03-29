@@ -46,7 +46,7 @@ function renderContentBlock(block: ContentBlock, index: number) {
     case 'heading':
       if (block.level === 2) {
         return (
-          <h2 key={index} className="font-bold text-2xl md:text-3xl text-gray-900 mt-12 mb-5">
+          <h2 key={index} className="font-extrabold text-2xl md:text-3xl text-gray-900 mt-12 mb-5 tracking-tight">
             {block.text}
           </h2>
         );
@@ -90,7 +90,7 @@ function renderContentBlock(block: ContentBlock, index: number) {
     case 'table':
       return (
         <div key={index} className="overflow-x-auto mb-8 -mx-4 px-4">
-          <table className="w-full text-sm border-collapse">
+          <table className="w-full text-sm border-collapse" style={{ borderRadius: '10px' }}>
             <thead>
               <tr className="bg-gray-50">
                 {block.headers.map((header, i) => (
@@ -171,26 +171,30 @@ export default function BlogArticlePage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      {/* Hero */}
-      <section className="relative overflow-hidden bg-white">
-        <div className="h-1 bg-gradient-to-r from-primary-600 via-emerald-500 to-primary-700" />
-        <div className="container py-16 md:py-20 lg:py-24">
+      {/* Hero dark compact */}
+      <section className="relative overflow-hidden bg-gray-950">
+        <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'repeating-linear-gradient(45deg, #fff 0, #fff 1px, transparent 0, transparent 50%), repeating-linear-gradient(-45deg, #fff 0, #fff 1px, transparent 0, transparent 50%)', backgroundSize: '20px 20px' }} />
+        <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-primary-600/10 rounded-full blur-3xl" />
+
+        <div className="container relative z-10 py-14 md:py-20">
           {/* Breadcrumb */}
           <nav className="mb-8" aria-label="Fil d'Ariane">
-            <ol className="flex items-center gap-2 text-xs text-gray-400 flex-wrap">
-              <li><Link href="/" className="hover:text-primary-600 transition-colors">Accueil</Link></li>
+            <ol className="flex items-center gap-2 text-xs text-white/30 flex-wrap">
+              <li><Link href="/" className="hover:text-primary-400 transition-colors">Accueil</Link></li>
               <li>/</li>
-              <li><Link href="/blog" className="hover:text-primary-600 transition-colors">Blog</Link></li>
+              <li><Link href="/blog" className="hover:text-primary-400 transition-colors">Blog</Link></li>
               <li>/</li>
-              <li className="text-gray-700 font-bold truncate max-w-[200px]">{article.title}</li>
+              <li className="text-white/60 font-medium truncate max-w-[200px]">{article.title}</li>
             </ol>
           </nav>
 
           <div className="max-w-3xl">
-            <span className="inline-block px-3 py-1 bg-primary-50 text-primary-700 text-xs font-semibold uppercase tracking-wider mb-4" style={{borderRadius:'6px'}}>Article</span>
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/[0.06] border border-white/[0.08] text-white/70 text-sm font-medium mb-5" style={{ borderRadius: '100px' }}>
+              Article
+            </span>
 
             {/* Meta */}
-            <div className="flex items-center gap-3 text-xs text-gray-400 mb-6">
+            <div className="flex items-center gap-3 text-xs text-white/30 mb-6">
               <time dateTime={article.date}>
                 {new Date(article.date).toLocaleDateString('fr-FR', {
                   day: 'numeric',
@@ -198,11 +202,11 @@ export default function BlogArticlePage({ params }: Props) {
                   year: 'numeric',
                 })}
               </time>
-              <span>|</span>
+              <span className="w-1 h-1 bg-white/20 rounded-full" />
               <span>{article.readTime} de lecture</span>
             </div>
 
-            <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl text-gray-900 leading-[1.1]">
+            <h1 className="font-extrabold text-3xl md:text-4xl lg:text-5xl text-white leading-[1.1] tracking-tight">
               {article.title}
             </h1>
           </div>
@@ -216,7 +220,7 @@ export default function BlogArticlePage({ params }: Props) {
             {/* Main Content */}
             <div className="lg:col-span-8">
               {/* Featured Image */}
-              <div className="relative aspect-[16/9] overflow-hidden mb-10 bg-gray-100" style={{ borderRadius: '10px' }}>
+              <div className="relative aspect-[16/9] overflow-hidden mb-10 bg-gray-100 shadow-2xl" style={{ borderRadius: '16px' }}>
                 <Image
                   src={article.image}
                   alt={article.imageAlt} title={article.imageAlt}
@@ -227,8 +231,8 @@ export default function BlogArticlePage({ params }: Props) {
               </div>
 
               {/* Summary Box */}
-              <div className="bg-white border border-gray-100 border-l-4 border-l-primary-600 p-6 md:p-8 mb-10" style={{ borderRadius: '10px' }}>
-                <h2 className="font-bold text-gray-900 text-lg mb-4">
+              <div className="bg-white border border-gray-100 border-l-4 border-l-primary-600 p-6 md:p-8 mb-10 shadow-sm" style={{ borderRadius: '16px' }}>
+                <h2 className="font-extrabold text-gray-900 text-lg mb-4 tracking-tight">
                   {article.summary.title}
                 </h2>
                 <ul className="space-y-2">
@@ -242,7 +246,7 @@ export default function BlogArticlePage({ params }: Props) {
               </div>
 
               {/* Content Blocks */}
-              <div className="prose-custom bg-white border border-gray-100 p-6 md:p-10" style={{ borderRadius: '10px' }}>
+              <div className="prose-custom bg-white border border-gray-100 p-6 md:p-10 shadow-sm" style={{ borderRadius: '16px' }}>
                 {article.content.map((block, index) => renderContentBlock(block, index))}
               </div>
             </div>
@@ -251,9 +255,9 @@ export default function BlogArticlePage({ params }: Props) {
             <aside className="lg:col-span-4">
               <div className="sticky top-28 space-y-8">
                 {/* CTA Box */}
-                <div className="bg-white border border-gray-100 p-6 text-center" style={{ borderRadius: '10px' }}>
-                  <span className="inline-block px-3 py-1 bg-primary-50 text-primary-700 text-xs font-semibold uppercase tracking-wider mb-4" style={{borderRadius:'6px'}}>Contact</span>
-                  <p className="font-bold text-gray-900 text-lg mb-2">
+                <div className="bg-white border border-gray-100 p-6 text-center shadow-sm" style={{ borderRadius: '16px' }}>
+                  <p className="text-primary-600 text-sm font-semibold uppercase tracking-widest mb-3">Contact</p>
+                  <p className="font-extrabold text-gray-900 text-lg mb-2 tracking-tight">
                     Besoin d&apos;un devis ?
                   </p>
                   <p className="text-gray-500 text-sm mb-5">
@@ -281,7 +285,7 @@ export default function BlogArticlePage({ params }: Props) {
                 {/* Related Articles */}
                 {relatedArticles.length > 0 && (
                   <div>
-                    <h3 className="font-bold text-gray-900 text-sm uppercase tracking-wider mb-4">
+                    <h3 className="font-bold text-gray-900 text-sm uppercase tracking-widest mb-4">
                       Articles similaires
                     </h3>
                     <div className="space-y-4">
@@ -289,8 +293,8 @@ export default function BlogArticlePage({ params }: Props) {
                         <Link
                           key={related.slug}
                           href={`/blog/${related.slug}`}
-                          className="block group bg-white border border-gray-100 hover:border-primary-200 overflow-hidden transition-all"
-                          style={{ borderRadius: '10px' }}
+                          className="block group bg-white border border-gray-100 hover:border-primary-200 hover:shadow-lg hover:-translate-y-1 overflow-hidden transition-all duration-300"
+                          style={{ borderRadius: '16px' }}
                         >
                           <div className="relative aspect-[16/9] overflow-hidden bg-gray-100">
                             <Image
