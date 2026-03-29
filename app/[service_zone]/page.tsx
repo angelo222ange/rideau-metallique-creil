@@ -218,16 +218,20 @@ export default function ServiceZonePage({ params }: Props) {
     answer: string;
   }
 
-  // Sélection anti-duplicate: 5 reviews et 5 FAQ différentes selon la zone
-  const zoneReviews: ReviewItem[] = content.reviews
-    ? getZoneContent(content.reviews as ReviewItem[], zone.slug, 5)
-    : [];
-  const zoneFaq: FAQItem[] = content.faq
-    ? getZoneContent(content.faq as FAQItem[], zone.slug, 5)
-    : [];
-
   // Contenu unique zone × service
   const zoneServiceContent = getZoneServiceContent(zone.slug, service.slug);
+
+  // FAQ et reviews : priorité au contenu zone-spécifique, fallback au pool partagé
+  const zoneReviews: ReviewItem[] = zoneServiceContent?.reviews
+    ? zoneServiceContent.reviews as ReviewItem[]
+    : content.reviews
+      ? getZoneContent(content.reviews as ReviewItem[], zone.slug, 5)
+      : [];
+  const zoneFaq: FAQItem[] = zoneServiceContent?.faq
+    ? zoneServiceContent.faq as FAQItem[]
+    : content.faq
+      ? getZoneContent(content.faq as FAQItem[], zone.slug, 5)
+      : [];
 
   // Maillage interne : autres zones et services
   const neighborZones = getNeighborZones(zone.slug, 8);

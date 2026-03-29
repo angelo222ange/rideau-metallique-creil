@@ -20,6 +20,18 @@ export interface ZoneServiceRecentCase {
   duree: string;      // ex: "1h30"
 }
 
+export interface ZoneServiceFAQ {
+  question: string;
+  answer: string;    // HTML avec <strong>, liens
+}
+
+export interface ZoneServiceReview {
+  name: string;
+  rating: number;
+  text: string;
+  date: string;
+}
+
 export interface ZoneServiceContent {
   /** Paragraphe intro unique pour cette zone×service (~150-200 mots) */
   zoneIntro: string;
@@ -29,6 +41,10 @@ export interface ZoneServiceContent {
   recentCases: ZoneServiceRecentCase[];
   /** Contexte tarifs spécifique à la zone (optionnel) */
   tarifContext?: string;
+  /** FAQ 100% uniques pour cette zone×service (5-8 questions) */
+  faq?: ZoneServiceFAQ[];
+  /** Avis 100% uniques pour cette zone×service (3-5 avis) */
+  reviews?: ZoneServiceReview[];
 }
 
 export type ZoneServiceMap = Record<string, ZoneServiceContent>;
