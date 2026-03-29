@@ -150,74 +150,87 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════
-          SERVICES — Dark section, visual cards with glass effect
+          SERVICES — Bento grid, light bg, featured card left
           ═══════════════════════════════════════════════════════════ */}
-      <section className="py-24 bg-gray-950 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-primary-600/5 rounded-full blur-3xl" />
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary-50 rounded-full blur-3xl opacity-50" />
 
         <div className="container relative">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-14">
-            <div>
-              <p className="text-primary-400 text-sm font-semibold uppercase tracking-widest mb-3">Nos services</p>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
-                Une expertise complète
-              </h2>
-            </div>
-            <Link href="/contact" className="text-white/40 hover:text-white text-sm flex items-center gap-2 transition-colors">
-              Tous les services <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-            </Link>
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <p className="text-primary-600 text-sm font-semibold uppercase tracking-widest mb-3">Nos services</p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight">
+              Tous vos besoins en rideau métallique
+            </h2>
+            <p className="text-gray-500 text-lg mt-4" style={{ textWrap: 'balance' } as any}>
+              De l&apos;urgence à l&apos;installation sur-mesure, nos techniciens interviennent à {siteConfig.city} et dans tout le {siteConfig.department}.
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {displayServices.slice(0, 4).map((service) => (
+          {/* Bento grid — 1 featured + 6 smaller */}
+          <div className="grid lg:grid-cols-3 gap-5">
+            {/* Featured service — large left card */}
+            <Link
+              href={`/${displayServices[0].slug}-rideau-metallique-creil`}
+              className="group lg:row-span-2 relative overflow-hidden bg-gray-900 transition-all duration-500 hover:shadow-2xl hover:shadow-primary-600/10"
+              style={{ borderRadius: '20px' }}
+            >
+              <div className="relative h-full min-h-[400px]">
+                <Image
+                  src={displayServices[0].image}
+                  alt={`${displayServices[0].name} rideau métallique ${siteConfig.city}`}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700 brightness-[0.5] group-hover:brightness-[0.6]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-8">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary-500/20 backdrop-blur-sm text-primary-300 text-xs font-semibold uppercase tracking-wider mb-4" style={{ borderRadius: '100px' }}>
+                    Service principal
+                  </div>
+                  <h3 className="font-extrabold text-white text-2xl mb-2">{displayServices[0].name}</h3>
+                  <p className="text-white/50 text-sm leading-relaxed mb-4">{displayServices[0].longDesc || displayServices[0].shortDesc}</p>
+                  <span className="inline-flex items-center gap-2 text-primary-400 text-sm font-semibold group-hover:gap-3 transition-all">
+                    En savoir plus
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                  </span>
+                </div>
+              </div>
+            </Link>
+
+            {/* Right side — 2 columns of smaller cards */}
+            {displayServices.slice(1).map((service) => (
               <Link
                 key={service.id}
                 href={`/${service.slug}-rideau-metallique-creil`}
-                className="group relative overflow-hidden bg-white/[0.03] backdrop-blur-sm border border-white/[0.06] hover:border-primary-500/30 transition-all duration-500 hover:-translate-y-1"
+                className="group relative flex items-center gap-5 p-6 bg-gray-50 border border-gray-100 hover:bg-white hover:border-gray-200 hover:shadow-xl hover:shadow-gray-200/50 transition-all duration-300 hover:-translate-y-0.5"
                 style={{ borderRadius: '16px' }}
               >
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative w-16 h-16 flex-shrink-0 overflow-hidden bg-gray-200" style={{ borderRadius: '12px' }}>
                   <Image
                     src={service.image}
-                    alt={`${service.name} rideau métallique ${siteConfig.city}`}
+                    alt={service.name}
                     fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-700 brightness-[0.7] group-hover:brightness-[0.8]"
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent" />
                 </div>
-                <div className="p-5 relative">
-                  <h3 className="font-bold text-white text-lg mb-1 group-hover:text-primary-400 transition-colors">{service.name}</h3>
-                  <p className="text-white/30 text-sm line-clamp-2">{service.shortDesc}</p>
-                  <div className="mt-4 flex items-center gap-1.5 text-primary-400 text-sm font-medium opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
-                    En savoir plus
-                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-                  </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="font-bold text-gray-900 group-hover:text-primary-600 transition-colors">{service.name}</h3>
+                  <p className="text-gray-400 text-sm mt-0.5 line-clamp-1">{service.shortDesc}</p>
                 </div>
-              </Link>
-            ))}
-          </div>
-
-          {/* Second row — smaller cards */}
-          <div className="grid md:grid-cols-3 gap-4 mt-4">
-            {displayServices.slice(4).map((service) => (
-              <Link
-                key={service.id}
-                href={`/${service.slug}-rideau-metallique-creil`}
-                className="group flex items-center gap-5 p-5 bg-white/[0.03] backdrop-blur-sm border border-white/[0.06] hover:border-primary-500/30 transition-all duration-300 hover:-translate-y-0.5"
-                style={{ borderRadius: '16px' }}
-              >
-                <div className="relative w-14 h-14 flex-shrink-0 overflow-hidden" style={{ borderRadius: '12px' }}>
-                  <Image src={service.image} alt={service.name} fill className="object-cover brightness-75" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-white text-sm group-hover:text-primary-400 transition-colors">{service.name}</h3>
-                  <p className="text-white/30 text-xs mt-0.5">{service.shortDesc}</p>
-                </div>
+                <svg className="w-5 h-5 text-gray-300 group-hover:text-primary-500 group-hover:translate-x-1 transition-all flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
               </Link>
             ))}
           </div>
         </div>
       </section>
+
+      {/* ═══════════════════════════════════════════════════════════
+          CONTENU SEO — Alternating features (toujours après services)
+          ═══════════════════════════════════════════════════════════ */}
+      {content.alternatingFeatures && (
+        <AlternatingFeatures features={content.alternatingFeatures} bgColor="bg-gray-50" />
+      )}
 
       {/* ═══════════════════════════════════════════════════════════
           STATS — Full width gradient strip
@@ -445,11 +458,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* ═══ CONTENU SEO RICHE — AlternatingFeatures ═══ */}
-      {content.alternatingFeatures && (
-        <AlternatingFeatures features={content.alternatingFeatures} bgColor="bg-white" />
-      )}
 
       <Reviews items={content.reviews} title={`Avis Clients ${siteConfig.city}`} />
       <FAQ items={content.faq.length > 0 ? content.faq : faq} title="Questions Fréquentes" />
