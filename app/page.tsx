@@ -5,6 +5,7 @@ import { siteConfig, services, zones } from "@/config/site";
 import { FAQ } from "@/components/sections/FAQ";
 import { CTA } from "@/components/sections/CTA";
 import { Reviews } from "@/components/sections/Reviews";
+import { AlternatingFeatures } from "@/components/sections/AlternatingFeatures";
 import { getPageContent } from "@/lib/content";
 import faqData from "@/content/faq.json";
 import homeContent from "@/content/pages/home.json";
@@ -43,7 +44,8 @@ export default function HomePage() {
         <div className="absolute bottom-20 left-1/4 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl" />
 
         <div className="container relative z-10 py-24">
-          <div className="max-w-3xl">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
             {/* Badge */}
             <div className="inline-flex items-center gap-2.5 px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-medium mb-8" style={{ borderRadius: '100px' }}>
               <span className="w-2.5 h-2.5 bg-emerald-400 rounded-full animate-pulse" />
@@ -118,7 +120,7 @@ export default function HomePage() {
               {/* Stats */}
               <div className="flex gap-6">
                 <div>
-                  <p className="text-white font-bold text-lg">{siteConfig.experience}+ ans</p>
+                  <p className="text-white font-bold text-lg">{siteConfig.experience} ans</p>
                   <p className="text-white/40 text-xs">d&apos;expérience</p>
                 </div>
                 <div>
@@ -127,6 +129,22 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
+          </div>
+
+          {/* Hero right — Product image (detoured, no background) */}
+          <div className="hidden lg:flex items-center justify-center relative">
+            <div className="relative w-full max-w-md">
+              {/* Glow behind product */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-emerald-500/10 rounded-full blur-3xl scale-110" />
+              <Image
+                src="/images/gallery/hero-rideau-lame-pleine.webp"
+                alt="Rideau métallique lame pleine sur-mesure DRM"
+                width={500}
+                height={600}
+                className="relative z-10 drop-shadow-2xl object-contain w-full h-auto"
+              />
+            </div>
+          </div>
           </div>
         </div>
       </section>
@@ -427,6 +445,11 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ═══ CONTENU SEO RICHE — AlternatingFeatures ═══ */}
+      {content.alternatingFeatures && (
+        <AlternatingFeatures features={content.alternatingFeatures} bgColor="bg-white" />
+      )}
 
       <Reviews items={content.reviews} title={`Avis Clients ${siteConfig.city}`} />
       <FAQ items={content.faq.length > 0 ? content.faq : faq} title="Questions Fréquentes" />
