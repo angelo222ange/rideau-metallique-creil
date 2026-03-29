@@ -288,13 +288,7 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {content.deblocage.steps.map((step: { step: number; title: string; description: string }, i: number) => {
-              const stepColors = [
-                { bg: "bg-primary-50", border: "border-primary-100", iconBg: "from-primary-600 to-primary-800", text: "text-primary-700" },
-                { bg: "bg-blue-50", border: "border-blue-100", iconBg: "from-blue-600 to-blue-800", text: "text-blue-700" },
-                { bg: "bg-amber-50", border: "border-amber-100", iconBg: "from-amber-600 to-amber-800", text: "text-amber-700" },
-                { bg: "bg-emerald-50", border: "border-emerald-100", iconBg: "from-emerald-600 to-emerald-800", text: "text-emerald-700" },
-              ];
-              const sc = stepColors[i % 4];
+              const sc = { bg: "bg-gray-50", border: "border-gray-200", iconBg: "from-primary-600 to-primary-800", text: "text-primary-700" };
               const stepIcons = [
                 // Phone / diagnostic
                 <svg key="icon-0" className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>,
