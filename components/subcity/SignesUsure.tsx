@@ -15,7 +15,7 @@ interface SignesUsureProps {
 }
 
 const urgenceLabel: Record<string, { text: string; color: string }> = {
-  "Moyen": { text: "Moyen", color: "text-secondary-terracotta" },
+  "Moyen": { text: "Moyen", color: "text-primary-600" },
   "Élevé": { text: "Élevé", color: "text-orange-600" },
   "Urgent": { text: "Urgent", color: "text-red-500" },
 };
@@ -36,7 +36,7 @@ export function SignesUsure({ title, subtitle, items, zoneName }: SignesUsurePro
             return (
               <div key={index} className="bg-white p-6">
                 <div className="flex items-start gap-4">
-                  <span className="font-display text-2xl text-gray-200 leading-none mt-0.5">
+                  <span className="font-bold text-2xl text-gray-200 leading-none mt-0.5">
                     {String(index + 1).padStart(2, '0')}
                   </span>
                   <div>
@@ -54,7 +54,7 @@ export function SignesUsure({ title, subtitle, items, zoneName }: SignesUsurePro
           })}
         </div>
 
-        <div className="mt-10 max-w-2xl border border-red-100 p-6" style={{ borderRadius: '2px' }}>
+        <div className="mt-10 max-w-2xl border border-red-100 p-6" style={{ borderRadius: '8px' }}>
           <p className="font-heading font-bold text-gray-900 text-sm mb-2">
             Vous constatez un de ces signes à {zoneName} ?
           </p>

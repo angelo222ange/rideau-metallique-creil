@@ -6,8 +6,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { siteConfig, navigation, zones, services } from "@/config/site";
 
-const servicesSlugs: string[] = services.map(s => s.slug);
-
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
@@ -32,25 +30,7 @@ export function Header() {
     return () => { document.body.style.overflow = ''; };
   }, [isMenuOpen]);
 
-  const getZoneSlugFromPath = (): string | null => {
-    const segments = pathname.split('/').filter(Boolean);
-    if (segments[0] === 'zones' && segments[1]) {
-      const zone = zones.find(z => z.slug === segments[1]);
-      if (zone && !('isMain' in zone)) return zone.slug;
-    }
-    if (segments.length >= 2 && servicesSlugs.includes(segments[0])) {
-      const zone = zones.find(z => z.slug === segments[1]);
-      if (zone && !('isMain' in zone)) return zone.slug;
-    }
-    return null;
-  };
-
-  const currentZoneSlug = getZoneSlugFromPath();
-
   const getServiceHref = (serviceSlug: string): string => {
-    if (currentZoneSlug) {
-      return `/${serviceSlug}-rideau-metallique-${currentZoneSlug}`;
-    }
     if (serviceSlug === "depannage") return "/";
     return `/${serviceSlug}-rideau-metallique-creil`;
   };
@@ -59,15 +39,6 @@ export function Header() {
     if (href === '/') return pathname === '/';
     return pathname.startsWith(href);
   };
-
-  const isServiceActive = (): boolean => {
-    return services.some(s => {
-      const href = getServiceHref(s.slug);
-      return pathname === href || pathname.startsWith(`/${s.slug}-rideau-metallique`);
-    });
-  };
-
-  const isHomepage = pathname === '/';
 
   const handleServicesEnter = () => {
     if (servicesTimeout.current) clearTimeout(servicesTimeout.current);
@@ -78,45 +49,59 @@ export function Header() {
     servicesTimeout.current = setTimeout(() => setIsServicesOpen(false), 150);
   };
 
-  const navTextColor = isScrolled || !isHomepage ? 'text-gray-600 hover:text-gray-900' : 'text-white/80 hover:text-white';
-
   return (
     <>
-      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      {/* Top bar */}
+      <div className="bg-gray-900 text-white/70 text-xs py-2 hidden md:block">
+        <div className="container flex items-center justify-between">
+          <div className="flex items-center gap-6">
+            <span className="flex items-center gap-1.5">
+              <svg className="w-3.5 h-3.5 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              {siteConfig.address}
+            </span>
+            <span className="flex items-center gap-1.5">
+              <svg className="w-3.5 h-3.5 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              Disponible 24h/24, 7j/7
+            </span>
+          </div>
+          <a href={`mailto:${siteConfig.email}`} className="hover:text-white transition-colors">
+            {siteConfig.email}
+          </a>
+        </div>
+      </div>
+
+      {/* Main header */}
+      <header className={`sticky top-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/95 backdrop-blur-sm shadow-[0_1px_0_rgba(0,0,0,0.06)]'
-          : isHomepage
-            ? 'bg-transparent'
-            : 'bg-white'
+          ? 'bg-white shadow-sm'
+          : 'bg-white border-b border-gray-100'
       }`}>
         <div className="container">
-          <div className="flex items-center justify-between h-[72px]">
+          <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2.5 relative z-10">
-              <div className="relative w-9 h-9 rounded-sm overflow-hidden">
-                <Image
-                  src="/images/logos/depannage-rideau-metallique-creil.webp"
-                  alt={`Logo ${siteConfig.name}`}
-                  fill
-                  className="object-contain"
-                  priority
-                />
+            <Link href="/" className="flex items-center gap-2.5">
+              <div className="w-8 h-8 bg-primary-600 flex items-center justify-center text-white font-bold text-sm" style={{ borderRadius: '6px' }}>
+                D
               </div>
-              <span className={`font-heading font-bold text-sm tracking-wide uppercase transition-colors duration-300 ${
-                isScrolled || !isHomepage ? 'text-gray-900' : 'text-white'
-              }`}>
-                {siteConfig.name}
-              </span>
+              <div className="hidden sm:block">
+                <span className="font-bold text-gray-900 text-sm">{siteConfig.name}</span>
+                <span className="block text-[10px] text-gray-400 leading-tight -mt-0.5">Rideau Métallique</span>
+              </div>
             </Link>
 
             {/* Nav Desktop */}
-            <nav className="hidden lg:flex items-center gap-7">
-              {/* Accueil */}
+            <nav className="hidden lg:flex items-center gap-1">
               <Link
                 href="/"
-                className={`nav-link ${
-                  pathname === '/' ? 'text-secondary-terracotta' : navTextColor
+                className={`px-3 py-2 text-sm font-medium transition-colors ${
+                  pathname === '/' ? 'text-primary-600' : 'text-gray-600 hover:text-gray-900'
                 }`}
+                style={{ borderRadius: '6px' }}
               >
                 Accueil
               </Link>
@@ -128,45 +113,30 @@ export function Header() {
                 onMouseLeave={handleServicesLeave}
               >
                 <button
-                  className={`nav-link flex items-center gap-1 ${
-                    isServiceActive() ? 'text-secondary-terracotta' : navTextColor
+                  className={`px-3 py-2 text-sm font-medium flex items-center gap-1 transition-colors ${
+                    pathname.includes('-rideau-metallique-') ? 'text-primary-600' : 'text-gray-600 hover:text-gray-900'
                   }`}
+                  style={{ borderRadius: '6px' }}
                 >
                   Services
-                  <svg
-                    className={`w-3.5 h-3.5 transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
+                  <svg className={`w-3.5 h-3.5 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
 
-                {/* Dropdown Panel */}
-                <div className={`absolute top-full left-1/2 -translate-x-1/2 pt-3 transition-all duration-200 ${
-                  isServicesOpen
-                    ? 'opacity-100 translate-y-0 pointer-events-auto'
-                    : 'opacity-0 -translate-y-2 pointer-events-none'
+                <div className={`absolute top-full left-0 pt-2 transition-all duration-200 ${
+                  isServicesOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-1 pointer-events-none'
                 }`}>
-                  <div className="bg-white rounded shadow-xl border border-gray-100 py-2 min-w-[260px]">
+                  <div className="bg-white shadow-lg border border-gray-100 py-1.5 min-w-[240px]" style={{ borderRadius: '10px' }}>
                     {services.filter(s => s.hasPage).map((service) => {
                       const href = getServiceHref(service.slug);
-                      const active = pathname.startsWith(`/${service.slug}-rideau-metallique`) || (service.slug === 'depannage' && pathname === '/');
                       return (
                         <Link
                           key={service.id}
                           href={href}
-                          className={`flex items-center gap-3 px-4 py-2.5 text-sm transition-colors ${
-                            active
-                              ? 'text-secondary-terracotta bg-secondary-sable'
-                              : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
-                          }`}
+                          className="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-600 hover:text-primary-600 hover:bg-primary-50 transition-colors"
                         >
-                          <div>
-                            <span className="font-heading font-bold text-[13px]">{service.name}</span>
-                            <span className="block text-[11px] text-gray-400 leading-tight">{service.shortDesc}</span>
-                          </div>
+                          <span className="font-medium">{service.name}</span>
                         </Link>
                       );
                     })}
@@ -174,14 +144,14 @@ export function Header() {
                 </div>
               </div>
 
-              {/* Other nav items */}
               {navigation.filter(item => item.label !== "Accueil").map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`nav-link ${
-                    isActive(item.href) ? 'text-secondary-terracotta' : navTextColor
+                  className={`px-3 py-2 text-sm font-medium transition-colors ${
+                    isActive(item.href) ? 'text-primary-600' : 'text-gray-600 hover:text-gray-900'
                   }`}
+                  style={{ borderRadius: '6px' }}
                 >
                   {item.label}
                 </Link>
@@ -189,38 +159,23 @@ export function Header() {
             </nav>
 
             {/* CTA */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2">
               <a
                 href={siteConfig.phoneLink}
-                className="hidden md:flex items-center gap-2 text-sm font-bold text-white px-5 py-2.5 transition-all duration-300 hover:opacity-90"
-                style={{ background: '#E07B39', borderRadius: '4px' }}
+                className="hidden md:flex items-center gap-2 text-sm font-semibold text-white px-4 py-2 bg-primary-600 hover:bg-primary-700 transition-colors"
+                style={{ borderRadius: '8px' }}
               >
-                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5}
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
                 {siteConfig.phone}
               </a>
 
-              <a
-                href={siteConfig.phoneLink}
-                className="md:hidden flex items-center justify-center w-10 h-10 text-white transition-all duration-300"
-                style={{ background: '#E07B39', borderRadius: '4px' }}
-                aria-label={`Appeler ${siteConfig.phone}`}
-              >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5}
-                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-              </a>
-
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className={`lg:hidden p-2 transition-colors ${
-                  isScrolled || !isHomepage ? 'text-gray-900' : 'text-white'
-                }`}
+                className="lg:hidden p-2 text-gray-600"
                 aria-label="Menu"
-                aria-expanded={isMenuOpen}
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   {isMenuOpen ? (
@@ -239,99 +194,86 @@ export function Header() {
       <div className={`fixed inset-0 z-[60] transition-opacity duration-300 ${
         isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
       }`}>
-        <div className="absolute inset-0 bg-dark/95" onClick={() => setIsMenuOpen(false)} />
+        <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setIsMenuOpen(false)} />
 
-        <div className={`relative z-10 h-full flex flex-col justify-between px-8 pt-28 pb-10 overflow-y-auto transition-transform duration-400 ${
-          isMenuOpen ? 'translate-y-0' : '-translate-y-8'
+        <div className={`absolute right-0 top-0 h-full w-[300px] bg-white shadow-2xl transition-transform duration-300 ${
+          isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}>
-          <button
-            onClick={() => setIsMenuOpen(false)}
-            className="absolute top-7 right-6 text-white/60 hover:text-white transition-colors"
-            aria-label="Fermer"
-          >
-            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-
-          <nav className="flex flex-col">
-            {/* Accueil */}
-            <Link
-              href="/"
+          <div className="p-6 pt-20 overflow-y-auto h-full">
+            <button
               onClick={() => setIsMenuOpen(false)}
-              className={`py-4 border-b border-white/10 font-display text-3xl transition-colors ${
-                pathname === '/' ? 'text-secondary-terracotta' : 'text-white/70 hover:text-white'
-              }`}
+              className="absolute top-5 right-5 p-2 text-gray-400 hover:text-gray-600"
+              aria-label="Fermer"
             >
-              Accueil
-            </Link>
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
 
-            {/* Services accordion */}
-            <div className="border-b border-white/10">
-              <button
-                onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
-                className={`w-full flex items-center justify-between py-4 font-display text-3xl transition-colors ${
-                  isServiceActive() ? 'text-secondary-terracotta' : 'text-white/70 hover:text-white'
-                }`}
-              >
-                Services
-                <svg
-                  className={`w-5 h-5 transition-transform duration-200 ${isMobileServicesOpen ? 'rotate-180' : ''}`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-
-              <div className={`overflow-hidden transition-all duration-300 ${
-                isMobileServicesOpen ? 'max-h-[500px] pb-3' : 'max-h-0'
-              }`}>
-                {services.filter(s => s.hasPage).map((service) => {
-                  const href = getServiceHref(service.slug);
-                  const active = pathname.startsWith(`/${service.slug}-rideau-metallique`) || (service.slug === 'depannage' && pathname === '/');
-                  return (
-                    <Link
-                      key={service.id}
-                      href={href}
-                      onClick={() => setIsMenuOpen(false)}
-                      className={`flex items-center gap-3 py-2.5 pl-4 transition-colors ${
-                        active ? 'text-secondary-terracotta' : 'text-white/50 hover:text-white/80'
-                      }`}
-                    >
-                      <span className="text-lg font-heading">{service.name}</span>
-                    </Link>
-                  );
-                })}
-              </div>
-            </div>
-
-            {/* Other links */}
-            {navigation.filter(item => item.label !== "Accueil").map((item, index) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                onClick={() => setIsMenuOpen(false)}
-                className={`py-4 border-b border-white/10 font-display text-3xl transition-colors ${
-                  isActive(item.href) ? 'text-secondary-terracotta' : 'text-white/70 hover:text-white'
-                }`}
-                style={{ transitionDelay: `${(index + 2) * 40}ms` }}
-              >
-                {item.label}
+            <nav className="space-y-1">
+              <Link href="/" onClick={() => setIsMenuOpen(false)}
+                className={`block px-3 py-3 text-base font-medium transition-colors ${pathname === '/' ? 'text-primary-600 bg-primary-50' : 'text-gray-700 hover:bg-gray-50'}`}
+                style={{ borderRadius: '8px' }}>
+                Accueil
               </Link>
-            ))}
-          </nav>
 
-          <div>
-            <a
-              href={siteConfig.phoneLink}
-              className="flex items-center justify-center gap-3 w-full py-4 text-white font-bold text-xl"
-              style={{ background: '#E07B39', borderRadius: '4px' }}
-            >
-              {siteConfig.phone}
-            </a>
-            <p className="text-white/30 text-xs text-center mt-4">Disponible 24h/24, 7j/7</p>
+              <div>
+                <button
+                  onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
+                  className="w-full flex items-center justify-between px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 transition-colors"
+                  style={{ borderRadius: '8px' }}
+                >
+                  Services
+                  <svg className={`w-4 h-4 transition-transform ${isMobileServicesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+
+                {isMobileServicesOpen && (
+                  <div className="ml-3 space-y-0.5">
+                    {services.filter(s => s.hasPage).map((service) => (
+                      <Link
+                        key={service.id}
+                        href={getServiceHref(service.slug)}
+                        onClick={() => setIsMenuOpen(false)}
+                        className="block px-3 py-2 text-sm text-gray-500 hover:text-primary-600 transition-colors"
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {navigation.filter(item => item.label !== "Accueil").map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setIsMenuOpen(false)}
+                  className={`block px-3 py-3 text-base font-medium transition-colors ${
+                    isActive(item.href) ? 'text-primary-600 bg-primary-50' : 'text-gray-700 hover:bg-gray-50'
+                  }`}
+                  style={{ borderRadius: '8px' }}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
+
+            <div className="mt-8 pt-6 border-t border-gray-100">
+              <a
+                href={siteConfig.phoneLink}
+                className="flex items-center justify-center gap-2 w-full py-3 bg-primary-600 text-white font-semibold hover:bg-primary-700 transition-colors"
+                style={{ borderRadius: '8px' }}
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                {siteConfig.phone}
+              </a>
+              <p className="text-gray-400 text-xs text-center mt-3">{siteConfig.address}</p>
+            </div>
           </div>
         </div>
       </div>

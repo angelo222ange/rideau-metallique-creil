@@ -31,7 +31,7 @@ export function AlternatingFeatures({ features, bgColor = "bg-white" }: Alternat
               <div className={feature.imagePosition === "left" ? "lg:col-start-2" : ""}>
                 <div className="rule-accent mb-6" />
                 <h2 
-                  className="font-display text-3xl md:text-4xl text-gray-900 leading-[1.2] mb-6"
+                  className="font-bold text-3xl md:text-4xl text-gray-900 leading-[1.2] mb-6"
                   dangerouslySetInnerHTML={{ __html: feature.title }}
                 />
                 <div 

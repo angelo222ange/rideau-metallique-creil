@@ -27,7 +27,7 @@ interface AvantagesMotorisationProps {
 
 export function AvantagesMotorisation({ title, subtitle, avantages, comparatif, zoneName }: AvantagesMotorisationProps) {
   return (
-    <section className="section bg-secondary-sable">
+    <section className="section bg-gray-50">
       <div className="container">
         <div className="max-w-xl mb-14">
           <div className="rule-accent mb-6" />
@@ -37,8 +37,8 @@ export function AvantagesMotorisation({ title, subtitle, avantages, comparatif, 
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-gray-200 mb-16">
           {avantages.map((item, index) => (
-            <div key={index} className="bg-secondary-sable p-6">
-              <p className="font-display text-3xl text-gray-900 mb-1">{item.stat}</p>
+            <div key={index} className="bg-gray-50 p-6">
+              <p className="font-bold text-3xl text-gray-900 mb-1">{item.stat}</p>
               <p className="text-xs text-gray-300 mb-3">{item.statLabel}</p>
               <h3 className="font-heading font-bold text-gray-900 mb-2 text-[15px]">{item.title}</h3>
               <p className="text-gray-400 text-sm">{item.description}</p>
@@ -51,13 +51,13 @@ export function AvantagesMotorisation({ title, subtitle, avantages, comparatif, 
             <h3 className="font-heading font-bold text-gray-900 text-sm uppercase tracking-wider mb-6">
               {comparatif.title}
             </h3>
-            <div className="border border-gray-200" style={{ borderRadius: '2px' }}>
+            <div className="border border-gray-200" style={{ borderRadius: '8px' }}>
               <table className="w-full">
                 <thead>
                   <tr className="bg-dark">
                     <th className="px-5 py-3 text-left text-xs font-bold text-white uppercase tracking-wider">Critère</th>
                     <th className="px-5 py-3 text-center text-xs font-bold text-white/40 uppercase tracking-wider">Manuel</th>
-                    <th className="px-5 py-3 text-center text-xs font-bold text-secondary-terracotta uppercase tracking-wider">Motorisé</th>
+                    <th className="px-5 py-3 text-center text-xs font-bold text-primary-600 uppercase tracking-wider">Motorisé</th>
                   </tr>
                 </thead>
                 <tbody>

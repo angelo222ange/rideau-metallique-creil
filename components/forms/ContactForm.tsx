@@ -87,8 +87,8 @@ export function ContactForm() {
   };
 
   return (
-    <div className="bg-secondary-sable p-8 md:p-10" style={{ borderRadius: '2px' }}>
-      <h2 className="font-display text-2xl text-gray-900 mb-6">Demande de devis</h2>
+    <div className="bg-gray-50 p-8 md:p-10" style={{ borderRadius: '8px' }}>
+      <h2 className="font-bold text-2xl text-gray-900 mb-6">Demande de devis</h2>
 
       {status.type === 'success' && (
         <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-sm">
@@ -116,8 +116,8 @@ export function ContactForm() {
               value={formData.nom}
               onChange={handleChange}
               disabled={status.type === 'loading'}
-              className="w-full px-4 py-3 bg-white border border-gray-200 text-sm focus:ring-1 focus:ring-secondary-terracotta focus:border-secondary-terracotta transition-all disabled:opacity-50"
-              style={{ borderRadius: '2px' }}
+              className="w-full px-4 py-3 bg-white border border-gray-200 text-sm focus:ring-1 focus:ring-primary-600 focus:border-primary-600 transition-all disabled:opacity-50"
+              style={{ borderRadius: '8px' }}
               placeholder="Votre nom"
             />
           </div>
@@ -133,8 +133,8 @@ export function ContactForm() {
               value={formData.telephone}
               onChange={handleChange}
               disabled={status.type === 'loading'}
-              className="w-full px-4 py-3 bg-white border border-gray-200 text-sm focus:ring-1 focus:ring-secondary-terracotta focus:border-secondary-terracotta transition-all disabled:opacity-50"
-              style={{ borderRadius: '2px' }}
+              className="w-full px-4 py-3 bg-white border border-gray-200 text-sm focus:ring-1 focus:ring-primary-600 focus:border-primary-600 transition-all disabled:opacity-50"
+              style={{ borderRadius: '8px' }}
               placeholder="06 12 34 56 78"
             />
           </div>
@@ -150,8 +150,8 @@ export function ContactForm() {
             value={formData.email}
             onChange={handleChange}
             disabled={status.type === 'loading'}
-            className="w-full px-4 py-3 bg-white border border-gray-200 text-sm focus:ring-1 focus:ring-secondary-terracotta focus:border-secondary-terracotta transition-all disabled:opacity-50"
-            style={{ borderRadius: '2px' }}
+            className="w-full px-4 py-3 bg-white border border-gray-200 text-sm focus:ring-1 focus:ring-primary-600 focus:border-primary-600 transition-all disabled:opacity-50"
+            style={{ borderRadius: '8px' }}
             placeholder="votre@email.com"
           />
         </div>
@@ -167,8 +167,8 @@ export function ContactForm() {
             value={formData.adresse}
             onChange={handleChange}
             disabled={status.type === 'loading'}
-            className="w-full px-4 py-3 bg-white border border-gray-200 text-sm focus:ring-1 focus:ring-secondary-terracotta focus:border-secondary-terracotta transition-all disabled:opacity-50"
-            style={{ borderRadius: '2px' }}
+            className="w-full px-4 py-3 bg-white border border-gray-200 text-sm focus:ring-1 focus:ring-primary-600 focus:border-primary-600 transition-all disabled:opacity-50"
+            style={{ borderRadius: '8px' }}
             placeholder="Adresse du local"
           />
         </div>
@@ -183,8 +183,8 @@ export function ContactForm() {
             value={formData.prestation}
             onChange={handleChange}
             disabled={status.type === 'loading'}
-            className="w-full px-4 py-3 bg-white border border-gray-200 text-sm focus:ring-1 focus:ring-secondary-terracotta focus:border-secondary-terracotta transition-all disabled:opacity-50"
-            style={{ borderRadius: '2px' }}
+            className="w-full px-4 py-3 bg-white border border-gray-200 text-sm focus:ring-1 focus:ring-primary-600 focus:border-primary-600 transition-all disabled:opacity-50"
+            style={{ borderRadius: '8px' }}
           >
             <option value="">Sélectionnez...</option>
             <option value="depannage">Dépannage urgence</option>
@@ -206,8 +206,8 @@ export function ContactForm() {
             value={formData.message}
             onChange={handleChange}
             disabled={status.type === 'loading'}
-            className="w-full px-4 py-3 bg-white border border-gray-200 text-sm focus:ring-1 focus:ring-secondary-terracotta focus:border-secondary-terracotta transition-all disabled:opacity-50"
-            style={{ borderRadius: '2px' }}
+            className="w-full px-4 py-3 bg-white border border-gray-200 text-sm focus:ring-1 focus:ring-primary-600 focus:border-primary-600 transition-all disabled:opacity-50"
+            style={{ borderRadius: '8px' }}
             placeholder="Décrivez votre besoin..."
           />
         </div>
@@ -220,7 +220,7 @@ export function ContactForm() {
         </button>
         <p className="text-xs text-gray-400 text-center">
           Urgence ? Appelez le{' '}
-          <a href={siteConfig.phoneLink} className="text-secondary-terracotta font-bold">
+          <a href={siteConfig.phoneLink} className="text-primary-600 font-bold">
             {siteConfig.phone}
           </a>
         </p>

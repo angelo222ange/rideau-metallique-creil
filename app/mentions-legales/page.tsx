@@ -49,7 +49,7 @@ export default function MentionsLegalesPage() {
       <section className="section bg-white">
         <div className="container">
           <div className="max-w-3xl mx-auto prose prose-lg prose-gray">
-            <h1 className="font-display text-3xl md:text-4xl text-gray-900">Mentions Légales</h1>
+            <h1 className="font-bold text-3xl md:text-4xl text-gray-900">Mentions Légales</h1>
 
             <h2>1. Éditeur du site</h2>
             <p>

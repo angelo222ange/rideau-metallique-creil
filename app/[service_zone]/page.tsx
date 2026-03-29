@@ -314,8 +314,8 @@ export default function ServiceZonePage({ params }: Props) {
       )}
 
       {/* ─── HERO ─── */}
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-dark overflow-hidden">
-        <div className="noise absolute inset-0" />
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-gray-900 overflow-hidden">
+        <div className="hidden" />
         <div className="container relative z-10">
           {/* Breadcrumb */}
           <nav className="mb-8" aria-label="Fil d'Ariane">
@@ -328,9 +328,9 @@ export default function ServiceZonePage({ params }: Props) {
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="rule-accent mb-8" style={{ background: '#E07B39' }} />
+              <div className="w-12 h-1 bg-primary-600 mb-8" style={{borderRadius:"4px"}}  />
 
-              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-5">
+              <h1 className="font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-5">
                 {content.hero.title}
               </h1>
 
@@ -357,7 +357,7 @@ export default function ServiceZonePage({ params }: Props) {
 
             {/* Image du service */}
             <div className="relative hidden lg:block">
-              <div className="relative aspect-[4/3] overflow-hidden" style={{ borderRadius: '2px' }}>
+              <div className="relative aspect-[4/3] overflow-hidden" style={{ borderRadius: '8px' }}>
                 <Image
                   src={service.image}
                   alt={`${service.name} rideau métallique ${zone.name}`}
@@ -375,7 +375,7 @@ export default function ServiceZonePage({ params }: Props) {
       {!zoneServiceContent && service.slug === "reparation" ? (
         <>
           {/* Section 1 : Image gauche, texte droite */}
-          <section className="section bg-secondary-sable">
+          <section className="py-20 md:py-28 bg-gray-50">
             <div className="container">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div className="relative hidden lg:block">
@@ -385,12 +385,12 @@ export default function ServiceZonePage({ params }: Props) {
                     width={800}
                     height={600}
                     className="w-full h-auto"
-                    style={{ borderRadius: '2px' }}
+                    style={{ borderRadius: '8px' }}
                   />
                 </div>
                 <div className="max-w-xl">
-                  <div className="rule-accent mb-6" />
-                  <h2 className="section-title">{content.intro.title}</h2>
+                  <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">{content.intro.title}</h2>
                   <div className="mt-6">
                     <p className="text-gray-500 text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: content.intro.paragraphs[0] }} />
                   </div>
@@ -400,12 +400,12 @@ export default function ServiceZonePage({ params }: Props) {
           </section>
 
           {/* Section 2 : Texte gauche, image droite */}
-          <section className="section bg-white">
+          <section className="py-20 md:py-28 bg-white">
             <div className="container">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div className="max-w-xl">
-                  <div className="rule-accent mb-6" />
-                  <h2 className="section-title">Réparation complète de votre rideau à {zone.name}</h2>
+                  <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">Réparation complète de votre rideau à {zone.name}</h2>
                   <div className="mt-6">
                     <p className="text-gray-500 text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: content.intro.paragraphs[1] }} />
                   </div>
@@ -417,7 +417,7 @@ export default function ServiceZonePage({ params }: Props) {
                     width={800}
                     height={600}
                     className="w-full h-auto"
-                    style={{ borderRadius: '2px' }}
+                    style={{ borderRadius: '8px' }}
                   />
                 </div>
               </div>
@@ -425,11 +425,11 @@ export default function ServiceZonePage({ params }: Props) {
           </section>
         </>
       ) : service.slug === "fabrication" ? (
-        <section className="section bg-secondary-sable">
+        <section className="py-20 md:py-28 bg-gray-50">
           <div className="container">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="relative hidden lg:block">
-                <div className="relative aspect-[4/3] overflow-hidden" style={{ borderRadius: '2px' }}>
+                <div className="relative aspect-[4/3] overflow-hidden" style={{ borderRadius: '8px' }}>
                   <Image
                     src="/images/gallery/Drapeau-rideau-metallique-motorisation-centrale-3D.webp"
                     alt={`Fabrication rideau métallique sur-mesure ${zone.name}`}
@@ -439,8 +439,8 @@ export default function ServiceZonePage({ params }: Props) {
                 </div>
               </div>
               <div className="max-w-xl">
-                <div className="rule-accent mb-6" />
-                <h2 className="section-title">{content.intro.title}</h2>
+                <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">{content.intro.title}</h2>
                 <div className="mt-6 space-y-4">
                   {content.intro.paragraphs.map((p: string, i: number) => (
                     <p key={i} className="text-gray-500 text-lg leading-relaxed">{p}</p>
@@ -451,12 +451,12 @@ export default function ServiceZonePage({ params }: Props) {
           </div>
         </section>
       ) : (
-        <section className="section bg-secondary-sable">
+        <section className="py-20 md:py-28 bg-gray-50">
           <div className="container">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="max-w-xl">
-                <div className="rule-accent mb-6" />
-                <h2 className="section-title">{content.intro.title}</h2>
+                <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">{content.intro.title}</h2>
                 <div className="mt-6 space-y-4">
                   {content.intro.paragraphs.map((p: string, i: number) => (
                     <p key={i} className="text-gray-500 text-lg leading-relaxed">{p}</p>
@@ -464,7 +464,7 @@ export default function ServiceZonePage({ params }: Props) {
                 </div>
               </div>
               <div className="relative hidden lg:block">
-                <div className="relative aspect-[4/3] overflow-hidden" style={{ borderRadius: '2px' }}>
+                <div className="relative aspect-[4/3] overflow-hidden" style={{ borderRadius: '8px' }}>
                   <Image
                     src="/images/gallery/rideau-metallique-lame-pleine-france.webp"
                     alt={`Rideau métallique ${zone.name}`}
@@ -480,17 +480,17 @@ export default function ServiceZonePage({ params }: Props) {
 
       {/* ─── SITUATIONS / TYPES D'INTERVENTION (masqué si contenu zone-spécifique) ─── */}
       {!zoneServiceContent && !["installation", "reparation", "depannage", "deblocage", "motorisation"].includes(service.slug) && (
-        <section className="section bg-white">
+        <section className="py-20 md:py-28 bg-white">
           <div className="container">
             <div className="max-w-xl mb-14">
-              <div className="rule-accent mb-6" />
-              <h2 className="section-title">{content.situations.title}</h2>
+              <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">{content.situations.title}</h2>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-gray-200">
               {content.situations.items.map((item: any, index: number) => (
                 <div key={index} className="bg-white p-6">
-                  <span className="font-display text-3xl text-gray-200 block mb-3">
+                  <span className="font-bold text-3xl text-gray-200 block mb-3">
                     {String(index + 1).padStart(2, '0')}
                   </span>
                   <h3 className="font-heading font-bold text-gray-900 mb-2 text-[15px]">
@@ -512,17 +512,17 @@ export default function ServiceZonePage({ params }: Props) {
 
       {/* ── DEPANNAGE : Étapes de déblocage (masqué si contenu zone-spécifique) ── */}
       {!zoneServiceContent && service.slug === "depannage" && content.deblocage && (
-        <section className="section bg-secondary-sable">
+        <section className="py-20 md:py-28 bg-gray-50">
           <div className="container">
             <div className="max-w-xl mb-14">
-              <div className="rule-accent mb-6" />
-              <h2 className="section-title">{content.deblocage.title}</h2>
-              <p className="section-subtitle">{content.deblocage.description}</p>
+              <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">{content.deblocage.title}</h2>
+              <p className="text-gray-500 text-lg mt-4 max-w-xl">{content.deblocage.description}</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-0 divide-y lg:divide-y-0 lg:divide-x divide-gray-200">
               {content.deblocage.steps.map((step: any, index: number) => (
                 <div key={index} className="py-6 lg:py-0 lg:px-8 first:lg:pl-0 last:lg:pr-0">
-                  <span className="font-display text-5xl text-gray-200 block mb-3">{step.step}</span>
+                  <span className="font-bold text-5xl text-gray-200 block mb-3">{step.step}</span>
                   <h3 className="font-heading font-bold text-gray-900 mb-2">{step.title}</h3>
                   <p className="text-gray-400 text-sm leading-relaxed">{step.description}</p>
                 </div>
@@ -539,17 +539,17 @@ export default function ServiceZonePage({ params }: Props) {
 
       {/* ── DEPANNAGE : Pannes courantes (masqué si contenu zone-spécifique) ── */}
       {!zoneServiceContent && service.slug === "depannage" && content.pannes && (
-        <section className="section bg-white">
+        <section className="py-20 md:py-28 bg-white">
           <div className="container">
             <div className="max-w-xl mb-14">
-              <div className="rule-accent mb-6" />
-              <h2 className="section-title">{content.pannes.title}</h2>
+              <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">{content.pannes.title}</h2>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-200">
               {content.pannes.items.map((panne: any, index: number) => (
                 <div key={index} className="bg-white p-8">
                   <div className="flex items-start gap-4">
-                    <span className="font-display text-3xl text-gray-200 leading-none">
+                    <span className="font-bold text-3xl text-gray-200 leading-none">
                       {String(index + 1).padStart(2, '0')}
                     </span>
                     <div>
@@ -558,7 +558,7 @@ export default function ServiceZonePage({ params }: Props) {
                         {panne.urgency && (
                           <span className={`text-[10px] font-bold uppercase tracking-wider ${
                             panne.urgency === 'urgent' ? 'text-red-500'
-                              : panne.urgency === 'moyen' ? 'text-secondary-terracotta'
+                              : panne.urgency === 'moyen' ? 'text-primary-600'
                               : 'text-gray-400'
                           }`}>
                             {panne.urgency === 'urgent' ? 'Urgent' : panne.urgency === 'moyen' ? 'Moyen' : 'Faible'}
@@ -577,8 +577,8 @@ export default function ServiceZonePage({ params }: Props) {
 
       {/* ── DEPANNAGE : Urgence 24/7 (masqué si contenu zone-spécifique) ── */}
       {!zoneServiceContent && service.slug === "depannage" && content.urgence && (
-        <section className="relative py-24 md:py-32 bg-dark overflow-hidden">
-          <div className="noise absolute inset-0" />
+        <section className="relative py-24 md:py-32 bg-gray-900 overflow-hidden">
+          <div className="hidden" />
           <div className="container relative z-10">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
@@ -586,7 +586,7 @@ export default function ServiceZonePage({ params }: Props) {
                   <span className="w-1.5 h-1.5 bg-red-400 rounded-full animate-pulse" />
                   Urgence 24h/24
                 </span>
-                <h2 className="font-display text-4xl md:text-5xl text-white leading-[1.1] mb-5">
+                <h2 className="font-bold text-4xl md:text-5xl text-white leading-[1.1] mb-5">
                   {content.urgence.title}
                 </h2>
                 <p className="text-white/40 text-lg mb-10 leading-relaxed">{content.urgence.description}</p>
@@ -594,7 +594,7 @@ export default function ServiceZonePage({ params }: Props) {
                 <div className="flex gap-8 mb-10">
                   {content.urgence.stats.map((stat: any, index: number) => (
                     <div key={index}>
-                      <p className="font-display text-3xl text-secondary-terracotta">{stat.value}</p>
+                      <p className="font-bold text-3xl text-primary-600">{stat.value}</p>
                       <p className="text-white/30 text-xs mt-0.5">{stat.label}</p>
                     </div>
                   ))}
@@ -629,17 +629,17 @@ export default function ServiceZonePage({ params }: Props) {
 
       {/* ── DEBLOCAGE : Étapes de déblocage (masqué si contenu zone-spécifique) ── */}
       {!zoneServiceContent && service.slug === "deblocage" && content.deblocage && (
-        <section className="section bg-secondary-sable">
+        <section className="py-20 md:py-28 bg-gray-50">
           <div className="container">
             <div className="max-w-xl mb-14">
-              <div className="rule-accent mb-6" />
-              <h2 className="section-title">{content.deblocage.title}</h2>
-              <p className="section-subtitle">{content.deblocage.description}</p>
+              <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">{content.deblocage.title}</h2>
+              <p className="text-gray-500 text-lg mt-4 max-w-xl">{content.deblocage.description}</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-0 divide-y lg:divide-y-0 lg:divide-x divide-gray-200">
               {content.deblocage.steps.map((step: any, index: number) => (
                 <div key={index} className="py-6 lg:py-0 lg:px-8 first:lg:pl-0 last:lg:pr-0">
-                  <span className="font-display text-5xl text-gray-200 block mb-3">{step.step}</span>
+                  <span className="font-bold text-5xl text-gray-200 block mb-3">{step.step}</span>
                   <h3 className="font-heading font-bold text-gray-900 mb-2">{step.title}</h3>
                   <p className="text-gray-400 text-sm leading-relaxed">{step.description}</p>
                 </div>
@@ -656,17 +656,17 @@ export default function ServiceZonePage({ params }: Props) {
 
       {/* ── DEBLOCAGE : Pannes courantes ── */}
       {!zoneServiceContent && service.slug === "deblocage" && content.pannes && (
-        <section className="section bg-white">
+        <section className="py-20 md:py-28 bg-white">
           <div className="container">
             <div className="max-w-xl mb-14">
-              <div className="rule-accent mb-6" />
-              <h2 className="section-title">{content.pannes.title}</h2>
+              <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">{content.pannes.title}</h2>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-200">
               {content.pannes.items.map((panne: any, index: number) => (
                 <div key={index} className="bg-white p-8">
                   <div className="flex items-start gap-4">
-                    <span className="font-display text-3xl text-gray-200 leading-none">
+                    <span className="font-bold text-3xl text-gray-200 leading-none">
                       {String(index + 1).padStart(2, '0')}
                     </span>
                     <div>
@@ -675,7 +675,7 @@ export default function ServiceZonePage({ params }: Props) {
                         {panne.urgency && (
                           <span className={`text-[10px] font-bold uppercase tracking-wider ${
                             panne.urgency === 'urgent' ? 'text-red-500'
-                              : panne.urgency === 'moyen' ? 'text-secondary-terracotta'
+                              : panne.urgency === 'moyen' ? 'text-primary-600'
                               : 'text-gray-400'
                           }`}>
                             {panne.urgency === 'urgent' ? 'Urgent' : panne.urgency === 'moyen' ? 'Moyen' : 'Faible'}
@@ -694,8 +694,8 @@ export default function ServiceZonePage({ params }: Props) {
 
       {/* ── DEBLOCAGE : Urgence 24/7 ── */}
       {!zoneServiceContent && service.slug === "deblocage" && content.urgence && (
-        <section className="relative py-24 md:py-32 bg-dark overflow-hidden">
-          <div className="noise absolute inset-0" />
+        <section className="relative py-24 md:py-32 bg-gray-900 overflow-hidden">
+          <div className="hidden" />
           <div className="container relative z-10">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
@@ -703,14 +703,14 @@ export default function ServiceZonePage({ params }: Props) {
                   <span className="w-1.5 h-1.5 bg-red-400 rounded-full animate-pulse" />
                   Urgence 24h/24
                 </span>
-                <h2 className="font-display text-4xl md:text-5xl text-white leading-[1.1] mb-5">
+                <h2 className="font-bold text-4xl md:text-5xl text-white leading-[1.1] mb-5">
                   {content.urgence.title}
                 </h2>
                 <p className="text-white/40 text-lg mb-10 leading-relaxed">{content.urgence.description}</p>
                 <div className="flex gap-8 mb-10">
                   {content.urgence.stats.map((stat: any, index: number) => (
                     <div key={index}>
-                      <p className="font-display text-3xl text-secondary-terracotta">{stat.value}</p>
+                      <p className="font-bold text-3xl text-primary-600">{stat.value}</p>
                       <p className="text-white/30 text-xs mt-0.5">{stat.label}</p>
                     </div>
                   ))}
@@ -743,12 +743,12 @@ export default function ServiceZonePage({ params }: Props) {
 
       {/* ── REPARATION : Types de réparation ── */}
       {!zoneServiceContent && service.slug === "reparation" && content.typesReparation && (
-        <section className="section bg-secondary-sable">
+        <section className="py-20 md:py-28 bg-gray-50">
           <div className="container">
             <div className="max-w-xl mb-14">
-              <div className="rule-accent mb-6" />
-              <h2 className="section-title">{content.typesReparation.title}</h2>
-              <p className="section-subtitle">
+              <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">{content.typesReparation.title}</h2>
+              <p className="text-gray-500 text-lg mt-4 max-w-xl">
                 Nous réparons tous les composants de votre rideau métallique à {zone.name} et dans le {siteConfig.department}.
               </p>
             </div>
@@ -756,7 +756,7 @@ export default function ServiceZonePage({ params }: Props) {
               {content.typesReparation.items.map((type: any, index: number) => (
                 <div key={index} className="grid grid-cols-12 gap-6 py-6 items-center">
                   <div className="col-span-1">
-                    <span className="font-display text-2xl text-gray-200">{String(index + 1).padStart(2, '0')}</span>
+                    <span className="font-bold text-2xl text-gray-200">{String(index + 1).padStart(2, '0')}</span>
                   </div>
                   <div className="col-span-11 md:col-span-8">
                     <h3 className="font-heading font-bold text-gray-900 text-[15px]">{type.name}</h3>
@@ -881,7 +881,7 @@ export default function ServiceZonePage({ params }: Props) {
 
       {/* ─── SECTIONS ALTERNÉES SEO (masqué si contenu zone-spécifique existe) ─── */}
       {!zoneServiceContent && content.alternatingFeatures && (
-        <AlternatingFeatures features={content.alternatingFeatures} bgColor="bg-secondary-sable" />
+        <AlternatingFeatures features={content.alternatingFeatures} bgColor="bg-gray-50" />
       )}
 
       {/* ═══════════════════════════════════════════════════════════════════
@@ -890,10 +890,10 @@ export default function ServiceZonePage({ params }: Props) {
 
       {/* ─── ZONE INTRO UNIQUE ─── */}
       {zoneServiceContent?.zoneIntro && (
-        <section className="section bg-white">
+        <section className="py-20 md:py-28 bg-white">
           <div className="container">
             <div className="max-w-4xl mx-auto">
-              <div className="rule-accent mb-6" />
+              <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
               <div
                 className="text-gray-600 text-lg leading-relaxed prose prose-a:text-primary-600 prose-a:no-underline hover:prose-a:underline prose-strong:text-gray-900"
                 dangerouslySetInnerHTML={{ __html: zoneServiceContent.zoneIntro }}
@@ -909,7 +909,7 @@ export default function ServiceZonePage({ params }: Props) {
           {zoneServiceContent.zoneFeatures.map((feature, index) => (
             <section
               key={index}
-              className={index % 2 === 0 ? "section bg-secondary-sable" : "section bg-white"}
+              className={index % 2 === 0 ? "section bg-gray-50" : "section bg-white"}
             >
               <div className="container">
                 <div className={`grid lg:grid-cols-2 gap-12 items-center ${
@@ -917,7 +917,7 @@ export default function ServiceZonePage({ params }: Props) {
                 }`}>
                   {feature.imagePosition === "left" && (
                     <div className="relative hidden lg:block">
-                      <div className="relative aspect-[4/3] overflow-hidden" style={{ borderRadius: '2px' }}>
+                      <div className="relative aspect-[4/3] overflow-hidden" style={{ borderRadius: '8px' }}>
                         <Image
                           src={feature.image}
                           alt={feature.imageAlt}
@@ -928,9 +928,9 @@ export default function ServiceZonePage({ params }: Props) {
                     </div>
                   )}
                   <div className="max-w-xl">
-                    <div className="rule-accent mb-6" />
+                    <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
                     <h2
-                      className="section-title"
+                      className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight"
                       dangerouslySetInnerHTML={{ __html: feature.title }}
                     />
                     <div
@@ -940,7 +940,7 @@ export default function ServiceZonePage({ params }: Props) {
                   </div>
                   {feature.imagePosition === "right" && (
                     <div className="relative hidden lg:block">
-                      <div className="relative aspect-[4/3] overflow-hidden" style={{ borderRadius: '2px' }}>
+                      <div className="relative aspect-[4/3] overflow-hidden" style={{ borderRadius: '8px' }}>
                         <Image
                           src={feature.image}
                           alt={feature.imageAlt}
@@ -959,11 +959,11 @@ export default function ServiceZonePage({ params }: Props) {
 
       {/* ─── CAS D'INTERVENTIONS RÉCENTES ─── */}
       {zoneServiceContent?.recentCases && zoneServiceContent.recentCases.length > 0 && (
-        <section className="section bg-dark">
+        <section className="py-20 md:py-28 bg-gray-900">
           <div className="container">
             <div className="max-w-xl mb-14">
-              <div className="rule-accent mb-6" style={{ background: '#E07B39' }} />
-              <h2 className="font-display text-3xl md:text-4xl text-white leading-[1.1]">
+              <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}}  />
+              <h2 className="font-bold text-3xl md:text-4xl text-white leading-[1.1]">
                 Interventions récentes à {zone.name}
               </h2>
               <p className="text-white/40 mt-4">
@@ -972,8 +972,8 @@ export default function ServiceZonePage({ params }: Props) {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/[0.06]">
               {zoneServiceContent.recentCases.map((cas: ZoneServiceRecentCase, index: number) => (
-                <div key={index} className="bg-dark p-8">
-                  <span className="text-xs font-bold uppercase tracking-wider text-secondary-terracotta">{cas.date}</span>
+                <div key={index} className="bg-gray-900 p-8">
+                  <span className="text-xs font-bold uppercase tracking-wider text-primary-600">{cas.date}</span>
                   <h3 className="font-heading font-bold text-white mt-2 mb-3">{cas.lieu}</h3>
                   <div className="space-y-2 text-sm">
                     <p className="text-white/50"><span className="text-white/30 font-bold">Problème :</span> {cas.probleme}</p>
@@ -989,11 +989,11 @@ export default function ServiceZonePage({ params }: Props) {
 
       {/* ─── CONTEXTE TARIFS ZONE ─── */}
       {zoneServiceContent?.tarifContext && (
-        <section className="section bg-secondary-sable">
+        <section className="py-20 md:py-28 bg-gray-50">
           <div className="container">
             <div className="max-w-4xl mx-auto">
-              <div className="rule-accent mb-6" />
-              <h2 className="section-title">Tarifs {service.name.toLowerCase()} à {zone.name}</h2>
+              <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">Tarifs {service.name.toLowerCase()} à {zone.name}</h2>
               <div
                 className="mt-6 text-gray-500 text-lg leading-relaxed prose prose-strong:text-gray-900"
                 dangerouslySetInnerHTML={{ __html: zoneServiceContent.tarifContext }}
@@ -1030,14 +1030,14 @@ export default function ServiceZonePage({ params }: Props) {
       )}
 
       {/* ─── MAILLAGE : AUTRES SERVICES À [ZONE] ─── */}
-      <section className="section bg-white">
+      <section className="py-20 md:py-28 bg-white">
         <div className="container">
           <div className="max-w-xl mb-10">
-            <div className="rule-accent mb-6" />
-            <h2 className="section-title">
+            <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
               Nos autres services à {zone.name}
             </h2>
-            <p className="section-subtitle">
+            <p className="text-gray-500 text-lg mt-4 max-w-xl">
               {siteConfig.name} propose une gamme complète de services pour rideaux métalliques à {zone.name}.
             </p>
           </div>
@@ -1052,7 +1052,7 @@ export default function ServiceZonePage({ params }: Props) {
                   <span className="font-heading font-bold text-gray-900 group-hover:text-primary-600 transition-colors">{s.name}</span>
                   <span className="text-xs text-gray-300">{zone.name}</span>
                 </div>
-                <svg className="w-4 h-4 text-gray-300 group-hover:text-secondary-terracotta group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 text-gray-300 group-hover:text-primary-600 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </Link>
@@ -1062,14 +1062,14 @@ export default function ServiceZonePage({ params }: Props) {
       </section>
 
       {/* ─── MAILLAGE : CE SERVICE DANS D'AUTRES ZONES ─── */}
-      <section className="section bg-secondary-sable">
+      <section className="py-20 md:py-28 bg-gray-50">
         <div className="container">
           <div className="max-w-xl mb-10">
-            <div className="rule-accent mb-6" />
-            <h2 className="section-title">
+            <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
               {service.name} dans les zones voisines
             </h2>
-            <p className="section-subtitle">
+            <p className="text-gray-500 text-lg mt-4 max-w-xl">
               {siteConfig.name} intervient pour {service.name.toLowerCase()} dans tout le {siteConfig.department}.
             </p>
           </div>
@@ -1079,15 +1079,15 @@ export default function ServiceZonePage({ params }: Props) {
                 key={z.slug}
                 href={`/${service.slug}-rideau-metallique-${z.slug}`}
                 className="px-4 py-2 bg-white text-gray-600 text-sm border border-gray-200 hover:border-primary-300 hover:text-primary-700 transition-all"
-                style={{ borderRadius: '2px' }}
+                style={{ borderRadius: '8px' }}
               >
                 {service.name} {z.name}
               </Link>
             ))}
             <Link
               href="/"
-              className="px-4 py-2 bg-dark text-white text-sm font-bold hover:bg-gray-800 transition-colors"
-              style={{ borderRadius: '2px' }}
+              className="px-4 py-2 bg-gray-900 text-white text-sm font-bold hover:bg-gray-800 transition-colors"
+              style={{ borderRadius: '8px' }}
             >
               Toutes les zones
             </Link>

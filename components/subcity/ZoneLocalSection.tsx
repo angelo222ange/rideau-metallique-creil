@@ -40,8 +40,8 @@ export function ZoneLocalSection({
               {localData.quartiers.map((quartier, i) => (
                 <span
                   key={i}
-                  className="px-3 py-1.5 bg-secondary-sable text-gray-700 text-sm border border-gray-200"
-                  style={{ borderRadius: '2px' }}
+                  className="px-3 py-1.5 bg-gray-50 text-gray-700 text-sm border border-gray-200"
+                  style={{ borderRadius: '8px' }}
                 >
                   {quartier}
                 </span>
@@ -57,7 +57,7 @@ export function ZoneLocalSection({
             <div className="grid sm:grid-cols-2 gap-3">
               {localData.landmarks.map((landmark, i) => (
                 <div key={i} className="flex items-center gap-3 text-gray-600 text-sm">
-                  <span className="w-1.5 h-1.5 bg-secondary-terracotta rounded-full flex-shrink-0" />
+                  <span className="w-1.5 h-1.5 bg-primary-600 rounded-full flex-shrink-0" />
                   {landmark}
                 </div>
               ))}
@@ -77,14 +77,14 @@ export function ZoneLocalSection({
           </div>
 
           {/* Problématiques locales */}
-          <div className="bg-secondary-sable p-6 md:p-8 border-l-4 border-primary-600" style={{ borderRadius: '2px' }}>
+          <div className="bg-gray-50 p-6 md:p-8 border-l-4 border-primary-600" style={{ borderRadius: '8px' }}>
             <h3 className="font-heading font-bold text-gray-900 mb-3">
               Spécificités locales à {zoneName}
             </h3>
             <p className="text-gray-600 text-[15px] leading-relaxed mb-4">
               {localData.problematiques}
             </p>
-            <a href={siteConfig.phoneLink} className="inline-flex items-center gap-2 text-sm font-bold text-secondary-terracotta hover:gap-3 transition-all">
+            <a href={siteConfig.phoneLink} className="inline-flex items-center gap-2 text-sm font-bold text-primary-600 hover:gap-3 transition-all">
               Intervention à {zoneName} : {siteConfig.phone}
               <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

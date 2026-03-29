@@ -22,7 +22,7 @@ export function Zones({ title = "Zones d'intervention", limit = 12 }: ZonesProps
             </p>
 
             {zones.length > limit && (
-              <Link href="/zones" className="inline-flex items-center gap-2 text-sm font-bold text-secondary-terracotta mt-6 hover:gap-3 transition-all">
+              <Link href="/zones" className="inline-flex items-center gap-2 text-sm font-bold text-primary-600 mt-6 hover:gap-3 transition-all">
                 Toutes les zones ({zones.length})
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -40,7 +40,7 @@ export function Zones({ title = "Zones d'intervention", limit = 12 }: ZonesProps
                   <Link
                     key={zone.slug}
                     href={`/depannage-rideau-metallique-${zone.slug}`}
-                    className={`block py-2.5 border-b border-gray-100 text-sm transition-colors hover:text-secondary-terracotta ${
+                    className={`block py-2.5 border-b border-gray-100 text-sm transition-colors hover:text-primary-600 ${
                       isMain ? 'font-bold text-gray-900' : 'text-gray-600'
                     }`}
                   >

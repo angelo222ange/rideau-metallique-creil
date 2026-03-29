@@ -105,7 +105,7 @@ export default function TarifsPage() {
 
       {/* Hero */}
       <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 bg-dark overflow-hidden">
-        <div className="noise absolute inset-0" />
+        <div className="hidden" />
         <div className="container relative z-10">
           <nav className="mb-8" aria-label="Fil d'Ariane">
             <ol className="flex items-center gap-2 text-xs text-white/30">
@@ -115,8 +115,8 @@ export default function TarifsPage() {
             </ol>
           </nav>
           <div className="max-w-3xl">
-            <div className="rule-accent mb-8" style={{ background: '#E07B39' }} />
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-5">
+            <div className="rule-accent mb-8"  />
+            <h1 className="font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-5">
               Prix Rideau Métallique {siteConfig.city}
             </h1>
             <p className="text-white/40 text-lg leading-relaxed mb-8">
@@ -135,9 +135,9 @@ export default function TarifsPage() {
       </section>
 
       {/* Encadré résumé */}
-      <section className="section bg-secondary-sable">
+      <section className="section bg-gray-50">
         <div className="container">
-          <div className="bg-white border-l-4 border-secondary-terracotta p-6 md:p-8 max-w-3xl" style={{ borderRadius: '2px' }}>
+          <div className="bg-white border-l-4 border-primary-600 p-6 md:p-8 max-w-3xl" style={{ borderRadius: '8px' }}>
             <h2 className="font-heading font-bold text-gray-900 text-lg mb-4">
               Tarifs en bref
             </h2>
@@ -151,7 +151,7 @@ export default function TarifsPage() {
                 `Prix final communiqué après diagnostic sur place — pas de surprise`,
               ].map((point, i) => (
                 <li key={i} className="flex items-start gap-3 text-gray-700 text-[15px]">
-                  <span className="w-1.5 h-1.5 bg-secondary-terracotta rounded-full mt-2 flex-shrink-0" />
+                  <span className="w-1.5 h-1.5 bg-primary-600 rounded-full mt-2 flex-shrink-0" />
                   <span>{point}</span>
                 </li>
               ))}
@@ -183,7 +183,7 @@ export default function TarifsPage() {
                 {tarifs.depannage.map((item, i) => (
                   <tr key={i} className="border-b border-gray-100 hover:bg-gray-50/50">
                     <td className="text-gray-900 font-medium px-4 py-3">{item.prestation}</td>
-                    <td className="text-secondary-terracotta font-bold px-4 py-3 whitespace-nowrap">{item.fourchette}</td>
+                    <td className="text-primary-600 font-bold px-4 py-3 whitespace-nowrap">{item.fourchette}</td>
                     <td className="text-gray-400 px-4 py-3 hidden md:table-cell">{item.details}</td>
                   </tr>
                 ))}
@@ -199,7 +199,7 @@ export default function TarifsPage() {
       </section>
 
       {/* Tarifs Installation */}
-      <section className="section bg-secondary-sable">
+      <section className="section bg-gray-50">
         <div className="container">
           <div className="max-w-xl mb-10">
             <div className="rule-accent mb-6" />
@@ -221,7 +221,7 @@ export default function TarifsPage() {
                 {tarifs.installation.map((item, i) => (
                   <tr key={i} className="border-b border-gray-100 hover:bg-white/50">
                     <td className="text-gray-900 font-medium px-4 py-3">{item.prestation}</td>
-                    <td className="text-secondary-terracotta font-bold px-4 py-3 whitespace-nowrap">{item.fourchette}</td>
+                    <td className="text-primary-600 font-bold px-4 py-3 whitespace-nowrap">{item.fourchette}</td>
                     <td className="text-gray-400 px-4 py-3 hidden md:table-cell">{item.details}</td>
                   </tr>
                 ))}
@@ -259,7 +259,7 @@ export default function TarifsPage() {
                 {tarifs.motorisation.map((item, i) => (
                   <tr key={i} className="border-b border-gray-100 hover:bg-gray-50/50">
                     <td className="text-gray-900 font-medium px-4 py-3">{item.prestation}</td>
-                    <td className="text-secondary-terracotta font-bold px-4 py-3 whitespace-nowrap">{item.fourchette}</td>
+                    <td className="text-primary-600 font-bold px-4 py-3 whitespace-nowrap">{item.fourchette}</td>
                     <td className="text-gray-400 px-4 py-3 hidden md:table-cell">{item.details}</td>
                   </tr>
                 ))}
@@ -270,7 +270,7 @@ export default function TarifsPage() {
       </section>
 
       {/* Tarifs Entretien */}
-      <section className="section bg-secondary-sable">
+      <section className="section bg-gray-50">
         <div className="container">
           <div className="max-w-xl mb-10">
             <div className="rule-accent mb-6" />
@@ -281,9 +281,9 @@ export default function TarifsPage() {
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {tarifs.entretien.map((formule, i) => (
-              <div key={i} className="bg-white p-6 border border-gray-200" style={{ borderRadius: '2px' }}>
+              <div key={i} className="bg-white p-6 border border-gray-200" style={{ borderRadius: '8px' }}>
                 <h3 className="font-heading font-bold text-gray-900 mb-2">{formule.prestation}</h3>
-                <p className="font-display text-2xl text-secondary-terracotta mb-3">{formule.fourchette}</p>
+                <p className="font-bold text-2xl text-primary-600 mb-3">{formule.fourchette}</p>
                 <p className="text-gray-400 text-sm">{formule.details}</p>
               </div>
             ))}

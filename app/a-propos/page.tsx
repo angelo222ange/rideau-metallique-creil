@@ -65,8 +65,8 @@ export default function AProposPage() {
       />
 
       {/* ─── HERO ─── */}
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-dark overflow-hidden">
-        <div className="noise absolute inset-0" />
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-gray-900 overflow-hidden">
+        <div className="hidden" />
         <div className="container relative z-10">
           <nav className="mb-8" aria-label="Fil d'Ariane">
             <ol className="flex items-center gap-2 text-xs text-white/30">
@@ -78,8 +78,8 @@ export default function AProposPage() {
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="rule-accent mb-8" style={{ background: '#E07B39' }} />
-              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-5">
+              <div className="w-12 h-1 bg-primary-600 mb-8" style={{borderRadius:"4px"}} />
+              <h1 className="font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-5">
                 {siteConfig.name} — Votre spécialiste rideau métallique dans l&apos;{siteConfig.department}
               </h1>
               <p className="text-white/40 text-lg mb-8 leading-relaxed">
@@ -98,7 +98,7 @@ export default function AProposPage() {
               </div>
             </div>
             <div className="relative hidden lg:block">
-              <div className="relative aspect-[4/3] overflow-hidden" style={{ borderRadius: '2px' }}>
+              <div className="relative aspect-[4/3] overflow-hidden" style={{ borderRadius: '8px' }}>
                 <Image
                   src="/images/gallery/depannage-rideau-metallique-creil-60.webp"
                   alt={`Équipe ${siteConfig.name} à ${siteConfig.city}`}
@@ -113,12 +113,12 @@ export default function AProposPage() {
       </section>
 
       {/* ─── NOTRE HISTOIRE ─── */}
-      <section className="section bg-secondary-sable">
+      <section className="py-20 md:py-28 bg-gray-50">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="max-w-xl">
-              <div className="rule-accent mb-6" />
-              <h2 className="section-title">Qui sommes-nous ?</h2>
+              <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">Qui sommes-nous ?</h2>
               <div className="mt-6 space-y-4 text-gray-500 text-lg leading-relaxed">
                 <p>
                   <strong className="text-gray-900">{siteConfig.name}</strong> est une entreprise spécialisée dans le <strong className="text-gray-900">dépannage, l&apos;installation, la fabrication et l&apos;entretien de rideaux métalliques</strong> à {siteConfig.city} et dans tout le département de l&apos;{siteConfig.department} (60). Basés au <strong className="text-gray-900">{siteConfig.address}</strong>, nous sommes au cœur du bassin creillois, ce qui nous permet d&apos;intervenir rapidement dans les {zones.length} communes de notre zone de couverture.
@@ -132,7 +132,7 @@ export default function AProposPage() {
               </div>
             </div>
             <div className="relative hidden lg:block">
-              <div className="relative aspect-[4/3] overflow-hidden" style={{ borderRadius: '2px' }}>
+              <div className="relative aspect-[4/3] overflow-hidden" style={{ borderRadius: '8px' }}>
                 <Image
                   src="/images/gallery/rideau-metallique-creil.webp"
                   alt={`Intervention ${siteConfig.name} sur rideau métallique`}
@@ -146,11 +146,11 @@ export default function AProposPage() {
       </section>
 
       {/* ─── NOS VALEURS ─── */}
-      <section className="section bg-white">
+      <section className="py-20 md:py-28 bg-white">
         <div className="container">
           <div className="max-w-xl mb-14">
-            <div className="rule-accent mb-6" />
-            <h2 className="section-title">Nos engagements</h2>
+            <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">Nos engagements</h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-gray-200">
             {[
@@ -176,7 +176,7 @@ export default function AProposPage() {
               },
             ].map((item, i) => (
               <div key={i} className="bg-white p-8">
-                <span className="font-display text-4xl text-gray-200 block mb-4">{item.num}</span>
+                <span className="font-bold text-4xl text-gray-200 block mb-4">{item.num}</span>
                 <h3 className="font-heading font-bold text-gray-900 mb-2">{item.title}</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
               </div>
@@ -186,12 +186,12 @@ export default function AProposPage() {
       </section>
 
       {/* ─── NOS SERVICES ─── */}
-      <section className="section bg-secondary-sable">
+      <section className="py-20 md:py-28 bg-gray-50">
         <div className="container">
           <div className="max-w-xl mb-14">
-            <div className="rule-accent mb-6" />
-            <h2 className="section-title">Nos {services.filter(s => s.hasPage).length} services</h2>
-            <p className="section-subtitle">
+            <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">Nos {services.filter(s => s.hasPage).length} services</h2>
+            <p className="text-gray-500 text-lg mt-4 max-w-xl">
               Une offre complète pour tous vos besoins en fermetures métalliques à {siteConfig.city} et dans l&apos;{siteConfig.department}.
             </p>
           </div>
@@ -206,7 +206,7 @@ export default function AProposPage() {
                   <span className="font-heading font-bold text-gray-900 group-hover:text-primary-600 transition-colors">{s.name}</span>
                   <span className="text-gray-400 text-sm ml-3">{s.longDesc}</span>
                 </div>
-                <svg className="w-4 h-4 text-gray-300 group-hover:text-secondary-terracotta group-hover:translate-x-1 transition-all flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 text-gray-300 group-hover:text-primary-600 group-hover:translate-x-1 transition-all flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </Link>
@@ -216,12 +216,12 @@ export default function AProposPage() {
       </section>
 
       {/* ─── ZONE D'INTERVENTION ─── */}
-      <section className="section bg-white">
+      <section className="py-20 md:py-28 bg-white">
         <div className="container">
           <div className="max-w-xl mb-14">
-            <div className="rule-accent mb-6" />
-            <h2 className="section-title">Notre zone d&apos;intervention</h2>
-            <p className="section-subtitle">
+            <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">Notre zone d&apos;intervention</h2>
+            <p className="text-gray-500 text-lg mt-4 max-w-xl">
               {siteConfig.name} couvre {zones.length} communes dans l&apos;{siteConfig.department}, dans un rayon de 45 km autour de {siteConfig.city}.
             </p>
           </div>
@@ -230,8 +230,8 @@ export default function AProposPage() {
               <Link
                 key={z.slug}
                 href={`/zones/${z.slug}`}
-                className="px-4 py-2 bg-secondary-sable text-gray-600 text-sm border border-gray-200 hover:border-primary-300 hover:text-primary-700 transition-all"
-                style={{ borderRadius: '2px' }}
+                className="px-4 py-2 bg-gray-50 text-gray-600 text-sm border border-gray-200 hover:border-primary-300 hover:text-primary-700 transition-all"
+                style={{ borderRadius: '8px' }}
               >
                 {z.name} ({z.postalCode})
               </Link>
@@ -241,7 +241,7 @@ export default function AProposPage() {
       </section>
 
       {/* ─── COORDONNÉES ─── */}
-      <section className="section bg-dark">
+      <section className="py-20 md:py-28 bg-gray-900">
         <div className="container">
           <div className="grid lg:grid-cols-3 gap-12">
             <div>
@@ -250,7 +250,7 @@ export default function AProposPage() {
             </div>
             <div>
               <h3 className="font-heading font-bold text-white text-sm uppercase tracking-wider mb-4">Téléphone</h3>
-              <a href={siteConfig.phoneLink} className="text-secondary-terracotta hover:text-white transition-colors font-bold">{siteConfig.phone}</a>
+              <a href={siteConfig.phoneLink} className="text-primary-600 hover:text-white transition-colors font-bold">{siteConfig.phone}</a>
               <p className="text-white/30 text-sm mt-1">Disponible 24h/24, 7j/7</p>
             </div>
             <div>

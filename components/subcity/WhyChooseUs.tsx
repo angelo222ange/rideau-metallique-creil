@@ -9,7 +9,7 @@ interface WhyChooseUsProps {
 
 export function WhyChooseUs({ title, items, zoneName, zonePostal }: WhyChooseUsProps) {
   return (
-    <section className="section bg-secondary-sable">
+    <section className="section bg-gray-50">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           <div>
@@ -19,7 +19,7 @@ export function WhyChooseUs({ title, items, zoneName, zonePostal }: WhyChooseUsP
             <div className="mt-8 divide-y divide-gray-200">
               {items.map((item, index) => (
                 <div key={index} className="flex items-start gap-4 py-4">
-                  <span className="font-display text-2xl text-gray-200 leading-none mt-0.5">
+                  <span className="font-bold text-2xl text-gray-200 leading-none mt-0.5">
                     {String(index + 1).padStart(2, '0')}
                   </span>
                   <p className="text-gray-600 text-[15px] leading-relaxed">{item}</p>
@@ -28,7 +28,7 @@ export function WhyChooseUs({ title, items, zoneName, zonePostal }: WhyChooseUsP
             </div>
           </div>
 
-          <div className="bg-white p-8 md:p-10" style={{ borderRadius: '2px' }}>
+          <div className="bg-white p-8 md:p-10" style={{ borderRadius: '8px' }}>
             <p className="text-xs font-bold uppercase tracking-widest text-gray-300 mb-6">
               Intervention à {zoneName}
             </p>
@@ -41,7 +41,7 @@ export function WhyChooseUs({ title, items, zoneName, zonePostal }: WhyChooseUsP
                 { value: "24/7", label: "disponibilité" },
               ].map((stat, i) => (
                 <div key={i} className="bg-white p-5 text-center">
-                  <p className="font-display text-2xl text-gray-900">{stat.value}</p>
+                  <p className="font-bold text-2xl text-gray-900">{stat.value}</p>
                   <p className="text-xs text-gray-400 mt-0.5">{stat.label}</p>
                 </div>
               ))}

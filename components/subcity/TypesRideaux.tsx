@@ -15,7 +15,7 @@ interface TypesRideauxProps {
 
 export function TypesRideaux({ title, zoneName, items }: TypesRideauxProps) {
   return (
-    <section className="section bg-secondary-sable">
+    <section className="section bg-gray-50">
       <div className="container">
         <div className="max-w-xl mb-14">
           <div className="rule-accent mb-6" />
@@ -29,7 +29,7 @@ export function TypesRideaux({ title, zoneName, items }: TypesRideauxProps) {
           {items.map((type, index) => (
             <div key={index} className="grid grid-cols-12 gap-6 py-6 items-center">
               <div className="col-span-1">
-                <span className="font-display text-2xl text-gray-200">{String(index + 1).padStart(2, '0')}</span>
+                <span className="font-bold text-2xl text-gray-200">{String(index + 1).padStart(2, '0')}</span>
               </div>
               <div className="col-span-7 md:col-span-8">
                 <h3 className="font-heading font-bold text-gray-900 text-[15px]">{type.name}</h3>

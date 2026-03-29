@@ -25,7 +25,7 @@ export function MarquesMoteurs({ title, subtitle, items }: MarquesMoteursProps) 
           {items.map((marque, index) => (
             <div key={index} className="grid grid-cols-12 gap-6 py-6 items-center">
               <div className="col-span-2 md:col-span-1">
-                <div className="w-10 h-10 flex items-center justify-center font-display text-lg text-white bg-dark" style={{ borderRadius: '2px' }}>
+                <div className="w-10 h-10 flex items-center justify-center font-bold text-lg text-white bg-dark" style={{ borderRadius: '8px' }}>
                   {marque.nom.charAt(0)}
                 </div>
               </div>

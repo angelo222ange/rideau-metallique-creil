@@ -46,7 +46,7 @@ function renderContentBlock(block: ContentBlock, index: number) {
     case 'heading':
       if (block.level === 2) {
         return (
-          <h2 key={index} className="font-display text-2xl md:text-3xl text-gray-900 mt-12 mb-5">
+          <h2 key={index} className="font-bold text-2xl md:text-3xl text-gray-900 mt-12 mb-5">
             {block.text}
           </h2>
         );
@@ -80,7 +80,7 @@ function renderContentBlock(block: ContentBlock, index: number) {
         <ul key={index} className="space-y-2 mb-6 ml-2">
           {block.items.map((item, i) => (
             <li key={i} className="flex items-start gap-3 text-gray-600 text-[16px] leading-relaxed">
-              <span className="w-1.5 h-1.5 bg-secondary-terracotta rounded-full mt-2.5 flex-shrink-0" />
+              <span className="w-1.5 h-1.5 bg-primary-600 rounded-full mt-2.5 flex-shrink-0" />
               <span dangerouslySetInnerHTML={{ __html: item }} />
             </li>
           ))}
@@ -173,7 +173,7 @@ export default function BlogArticlePage({ params }: Props) {
 
       {/* Hero */}
       <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 bg-dark overflow-hidden">
-        <div className="noise absolute inset-0" />
+        <div className="hidden" />
         <div className="container relative z-10">
           {/* Breadcrumb */}
           <nav className="mb-8" aria-label="Fil d'Ariane">
@@ -187,7 +187,7 @@ export default function BlogArticlePage({ params }: Props) {
           </nav>
 
           <div className="max-w-3xl">
-            <div className="rule-accent mb-8" style={{ background: '#E07B39' }} />
+            <div className="rule-accent mb-8"  />
 
             {/* Meta */}
             <div className="flex items-center gap-3 text-xs text-white/30 mb-6">
@@ -202,7 +202,7 @@ export default function BlogArticlePage({ params }: Props) {
               <span>{article.readTime} de lecture</span>
             </div>
 
-            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl text-white leading-[1.1]">
+            <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl text-white leading-[1.1]">
               {article.title}
             </h1>
           </div>
@@ -216,7 +216,7 @@ export default function BlogArticlePage({ params }: Props) {
             {/* Main Content */}
             <div className="lg:col-span-8">
               {/* Featured Image */}
-              <div className="relative aspect-[16/9] overflow-hidden mb-10 bg-gray-100" style={{ borderRadius: '2px' }}>
+              <div className="relative aspect-[16/9] overflow-hidden mb-10 bg-gray-100" style={{ borderRadius: '8px' }}>
                 <Image
                   src={article.image}
                   alt={article.imageAlt}
@@ -227,14 +227,14 @@ export default function BlogArticlePage({ params }: Props) {
               </div>
 
               {/* Summary Box */}
-              <div className="bg-secondary-sable border-l-4 border-secondary-terracotta p-6 md:p-8 mb-10" style={{ borderRadius: '2px' }}>
+              <div className="bg-gray-50 border-l-4 border-primary-600 p-6 md:p-8 mb-10" style={{ borderRadius: '8px' }}>
                 <h2 className="font-heading font-bold text-gray-900 text-lg mb-4">
                   {article.summary.title}
                 </h2>
                 <ul className="space-y-2">
                   {article.summary.points.map((point, i) => (
                     <li key={i} className="flex items-start gap-3 text-gray-700 text-[15px]">
-                      <span className="w-1.5 h-1.5 bg-secondary-terracotta rounded-full mt-2 flex-shrink-0" />
+                      <span className="w-1.5 h-1.5 bg-primary-600 rounded-full mt-2 flex-shrink-0" />
                       <span>{point}</span>
                     </li>
                   ))}
@@ -251,7 +251,7 @@ export default function BlogArticlePage({ params }: Props) {
             <aside className="lg:col-span-4">
               <div className="sticky top-28 space-y-8">
                 {/* CTA Box */}
-                <div className="bg-dark p-6 text-center" style={{ borderRadius: '2px' }}>
+                <div className="bg-dark p-6 text-center" style={{ borderRadius: '8px' }}>
                   <p className="text-white font-heading font-bold text-lg mb-2">
                     Besoin d&apos;un devis ?
                   </p>
@@ -279,7 +279,7 @@ export default function BlogArticlePage({ params }: Props) {
                           href={`/blog/${related.slug}`}
                           className="block group"
                         >
-                          <div className="relative aspect-[16/9] overflow-hidden mb-2 bg-gray-100" style={{ borderRadius: '2px' }}>
+                          <div className="relative aspect-[16/9] overflow-hidden mb-2 bg-gray-100" style={{ borderRadius: '8px' }}>
                             <Image
                               src={related.image}
                               alt={related.imageAlt}

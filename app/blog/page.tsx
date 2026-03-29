@@ -42,10 +42,10 @@ export default function BlogPage() {
 
       {/* Hero */}
       <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 bg-dark overflow-hidden">
-        <div className="noise absolute inset-0" />
+        <div className="hidden" />
         <div className="container relative z-10 text-center">
-          <div className="rule-accent mx-auto mb-8" style={{ background: '#E07B39' }} />
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-4">
+          <div className="rule-accent mx-auto mb-8"  />
+          <h1 className="font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-4">
             Blog
           </h1>
           <p className="text-white/40 text-lg max-w-lg mx-auto">
@@ -66,7 +66,7 @@ export default function BlogPage() {
               >
                 <article>
                   {/* Image */}
-                  <div className="relative aspect-[16/10] overflow-hidden mb-5 bg-gray-100" style={{ borderRadius: '2px' }}>
+                  <div className="relative aspect-[16/10] overflow-hidden mb-5 bg-gray-100" style={{ borderRadius: '8px' }}>
                     <Image
                       src={article.image}
                       alt={article.imageAlt}
@@ -99,7 +99,7 @@ export default function BlogPage() {
                   </p>
 
                   {/* Read more */}
-                  <span className="inline-flex items-center gap-1 text-sm font-bold text-secondary-terracotta mt-4 group-hover:gap-2 transition-all">
+                  <span className="inline-flex items-center gap-1 text-sm font-bold text-primary-600 mt-4 group-hover:gap-2 transition-all">
                     Lire l&apos;article
                     <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -114,9 +114,9 @@ export default function BlogPage() {
 
       {/* CTA */}
       <section className="relative py-20 md:py-28 bg-dark overflow-hidden">
-        <div className="noise absolute inset-0" />
+        <div className="hidden" />
         <div className="container relative z-10 text-center">
-          <h2 className="font-display text-3xl md:text-4xl text-white mb-4">
+          <h2 className="font-bold text-3xl md:text-4xl text-white mb-4">
             Besoin d&apos;un professionnel ?
           </h2>
           <p className="text-white/40 text-lg mb-8 max-w-lg mx-auto">

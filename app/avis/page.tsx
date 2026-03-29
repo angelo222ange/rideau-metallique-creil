@@ -99,8 +99,8 @@ export default function AvisPage() {
       />
 
       {/* ─── HERO ─── */}
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-dark overflow-hidden">
-        <div className="noise absolute inset-0" />
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-gray-900 overflow-hidden">
+        <div className="hidden" />
         <div className="container relative z-10">
           <nav className="mb-8" aria-label="Fil d'Ariane">
             <ol className="flex items-center gap-2 text-xs text-white/30">
@@ -110,8 +110,8 @@ export default function AvisPage() {
             </ol>
           </nav>
           <div className="max-w-3xl">
-            <div className="rule-accent mb-8" style={{ background: '#E07B39' }} />
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-5">
+            <div className="rule-accent mb-8"  />
+            <h1 className="font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-5">
               Avis Clients {siteConfig.name}
             </h1>
             <p className="text-white/40 text-lg leading-relaxed">
@@ -121,19 +121,19 @@ export default function AvisPage() {
             {/* Stats rapides */}
             <div className="flex gap-8 mt-10">
               <div>
-                <p className="font-display text-4xl text-secondary-terracotta">{avgRating}/5</p>
+                <p className="font-bold text-4xl text-primary-600">{avgRating}/5</p>
                 <p className="text-white/30 text-xs mt-0.5">Note moyenne</p>
               </div>
               <div>
-                <p className="font-display text-4xl text-white">{uniqueReviews.length}</p>
+                <p className="font-bold text-4xl text-white">{uniqueReviews.length}</p>
                 <p className="text-white/30 text-xs mt-0.5">Avis clients</p>
               </div>
               <div>
-                <p className="font-display text-4xl text-white">{count5}</p>
+                <p className="font-bold text-4xl text-white">{count5}</p>
                 <p className="text-white/30 text-xs mt-0.5">Notes 5/5</p>
               </div>
               <div>
-                <p className="font-display text-4xl text-white">{count4}</p>
+                <p className="font-bold text-4xl text-white">{count4}</p>
                 <p className="text-white/30 text-xs mt-0.5">Notes 4/5</p>
               </div>
             </div>
@@ -142,7 +142,7 @@ export default function AvisPage() {
       </section>
 
       {/* ─── TOUS LES AVIS ─── */}
-      <section className="section bg-secondary-sable">
+      <section className="section bg-gray-50">
         <div className="container">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-200">
             {uniqueReviews.map((review, index) => (

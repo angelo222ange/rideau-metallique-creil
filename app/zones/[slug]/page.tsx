@@ -85,7 +85,7 @@ export default function ZonePage({ params }: Props) {
 
       {/* Sections alternées SEO-optimisées */}
       {content.alternatingFeatures && (
-        <AlternatingFeatures features={content.alternatingFeatures} bgColor="bg-secondary-sable" />
+        <AlternatingFeatures features={content.alternatingFeatures} bgColor="bg-gray-50" />
       )}
 
       <section className="section bg-white">
@@ -109,7 +109,7 @@ export default function ZonePage({ params }: Props) {
                 { title: "Techniciens qualifiés", desc: "toutes marques" },
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-4 py-4">
-                  <span className="font-display text-2xl text-gray-200">{String(i + 1).padStart(2, '0')}</span>
+                  <span className="font-bold text-2xl text-gray-200">{String(i + 1).padStart(2, '0')}</span>
                   <div>
                     <p className="font-heading font-bold text-gray-900 text-[15px]">{item.title}</p>
                     <p className="text-gray-400 text-sm">{item.desc}</p>

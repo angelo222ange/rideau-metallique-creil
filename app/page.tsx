@@ -48,18 +48,18 @@ export default function HomePage() {
       <Services />
 
       {/* Intervention Express — Steps */}
-      <section className="section bg-secondary-sable">
+      <section className="py-20 md:py-28 bg-gray-50">
         <div className="container">
           <div className="max-w-xl mb-14">
-            <div className="rule-accent mb-6" />
-            <h2 className="section-title">{content.deblocage.title}</h2>
-            <p className="section-subtitle">{content.deblocage.description}</p>
+            <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">{content.deblocage.title}</h2>
+            <p className="text-gray-500 text-lg mt-4 max-w-xl">{content.deblocage.description}</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-0 divide-y lg:divide-y-0 lg:divide-x divide-gray-200">
             {content.deblocage.steps.map((step, index) => (
               <div key={index} className="py-6 lg:py-0 lg:px-8 first:lg:pl-0 last:lg:pr-0">
-                <span className="font-display text-5xl text-gray-200 block mb-3">
+                <span className="font-bold text-5xl text-gray-200 block mb-3">
                   {step.step}
                 </span>
                 <h3 className="font-heading font-bold text-gray-900 mb-2">{step.title}</h3>
@@ -77,18 +77,18 @@ export default function HomePage() {
       </section>
 
       {/* Pannes courantes */}
-      <section className="section bg-white">
+      <section className="py-20 md:py-28 bg-white">
         <div className="container">
           <div className="max-w-xl mb-14">
-            <div className="rule-accent mb-6" />
-            <h2 className="section-title">{content.pannes.title}</h2>
+            <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">{content.pannes.title}</h2>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-200">
             {content.pannes.items.map((panne, index) => (
               <div key={index} className="bg-white p-8 group">
                 <div className="flex items-start gap-4">
-                  <span className="font-display text-3xl text-gray-200 leading-none">
+                  <span className="font-bold text-3xl text-gray-200 leading-none">
                     {String(index + 1).padStart(2, '0')}
                   </span>
                   <div>
@@ -96,7 +96,7 @@ export default function HomePage() {
                       <h3 className="font-heading font-bold text-gray-900">{panne.title}</h3>
                       <span className={`text-[10px] font-bold uppercase tracking-wider ${
                         panne.urgency === 'urgent' ? 'text-red-500'
-                          : panne.urgency === 'moyen' ? 'text-secondary-terracotta'
+                          : panne.urgency === 'moyen' ? 'text-primary-600'
                           : 'text-gray-400'
                       }`}>
                         {panne.urgency === 'urgent' ? 'Urgent' : panne.urgency === 'moyen' ? 'Moyen' : 'Faible'}
@@ -112,8 +112,8 @@ export default function HomePage() {
       </section>
 
       {/* Urgence 24/7 */}
-      <section className="relative py-24 md:py-32 bg-dark overflow-hidden">
-        <div className="noise absolute inset-0" />
+      <section className="relative py-24 md:py-32 bg-gray-900 overflow-hidden">
+        <div className="hidden" />
         <div className="container relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -121,7 +121,7 @@ export default function HomePage() {
                 <span className="w-1.5 h-1.5 bg-red-400 rounded-full animate-pulse" />
                 Urgence 24h/24
               </span>
-              <h2 className="font-display text-4xl md:text-5xl text-white leading-[1.1] mb-5">
+              <h2 className="font-bold text-4xl md:text-5xl text-white leading-[1.1] mb-5">
                 {content.urgence.title}
               </h2>
               <p className="text-white/40 text-lg mb-10 leading-relaxed">{content.urgence.description}</p>
@@ -129,7 +129,7 @@ export default function HomePage() {
               <div className="flex gap-8 mb-10">
                 {content.urgence.stats.map((stat, index) => (
                   <div key={index}>
-                    <p className="font-display text-3xl text-secondary-terracotta">{stat.value}</p>
+                    <p className="font-bold text-3xl text-primary-600">{stat.value}</p>
                     <p className="text-white/30 text-xs mt-0.5">{stat.label}</p>
                   </div>
                 ))}

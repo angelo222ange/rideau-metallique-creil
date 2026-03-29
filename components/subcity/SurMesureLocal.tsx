@@ -22,7 +22,7 @@ interface SurMesureLocalProps {
 
 export function SurMesureLocal({ title, subtitle, comparatif, avantages, zoneName }: SurMesureLocalProps) {
   return (
-    <section className="section bg-secondary-sable">
+    <section className="section bg-gray-50">
       <div className="container">
         <div className="max-w-xl mb-14">
           <div className="rule-accent mb-6" />
@@ -32,7 +32,7 @@ export function SurMesureLocal({ title, subtitle, comparatif, avantages, zoneNam
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-gray-200 mb-16">
           {avantages.map((avantage, index) => (
-            <div key={index} className="bg-secondary-sable p-6">
+            <div key={index} className="bg-gray-50 p-6">
               <h3 className="font-heading font-bold text-gray-900 mb-2 text-[15px]">{avantage.title}</h3>
               <p className="text-gray-400 text-sm">{avantage.description}</p>
             </div>
@@ -43,12 +43,12 @@ export function SurMesureLocal({ title, subtitle, comparatif, avantages, zoneNam
           <h3 className="font-heading font-bold text-gray-900 text-sm uppercase tracking-wider mb-6">
             Sur-Mesure vs Standard
           </h3>
-          <div className="border border-gray-200" style={{ borderRadius: '2px' }}>
+          <div className="border border-gray-200" style={{ borderRadius: '8px' }}>
             <table className="w-full">
               <thead>
                 <tr className="bg-dark">
                   <th className="px-5 py-3 text-left text-xs font-bold text-white uppercase tracking-wider">Critère</th>
-                  <th className="px-5 py-3 text-center text-xs font-bold text-secondary-terracotta uppercase tracking-wider">Sur-Mesure</th>
+                  <th className="px-5 py-3 text-center text-xs font-bold text-primary-600 uppercase tracking-wider">Sur-Mesure</th>
                   <th className="px-5 py-3 text-center text-xs font-bold text-white/40 uppercase tracking-wider">Standard</th>
                 </tr>
               </thead>

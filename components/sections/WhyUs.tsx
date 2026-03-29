@@ -12,7 +12,7 @@ export function WhyUs() {
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
           {/* Image */}
           <div className="relative order-2 lg:order-1">
-            <div className="relative aspect-[4/3] overflow-hidden" style={{ borderRadius: '2px' }}>
+            <div className="relative aspect-[4/3] overflow-hidden" style={{ borderRadius: '8px' }}>
               <Image
                 src="/images/gallery/rideau-metallique-creil.webp"
                 alt={`Technicien rideau métallique ${siteConfig.city}`}
@@ -22,8 +22,8 @@ export function WhyUs() {
               />
             </div>
             {/* Floating stat — minimal */}
-            <div className="absolute -bottom-6 right-4 md:right-8 bg-dark px-6 py-5" style={{ borderRadius: '2px' }}>
-              <p className="font-display text-4xl text-secondary-terracotta">{content.stats.experience}</p>
+            <div className="absolute -bottom-6 right-4 md:right-8 bg-dark px-6 py-5" style={{ borderRadius: '8px' }}>
+              <p className="font-bold text-4xl text-primary-600">{content.stats.experience}</p>
               <p className="text-white/40 text-xs mt-0.5">{content.stats.experienceLabel}</p>
             </div>
           </div>
@@ -37,7 +37,7 @@ export function WhyUs() {
             <div className="space-y-0 divide-y divide-gray-100">
               {content.whyUs.advantages.map((advantage, index) => (
                 <div key={index} className="py-5 flex items-start gap-4">
-                  <span className="text-secondary-terracotta font-display text-2xl leading-none mt-0.5">
+                  <span className="text-primary-600 font-bold text-2xl leading-none mt-0.5">
                     {String(index + 1).padStart(2, '0')}
                   </span>
                   <div>

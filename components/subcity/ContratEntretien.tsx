@@ -16,7 +16,7 @@ interface ContratEntretienProps {
 
 export function ContratEntretien({ title, subtitle, formules, zoneName }: ContratEntretienProps) {
   return (
-    <section className="section bg-secondary-sable">
+    <section className="section bg-gray-50">
       <div className="container">
         <div className="text-center max-w-xl mx-auto mb-14">
           <div className="rule-accent mx-auto mb-6" />
@@ -27,11 +27,11 @@ export function ContratEntretien({ title, subtitle, formules, zoneName }: Contra
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {formules.map((formule, index) => (
             <div key={index}
-              className={`bg-white p-8 relative ${formule.popular ? 'ring-2 ring-secondary-terracotta' : 'border border-gray-200'}`}
-              style={{ borderRadius: '2px' }}>
+              className={`bg-white p-8 relative ${formule.popular ? 'ring-2 ring-primary-600' : 'border border-gray-200'}`}
+              style={{ borderRadius: '8px' }}>
               {formule.popular && (
-                <span className="absolute -top-3 left-6 text-[10px] font-bold uppercase tracking-wider text-white px-3 py-1"
-                  style={{ background: '#E07B39', borderRadius: '2px' }}>
+                <span className="absolute -top-3 left-6 text-[10px] font-bold uppercase tracking-wider text-white px-3 py-1 bg-primary-600"
+                  style={{ borderRadius: '8px' }}>
                   Le plus choisi
                 </span>
               )}
@@ -42,7 +42,7 @@ export function ContratEntretien({ title, subtitle, formules, zoneName }: Contra
               <ul className="space-y-3 mb-8">
                 {formule.inclus.map((item, i) => (
                   <li key={i} className="flex items-start gap-2 text-gray-600 text-sm">
-                    <svg className="w-4 h-4 text-secondary-terracotta flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 text-primary-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     {item}
