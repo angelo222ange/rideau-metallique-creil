@@ -52,8 +52,20 @@
   </url>
 
   <!-- ================================================================== -->
-  <!-- SERVICE PAGES (Creil) - 6 services (depannage = homepage) -->
+  <!-- SERVICE PAGES (Creil) - 7 services + zone overview -->
   <!-- ================================================================== -->
+  <url>
+    <loc>https://depannage-rideau-metallique-creil.fr/depannage-rideau-metallique-creil/</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://depannage-rideau-metallique-creil.fr/rideau-metallique-creil/</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
   <url>
     <loc>https://depannage-rideau-metallique-creil.fr/installation-rideau-metallique-creil/</loc>
     <lastmod>2026-03-29</lastmod>
@@ -299,32 +311,10 @@
   <url><loc>https://depannage-rideau-metallique-creil.fr/rideau-metallique-beauvais/</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://depannage-rideau-metallique-creil.fr/rideau-metallique-noyon/</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
 
-  <!-- ================================================================== -->
-  <!-- ZONE PAGES (/zones/{slug}) -->
-  <!-- ================================================================== -->
-  <url><loc>https://depannage-rideau-metallique-creil.fr/zones/nogent-sur-oise/</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://depannage-rideau-metallique-creil.fr/zones/montataire/</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://depannage-rideau-metallique-creil.fr/zones/villers-saint-paul/</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://depannage-rideau-metallique-creil.fr/zones/thiverny/</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://depannage-rideau-metallique-creil.fr/zones/saint-maximin/</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://depannage-rideau-metallique-creil.fr/zones/brenouille/</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://depannage-rideau-metallique-creil.fr/zones/saint-leu-desserent/</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://depannage-rideau-metallique-creil.fr/zones/lamorlaye/</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://depannage-rideau-metallique-creil.fr/zones/gouvieux/</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://depannage-rideau-metallique-creil.fr/zones/chantilly/</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://depannage-rideau-metallique-creil.fr/zones/liancourt/</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://depannage-rideau-metallique-creil.fr/zones/pont-sainte-maxence/</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://depannage-rideau-metallique-creil.fr/zones/senlis/</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://depannage-rideau-metallique-creil.fr/zones/chambly/</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://depannage-rideau-metallique-creil.fr/zones/clermont/</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://depannage-rideau-metallique-creil.fr/zones/verberie/</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://depannage-rideau-metallique-creil.fr/zones/meru/</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://depannage-rideau-metallique-creil.fr/zones/compiegne/</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://depannage-rideau-metallique-creil.fr/zones/beauvais/</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://depannage-rideau-metallique-creil.fr/zones/noyon/</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <!-- Zone redirect pages (/zones/{slug}) intentionally excluded - they are 301 redirects to /rideau-metallique-{slug}/ -->
 
   <!-- ================================================================== -->
-  <!-- BLOG ARTICLES (18 articles) -->
+  <!-- BLOG ARTICLES (19 articles) -->
   <!-- ================================================================== -->
   <url><loc>https://depannage-rideau-metallique-creil.fr/blog/signes-depannage-rideau-metallique-urgent/</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://depannage-rideau-metallique-creil.fr/blog/guide-entretien-rideau-metallique-2026/</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
@@ -344,6 +334,7 @@
   <url><loc>https://depannage-rideau-metallique-creil.fr/blog/securite-incendie-rideau-metallique-commerce/</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://depannage-rideau-metallique-creil.fr/blog/rideau-metallique-intelligent-connecte-2026/</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://depannage-rideau-metallique-creil.fr/blog/fabricant-rideau-metallique-comment-choisir/</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://depannage-rideau-metallique-creil.fr/blog/top-6-fabricants-rideaux-metalliques-france-2026/</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
   <!-- ================================================================== -->
   <!-- PAGES LEGALES ET UTILITAIRES -->

@@ -246,17 +246,22 @@ export function Reviews({ title = "Avis Clients", subtitle, items, allReviewsLin
           </div>
         </div>
 
-        {/* Dots indicator */}
-        <div className="flex justify-center gap-1.5 mt-8">
+        {/* Dots indicator -- min 44px touch target via padding */}
+        <div className="flex justify-center gap-0 mt-6">
           {Array.from({ length: maxStart + 1 }).map((_, i) => (
             <button
               key={i}
               onClick={() => setStartIndex(i)}
-              className={`h-1.5 transition-all duration-300 ${
-                i === startIndex ? "w-6 bg-primary-600" : "w-1.5 bg-gray-300"
-              }`}
-              style={{ borderRadius: "100px" }}
-            />
+              className="p-3 flex items-center justify-center"
+              aria-label={`Aller au groupe d'avis ${i + 1}`}
+            >
+              <span
+                className={`block h-1.5 transition-all duration-300 ${
+                  i === startIndex ? "w-6 bg-primary-600" : "w-1.5 bg-gray-300"
+                }`}
+                style={{ borderRadius: "100px" }}
+              />
+            </button>
           ))}
         </div>
 
