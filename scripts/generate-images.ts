@@ -11,8 +11,12 @@
 import fs from "fs";
 import path from "path";
 
-// Clé API Gemini
-const API_KEY = process.env.GEMINI_API_KEY || "***REMOVED***";
+// Clé API Gemini (JAMAIS en dur, toujours via env)
+const API_KEY = process.env.GEMINI_API_KEY;
+if (!API_KEY) {
+  console.error("GEMINI_API_KEY env variable is required. Set it in .env");
+  process.exit(1);
+}
 const OUTPUT_DIR = path.join(__dirname, "../public/images/generated");
 fs.mkdirSync(OUTPUT_DIR, { recursive: true });
 
