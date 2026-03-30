@@ -15,10 +15,23 @@ import reparationContent from "@/content/pages/services/reparation.json";
 import { replaceVariables } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: `Avis Clients - ${siteConfig.name} | ${siteConfig.reviews.rating}/5 (${siteConfig.reviews.count} avis)`,
-  description: `Decouvrez les avis clients de ${siteConfig.name} a ${siteConfig.city}. Note ${siteConfig.reviews.rating}/5 sur ${siteConfig.reviews.count} avis. Depannage, installation, reparation de rideaux metalliques. ${siteConfig.phone}`,
+  title: `Avis DRM Creil | ${siteConfig.reviews.rating}/5 sur ${siteConfig.reviews.count} Avis`,
+  description: `Avis clients DRM Creil : note ${siteConfig.reviews.rating}/5 sur ${siteConfig.reviews.count} avis verifies. Depannage, installation rideau metallique. ${siteConfig.phone}`,
   alternates: {
     canonical: `${siteConfig.url}/avis/`,
+  },
+  openGraph: {
+    title: `Avis Clients DRM Creil | ${siteConfig.reviews.rating}/5`,
+    description: `${siteConfig.reviews.count} avis clients verifies. Depannage rideau metallique a Creil.`,
+    type: "website",
+    locale: "fr_FR",
+    url: `${siteConfig.url}/avis/`,
+    images: [{
+      url: `${siteConfig.url}/images/logos/depannage-rideau-metallique-creil.webp`,
+      width: 800,
+      height: 600,
+      alt: `Avis clients DRM Creil`,
+    }],
   },
 };
 
@@ -31,12 +44,38 @@ interface Review {
   service?: string;
 }
 
-// Noms masculins courants
-const masculineNames = ["Laurent", "Ahmed", "Thomas", "Philippe", "Nicolas", "Pierre", "Jean", "Marc", "Patrick", "David", "Christophe", "Michel", "Franck", "Julien", "Stephane", "Bruno", "Eric", "Olivier", "Alain", "Bernard", "Yves", "Gerard", "Jacques", "Thierry", "Daniel", "Claude", "Romain", "Frederic", "Antoine", "Hugo"];
+// Noms féminins — même liste que Reviews.tsx pour cohérence
+const feminineNames = new Set([
+  "sophie", "nathalie", "fatima", "caroline", "samira", "isabelle", "amandine",
+  "marie", "julie", "sarah", "laura", "emma", "lea", "chloe", "manon",
+  "camille", "alice", "charlotte", "margaux", "helene", "valerie", "sylvie",
+  "martine", "sandrine", "aurelie", "celine", "virginie", "stephanie",
+  "karine", "myriam", "aicha", "yasmine", "leila", "rachida", "djamila",
+  "patricia", "brigitte", "claudine", "monique", "francoise", "elise",
+  "nadia", "catherine", "corinne", "carole", "claire", "audrey", "amina",
+  "josephine", "melanie", "mireille", "salima", "agnes", "anne",
+]);
+
+function isFeminineName(name: string): boolean {
+  const firstName = name.split(/[\s.]/)[0].toLowerCase()
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  // Gère les prénoms composés: "Marie-Claire" → check "marie"
+  const base = firstName.replace(/-.*/, "");
+  return feminineNames.has(firstName) || feminineNames.has(base);
+}
 
 function isMasculineName(name: string): boolean {
-  const firstName = name.split(" ")[0].replace(/[^a-zA-ZÀ-ÿ]/g, "");
-  return masculineNames.some((m) => firstName.toLowerCase() === m.toLowerCase());
+  return !isFeminineName(name);
+}
+
+// Hash déterministe — même nom = même photo partout sur le site
+function getPhotoId(name: string): number {
+  let hash = 0;
+  for (let i = 0; i < name.length; i++) {
+    hash = ((hash << 5) - hash) + name.charCodeAt(i);
+    hash |= 0;
+  }
+  return (Math.abs(hash) % 70) + 1;
 }
 
 // Couleurs pour les initiales
@@ -106,22 +145,36 @@ export default function AvisPage() {
     })),
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": siteConfig.url },
+      { "@type": "ListItem", "position": 2, "name": "Avis clients", "item": `${siteConfig.url}/avis` },
+    ],
+  };
+
   return (
     <main>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
 
       {/* ─── HERO ─── */}
       <section className="relative overflow-hidden bg-gray-900">
         <Image
-          src="/images/gallery/hero-bg-technicien-drm.webp"
+          src="/images/gallery/avis-client-rideau-metallique.webp"
           alt={`Avis clients ${siteConfig.name} rideau metallique ${siteConfig.city}`}
           title={`Avis clients ${siteConfig.name} rideau metallique ${siteConfig.city}`}
           fill
           className="object-cover opacity-20"
-        />
+          sizes="100vw"
+          />
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/90 to-gray-900/70" />
         <div className="container relative z-10 py-16 md:py-20">
           <nav className="mb-6" aria-label="Fil d'Ariane">
@@ -155,10 +208,10 @@ export default function AvisPage() {
             ].map((stat, i) => (
               <div
                 key={i}
-                className={`p-8 text-center border-l-4 transition-colors ${
+                className={`rounded-2xl p-8 text-center transition-all ${
                   stat.highlight
-                    ? 'bg-primary-600 border-l-primary-800 text-white'
-                    : 'bg-white border-l-primary-500 border border-gray-200'
+                    ? 'bg-primary-600 text-white shadow-xl shadow-primary-600/20'
+                    : 'bg-white border border-gray-100 shadow-lg'
                 }`}
               >
                 <p className={`stat-number mb-2 ${stat.highlight ? 'text-white' : 'text-gray-900'}`}>{stat.value}</p>
@@ -191,10 +244,10 @@ export default function AvisPage() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {uniqueReviews.map((review, index) => {
-              const isMale = isMasculineName(review.name);
+              const isFeminine = isFeminineName(review.name);
               const usePhoto = index % 2 === 0;
-              const photoGender = isMale ? "men" : "women";
-              const photoIndex = (index * 7 + 3) % 80;
+              const photoGender = isFeminine ? "women" : "men";
+              const photoIndex = getPhotoId(review.name);
               const colorClass = initialColors[index % initialColors.length];
               const initial = review.name.charAt(0).toUpperCase();
 
@@ -258,7 +311,7 @@ export default function AvisPage() {
             <h2 className="section-title">
               Pourquoi nos clients nous recommandent
             </h2>
-            <div className="divider-industrial mx-auto mt-4" />
+            <div className="h-px bg-gray-200 mx-auto max-w-xs mt-4" />
           </div>
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {[
@@ -274,6 +327,54 @@ export default function AvisPage() {
                 <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── LAISSER UN AVIS ─── */}
+      <section className="section bg-gray-50">
+        <div className="container">
+          <div className="max-w-2xl mx-auto text-center">
+            <p className="section-label">Votre avis compte</p>
+            <h2 className="section-title">Vous etes client {siteConfig.name} ?</h2>
+            <div className="h-px bg-gray-200 mx-auto max-w-xs mt-4 mb-6" />
+            <p className="text-gray-500 text-lg mb-8">
+              Partagez votre experience avec d&apos;autres commercants et professionnels de {siteConfig.city} et de l&apos;{siteConfig.department}. Votre retour nous aide a ameliorer nos services.
+            </p>
+            {siteConfig.reviews.googleUrl ? (
+              <a href={siteConfig.reviews.googleUrl} target="_blank" rel="noopener noreferrer" className="btn-primary">
+                Laisser un avis Google
+              </a>
+            ) : (
+              <Link href="/contact" className="btn-primary">
+                Nous contacter
+              </Link>
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── MAILLAGE ─── */}
+      <section className="section bg-white">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="section-label">Decouvrir aussi</p>
+            <h2 className="section-title">Nos services et tarifs</h2>
+            <div className="h-px bg-gray-200 mx-auto max-w-xs mt-4 mb-10" />
+            <div className="grid sm:grid-cols-3 gap-4">
+              <Link href="/tarifs" className="card p-6 text-center group">
+                <p className="font-bold text-gray-900 group-hover:text-primary-600 transition-colors">Nos tarifs</p>
+                <p className="text-gray-500 text-sm mt-1">A partir de 150 EUR</p>
+              </Link>
+              <Link href="/a-propos" className="card p-6 text-center group">
+                <p className="font-bold text-gray-900 group-hover:text-primary-600 transition-colors">Notre equipe</p>
+                <p className="text-gray-500 text-sm mt-1">{siteConfig.experience} ans d&apos;experience</p>
+              </Link>
+              <Link href="/zones" className="card p-6 text-center group">
+                <p className="font-bold text-gray-900 group-hover:text-primary-600 transition-colors">Zones d&apos;intervention</p>
+                <p className="text-gray-500 text-sm mt-1">{siteConfig.city} et environs</p>
+              </Link>
+            </div>
           </div>
         </div>
       </section>

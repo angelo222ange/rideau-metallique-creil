@@ -11,11 +11,24 @@ import pageData from "@/content/pages/contact.json";
 const content = getPageContent(pageData);
 
 export const metadata: Metadata = {
-  title: `Contact & Devis Gratuit - Rideau Metallique ${siteConfig.city}`,
-  description: `Contactez ${siteConfig.name} a ${siteConfig.city}. Disponible 24h/24. ${siteConfig.phone} | ${siteConfig.email}`,
+  title: `Contact Rideau Metallique Creil | Devis Gratuit 24h/24`,
+  description: `Contactez DRM Creil pour vos rideaux metalliques. Devis gratuit, intervention 24h/24. Appelez le ${siteConfig.phone} ou envoyez un message.`,
   keywords: `contact rideau metallique ${siteConfig.city}, devis rideau metallique ${siteConfig.department}`,
   alternates: {
     canonical: `${siteConfig.url}/contact/`,
+  },
+  openGraph: {
+    title: `Contact DRM Creil | Devis Gratuit Rideau Metallique`,
+    description: `Devis gratuit rideau metallique a Creil. Disponible 24h/24. ${siteConfig.phone}`,
+    type: "website",
+    locale: "fr_FR",
+    url: `${siteConfig.url}/contact/`,
+    images: [{
+      url: `${siteConfig.url}/images/logos/depannage-rideau-metallique-creil.webp`,
+      width: 800,
+      height: 600,
+      alt: `Contact DRM Creil`,
+    }],
   },
 };
 
@@ -58,11 +71,12 @@ export default function ContactPage() {
       {/* ─── HERO ─── */}
       <section className="relative overflow-hidden bg-gray-900">
         <Image
-          src="/images/gallery/hero-bg-technicien-drm.webp"
+          src="/images/gallery/depannage-rideau-metallique-creil-60.webp"
           alt={`Contact ${siteConfig.name} rideau metallique ${siteConfig.city}`}
           title={`Contact ${siteConfig.name} rideau metallique ${siteConfig.city}`}
           fill
           className="object-cover opacity-20"
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/90 to-gray-900/70" />
         <div className="container relative z-10 py-16 md:py-20">
@@ -99,9 +113,9 @@ export default function ContactPage() {
               <div className="space-y-4">
                 <a
                   href={siteConfig.phoneLink}
-                  className="flex items-start gap-4 p-5 bg-white border-l-4 border-l-primary-500 border border-gray-200 hover:border-l-primary-700 transition-all group"
+                  className="flex items-start gap-4 p-5 rounded-2xl bg-white border border-gray-100 shadow-lg hover:shadow-xl transition-all group"
                 >
-                  <div className="w-12 h-12 bg-primary-600 text-white flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 rounded-xl bg-primary-600 text-white flex items-center justify-center flex-shrink-0">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
@@ -114,9 +128,9 @@ export default function ContactPage() {
 
                 <a
                   href={`mailto:${siteConfig.email}`}
-                  className="flex items-start gap-4 p-5 bg-white border-l-4 border-l-primary-500 border border-gray-200 hover:border-l-primary-700 transition-all group"
+                  className="flex items-start gap-4 p-5 rounded-2xl bg-white border border-gray-100 shadow-lg hover:shadow-xl transition-all group"
                 >
-                  <div className="w-12 h-12 bg-primary-600 text-white flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 rounded-xl bg-primary-600 text-white flex items-center justify-center flex-shrink-0">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
@@ -127,8 +141,8 @@ export default function ContactPage() {
                   </div>
                 </a>
 
-                <div className="flex items-start gap-4 p-5 bg-white border-l-4 border-l-gray-300 border border-gray-200">
-                  <div className="w-12 h-12 bg-gray-100 text-gray-600 flex items-center justify-center flex-shrink-0">
+                <div className="flex items-start gap-4 p-5 rounded-2xl bg-white border border-gray-100 shadow-lg">
+                  <div className="w-12 h-12 rounded-xl bg-gray-100 text-gray-600 flex items-center justify-center flex-shrink-0">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -140,8 +154,8 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-5 bg-white border-l-4 border-l-gray-300 border border-gray-200">
-                  <div className="w-12 h-12 bg-gray-100 text-gray-600 flex items-center justify-center flex-shrink-0">
+                <div className="flex items-start gap-4 p-5 rounded-2xl bg-white border border-gray-100 shadow-lg">
+                  <div className="w-12 h-12 rounded-xl bg-gray-100 text-gray-600 flex items-center justify-center flex-shrink-0">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
@@ -157,7 +171,7 @@ export default function ContactPage() {
               </div>
 
               {/* Urgence banner */}
-              <div className="mt-8 bg-primary-600 p-6 text-white border-l-4 border-l-primary-800">
+              <div className="mt-8 bg-primary-600 rounded-2xl p-6 text-white shadow-xl shadow-primary-600/20">
                 <div className="flex items-center gap-3 mb-3">
                   <span className="w-3 h-3 bg-white rounded-full animate-pulse" />
                   <p className="font-bold text-lg uppercase tracking-wide">Urgence rideau metallique ?</p>
@@ -167,7 +181,7 @@ export default function ContactPage() {
                 </p>
                 <a
                   href={siteConfig.phoneLink}
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-white text-primary-700 font-bold hover:bg-gray-50 transition-colors"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-primary-700 font-bold hover:bg-gray-50 transition-colors shadow-lg"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -195,7 +209,7 @@ export default function ContactPage() {
             {content.confiance.items.map((item, index) => (
               <div
                 key={index}
-                className="bg-white border-l-4 border-l-primary-500 border border-gray-200 p-8 text-center hover:border-l-primary-700 transition-colors"
+                className="bg-white rounded-2xl border border-gray-100 p-8 text-center shadow-lg hover:shadow-xl transition-all"
               >
                 <p className="stat-number text-primary-600 mb-2">{item.value}</p>
                 <p className="stat-label">{item.label}</p>
@@ -226,11 +240,11 @@ export default function ContactPage() {
                 ))}
               </ul>
             </div>
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
               {content.engagements.stats.map((stat, index) => (
                 <div
                   key={index}
-                  className="bg-white border-l-4 border-l-primary-500 border border-gray-200 p-6 text-center hover:border-l-primary-700 transition-colors"
+                  className="bg-white rounded-2xl border border-gray-100 p-6 text-center shadow-lg"
                 >
                   <p className="font-black text-2xl text-gray-900">{stat.value}</p>
                   <p className="text-xs text-gray-500 mt-1">{stat.label}</p>
@@ -250,13 +264,42 @@ export default function ContactPage() {
             <div className="divider-industrial mx-auto mt-4" />
             <p className="section-subtitle mx-auto mt-4">{siteConfig.name} intervient a {siteConfig.city} et dans tout le departement de l&apos;{siteConfig.department}.</p>
           </div>
-          <div className="overflow-hidden h-[400px] border border-gray-200">
+          <div className="rounded-2xl overflow-hidden h-[400px] border border-gray-200 shadow-lg">
             <iframe
               src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2904.5!2d${siteConfig.geo.lng}!3d${siteConfig.geo.lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z${siteConfig.geo.lat}%2C${siteConfig.geo.lng}!5e0!3m2!1sfr!2sfr!4v1`}
               width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               title={`Carte ${siteConfig.name}`}
             />
+          </div>
+        </div>
+      </section>
+
+      {/* ─── MAILLAGE ─── */}
+      <section className="section bg-white">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="section-label">Pages utiles</p>
+            <h2 className="section-title">Avant de nous contacter</h2>
+            <div className="h-px bg-gray-200 mx-auto max-w-xs mt-4 mb-10" />
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <Link href="/tarifs" className="card p-5 text-center group">
+                <p className="font-bold text-gray-900 group-hover:text-primary-600 transition-colors text-sm">Nos tarifs</p>
+                <p className="text-gray-400 text-xs mt-1">Prix indicatifs</p>
+              </Link>
+              <Link href="/a-propos" className="card p-5 text-center group">
+                <p className="font-bold text-gray-900 group-hover:text-primary-600 transition-colors text-sm">A propos</p>
+                <p className="text-gray-400 text-xs mt-1">Notre equipe</p>
+              </Link>
+              <Link href="/avis" className="card p-5 text-center group">
+                <p className="font-bold text-gray-900 group-hover:text-primary-600 transition-colors text-sm">{siteConfig.reviews.rating}/5</p>
+                <p className="text-gray-400 text-xs mt-1">{siteConfig.reviews.count} avis clients</p>
+              </Link>
+              <Link href="/zones" className="card p-5 text-center group">
+                <p className="font-bold text-gray-900 group-hover:text-primary-600 transition-colors text-sm">Zones</p>
+                <p className="text-gray-400 text-xs mt-1">Communes couvertes</p>
+              </Link>
+            </div>
           </div>
         </div>
       </section>

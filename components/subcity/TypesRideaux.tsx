@@ -27,11 +27,9 @@ export function TypesRideaux({ title, zoneName, items }: TypesRideauxProps) {
 
         <div className="divide-y divide-gray-200">
           {items.map((type, index) => (
-            <div key={index} className="grid grid-cols-12 gap-6 py-6 items-center">
-              <div className="col-span-1">
-                <span className="font-bold text-2xl text-gray-200">{String(index + 1).padStart(2, '0')}</span>
-              </div>
-              <div className="col-span-7 md:col-span-8">
+            <div key={index} className="flex gap-4 md:gap-6 py-6 items-start">
+              <span className="font-bold text-2xl text-gray-200 flex-shrink-0 w-8">{String(index + 1).padStart(2, '0')}</span>
+              <div className="flex-1 min-w-0">
                 <h3 className="font-heading font-bold text-gray-900 text-[15px]">{type.name}</h3>
                 <p className="text-gray-400 text-sm">{type.description}</p>
                 <span className="text-xs text-gray-300">Idéal : {type.ideal}</span>

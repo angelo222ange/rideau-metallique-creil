@@ -3,12 +3,26 @@ import Link from "next/link";
 import Image from "next/image";
 import { siteConfig, zones, services } from "@/config/site";
 import { CTA } from "@/components/sections/CTA";
+import { ServicesCarousel } from "@/components/sections/ServicesCarousel";
 
 export const metadata: Metadata = {
-  title: `A Propos - ${siteConfig.name} | Rideau Metallique ${siteConfig.city}`,
-  description: `${siteConfig.name}, specialiste du rideau metallique a ${siteConfig.city} (${siteConfig.postalCode}) et dans l'${siteConfig.department}. ${siteConfig.experience} ans d'experience, ${siteConfig.interventions} interventions. ${siteConfig.phone}`,
+  title: `A Propos DRM Creil | Specialiste Rideau Metallique`,
+  description: `DRM Creil : ${siteConfig.experience} ans d'experience, ${siteConfig.interventions} interventions en rideau metallique. Equipe certifiee, Creil et Oise. ${siteConfig.phone}`,
   alternates: {
     canonical: `${siteConfig.url}/a-propos/`,
+  },
+  openGraph: {
+    title: `A Propos - DRM Creil | Rideau Metallique Oise`,
+    description: `Specialiste rideau metallique a Creil. ${siteConfig.experience} ans d'experience, ${siteConfig.interventions} interventions.`,
+    type: "website",
+    locale: "fr_FR",
+    url: `${siteConfig.url}/a-propos/`,
+    images: [{
+      url: `${siteConfig.url}/images/gallery/rideau-metallique-creil.webp`,
+      width: 800,
+      height: 600,
+      alt: `DRM Creil - Specialiste rideau metallique`,
+    }],
   },
 };
 
@@ -57,11 +71,24 @@ export default function AProposPage() {
     },
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": siteConfig.url },
+      { "@type": "ListItem", "position": 2, "name": "A propos", "item": `${siteConfig.url}/a-propos` },
+    ],
+  };
+
   return (
     <main>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       {/* ─── HERO ─── */}
@@ -72,7 +99,8 @@ export default function AProposPage() {
           title={`A propos ${siteConfig.name} rideau metallique ${siteConfig.city}`}
           fill
           className="object-cover opacity-20"
-        />
+          sizes="100vw"
+          />
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/90 to-gray-900/70" />
         <div className="container relative z-10 py-16 md:py-20">
           <nav className="mb-6" aria-label="Fil d'Ariane">
@@ -106,7 +134,7 @@ export default function AProposPage() {
             ].map((stat, i) => (
               <div
                 key={i}
-                className="bg-white border-l-4 border-l-primary-500 border border-gray-200 p-8 text-center hover:border-l-primary-700 transition-colors"
+                className="bg-white rounded-2xl border border-gray-100 p-8 text-center shadow-lg hover:shadow-xl transition-all"
               >
                 <p className="stat-number text-primary-600">{stat.value}</p>
                 <p className="stat-label">{stat.label}</p>
@@ -119,7 +147,7 @@ export default function AProposPage() {
       {/* ─── NOTRE HISTOIRE ─── */}
       <section className="section bg-gray-50">
         <div className="container">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
               <p className="section-label">Qui sommes-nous</p>
               <h2 className="section-title">
@@ -149,17 +177,18 @@ export default function AProposPage() {
                 </Link>
               </div>
             </div>
-            <div className="relative hidden lg:block">
-              <div className="relative aspect-[4/3] overflow-hidden">
+            <div className="relative hidden md:block">
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
                 <Image
-                  src="/images/gallery/rideau-metallique-creil.webp"
+                  src="/images/gallery/fabrication-rideau-metallique-entreprise-drm.webp"
                   alt={`Intervention ${siteConfig.name} sur rideau metallique`}
                   title={`Intervention ${siteConfig.name} sur rideau metallique`}
                   fill
                   className="object-cover"
-                />
+                  sizes="(max-width: 768px) 0vw, 50vw"
+                  />
               </div>
-              <div className="absolute -bottom-6 -left-6 bg-primary-600 text-white p-6">
+              <div className="absolute -bottom-6 -left-6 bg-primary-600 text-white p-6 rounded-2xl shadow-lg">
                 <p className="stat-number text-white">{siteConfig.experience}+</p>
                 <p className="text-white/80 text-sm font-medium">ans d&apos;experience</p>
               </div>
@@ -215,37 +244,20 @@ export default function AProposPage() {
       </section>
 
       {/* ─── NOS SERVICES ─── */}
-      <section className="section bg-gray-50">
-        <div className="container">
-          <div className="max-w-2xl mb-14">
-            <p className="section-label">Nos services</p>
-            <h2 className="section-title">
-              {services.filter(s => s.hasPage).length} services pour vos fermetures metalliques
-            </h2>
-            <div className="divider-industrial mt-4" />
-            <p className="section-subtitle mt-4">
-              Une offre complete pour tous vos besoins en fermetures metalliques a {siteConfig.city} et dans l&apos;{siteConfig.department}.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-4 max-w-3xl">
-            {services.filter(s => s.hasPage).map((s) => (
-              <Link
-                key={s.id}
-                href={`/${s.slug}-rideau-metallique-${siteConfig.city.toLowerCase()}`}
-                className="card flex items-center justify-between group"
-              >
-                <div>
-                  <span className="font-bold text-gray-900 group-hover:text-primary-600 transition-colors">{s.name}</span>
-                  <span className="block text-gray-400 text-sm mt-1">{s.longDesc}</span>
-                </div>
-                <svg className="w-5 h-5 text-gray-300 group-hover:text-primary-600 group-hover:translate-x-1 transition-all flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ServicesCarousel
+        services={services.filter(s => s.hasPage)}
+        serviceImages={{
+          depannage: "/images/gallery/depannage-rideau-metallique-DRM-reparation.webp",
+          installation: "/images/gallery/installation-rideau-metallique-drm.webp",
+          fabrication: "/images/gallery/realisation-rideau-metallique-lame-pleine-commerce.webp",
+          entretien: "/images/gallery/entretien-rideau-metallique-rideau-de-fer.webp",
+          motorisation: "/images/gallery/motorisation-rideau-metallique-drm-depannage.webp",
+          deblocage: "/images/gallery/depannage-rideau-metallique-drm-france-rm.webp",
+          reparation: "/images/gallery/realisation-drm-rideau-metallique-lame-pleine.webp",
+        }}
+        city={siteConfig.city}
+        department={siteConfig.department}
+      />
 
       {/* ─── ZONE D'INTERVENTION ─── */}
       <section className="section bg-white">
@@ -264,8 +276,8 @@ export default function AProposPage() {
             {zones.map((z) => (
               <Link
                 key={z.slug}
-                href={`/zones/${z.slug}`}
-                className="px-4 py-2 bg-gray-50 text-gray-600 text-sm border border-gray-200 hover:border-primary-500 hover:text-primary-700 hover:bg-primary-50 transition-all"
+                href={`/rideau-metallique-${z.slug}`}
+                className="px-4 py-2 rounded-full bg-gray-50 text-gray-600 text-sm border border-gray-200 hover:border-primary-500 hover:text-primary-700 hover:bg-primary-50 transition-all"
               >
                 {z.name} ({z.postalCode})
               </Link>
@@ -274,15 +286,41 @@ export default function AProposPage() {
         </div>
       </section>
 
+      {/* ─── LIENS UTILES ─── */}
+      <section className="section bg-gray-50">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="section-label">En savoir plus</p>
+            <h2 className="section-title">Decouvrez aussi</h2>
+            <div className="h-px bg-gray-200 mx-auto max-w-xs mt-4 mb-10" />
+            <div className="grid sm:grid-cols-3 gap-4">
+              <Link href="/tarifs" className="card p-6 text-center group">
+                <p className="font-bold text-gray-900 group-hover:text-primary-600 transition-colors">Nos tarifs</p>
+                <p className="text-gray-500 text-sm mt-1">Prix et devis gratuit</p>
+              </Link>
+              <Link href="/avis" className="card p-6 text-center group">
+                <p className="font-bold text-gray-900 group-hover:text-primary-600 transition-colors">{siteConfig.reviews.rating}/5 -- {siteConfig.reviews.count} avis</p>
+                <p className="text-gray-500 text-sm mt-1">Avis clients verifies</p>
+              </Link>
+              <Link href="/blog" className="card p-6 text-center group">
+                <p className="font-bold text-gray-900 group-hover:text-primary-600 transition-colors">Blog conseils</p>
+                <p className="text-gray-500 text-sm mt-1">Guides et actualites</p>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ─── COORDONNEES ─── */}
       <section className="relative overflow-hidden bg-gray-900">
         <Image
-          src="/images/gallery/hero-bg-technicien-drm.webp"
+          src="/images/gallery/rideau-metallique-industrielle-rideau-metallique-drm.webp"
           alt={`Coordonnees ${siteConfig.name}`}
           title={`Coordonnees ${siteConfig.name}`}
           fill
           className="object-cover opacity-10"
-        />
+          sizes="100vw"
+          />
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/95 to-gray-900/90" />
         <div className="container relative z-10 py-16 md:py-24">
           <div className="grid md:grid-cols-3 gap-8">
@@ -306,7 +344,7 @@ export default function AProposPage() {
               },
             ].map((item, i) => {
               const content = (
-                <div className="border-l-4 border-l-primary-500 bg-white/5 border border-white/10 p-8 hover:bg-white/10 transition-all">
+                <div className="rounded-2xl bg-white/5 border border-white/10 p-8 hover:bg-white/10 transition-all">
                   <p className="text-white/40 text-xs font-bold uppercase tracking-widest mb-2">{item.label}</p>
                   <p className="text-white font-bold text-lg">{item.value}</p>
                   <p className="text-white/30 text-sm mt-1">{item.sub}</p>

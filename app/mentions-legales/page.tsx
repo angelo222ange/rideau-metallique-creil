@@ -3,7 +3,7 @@ import Link from "next/link";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: `Mentions Légales | ${siteConfig.name}`,
+  title: `Mentions Légales`,
   description: `Mentions légales du site ${siteConfig.domain}. ${siteConfig.fullName}. Informations éditeur, hébergement et RGPD.`,
   robots: { index: true, follow: true },
   alternates: {

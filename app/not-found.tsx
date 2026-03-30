@@ -8,11 +8,12 @@ export default function NotFound() {
       {/* ─── HERO 404 ─── */}
       <section className="relative overflow-hidden bg-gray-900 min-h-[60vh] flex items-center">
         <Image
-          src="/images/gallery/hero-bg-technicien-drm.webp"
+          src="/images/gallery/rideau-metallique-industriel-lame-pleine.webp"
           alt="Page introuvable"
           title="Page introuvable"
           fill
           className="object-cover opacity-10"
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/95 to-gray-900/80" />
         <div className="container relative z-10 text-center py-16 md:py-20">

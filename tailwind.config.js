@@ -28,9 +28,9 @@ module.exports = {
         dark: '#0C1B2A',
       },
       fontFamily: {
-        sans: ['Plus Jakarta Sans', 'DM Sans', 'system-ui', 'sans-serif'],
-        heading: ['Plus Jakarta Sans', 'DM Sans', 'sans-serif'],
-        body: ['DM Sans', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-plus-jakarta)', 'var(--font-dm-sans)', 'system-ui', 'sans-serif'],
+        heading: ['var(--font-plus-jakarta)', 'var(--font-dm-sans)', 'sans-serif'],
+        body: ['var(--font-dm-sans)', 'var(--font-plus-jakarta)', 'system-ui', 'sans-serif'],
       },
       boxShadow: {
         'card': '0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.06)',

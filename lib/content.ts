@@ -24,7 +24,8 @@ export function replaceVariables(text: string, context?: ReplaceContext): string
     .replace(/{email}/g, siteConfig.email)
     .replace(/{department}/g, siteConfig.department)
     .replace(/{region}/g, siteConfig.region)
-    .replace(/{postalCode}/g, siteConfig.postalCode);
+    .replace(/{postalCode}/g, siteConfig.postalCode)
+    .replace(/{address}/g, siteConfig.address);
 
   // Variables contextuelles (zone et service)
   if (context?.zone) {

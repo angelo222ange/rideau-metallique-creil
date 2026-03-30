@@ -1,225 +1,285 @@
 {
- "slug": "securite-incendie-rideau-metallique-commerce",
- "title": "Securite Incendie et Rideau Metallique : Obligations des Commercants",
- "metaTitle": "Securite Incendie Rideau Metallique - Obligations ERP",
- "metaDescription": "Securite incendie et rideau metallique : obligations legales, normes ERP, evacuation, coupe-feu. Conseil expert DRM Creil au {phone}.",
- "date": "2026-03-18",
- "readTime": "12 min",
- "image": "/images/gallery/entretien-rideau-metallique-rideau-de-fer.webp",
- "imageAlt": "Rideau metallique conforme aux normes de securite incendie sur un commerce a Creil",
- "excerpt": "Les rideaux metalliques jouent un role crucial dans la securite incendie des commerces. Entre obligations legales, normes ERP et exigences des assureurs, les commercants doivent maitriser un cadre reglementaire complexe. Ce guide fait le point complet.",
- "summary": {
-  "title": "L'essentiel a retenir",
-  "points": [
-   "Les commerces de plus de 100 m2 ou recevant du public sont classes ERP (Etablissements Recevant du Public) et soumis a des obligations strictes en matiere de securite incendie, y compris pour les rideaux metalliques.",
-   "Un rideau metallique ne doit jamais bloquer une issue de secours. La norme impose un debrayage manuel accessible et un systeme d'ouverture d'urgence en cas de panne de courant.",
-   "Les rideaux metalliques coupe-feu (classement CF 1h ou 2h) sont obligatoires dans certains cas pour compartimenter les locaux et limiter la propagation du feu.",
-   "DRM Creil installe des rideaux metalliques conformes aux normes incendie et ERP. Audit gratuit au {phone}."
+  "slug": "securite-incendie-rideau-metallique-commerce",
+  "title": "Securite Incendie et Rideau Metallique : Obligations des Commercants",
+  "metaTitle": "Securite Incendie Rideau Metallique - Obligations ERP",
+  "metaDescription": "Securite incendie et rideau metallique : obligations legales, normes ERP, evacuation, coupe-feu. Conseil expert DRM Creil au {phone}.",
+  "date": "2026-03-18",
+  "readTime": "12 min",
+  "image": "/images/gallery/Coffre-securite-Blindor-ACM.webp",
+  "imageAlt": "Rideau metallique conforme aux normes de securite incendie sur un commerce a Creil",
+  "excerpt": "Les rideaux metalliques jouent un role crucial dans la securite incendie des commerces. Entre obligations legales, normes ERP et exigences des assureurs, les commercants doivent maitriser un cadre reglementaire complexe. Ce guide fait le point complet.",
+  "summary": {
+    "title": "L'essentiel a retenir",
+    "points": [
+      "Les commerces de plus de 100 m2 ou recevant du public sont classes ERP (Etablissements Recevant du Public) et soumis a des obligations strictes en matiere de securite incendie, y compris pour les rideaux metalliques.",
+      "Un rideau metallique ne doit jamais bloquer une issue de secours. La norme impose un debrayage manuel accessible et un systeme d'ouverture d'urgence en cas de panne de courant.",
+      "Les rideaux metalliques coupe-feu (classement CF 1h ou 2h) sont obligatoires dans certains cas pour compartimenter les locaux et limiter la propagation du feu.",
+      "DRM Creil installe des rideaux metalliques conformes aux normes incendie et ERP. Audit gratuit au {phone}."
+    ]
+  },
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "La securite incendie est un sujet que beaucoup de commercants negligent ou abordent avec une connaissance partielle de la reglementation. Pourtant, les consequences d'un non-respect des normes incendie sont graves : fermeture administrative du commerce, poursuites penales en cas de sinistre, refus d'indemnisation par l'assureur. Et le rideau metallique, element central de la facade commerciale, est directement concerne par ces obligations."
+    },
+    {
+      "type": "paragraph",
+      "text": "A Creil, ou les locaux commerciaux sont souvent anciens et les configurations parfois complexes, la mise en conformite des rideaux metalliques avec les normes incendie est un enjeu majeur. <strong>DRM Creil</strong> accompagne les commercants de Creil dans cette demarche, de l'audit initial a l'<a href=\"/installation-rideau-metallique-creil\">installation de rideaux conformes</a>."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Les commerces et la reglementation ERP"
+    },
+    {
+      "type": "paragraph",
+      "text": "La majorite des commerces sont classes ERP (Etablissements Recevant du Public) et soumis a ce titre a une reglementation specifique en matiere de securite incendie. Le classement depend de l'activite et de la capacite d'accueil du public."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Les categories d'ERP concernant les commerces"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Type ERP",
+        "Activite",
+        "Seuil 5e categorie",
+        "Exemple a Creil"
+      ],
+      "rows": [
+        [
+          "Type M",
+          "Magasins de vente, centres commerciaux",
+          "Moins de 100 personnes",
+          "Boutiques rue centre, Terrasses du Port"
+        ],
+        [
+          "Type N",
+          "Restaurants, debits de boissons",
+          "Zone a manger < 100 pers. / zone debout < 200 pers.",
+          "Restaurants et brasseries du centre-ville de Creil"
+        ],
+        [
+          "Type O",
+          "Hotels, pensions",
+          "Moins de 100 personnes",
+          "Hotels du centre-ville de Creil"
+        ],
+        [
+          "Type R",
+          "Enseignement",
+          "Moins de 100 personnes",
+          "Ecoles privees, auto-ecoles"
+        ],
+        [
+          "Type W",
+          "Bureaux",
+          "Moins de 100 personnes",
+          "Bureaux zone d'activite de Creil, centre-ville"
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Les commerces de 5e categorie (les plus petits, accueillant moins de 100 personnes) sont soumis a des obligations allegees mais neanmoins reelles. Les commerces de 1ere a 4e categorie font l'objet de controles reguliers par la commission de securite de la ville de Creil."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Le rideau metallique et les issues de secours : la regle fondamentale"
+    },
+    {
+      "type": "paragraph",
+      "text": "La regle numero un, celle qui conditionne toutes les autres, est simple : un rideau metallique ne doit jamais empecher l'evacuation des personnes en cas d'incendie. Cela a plusieurs implications concretes pour les commercants."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "<strong>Acces aux issues de secours</strong> : si le rideau metallique est la seule issue du commerce (ce qui est frequent dans les petits commerces en pied d'immeuble a Creil), il doit pouvoir etre ouvert manuellement de l'interieur, meme en cas de panne de courant.",
+        "<strong>Debrayage manuel obligatoire</strong> : tout rideau motorise doit etre equipe d'un dispositif de debrayage permettant de le soulever manuellement. Ce debrayage doit etre accessible sans cle ni outil.",
+        "<strong>Systeme d'ouverture d'urgence</strong> : dans les ERP de 1ere a 4e categorie, un bouton d'ouverture d'urgence (type coup de poing) doit etre installe a proximite du rideau, accessible au personnel.",
+        "<strong>Signalisation</strong> : les consignes d'evacuation doivent mentionner la procedure d'ouverture du rideau metallique. Un panneau indiquant l'emplacement du debrayage doit etre visible.",
+        "<strong>Balisage lumineux</strong> : les issues de secours equipees d'un rideau metallique doivent etre balisees par un eclairage de securite autonome (bloc BAES)."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Les rideaux metalliques coupe-feu : quand sont-ils obligatoires ?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Un rideau metallique coupe-feu est un rideau concu pour resister au feu pendant une duree determinee (30 minutes, 1 heure ou 2 heures), empechant les flammes et la chaleur de se propager d'un local a un autre. Il se distingue du rideau metallique standard par sa fabrication, ses materiaux et son mode de declenchement."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Cas ou le rideau coupe-feu est obligatoire"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "<strong>Separation entre un commerce et un parking souterrain</strong> : tres frequent a Creil, notamment dans les centres commerciaux et les immeubles du centre-ville, du centre-ville ou d'zone d'activite de Creil.",
+        "<strong>Separation entre deux locaux de natures differentes</strong> : par exemple, entre un restaurant (risque de feu de cuisine) et une boutique de vetements (charge combustible elevee).",
+        "<strong>Locaux techniques</strong> : les ouvertures donnant sur des locaux contenant des equipements electriques (TGBT, chaufferie, local transformateur) doivent etre equipees de portes ou rideaux coupe-feu.",
+        "<strong>Commerces en centre commercial</strong> : les centres commerciaux comme les centres commerciaux de la region imposent des rideaux coupe-feu pour compartimenter les cellules commerciales.",
+        "<strong>Commerces en etage</strong> : les ouvertures entre niveaux (escaliers, monte-charges) doivent etre equipees de dispositifs coupe-feu dans les ERP de 1ere a 4e categorie."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Classement au feu des rideaux metalliques"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Classement",
+        "Signification",
+        "Duree de resistance",
+        "Application type"
+      ],
+      "rows": [
+        [
+          "PF 30 min (pare-flamme)",
+          "Empeche le passage des flammes pendant 30 min",
+          "30 minutes",
+          "Separation legere entre commerces"
+        ],
+        [
+          "CF 1h (coupe-feu 1 heure)",
+          "Empeche flammes et chaleur pendant 1 heure",
+          "60 minutes",
+          "Separation commerce/parking, commerce/local technique"
+        ],
+        [
+          "CF 2h (coupe-feu 2 heures)",
+          "Empeche flammes et chaleur pendant 2 heures",
+          "120 minutes",
+          "Separation de compartiments en centre commercial"
+        ],
+        [
+          "EI 60 (norme europeenne)",
+          "Integrite et isolation thermique 60 min",
+          "60 minutes",
+          "Equivalent europeen du CF 1h"
+        ],
+        [
+          "EI 120 (norme europeenne)",
+          "Integrite et isolation thermique 120 min",
+          "120 minutes",
+          "Equivalent europeen du CF 2h"
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Le fonctionnement d'un rideau coupe-feu"
+    },
+    {
+      "type": "paragraph",
+      "text": "Un rideau metallique coupe-feu est concu differemment d'un rideau standard. Son fonctionnement en cas d'incendie obeit a une logique bien precise."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "<strong>Declenchement automatique</strong> : le rideau coupe-feu est relie au systeme de detection incendie (detecteurs de fumee, centrale d'alarme). En cas de detection d'un incendie, le rideau se ferme automatiquement.",
+        "<strong>Fermeture par gravite</strong> : pour garantir la fermeture meme en cas de coupure de courant, le rideau coupe-feu descend par son propre poids, sans moteur. Un systeme de frein controlle la vitesse de descente.",
+        "<strong>Fusible thermique</strong> : en complement de la detection electronique, un fusible thermique (element metallique qui fond a une temperature precise, generalement 70°C) declenche la fermeture si la chaleur devient trop intense.",
+        "<strong>Lames isolantes</strong> : les lames d'un rideau coupe-feu sont generalement constituees de deux parois d'acier avec un isolant interne (laine de roche, silicate de calcium) qui retarde la transmission de la chaleur.",
+        "<strong>Joints intumescents</strong> : des joints speciaux installes dans les coulisses et en partie basse gonflent sous l'effet de la chaleur pour combler les jeux et empecher le passage de la fumee."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Les obligations d'entretien liees a la securite incendie"
+    },
+    {
+      "type": "paragraph",
+      "text": "La reglementation ne se limite pas a l'installation. Elle impose un <a href=\"/entretien-rideau-metallique-creil\">entretien regulier</a> des rideaux metalliques, et en particulier des rideaux coupe-feu, avec une tracabilite rigoureuse."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "<strong>Verification annuelle obligatoire</strong> : tout rideau metallique motorise dans un ERP doit etre verifie au moins une fois par an par un professionnel qualifie. Un rapport de verification est emis et doit etre conserve.",
+        "<strong>Verification semestrielle pour les coupe-feu</strong> : les rideaux coupe-feu doivent etre testes deux fois par an, avec verification du declenchement automatique, du fusible thermique et de la vitesse de descente.",
+        "<strong>Registre de securite</strong> : tout ERP doit tenir un registre de securite dans lequel sont consignes les rapports de verification, les interventions d'entretien et les eventuels incidents.",
+        "<strong>Exercice d'evacuation</strong> : les ERP de 1ere a 4e categorie doivent organiser des exercices d'evacuation reguliers, incluant la procedure d'ouverture du rideau metallique.",
+        "<strong>Commission de securite</strong> : la commission de securite de la ville de Creil peut controler a tout moment la conformite des rideaux metalliques et exiger la mise aux normes en cas de defaut."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Impact sur l'assurance du commerce"
+    },
+    {
+      "type": "paragraph",
+      "text": "La conformite des rideaux metalliques aux normes incendie a un impact direct sur la couverture d'assurance du commercant. A Creil, les assureurs sont particulierement attentifs a ce sujet."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "En cas d'incendie, si le commerce n'est pas conforme aux normes ERP, l'assureur peut appliquer une deduction de 20 a 50 % sur l'indemnisation.",
+        "L'absence de registre de securite ou de rapports de verification peut etre consideree comme une faute du commercant.",
+        "Un rideau coupe-feu non entretenu qui ne se ferme pas lors d'un incendie peut entrainer un refus total d'indemnisation si la propagation du feu est imputable a cette defaillance.",
+        "A l'inverse, un commerce parfaitement conforme beneficie de conditions d'assurance favorables et d'une prise en charge rapide en cas de sinistre.",
+        "Les <a href=\"/tarifs\">contrats d'entretien DRM Creil</a> incluent la verification des dispositifs de securite incendie et la remise d'un rapport conforme aux exigences des assureurs."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Les erreurs les plus courantes a Creil"
+    },
+    {
+      "type": "paragraph",
+      "text": "Notre experience de terrain dans les commerces creillois nous amene a constater regulierement les memes erreurs en matiere de securite incendie et de rideaux metalliques."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "<strong>Debrayage inaccessible</strong> : le mecanisme de debrayage est cache derriere des etageres, un comptoir ou du materiel stocke. En cas d'urgence, il serait impossible de l'atteindre rapidement.",
+        "<strong>Debrayage absent ou hors service</strong> : certains rideaux motorises anciens ne disposent pas de debrayage manuel, ou le mecanisme est grippe par manque d'entretien.",
+        "<strong>Rideau unique sans issue de secours alternative</strong> : dans les petits commerces du centre de Creil (le centre ancien, le quartier de la gare, rues commercantes), le rideau est souvent la seule issue. Si aucun debrayage n'est fonctionnel, les occupants sont pieges.",
+        "<strong>Rideau coupe-feu jamais teste</strong> : le rideau coupe-feu existe mais n'a jamais ete declench volontairement pour verifier son bon fonctionnement. Le jour de l'incendie, il ne se ferme pas.",
+        "<strong>Absence de registre de securite</strong> : beaucoup de petits commercants creillois ne tiennent pas de registre de securite, s'exposant a des sanctions lors des controles.",
+        "<strong>Modifications non declarees</strong> : l'ajout d'un rideau metallique ou la modification d'une issue de secours sans declaration prealable est une infraction qui peut entrainer la fermeture du commerce."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Comment mettre votre commerce en conformite"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>DRM Creil</strong> propose un audit complet de vos rideaux metalliques au regard des normes de securite incendie. Nos techniciens verifient chaque point de conformite et vous remettent un rapport detaille avec les actions correctives a mettre en oeuvre."
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "<strong>Audit gratuit</strong> : un technicien se deplace pour examiner vos rideaux metalliques, vos issues de secours et vos dispositifs de securite incendie.",
+        "<strong>Rapport de conformite</strong> : un document detaille liste les points conformes et les non-conformites, avec les solutions pour y remedier.",
+        "<strong>Mise en conformite</strong> : nos equipes realisent les travaux necessaires : installation de debrayage, remplacement de rideau par un modele coupe-feu, pose de signalisation.",
+        "<strong>Contrat d'entretien reglementaire</strong> : verification annuelle ou semestrielle selon le type de rideau, avec remise d'un rapport officiel pour le registre de securite.",
+        "<strong>Accompagnement commission de securite</strong> : nous pouvons vous assister lors du passage de la commission de securite pour presenter les certificats de conformite."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Ne prenez pas de risque avec la securite incendie. Appelez <strong>DRM Creil</strong> au <strong>{phone}</strong> pour un audit gratuit de vos rideaux metalliques. Nous intervenons dans tout Creil et ses environs et dans l'Oise pour mettre votre commerce en conformite avec les normes en vigueur."
+    }
   ]
- },
- "content": [
-  {
-   "type": "paragraph",
-   "text": "La securite incendie est un sujet que beaucoup de commercants negligent ou abordent avec une connaissance partielle de la reglementation. Pourtant, les consequences d'un non-respect des normes incendie sont graves : fermeture administrative du commerce, poursuites penales en cas de sinistre, refus d'indemnisation par l'assureur. Et le rideau metallique, element central de la facade commerciale, est directement concerne par ces obligations."
-  },
-  {
-   "type": "paragraph",
-   "text": "A Creil, ou les locaux commerciaux sont souvent anciens et les configurations parfois complexes, la mise en conformite des rideaux metalliques avec les normes incendie est un enjeu majeur. <strong>DRM Creil</strong> accompagne les commercants de Creil dans cette demarche, de l'audit initial a l'<a href=\"/installation\">installation de rideaux conformes</a>."
-  },
-  {
-   "type": "heading",
-   "level": 2,
-   "text": "Les commerces et la reglementation ERP"
-  },
-  {
-   "type": "paragraph",
-   "text": "La majorite des commerces sont classes ERP (Etablissements Recevant du Public) et soumis a ce titre a une reglementation specifique en matiere de securite incendie. Le classement depend de l'activite et de la capacite d'accueil du public."
-  },
-  {
-   "type": "heading",
-   "level": 3,
-   "text": "Les categories d'ERP concernant les commerces"
-  },
-  {
-   "type": "table",
-   "headers": ["Type ERP", "Activite", "Seuil 5e categorie", "Exemple a Creil"],
-   "rows": [
-    ["Type M", "Magasins de vente, centres commerciaux", "Moins de 100 personnes", "Boutiques rue centre, Terrasses du Port"],
-    ["Type N", "Restaurants, debits de boissons", "Zone a manger < 100 pers. / zone debout < 200 pers.", "Restaurants et brasseries du centre-ville de Creil"],
-    ["Type O", "Hotels, pensions", "Moins de 100 personnes", "Hotels du centre-ville de Creil"],
-    ["Type R", "Enseignement", "Moins de 100 personnes", "Ecoles privees, auto-ecoles"],
-    ["Type W", "Bureaux", "Moins de 100 personnes", "Bureaux zone d'activite de Creil, centre-ville"]
-   ]
-  },
-  {
-   "type": "paragraph",
-   "text": "Les commerces de 5e categorie (les plus petits, accueillant moins de 100 personnes) sont soumis a des obligations allegees mais neanmoins reelles. Les commerces de 1ere a 4e categorie font l'objet de controles reguliers par la commission de securite de la ville de Creil."
-  },
-  {
-   "type": "heading",
-   "level": 2,
-   "text": "Le rideau metallique et les issues de secours : la regle fondamentale"
-  },
-  {
-   "type": "paragraph",
-   "text": "La regle numero un, celle qui conditionne toutes les autres, est simple : un rideau metallique ne doit jamais empecher l'evacuation des personnes en cas d'incendie. Cela a plusieurs implications concretes pour les commercants."
-  },
-  {
-   "type": "list",
-   "ordered": false,
-   "items": [
-    "<strong>Acces aux issues de secours</strong> : si le rideau metallique est la seule issue du commerce (ce qui est frequent dans les petits commerces en pied d'immeuble a Creil), il doit pouvoir etre ouvert manuellement de l'interieur, meme en cas de panne de courant.",
-    "<strong>Debrayage manuel obligatoire</strong> : tout rideau motorise doit etre equipe d'un dispositif de debrayage permettant de le soulever manuellement. Ce debrayage doit etre accessible sans cle ni outil.",
-    "<strong>Systeme d'ouverture d'urgence</strong> : dans les ERP de 1ere a 4e categorie, un bouton d'ouverture d'urgence (type coup de poing) doit etre installe a proximite du rideau, accessible au personnel.",
-    "<strong>Signalisation</strong> : les consignes d'evacuation doivent mentionner la procedure d'ouverture du rideau metallique. Un panneau indiquant l'emplacement du debrayage doit etre visible.",
-    "<strong>Balisage lumineux</strong> : les issues de secours equipees d'un rideau metallique doivent etre balisees par un eclairage de securite autonome (bloc BAES)."
-   ]
-  },
-  {
-   "type": "heading",
-   "level": 2,
-   "text": "Les rideaux metalliques coupe-feu : quand sont-ils obligatoires ?"
-  },
-  {
-   "type": "paragraph",
-   "text": "Un rideau metallique coupe-feu est un rideau concu pour resister au feu pendant une duree determinee (30 minutes, 1 heure ou 2 heures), empechant les flammes et la chaleur de se propager d'un local a un autre. Il se distingue du rideau metallique standard par sa fabrication, ses materiaux et son mode de declenchement."
-  },
-  {
-   "type": "heading",
-   "level": 3,
-   "text": "Cas ou le rideau coupe-feu est obligatoire"
-  },
-  {
-   "type": "list",
-   "ordered": false,
-   "items": [
-    "<strong>Separation entre un commerce et un parking souterrain</strong> : tres frequent a Creil, notamment dans les centres commerciaux et les immeubles du centre-ville, du centre-ville ou d'zone d'activite de Creil.",
-    "<strong>Separation entre deux locaux de natures differentes</strong> : par exemple, entre un restaurant (risque de feu de cuisine) et une boutique de vetements (charge combustible elevee).",
-    "<strong>Locaux techniques</strong> : les ouvertures donnant sur des locaux contenant des equipements electriques (TGBT, chaufferie, local transformateur) doivent etre equipees de portes ou rideaux coupe-feu.",
-    "<strong>Commerces en centre commercial</strong> : les centres commerciaux comme les centres commerciaux de la region imposent des rideaux coupe-feu pour compartimenter les cellules commerciales.",
-    "<strong>Commerces en etage</strong> : les ouvertures entre niveaux (escaliers, monte-charges) doivent etre equipees de dispositifs coupe-feu dans les ERP de 1ere a 4e categorie."
-   ]
-  },
-  {
-   "type": "heading",
-   "level": 3,
-   "text": "Classement au feu des rideaux metalliques"
-  },
-  {
-   "type": "table",
-   "headers": ["Classement", "Signification", "Duree de resistance", "Application type"],
-   "rows": [
-    ["PF 30 min (pare-flamme)", "Empeche le passage des flammes pendant 30 min", "30 minutes", "Separation legere entre commerces"],
-    ["CF 1h (coupe-feu 1 heure)", "Empeche flammes et chaleur pendant 1 heure", "60 minutes", "Separation commerce/parking, commerce/local technique"],
-    ["CF 2h (coupe-feu 2 heures)", "Empeche flammes et chaleur pendant 2 heures", "120 minutes", "Separation de compartiments en centre commercial"],
-    ["EI 60 (norme europeenne)", "Integrite et isolation thermique 60 min", "60 minutes", "Equivalent europeen du CF 1h"],
-    ["EI 120 (norme europeenne)", "Integrite et isolation thermique 120 min", "120 minutes", "Equivalent europeen du CF 2h"]
-   ]
-  },
-  {
-   "type": "heading",
-   "level": 2,
-   "text": "Le fonctionnement d'un rideau coupe-feu"
-  },
-  {
-   "type": "paragraph",
-   "text": "Un rideau metallique coupe-feu est concu differemment d'un rideau standard. Son fonctionnement en cas d'incendie obeit a une logique bien precise."
-  },
-  {
-   "type": "list",
-   "ordered": false,
-   "items": [
-    "<strong>Declenchement automatique</strong> : le rideau coupe-feu est relie au systeme de detection incendie (detecteurs de fumee, centrale d'alarme). En cas de detection d'un incendie, le rideau se ferme automatiquement.",
-    "<strong>Fermeture par gravite</strong> : pour garantir la fermeture meme en cas de coupure de courant, le rideau coupe-feu descend par son propre poids, sans moteur. Un systeme de frein controlle la vitesse de descente.",
-    "<strong>Fusible thermique</strong> : en complement de la detection electronique, un fusible thermique (element metallique qui fond a une temperature precise, generalement 70°C) declenche la fermeture si la chaleur devient trop intense.",
-    "<strong>Lames isolantes</strong> : les lames d'un rideau coupe-feu sont generalement constituees de deux parois d'acier avec un isolant interne (laine de roche, silicate de calcium) qui retarde la transmission de la chaleur.",
-    "<strong>Joints intumescents</strong> : des joints speciaux installes dans les coulisses et en partie basse gonflent sous l'effet de la chaleur pour combler les jeux et empecher le passage de la fumee."
-   ]
-  },
-  {
-   "type": "heading",
-   "level": 2,
-   "text": "Les obligations d'entretien liees a la securite incendie"
-  },
-  {
-   "type": "paragraph",
-   "text": "La reglementation ne se limite pas a l'installation. Elle impose un <a href=\"/entretien\">entretien regulier</a> des rideaux metalliques, et en particulier des rideaux coupe-feu, avec une tracabilite rigoureuse."
-  },
-  {
-   "type": "list",
-   "ordered": false,
-   "items": [
-    "<strong>Verification annuelle obligatoire</strong> : tout rideau metallique motorise dans un ERP doit etre verifie au moins une fois par an par un professionnel qualifie. Un rapport de verification est emis et doit etre conserve.",
-    "<strong>Verification semestrielle pour les coupe-feu</strong> : les rideaux coupe-feu doivent etre testes deux fois par an, avec verification du declenchement automatique, du fusible thermique et de la vitesse de descente.",
-    "<strong>Registre de securite</strong> : tout ERP doit tenir un registre de securite dans lequel sont consignes les rapports de verification, les interventions d'entretien et les eventuels incidents.",
-    "<strong>Exercice d'evacuation</strong> : les ERP de 1ere a 4e categorie doivent organiser des exercices d'evacuation reguliers, incluant la procedure d'ouverture du rideau metallique.",
-    "<strong>Commission de securite</strong> : la commission de securite de la ville de Creil peut controler a tout moment la conformite des rideaux metalliques et exiger la mise aux normes en cas de defaut."
-   ]
-  },
-  {
-   "type": "heading",
-   "level": 2,
-   "text": "Impact sur l'assurance du commerce"
-  },
-  {
-   "type": "paragraph",
-   "text": "La conformite des rideaux metalliques aux normes incendie a un impact direct sur la couverture d'assurance du commercant. A Creil, les assureurs sont particulierement attentifs a ce sujet."
-  },
-  {
-   "type": "list",
-   "ordered": false,
-   "items": [
-    "En cas d'incendie, si le commerce n'est pas conforme aux normes ERP, l'assureur peut appliquer une deduction de 20 a 50 % sur l'indemnisation.",
-    "L'absence de registre de securite ou de rapports de verification peut etre consideree comme une faute du commercant.",
-    "Un rideau coupe-feu non entretenu qui ne se ferme pas lors d'un incendie peut entrainer un refus total d'indemnisation si la propagation du feu est imputable a cette defaillance.",
-    "A l'inverse, un commerce parfaitement conforme beneficie de conditions d'assurance favorables et d'une prise en charge rapide en cas de sinistre.",
-    "Les <a href=\"/tarifs\">contrats d'entretien DRM Creil</a> incluent la verification des dispositifs de securite incendie et la remise d'un rapport conforme aux exigences des assureurs."
-   ]
-  },
-  {
-   "type": "heading",
-   "level": 2,
-   "text": "Les erreurs les plus courantes a Creil"
-  },
-  {
-   "type": "paragraph",
-   "text": "Notre experience de terrain dans les commerces creillois nous amene a constater regulierement les memes erreurs en matiere de securite incendie et de rideaux metalliques."
-  },
-  {
-   "type": "list",
-   "ordered": false,
-   "items": [
-    "<strong>Debrayage inaccessible</strong> : le mecanisme de debrayage est cache derriere des etageres, un comptoir ou du materiel stocke. En cas d'urgence, il serait impossible de l'atteindre rapidement.",
-    "<strong>Debrayage absent ou hors service</strong> : certains rideaux motorises anciens ne disposent pas de debrayage manuel, ou le mecanisme est grippe par manque d'entretien.",
-    "<strong>Rideau unique sans issue de secours alternative</strong> : dans les petits commerces du centre de Creil (le centre ancien, le quartier de la gare, rues commercantes), le rideau est souvent la seule issue. Si aucun debrayage n'est fonctionnel, les occupants sont pieges.",
-    "<strong>Rideau coupe-feu jamais teste</strong> : le rideau coupe-feu existe mais n'a jamais ete declench volontairement pour verifier son bon fonctionnement. Le jour de l'incendie, il ne se ferme pas.",
-    "<strong>Absence de registre de securite</strong> : beaucoup de petits commercants creillois ne tiennent pas de registre de securite, s'exposant a des sanctions lors des controles.",
-    "<strong>Modifications non declarees</strong> : l'ajout d'un rideau metallique ou la modification d'une issue de secours sans declaration prealable est une infraction qui peut entrainer la fermeture du commerce."
-   ]
-  },
-  {
-   "type": "heading",
-   "level": 2,
-   "text": "Comment mettre votre commerce en conformite"
-  },
-  {
-   "type": "paragraph",
-   "text": "<strong>DRM Creil</strong> propose un audit complet de vos rideaux metalliques au regard des normes de securite incendie. Nos techniciens verifient chaque point de conformite et vous remettent un rapport detaille avec les actions correctives a mettre en oeuvre."
-  },
-  {
-   "type": "list",
-   "ordered": true,
-   "items": [
-    "<strong>Audit gratuit</strong> : un technicien se deplace pour examiner vos rideaux metalliques, vos issues de secours et vos dispositifs de securite incendie.",
-    "<strong>Rapport de conformite</strong> : un document detaille liste les points conformes et les non-conformites, avec les solutions pour y remedier.",
-    "<strong>Mise en conformite</strong> : nos equipes realisent les travaux necessaires : installation de debrayage, remplacement de rideau par un modele coupe-feu, pose de signalisation.",
-    "<strong>Contrat d'entretien reglementaire</strong> : verification annuelle ou semestrielle selon le type de rideau, avec remise d'un rapport officiel pour le registre de securite.",
-    "<strong>Accompagnement commission de securite</strong> : nous pouvons vous assister lors du passage de la commission de securite pour presenter les certificats de conformite."
-   ]
-  },
-  {
-   "type": "paragraph",
-   "text": "Ne prenez pas de risque avec la securite incendie. Appelez <strong>DRM Creil</strong> au <strong>{phone}</strong> pour un audit gratuit de vos rideaux metalliques. Nous intervenons dans tout Creil et ses environs et dans l'Oise pour mettre votre commerce en conformite avec les normes en vigueur."
-  }
- ]
 }

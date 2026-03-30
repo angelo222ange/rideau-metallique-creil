@@ -328,21 +328,21 @@
     {
       "title": "<strong>Entretien Rideau Métallique {zone}</strong> : Prévenez les Pannes",
       "content": "<p>L'<strong>entretien régulier de rideau métallique à {zone}</strong> ({zonePostal}) est essentiel pour garantir la longévité et le bon fonctionnement de votre fermeture. Un <strong>rideau métallique bien entretenu</strong> dure 15 à 20 ans, contre seulement 8 à 10 ans sans maintenance. {name} propose des <strong>contrats d'entretien préventif</strong> adaptés à tous les professionnels du <strong>{department}</strong>.</p><p>Notre <strong>maintenance préventive</strong> comprend : l'<strong>inspection complète</strong> de tous les composants (lames, glissières, axe d'enroulement), la <strong>lubrification</strong> des mécanismes, le <strong>réglage des fins de course</strong>, la vérification du <strong>moteur</strong> et du système de verrouillage, ainsi qu'un rapport détaillé avec préconisations.</p><p>Un <strong>entretien annuel</strong> permet de prévenir <strong>80% des pannes</strong> et d'éviter les blocages intempestifs qui vous obligent à fermer votre commerce. Formules adaptées : 1, 2 ou 4 visites par an selon votre usage.</p>",
-      "image": "/images/gallery/rideau-metallique-depannage-rideau-metallique.webp",
+      "image": "/images/gallery/test-rideau-metallique-drm.webp",
       "imageAlt": "Entretien préventif rideau métallique {zone}",
       "imagePosition": "right"
     },
     {
       "title": "<strong>Maintenance Rideau Métallique {zone}</strong> : Intervention Prioritaire",
       "content": "<p>Avec un <strong>contrat d'entretien rideau métallique</strong> chez {name}, vous bénéficiez d'une <strong>intervention prioritaire</strong> en cas de panne à {zone} et dans tout le <strong>{department}</strong>. Selon la formule choisie, nos techniciens interviennent sous 4h, 2h ou 1h maximum.</p><p>Notre <strong>service de maintenance</strong> détecte les signes d'usure avant qu'ils ne deviennent problématiques : <strong>lames tordues</strong>, <strong>glissières usées</strong>, <strong>moteur surchauffe</strong>, <strong>attaches tablier fragilisées</strong>, <strong>système de sécurité défaillant</strong>. Nous remplaçons les pièces d'usure avant la panne totale, vous évitant ainsi des réparations d'urgence coûteuses.</p><p>Les <strong>contrats d'entretien</strong> incluent aussi des tarifs préférentiels sur les pièces de rechange et la main d'œuvre en cas de réparation. Un investissement rentabilisé dès la première intervention évitée. Commerçants de {zone}, protégez votre commerce avec un <strong>contrat de maintenance rideau métallique</strong>.</p>",
-      "image": "/images/gallery/moteur-externe-rideau-metallique-drm.webp",
+      "image": "/images/gallery/test-rideau-metallique-drm.webp",
       "imageAlt": "Maintenance professionnelle rideau métallique {zone}",
       "imagePosition": "left"
     },
     {
       "title": "<strong>Signes d'Usure Rideau Métallique</strong> : Quand Faire Appel à un Pro ?",
       "content": "<p>Certains <strong>signes d'usure</strong> sur votre <strong>rideau métallique à {zone}</strong> doivent vous alerter : <strong>bruits anormaux</strong> (grincements, claquements), <strong>difficulté à monter ou descendre</strong>, <strong>lenteur inhabituelle</strong> du moteur, <strong>lames qui se coincent</strong> dans les glissières, ou rideau qui se désaxe régulièrement.</p><p>D'autres signaux nécessitent une <strong>intervention rapide</strong> : traces de <strong>rouille sur les lames</strong>, <strong>glissières déformées</strong>, <strong>tablier qui sort des rails</strong>, <strong>moteur qui surchauffe</strong> ou émet des odeurs de brûlé, <strong>télécommande qui ne répond plus</strong>, ou <strong>système de sécurité défaillant</strong>.</p><p>Ne laissez pas ces signes s'aggraver : une <strong>petite réparation</strong> réalisée à temps coûte 5 à 10 fois moins cher qu'un remplacement complet. {name} intervient rapidement à {zone} ({zonePostal}) pour diagnostiquer et réparer votre <strong>rideau métallique</strong> avant la panne totale. Appelez le <strong>{phone}</strong> dès les premiers symptômes.</p>",
-      "image": "/images/gallery/rideau-metallique-lame-pleine-france.webp",
+      "image": "/images/gallery/details-rideau-metallique-france.webp",
       "imageAlt": "Réparation usure rideau métallique {zone} {department}",
       "imagePosition": "right"
     }

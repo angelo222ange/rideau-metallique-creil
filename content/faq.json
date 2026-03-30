@@ -1,42 +1,42 @@
 [
   {
-    "question": "Qui appeler pour un dépannage de rideau métallique à {city} ?",
-    "answer": "Pour tout dépannage de rideau métallique à {city} et dans l'{department} ({postalCode}), contactez <strong>DRM {city}</strong> au <strong>{phone}</strong>. Nos techniciens certifiés interviennent 24h/24 et 7j/7 à {city} et dans les communes environnantes (Nogent-sur-Oise, Montataire, Villers-Saint-Paul, Senlis, Chantilly...). Que votre rideau soit bloqué, coincé ou endommagé, nous garantissons une intervention rapide en moins de 30 minutes. Devis gratuit."
+    "question": "Qui appeler pour un depannage de rideau metallique a {city} ?",
+    "answer": "Pour un depannage de rideau metallique a {city}, appelez <strong>DRM {city} au {phone}</strong>. Nos techniciens certifies interviennent en urgence 24h/24 et 7j/7 a {city} et dans l'{department}, y compris a Nogent-sur-Oise, Montataire, Senlis et Chantilly. Que votre rideau soit bloque, coince ou endommage, nous intervenons en moins de 30 minutes. Le diagnostic et le <a href=\"/contact\">devis sont gratuits</a>, sans engagement."
   },
   {
-    "question": "Quel est le délai d'intervention de DRM {city} ?",
-    "answer": "Nos techniciens interviennent en <strong>moins de 30 minutes</strong> sur {city} et l'agglomération creilloise. Grâce à notre maillage local dans l'{department}, nous couvrons {city} ainsi que les communes voisines : Nogent-sur-Oise, Montataire, Villers-Saint-Paul, Senlis, Chantilly, Pont-Sainte-Maxence. Disponibilité 24h/24, 7j/7, y compris les week-ends et jours fériés."
+    "question": "Quel est le delai d'intervention de DRM {city} ?",
+    "answer": "Le delai d'intervention de DRM {city} est de <strong>moins de 30 minutes</strong> sur {city} et l'agglomeration creilloise. Pour un depannage urgent, appelez le <strong>{phone}</strong>. Notre equipe basee au {address} couvre toutes les communes voisines : <a href=\"/depannage-rideau-metallique-nogent-sur-oise\">Nogent-sur-Oise</a>, <a href=\"/depannage-rideau-metallique-montataire\">Montataire</a>, <a href=\"/depannage-rideau-metallique-senlis\">Senlis</a>, <a href=\"/depannage-rideau-metallique-chantilly\">Chantilly</a>. Disponibilite 24h/24, 7j/7, y compris les week-ends et jours feries."
   },
   {
-    "question": "Comment obtenir un devis pour un dépannage de rideau métallique dans l'{department} ?",
-    "answer": "Appelez le <strong>{phone}</strong> pour obtenir un devis gratuit et sans engagement. Notre technicien évalue la panne et vous communique le devis avant toute intervention. Aucune surprise."
+    "question": "Combien coute un depannage de rideau metallique a {city} ?",
+    "answer": "Le prix d'un depannage de rideau metallique a {city} commence <strong>a partir de 150 EUR</strong> pour un deblocage simple. Pour une reparation moteur, comptez a partir de 250 EUR, et pour un remplacement de lames, a partir de 30 EUR par lame. Le diagnostic est gratuit et le devis est communique avant toute intervention. Appelez le <strong>{phone}</strong> pour un devis personnalise ou consultez nos <a href=\"/tarifs\">tarifs detailles</a>."
   },
   {
-    "question": "Intervenez-vous le week-end et les jours fériés à {city} ?",
-    "answer": "Oui, DRM {city} est disponible <strong>24h/24, 7j/7</strong>, y compris les week-ends, jours fériés et pendant la période estivale. Nous comprenons qu'une panne de rideau métallique est une urgence pour votre commerce. Appelez le <strong>{phone}</strong> à tout moment."
+    "question": "Intervenez-vous le week-end et les jours feries a {city} ?",
+    "answer": "Oui, DRM {city} intervient <strong>24h/24 et 7j/7</strong>, week-ends et jours feries inclus. Appelez le <strong>{phone}</strong> a tout moment pour une intervention urgente a {city}. Un rideau metallique bloque est une urgence pour votre commerce : nous deployons un technicien rapidement, meme pendant la periode estivale. Consultez notre page <a href=\"/deblocage-rideau-metallique-creil\">deblocage urgence</a> pour plus d'informations."
   },
   {
-    "question": "Quels types de rideaux métalliques réparez-vous à {city} ?",
-    "answer": "Nous intervenons sur <strong>tous les types de rideaux métalliques</strong> : lames pleines (acier galvanisé, aluminium, inox), rideaux micro-perforés, grilles articulées cobra, rideaux coupe-feu, portes de garage enroulables, rideaux industriels grande dimension. Toutes marques : Somfy, Nice, Came, Hörmann, Bubendorff, Simu. Du petit commerce à l'entrepôt industriel."
+    "question": "Quels types de rideaux metalliques reparez-vous a {city} ?",
+    "answer": "DRM {city} repare <strong>tous les types de rideaux metalliques</strong> : lames pleines en acier galvanise, aluminium ou inox, rideaux micro-perfores, grilles articulees cobra, rideaux coupe-feu et portes de garage enroulables. Nous intervenons sur toutes les marques : Somfy, Nice, Came, Hormann, Simu et BFT. Appelez le <strong>{phone}</strong> pour un diagnostic gratuit ou consultez notre page <a href=\"/reparation-rideau-metallique-creil\">reparation</a>."
   },
   {
-    "question": "Peut-on motoriser un rideau métallique manuel à {city} ?",
-    "answer": "Oui, <strong>tout rideau métallique manuel peut être motorisé</strong>. DRM {city} est installateur certifié Somfy, Nice et Came. Notre technicien évalue la faisabilité sur place (dimensions, poids, alimentation électrique) et vous propose la motorisation adaptée. Devis gratuit au <strong>{phone}</strong>."
+    "question": "Peut-on motoriser un rideau metallique manuel a {city} ?",
+    "answer": "Oui, tout rideau metallique manuel peut etre motorise a {city}. DRM {city} installe des moteurs Somfy, Nice et Came adaptes a vos dimensions, <strong>a partir de 500 EUR</strong>. Notre technicien evalue la faisabilite sur place (dimensions, poids, alimentation electrique) et propose la <a href=\"/motorisation-rideau-metallique-creil\">motorisation adaptee</a>. Appelez le <strong>{phone}</strong> pour un devis gratuit."
   },
   {
-    "question": "Proposez-vous des contrats d'entretien pour les rideaux métalliques ?",
-    "answer": "Oui, DRM {city} propose 3 formules de contrat d'entretien : <strong>Essentiel</strong> avec 1 visite annuelle, <strong>Pro</strong> avec 2 visites et priorité dépannage, et <strong>Premium</strong> avec 4 visites et dépannage prioritaire garanti. L'entretien régulier prolonge la durée de vie de 40% et réduit les pannes de 70%. Appelez le <strong>{phone}</strong> pour un devis."
+    "question": "Proposez-vous des contrats d'entretien pour les rideaux metalliques ?",
+    "answer": "Oui, DRM {city} propose <strong>3 formules de contrat d'entretien</strong> : Essentiel (1 visite/an, a partir de 120 EUR), Pro (2 visites/an, a partir de 200 EUR) et Premium (4 visites, depannage prioritaire). L'entretien regulier prolonge la duree de vie de votre rideau de 40% et reduit les pannes de 70%. Appelez le <strong>{phone}</strong> ou consultez notre page <a href=\"/entretien-rideau-metallique-creil\">entretien</a>."
   },
   {
-    "question": "Comment fonctionne la fabrication sur-mesure de rideau métallique ?",
-    "answer": "La fabrication sur-mesure chez DRM {city} se déroule en 4 étapes : <strong>1.</strong> Prise de cotes gratuite sur site, <strong>2.</strong> Devis détaillé avec choix des matériaux et finitions, <strong>3.</strong> Fabrication en atelier (7-15 jours), <strong>4.</strong> Pose et mise en service. Matériaux disponibles : acier galvanisé, aluminium, acier inoxydable (recommandé pour les commerces exposés aux intempéries)."
+    "question": "Comment fonctionne la fabrication sur-mesure de rideau metallique ?",
+    "answer": "La fabrication sur-mesure chez DRM {city} se deroule en <strong>4 etapes</strong> : prise de cotes gratuite sur site, devis detaille avec choix des materiaux (acier galvanise, aluminium, inox), fabrication en atelier (7-15 jours), puis pose et mise en service. Les prix commencent a partir de 700 EUR. Appelez le <strong>{phone}</strong> pour programmer un rendez-vous ou visitez notre page <a href=\"/fabrication-rideau-metallique-creil\">fabrication sur-mesure</a>."
   },
   {
     "question": "Quelle est la zone d'intervention de DRM {city} ?",
-    "answer": "DRM {city} intervient à <strong>{city} et dans toutes les communes de l'{department}</strong> (60) : Nogent-sur-Oise, Montataire, Villers-Saint-Paul, Senlis, Chantilly, Lamorlaye, Gouvieux, Pont-Sainte-Maxence, et plus encore. Temps d'intervention moyen : 20 à 30 minutes."
+    "answer": "DRM {city} intervient sur <strong>{city} et plus de 20 communes de l'{department}</strong> dans un rayon de 45 km : Nogent-sur-Oise, Montataire, Senlis, Chantilly, Lamorlaye, Gouvieux, Pont-Sainte-Maxence, Chambly, Clermont, Compiegne et Beauvais. Aucun frais de deplacement. Appelez le <strong>{phone}</strong> ou consultez toutes nos <a href=\"/zones\">zones d'intervention</a>."
   },
   {
     "question": "Les interventions de DRM {city} sont-elles garanties ?",
-    "answer": "Oui, toutes nos interventions sont <strong>garanties pièces et main d'œuvre</strong>. La durée de garantie varie selon la prestation : dépannage/réparation (3-6 mois), motorisation (2-5 ans selon la marque), fabrication et installation (10 ans sur la structure, 5 ans sur la motorisation). Un bon d'intervention détaillé est systématiquement remis."
+    "answer": "Oui, toutes les interventions de DRM {city} sont <strong>garanties pieces et main d'oeuvre</strong>. Durees de garantie : depannage et reparation 3 a 6 mois, motorisation 2 a 5 ans selon la marque, fabrication et installation 10 ans sur la structure et 5 ans sur la motorisation. Un bon d'intervention detaille est remis apres chaque intervention. Appelez le <strong>{phone}</strong> ou consultez nos <a href=\"/avis\">avis clients</a>."
   }
 ]

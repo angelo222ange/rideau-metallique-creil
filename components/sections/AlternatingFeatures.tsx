@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 
 interface FeatureItem {
@@ -19,7 +17,7 @@ export function AlternatingFeatures({ features }: AlternatingFeaturesProps) {
   return (
     <>
       {features.map((feature, index) => {
-        const isImageLeft = feature.imagePosition === "left";
+        const isImageLeft = index % 2 === 0;
         const isEven = index % 2 === 0;
         const sectionBg = isEven ? "bg-white" : "bg-gray-50";
 

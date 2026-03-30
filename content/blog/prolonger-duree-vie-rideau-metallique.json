@@ -1,214 +1,324 @@
 {
- "slug": "prolonger-duree-vie-rideau-metallique",
- "title": "Comment prolonger la duree de vie de votre rideau metallique",
- "metaTitle": "Prolonger duree de vie rideau metallique - Conseils",
- "metaDescription": "Decouvrez les gestes, traitements et habitudes qui prolongent la duree de vie de votre rideau metallique de 5 a 10 ans. Guide pratique et calendrier entretien.",
- "date": "2026-03-16",
- "readTime": "60 min",
- "image": "/images/gallery/entretien-rideau-metallique-rideau-de-fer.webp",
- "imageAlt": "Technicien effectuant l'entretien d'un rideau metallique pour prolonger sa duree de vie",
- "excerpt": "Un rideau metallique bien entretenu peut durer 25 a 30 ans. Mal entretenu, il n'en fera que 10 a 15. La difference se joue sur quelques gestes simples, un calendrier d'entretien rigoureux et le choix des bons produits. Voici comment tirer le maximum de votre investissement.",
- "summary": {
-  "title": "Pas le temps de tout lire ? L'essentiel en bref",
-  "points": [
-   "Un rideau metallique correctement entretenu dure 20 a 30 ans. Sans entretien, sa duree de vie tombe a 10-15 ans. L'entretien regulier est donc l'investissement le plus rentable pour votre fermeture metallique.",
-   "Les 3 gestes essentiels : nettoyage trimestriel a l'eau claire, graissage semestriel des mecanismes, et inspection visuelle mensuelle pour detecter les premiers signes d'usure.",
-   "A Creil, l'air humide impose un traitement anti-corrosion renforce et un rincage plus frequent des surfaces metalliques, surtout pour les commerces proches de la region.",
-   "DRM Creil propose des contrats d'entretien annuels a partir de 180 euros par an qui incluent 2 visites, graissage, reglage et inspection complete. Renseignements au {phone}."
+  "slug": "prolonger-duree-vie-rideau-metallique",
+  "title": "Comment prolonger la duree de vie de votre rideau metallique",
+  "metaTitle": "Prolonger duree de vie rideau metallique - Conseils",
+  "metaDescription": "Decouvrez les gestes, traitements et habitudes qui prolongent la duree de vie de votre rideau metallique de 5 a 10 ans. Guide pratique et calendrier entretien.",
+  "date": "2026-03-16",
+  "readTime": "60 min",
+  "image": "/images/gallery/entretien-rideau-metallique-france-entretien.webp",
+  "imageAlt": "Technicien effectuant l'entretien d'un rideau metallique pour prolonger sa duree de vie",
+  "excerpt": "Un rideau metallique bien entretenu peut durer 25 a 30 ans. Mal entretenu, il n'en fera que 10 a 15. La difference se joue sur quelques gestes simples, un calendrier d'entretien rigoureux et le choix des bons produits. Voici comment tirer le maximum de votre investissement.",
+  "summary": {
+    "title": "Pas le temps de tout lire ? L'essentiel en bref",
+    "points": [
+      "Un rideau metallique correctement entretenu dure 20 a 30 ans. Sans entretien, sa duree de vie tombe a 10-15 ans. L'entretien regulier est donc l'investissement le plus rentable pour votre fermeture metallique.",
+      "Les 3 gestes essentiels : nettoyage trimestriel a l'eau claire, graissage semestriel des mecanismes, et inspection visuelle mensuelle pour detecter les premiers signes d'usure.",
+      "A Creil, l'air humide impose un traitement anti-corrosion renforce et un rincage plus frequent des surfaces metalliques, surtout pour les commerces proches de la region.",
+      "DRM Creil propose des contrats d'entretien annuels a partir de 180 euros par an qui incluent 2 visites, graissage, reglage et inspection complete. Renseignements au {phone}."
+    ]
+  },
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Votre rideau metallique represente un investissement de 1 500 a 5 000 euros, voire davantage pour les modeles motorises haut de gamme. C'est un equipement de securite essentiel pour votre commerce, et sa duree de vie conditionne directement la rentabilite de cet investissement. Or, la difference entre un rideau de fer qui dure 10 ans et un rideau qui dure 25 ans ne tient souvent qu'a quelques gestes d'entretien reguliers et a quelques bonnes habitudes de manoeuvre."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cet article de <strong>DRM Creil</strong> vous presente un programme d'entretien complet, etape par etape, pour maximiser la duree de vie de votre fermeture metallique. Adapte au climat specifique de l'Oise (air humide, vents du nord, ensoleillement intense), ce guide est valable pour tous les types de rideaux metalliques : lames pleines, perforees, grilles a tubes, manuels ou motorises."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Les facteurs qui influencent la duree de vie d'un rideau metallique"
+    },
+    {
+      "type": "paragraph",
+      "text": "Avant de parler d'entretien, il est utile de comprendre quels facteurs determinent la longevite d'une fermeture metallique. Certains sont fixes (qualite du rideau, environnement), d'autres sont entierement sous votre controle (entretien, utilisation). Agir sur les facteurs controlables peut ajouter 5 a 10 ans de duree de vie a votre equipement."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Facteur",
+        "Impact sur la duree de vie",
+        "Controlable ?",
+        "Action possible"
+      ],
+      "rows": [
+        [
+          "Qualite du materiau (acier, alu, epaisseur)",
+          "Determinant : +/- 10 ans",
+          "Oui (au moment de l'achat)",
+          "Choisir acier galvanise ou aluminium de qualite"
+        ],
+        [
+          "Traitement de surface (galvanisation, laquage)",
+          "Important : +/- 5 a 8 ans",
+          "Oui (a l'achat et en entretien)",
+          "Galvanisation + laquage, retouches regulieres"
+        ],
+        [
+          "Environnement (air humide, pollution, humidite)",
+          "Important : +/- 3 a 8 ans",
+          "Partiellement",
+          "Entretien renforce en environnement agressif"
+        ],
+        [
+          "Frequence de manoeuvre",
+          "Moderee : +/- 2 a 5 ans",
+          "Non (depend de l'activite)",
+          "Motorisation adaptee, graissage frequent"
+        ],
+        [
+          "Qualite de l'installation",
+          "Determinant : +/- 5 ans",
+          "Oui (choix de l'installateur)",
+          "Installateur professionnel certifie"
+        ],
+        [
+          "Entretien regulier",
+          "Determinant : +/- 5 a 10 ans",
+          "Oui",
+          "Programme d'entretien rigoureux"
+        ],
+        [
+          "Habitudes de manoeuvre",
+          "Moderee : +/- 2 a 4 ans",
+          "Oui",
+          "Formation du personnel, gestes corrects"
+        ],
+        [
+          "Reparation rapide des defauts",
+          "Important : +/- 3 a 5 ans",
+          "Oui",
+          "Intervention des premiers signes de panne"
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Le programme d'entretien mensuel : les gestes simples"
+    },
+    {
+      "type": "paragraph",
+      "text": "L'entretien mensuel d'un rideau metallique se resume a quelques gestes simples que vous ou votre personnel pouvez realiser sans competence technique particuliere. Ces gestes prennent 10 a 15 minutes par mois et constituent la base d'une longevite optimale."
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "<strong>Inspection visuelle (5 minutes)</strong> : examinez l'ensemble du rideau en position fermee. Recherchez les points de rouille, les rayures profondes, les lames deformees, les coulisses encrassees et tout element anormal. Notez ce que vous observez pour suivre l'evolution d'un mois sur l'autre.",
+        "<strong>Test de manoeuvre (3 minutes)</strong> : ouvrez et fermez le rideau completement en etant attentif au bruit, a la vitesse et a la fluidite du mouvement. Un bruit nouveau (grincement, claquement, vibration) est un signal d'alerte a ne pas ignorer.",
+        "<strong>Nettoyage du seuil et des coulisses (5 minutes)</strong> : retirez les debris, les feuilles, les megots et la poussiere accumules dans les coulisses laterales et au pied du rideau. Ces corps etrangers genent la descente du tablier et usent prematurerement les lames et les coulisses.",
+        "<strong>Verification de la serrure (2 minutes)</strong> : verifiez que la cle tourne facilement et que le verrou s'engage completement. Si la serrure force, appliquez un lubrifiant graphite en spray (jamais de WD-40 dans une serrure, il encrasse le mecanisme a long terme)."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Le programme d'entretien trimestriel : nettoyage et protection"
+    },
+    {
+      "type": "paragraph",
+      "text": "Tous les trois mois, un nettoyage plus complet du store metallique est necessaire. A Creil, ce rythme trimestriel est le minimum recommande en raison des depots de humidite, de la poussiere et de la pollution urbaine qui s'accumulent sur les surfaces metalliques."
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "<strong>Nettoyage complet du tablier</strong> : avec une eponge douce et de l'eau savonneuse (savon de Creil ou liquide vaisselle doux), nettoyez toute la surface du rideau en insistant sur les zones basses qui recoivent les projections de la rue. Rincez abondamment a l'eau claire. Ne jamais utiliser de produit abrasif, de solvant ou de nettoyeur haute pression directement sur les lames.",
+        "<strong>Nettoyage des coulisses</strong> : les coulisses (rails lateraux) sont des zones d'accumulation de salete et de graisseancienne. Nettoyez-les avec un chiffon humide puis sechez-les avant d'appliquer le lubrifiant.",
+        "<strong>Inspection des fixations</strong> : verifiez que les vis de fixation des coulisses, du coffre et du boitier de commande sont bien serrees. Les vibrations de la manoeuvre quotidienne peuvent desserrer les fixations avec le temps.",
+        "<strong>Retouche des rayures</strong> : si vous avez repere des rayures ou des eclats de peinture lors de l'inspection mensuelle, c'est le moment de les retoucher avec une peinture de protection adaptee. Chaque rayure non traitee est un point d'entree pour la corrosion."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Le programme d'entretien semestriel : graissage et reglage"
+    },
+    {
+      "type": "paragraph",
+      "text": "Deux fois par an, un entretien plus approfondi est necessaire. C'est le moment de graisser les mecanismes, de verifier les reglages et de controler les elements de securite. Certaines de ces operations peuvent etre realisees par un utilisateur bricoleur, mais nous recommandons de confier cet entretien a un professionnel, surtout pour les rideaux motorises."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "<strong>Graissage des coulisses</strong> : appliquez un lubrifiant en spray (type silicone ou teflon) sur toute la longueur des coulisses laterales. Ce graissage facilite la descente et la montee du tablier, reduit l'usure des lames et diminue l'effort demande au moteur ou a l'utilisateur.",
+        "<strong>Graissage de l'axe d'enroulement</strong> : l'axe autour duquel s'enroule le tablier doit etre graisse pour eviter les frottements et l'usure des paliers. Cette operation necessite l'ouverture du coffre et doit idealement etre realisee par un technicien.",
+        "<strong>Verification des ressorts</strong> : les ressorts de compensation (ressorts de torsion ou ressorts a boudin) compensent le poids du tablier et facilitent la manoeuvre. Un ressort fatigue ou casse rend le rideau lourd a manoeuvrer et surcharge le moteur. Le remplacement d'un ressort est une operation dangereuse qui doit imperativement etre realisee par un professionnel.",
+        "<strong>Controle du moteur (rideau motorise)</strong> : verification du fonctionnement du moteur, des fins de course (haut et bas), du systeme anti-chute et du debrayage manuel. Nettoyage du moteur si necessaire.",
+        "<strong>Test des dispositifs de securite</strong> : verification du fonctionnement de la cellule photoelectrique ou de la barre palpeuse (detection d'obstacle), du systeme anti-chute et du limiteur d'effort.",
+        "<strong>Verification de l'etat de la lame finale</strong> : la lame du bas est la plus exposee aux chocs et a l'humidite. Verifiez son etat, son joint d'etancheite et sa fixation."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Le calendrier d'entretien annuel recapitulatif"
+    },
+    {
+      "type": "paragraph",
+      "text": "Pour faciliter le suivi, voici un calendrier recapitulatif de toutes les operations d'entretien a realiser sur une annee. Adaptez les mois en fonction de votre activite et du climat (a Creil, nous recommandons les entretiens semestriels en mars et en septembre, avant et apres la periode estivale)."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Mois",
+        "Operations a realiser",
+        "Duree estimee",
+        "Par qui"
+      ],
+      "rows": [
+        [
+          "Tous les mois",
+          "Inspection visuelle, test manoeuvre, nettoyage seuil",
+          "10-15 minutes",
+          "Le commercant ou son personnel"
+        ],
+        [
+          "Mars",
+          "Nettoyage complet + graissage semestriel + controle moteur + securite",
+          "1 a 2 heures",
+          "Professionnel DRM Creil"
+        ],
+        [
+          "Avril",
+          "Nettoyage trimestriel + retouches peinture",
+          "30 minutes",
+          "Le commercant"
+        ],
+        [
+          "Juillet",
+          "Nettoyage trimestriel (renforcee si bords de l'Oise)",
+          "30 minutes",
+          "Le commercant"
+        ],
+        [
+          "Septembre",
+          "Nettoyage complet + graissage semestriel + controle moteur + securite",
+          "1 a 2 heures",
+          "Professionnel DRM Creil"
+        ],
+        [
+          "Octobre",
+          "Nettoyage trimestriel + verification avant hiver",
+          "30 minutes",
+          "Le commercant"
+        ],
+        [
+          "Decembre",
+          "Nettoyage trimestriel + inspection detaillee",
+          "30 minutes",
+          "Le commercant"
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Les erreurs a eviter absolument"
+    },
+    {
+      "type": "paragraph",
+      "text": "Certaines erreurs courantes reduisent considerablement la duree de vie des rideaux metalliques. Nos techniciens de DRM Creil les constatent quotidiennement sur les fermetures metalliques qu'ils reparent dans l'Oise. Eviter ces erreurs est aussi important que de suivre le programme d'entretien."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "<strong>Forcer un rideau bloque</strong> : c'est l'erreur la plus courante et la plus destructrice. Un store metallique qui se bloque envoie un signal clair : quelque chose ne va pas. Forcer aggrave systematiquement le probleme (lames tordues, coulisses deformees, moteur grille). Arretez immediatement et appelez un professionnel.",
+        "<strong>Utiliser un nettoyeur haute pression</strong> : le jet haute pression s'infiltre dans le coffre d'enroulement, deplace la graisse des mecanismes, accelere la corrosion de l'axe et peut endommager les joints du moteur. Nettoyez toujours a basse pression ou a l'eponge.",
+        "<strong>Negliger les petites rayures</strong> : une rayure parait insignifiante, mais c'est un point d'entree pour la rouille. A Creil, avec l'air humide, une rayure non traitee peut generer une plaque de rouille de plusieurs centimetres en quelques mois.",
+        "<strong>Utiliser des lubrifiants inadaptes</strong> : evitez la graisse epaisse dans les coulisses (elle retient la poussiere et forme une pate abrasive). Evitez le WD-40 dans les serrures (il degraise a court terme mais encrasse a long terme). Utilisez du lubrifiant silicone pour les coulisses et du graphite pour les serrures.",
+        "<strong>Laisser le rideau a mi-hauteur</strong> : un rideau metallique maintenu en position intermediaire pendant de longues periodes (plusieurs heures) fatigue les ressorts de compensation et desequilibre le tablier. Ouvrez completement ou fermez completement.",
+        "<strong>Suspendre des objets au rideau</strong> : pancartes, enseignes, pots de fleurs... Tout poids supplementaire sur le tablier desequilibre le rideau, fatigue les ressorts et surcharge le moteur.",
+        "<strong>Ignorer les bruits anormaux</strong> : un grincement, un claquement ou une vibration nouvelle sont des symptomes de panne imminente. Les traiter immediatement coute 50 a 200 euros. Attendre la panne complete coute 500 a 2 000 euros."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Les bonnes habitudes de manoeuvre au quotidien"
+    },
+    {
+      "type": "paragraph",
+      "text": "La facon dont vous manoeuvrez votre rideau metallique au quotidien a un impact direct sur sa duree de vie. Quelques habitudes simples, adoptees par vous et votre personnel, peuvent reduire l'usure de 30 a 50 %."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Ouvrez et fermez le rideau en douceur, sans a-coup. Evitez de lacher brutalement un rideau manuel en cours de descente.",
+        "Attendez l'arret complet du rideau (en position haute ou basse) avant de relacher la commande ou la sangle.",
+        "Verifiez que rien ne se trouve dans la trajectoire du rideau avant de lancer la fermeture (objets au sol, personne, terrasse).",
+        "En cas de vent fort (vents du nord), soyez particulierement vigilant : le vent peut destabiliser le tablier en cours de manoeuvre.",
+        "Verrouillez systematiquement la serrure apres chaque fermeture. Un rideau non verrouille peut etre souleve par le vent ou manipule par des tiers.",
+        "Pour les rideaux manuels, utilisez le poignet de manoeuvre et non les lames du rideau. Tirer directement sur les lames les deforme et use le tablier.",
+        "Formez chaque nouveau membre du personnel a la bonne utilisation du rideau de fer et au systeme de debrayage d'urgence."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Le contrat d'entretien : l'investissement le plus rentable"
+    },
+    {
+      "type": "paragraph",
+      "text": "Pour les commercants qui ne souhaitent pas gerer eux-memes le programme d'entretien semestriel, le contrat d'entretien professionnel est la solution la plus simple et la plus efficace. DRM Creil propose des contrats d'entretien annuels adaptes a tous les types de fermetures metalliques et a tous les budgets."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Formule",
+        "Contenu",
+        "Prix annuel (HT)",
+        "Ideal pour"
+      ],
+      "rows": [
+        [
+          "Essentiel",
+          "1 visite par an : nettoyage, graissage, inspection, reglages de base",
+          "180 a 250 euros",
+          "Rideau manuel, utilisation moderee"
+        ],
+        [
+          "Confort",
+          "2 visites par an : nettoyage complet, graissage, controle moteur et securite, petites reparations incluses",
+          "280 a 400 euros",
+          "Rideau motorise, utilisation normale"
+        ],
+        [
+          "Premium",
+          "2 visites + depannage prioritaire sous 4h + pieces d'usure incluses (joints, lames basses)",
+          "400 a 600 euros",
+          "Commerces a forte activite, restaurants"
+        ],
+        [
+          "Sur-mesure",
+          "Nombre de visites et prestations adaptees a votre besoin specifique",
+          "Sur devis",
+          "Grandes surfaces, installations multiples"
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Le retour sur investissement d'un contrat d'entretien est considerable. Pour un cout annuel de 250 a 400 euros, vous prolongez la duree de vie de votre grille metallique de 5 a 10 ans (soit une economie de 1 500 a 5 000 euros sur le long terme), vous evitez les pannes imprevues et les depannages d'urgence (couteux, surtout la nuit), et vous disposez d'un historique d'entretien qui renforce votre dossier en cas de sinistre assurance."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Conclusion : l'entretien, la cle d'un rideau metallique qui dure"
+    },
+    {
+      "type": "paragraph",
+      "text": "Prolonger la duree de vie de votre rideau metallique n'a rien de complique. Il suffit de quelques gestes reguliers, d'un programme d'entretien suivi et de bonnes habitudes de manoeuvre. A Creil, ou les conditions climatiques sont exigeantes, l'entretien est d'autant plus crucial. Un rideau bien entretenu est un rideau qui vous protege efficacement, qui fonctionne sans accroc et qui ne vous impose pas de depense imprevue."
+    },
+    {
+      "type": "paragraph",
+      "text": "DRM Creil vous accompagne tout au long de la vie de votre fermeture metallique : de l'installation a l'entretien courant, du depannage au remplacement le moment venu. Nos contrats d'entretien sont concus pour le climat et les contraintes de l'Oise. Pour souscrire un contrat ou pour un simple conseil, appelez-nous au <strong>{phone}</strong>. Nous intervenons dans tout Creil : du centre-ville aux quartiers peripheriques, de la gare au bord de l'Oise."
+    }
   ]
- },
- "content": [
-  {
-   "type": "paragraph",
-   "text": "Votre rideau metallique represente un investissement de 1 500 a 5 000 euros, voire davantage pour les modeles motorises haut de gamme. C'est un equipement de securite essentiel pour votre commerce, et sa duree de vie conditionne directement la rentabilite de cet investissement. Or, la difference entre un rideau de fer qui dure 10 ans et un rideau qui dure 25 ans ne tient souvent qu'a quelques gestes d'entretien reguliers et a quelques bonnes habitudes de manoeuvre."
-  },
-  {
-   "type": "paragraph",
-   "text": "Cet article de <strong>DRM Creil</strong> vous presente un programme d'entretien complet, etape par etape, pour maximiser la duree de vie de votre fermeture metallique. Adapte au climat specifique de l'Oise (air humide, vents du nord, ensoleillement intense), ce guide est valable pour tous les types de rideaux metalliques : lames pleines, perforees, grilles a tubes, manuels ou motorises."
-  },
-  {
-   "type": "heading",
-   "level": 2,
-   "text": "Les facteurs qui influencent la duree de vie d'un rideau metallique"
-  },
-  {
-   "type": "paragraph",
-   "text": "Avant de parler d'entretien, il est utile de comprendre quels facteurs determinent la longevite d'une fermeture metallique. Certains sont fixes (qualite du rideau, environnement), d'autres sont entierement sous votre controle (entretien, utilisation). Agir sur les facteurs controlables peut ajouter 5 a 10 ans de duree de vie a votre equipement."
-  },
-  {
-   "type": "table",
-   "headers": ["Facteur", "Impact sur la duree de vie", "Controlable ?", "Action possible"],
-   "rows": [
-    ["Qualite du materiau (acier, alu, epaisseur)", "Determinant : +/- 10 ans", "Oui (au moment de l'achat)", "Choisir acier galvanise ou aluminium de qualite"],
-    ["Traitement de surface (galvanisation, laquage)", "Important : +/- 5 a 8 ans", "Oui (a l'achat et en entretien)", "Galvanisation + laquage, retouches regulieres"],
-    ["Environnement (air humide, pollution, humidite)", "Important : +/- 3 a 8 ans", "Partiellement", "Entretien renforce en environnement agressif"],
-    ["Frequence de manoeuvre", "Moderee : +/- 2 a 5 ans", "Non (depend de l'activite)", "Motorisation adaptee, graissage frequent"],
-    ["Qualite de l'installation", "Determinant : +/- 5 ans", "Oui (choix de l'installateur)", "Installateur professionnel certifie"],
-    ["Entretien regulier", "Determinant : +/- 5 a 10 ans", "Oui", "Programme d'entretien rigoureux"],
-    ["Habitudes de manoeuvre", "Moderee : +/- 2 a 4 ans", "Oui", "Formation du personnel, gestes corrects"],
-    ["Reparation rapide des defauts", "Important : +/- 3 a 5 ans", "Oui", "Intervention des premiers signes de panne"]
-   ]
-  },
-  {
-   "type": "heading",
-   "level": 2,
-   "text": "Le programme d'entretien mensuel : les gestes simples"
-  },
-  {
-   "type": "paragraph",
-   "text": "L'entretien mensuel d'un rideau metallique se resume a quelques gestes simples que vous ou votre personnel pouvez realiser sans competence technique particuliere. Ces gestes prennent 10 a 15 minutes par mois et constituent la base d'une longevite optimale."
-  },
-  {
-   "type": "list",
-   "ordered": true,
-   "items": [
-    "<strong>Inspection visuelle (5 minutes)</strong> : examinez l'ensemble du rideau en position fermee. Recherchez les points de rouille, les rayures profondes, les lames deformees, les coulisses encrassees et tout element anormal. Notez ce que vous observez pour suivre l'evolution d'un mois sur l'autre.",
-    "<strong>Test de manoeuvre (3 minutes)</strong> : ouvrez et fermez le rideau completement en etant attentif au bruit, a la vitesse et a la fluidite du mouvement. Un bruit nouveau (grincement, claquement, vibration) est un signal d'alerte a ne pas ignorer.",
-    "<strong>Nettoyage du seuil et des coulisses (5 minutes)</strong> : retirez les debris, les feuilles, les megots et la poussiere accumules dans les coulisses laterales et au pied du rideau. Ces corps etrangers genent la descente du tablier et usent prematurerement les lames et les coulisses.",
-    "<strong>Verification de la serrure (2 minutes)</strong> : verifiez que la cle tourne facilement et que le verrou s'engage completement. Si la serrure force, appliquez un lubrifiant graphite en spray (jamais de WD-40 dans une serrure, il encrasse le mecanisme a long terme)."
-   ]
-  },
-  {
-   "type": "heading",
-   "level": 2,
-   "text": "Le programme d'entretien trimestriel : nettoyage et protection"
-  },
-  {
-   "type": "paragraph",
-   "text": "Tous les trois mois, un nettoyage plus complet du store metallique est necessaire. A Creil, ce rythme trimestriel est le minimum recommande en raison des depots de humidite, de la poussiere et de la pollution urbaine qui s'accumulent sur les surfaces metalliques."
-  },
-  {
-   "type": "list",
-   "ordered": true,
-   "items": [
-    "<strong>Nettoyage complet du tablier</strong> : avec une eponge douce et de l'eau savonneuse (savon de Creil ou liquide vaisselle doux), nettoyez toute la surface du rideau en insistant sur les zones basses qui recoivent les projections de la rue. Rincez abondamment a l'eau claire. Ne jamais utiliser de produit abrasif, de solvant ou de nettoyeur haute pression directement sur les lames.",
-    "<strong>Nettoyage des coulisses</strong> : les coulisses (rails lateraux) sont des zones d'accumulation de salete et de graisseancienne. Nettoyez-les avec un chiffon humide puis sechez-les avant d'appliquer le lubrifiant.",
-    "<strong>Inspection des fixations</strong> : verifiez que les vis de fixation des coulisses, du coffre et du boitier de commande sont bien serrees. Les vibrations de la manoeuvre quotidienne peuvent desserrer les fixations avec le temps.",
-    "<strong>Retouche des rayures</strong> : si vous avez repere des rayures ou des eclats de peinture lors de l'inspection mensuelle, c'est le moment de les retoucher avec une peinture de protection adaptee. Chaque rayure non traitee est un point d'entree pour la corrosion."
-   ]
-  },
-  {
-   "type": "heading",
-   "level": 2,
-   "text": "Le programme d'entretien semestriel : graissage et reglage"
-  },
-  {
-   "type": "paragraph",
-   "text": "Deux fois par an, un entretien plus approfondi est necessaire. C'est le moment de graisser les mecanismes, de verifier les reglages et de controler les elements de securite. Certaines de ces operations peuvent etre realisees par un utilisateur bricoleur, mais nous recommandons de confier cet entretien a un professionnel, surtout pour les rideaux motorises."
-  },
-  {
-   "type": "list",
-   "ordered": false,
-   "items": [
-    "<strong>Graissage des coulisses</strong> : appliquez un lubrifiant en spray (type silicone ou teflon) sur toute la longueur des coulisses laterales. Ce graissage facilite la descente et la montee du tablier, reduit l'usure des lames et diminue l'effort demande au moteur ou a l'utilisateur.",
-    "<strong>Graissage de l'axe d'enroulement</strong> : l'axe autour duquel s'enroule le tablier doit etre graisse pour eviter les frottements et l'usure des paliers. Cette operation necessite l'ouverture du coffre et doit idealement etre realisee par un technicien.",
-    "<strong>Verification des ressorts</strong> : les ressorts de compensation (ressorts de torsion ou ressorts a boudin) compensent le poids du tablier et facilitent la manoeuvre. Un ressort fatigue ou casse rend le rideau lourd a manoeuvrer et surcharge le moteur. Le remplacement d'un ressort est une operation dangereuse qui doit imperativement etre realisee par un professionnel.",
-    "<strong>Controle du moteur (rideau motorise)</strong> : verification du fonctionnement du moteur, des fins de course (haut et bas), du systeme anti-chute et du debrayage manuel. Nettoyage du moteur si necessaire.",
-    "<strong>Test des dispositifs de securite</strong> : verification du fonctionnement de la cellule photoelectrique ou de la barre palpeuse (detection d'obstacle), du systeme anti-chute et du limiteur d'effort.",
-    "<strong>Verification de l'etat de la lame finale</strong> : la lame du bas est la plus exposee aux chocs et a l'humidite. Verifiez son etat, son joint d'etancheite et sa fixation."
-   ]
-  },
-  {
-   "type": "heading",
-   "level": 2,
-   "text": "Le calendrier d'entretien annuel recapitulatif"
-  },
-  {
-   "type": "paragraph",
-   "text": "Pour faciliter le suivi, voici un calendrier recapitulatif de toutes les operations d'entretien a realiser sur une annee. Adaptez les mois en fonction de votre activite et du climat (a Creil, nous recommandons les entretiens semestriels en mars et en septembre, avant et apres la periode estivale)."
-  },
-  {
-   "type": "table",
-   "headers": ["Mois", "Operations a realiser", "Duree estimee", "Par qui"],
-   "rows": [
-    ["Tous les mois", "Inspection visuelle, test manoeuvre, nettoyage seuil", "10-15 minutes", "Le commercant ou son personnel"],
-    ["Mars", "Nettoyage complet + graissage semestriel + controle moteur + securite", "1 a 2 heures", "Professionnel DRM Creil"],
-    ["Avril", "Nettoyage trimestriel + retouches peinture", "30 minutes", "Le commercant"],
-    ["Juillet", "Nettoyage trimestriel (renforcee si bords de l'Oise)", "30 minutes", "Le commercant"],
-    ["Septembre", "Nettoyage complet + graissage semestriel + controle moteur + securite", "1 a 2 heures", "Professionnel DRM Creil"],
-    ["Octobre", "Nettoyage trimestriel + verification avant hiver", "30 minutes", "Le commercant"],
-    ["Decembre", "Nettoyage trimestriel + inspection detaillee", "30 minutes", "Le commercant"]
-   ]
-  },
-  {
-   "type": "heading",
-   "level": 2,
-   "text": "Les erreurs a eviter absolument"
-  },
-  {
-   "type": "paragraph",
-   "text": "Certaines erreurs courantes reduisent considerablement la duree de vie des rideaux metalliques. Nos techniciens de DRM Creil les constatent quotidiennement sur les fermetures metalliques qu'ils reparent dans l'Oise. Eviter ces erreurs est aussi important que de suivre le programme d'entretien."
-  },
-  {
-   "type": "list",
-   "ordered": false,
-   "items": [
-    "<strong>Forcer un rideau bloque</strong> : c'est l'erreur la plus courante et la plus destructrice. Un store metallique qui se bloque envoie un signal clair : quelque chose ne va pas. Forcer aggrave systematiquement le probleme (lames tordues, coulisses deformees, moteur grille). Arretez immediatement et appelez un professionnel.",
-    "<strong>Utiliser un nettoyeur haute pression</strong> : le jet haute pression s'infiltre dans le coffre d'enroulement, deplace la graisse des mecanismes, accelere la corrosion de l'axe et peut endommager les joints du moteur. Nettoyez toujours a basse pression ou a l'eponge.",
-    "<strong>Negliger les petites rayures</strong> : une rayure parait insignifiante, mais c'est un point d'entree pour la rouille. A Creil, avec l'air humide, une rayure non traitee peut generer une plaque de rouille de plusieurs centimetres en quelques mois.",
-    "<strong>Utiliser des lubrifiants inadaptes</strong> : evitez la graisse epaisse dans les coulisses (elle retient la poussiere et forme une pate abrasive). Evitez le WD-40 dans les serrures (il degraise a court terme mais encrasse a long terme). Utilisez du lubrifiant silicone pour les coulisses et du graphite pour les serrures.",
-    "<strong>Laisser le rideau a mi-hauteur</strong> : un rideau metallique maintenu en position intermediaire pendant de longues periodes (plusieurs heures) fatigue les ressorts de compensation et desequilibre le tablier. Ouvrez completement ou fermez completement.",
-    "<strong>Suspendre des objets au rideau</strong> : pancartes, enseignes, pots de fleurs... Tout poids supplementaire sur le tablier desequilibre le rideau, fatigue les ressorts et surcharge le moteur.",
-    "<strong>Ignorer les bruits anormaux</strong> : un grincement, un claquement ou une vibration nouvelle sont des symptomes de panne imminente. Les traiter immediatement coute 50 a 200 euros. Attendre la panne complete coute 500 a 2 000 euros."
-   ]
-  },
-  {
-   "type": "heading",
-   "level": 2,
-   "text": "Les bonnes habitudes de manoeuvre au quotidien"
-  },
-  {
-   "type": "paragraph",
-   "text": "La facon dont vous manoeuvrez votre rideau metallique au quotidien a un impact direct sur sa duree de vie. Quelques habitudes simples, adoptees par vous et votre personnel, peuvent reduire l'usure de 30 a 50 %."
-  },
-  {
-   "type": "list",
-   "ordered": false,
-   "items": [
-    "Ouvrez et fermez le rideau en douceur, sans a-coup. Evitez de lacher brutalement un rideau manuel en cours de descente.",
-    "Attendez l'arret complet du rideau (en position haute ou basse) avant de relacher la commande ou la sangle.",
-    "Verifiez que rien ne se trouve dans la trajectoire du rideau avant de lancer la fermeture (objets au sol, personne, terrasse).",
-    "En cas de vent fort (vents du nord), soyez particulierement vigilant : le vent peut destabiliser le tablier en cours de manoeuvre.",
-    "Verrouillez systematiquement la serrure apres chaque fermeture. Un rideau non verrouille peut etre souleve par le vent ou manipule par des tiers.",
-    "Pour les rideaux manuels, utilisez le poignet de manoeuvre et non les lames du rideau. Tirer directement sur les lames les deforme et use le tablier.",
-    "Formez chaque nouveau membre du personnel a la bonne utilisation du rideau de fer et au systeme de debrayage d'urgence."
-   ]
-  },
-  {
-   "type": "heading",
-   "level": 2,
-   "text": "Le contrat d'entretien : l'investissement le plus rentable"
-  },
-  {
-   "type": "paragraph",
-   "text": "Pour les commercants qui ne souhaitent pas gerer eux-memes le programme d'entretien semestriel, le contrat d'entretien professionnel est la solution la plus simple et la plus efficace. DRM Creil propose des contrats d'entretien annuels adaptes a tous les types de fermetures metalliques et a tous les budgets."
-  },
-  {
-   "type": "table",
-   "headers": ["Formule", "Contenu", "Prix annuel (HT)", "Ideal pour"],
-   "rows": [
-    ["Essentiel", "1 visite par an : nettoyage, graissage, inspection, reglages de base", "180 a 250 euros", "Rideau manuel, utilisation moderee"],
-    ["Confort", "2 visites par an : nettoyage complet, graissage, controle moteur et securite, petites reparations incluses", "280 a 400 euros", "Rideau motorise, utilisation normale"],
-    ["Premium", "2 visites + depannage prioritaire sous 4h + pieces d'usure incluses (joints, lames basses)", "400 a 600 euros", "Commerces a forte activite, restaurants"],
-    ["Sur-mesure", "Nombre de visites et prestations adaptees a votre besoin specifique", "Sur devis", "Grandes surfaces, installations multiples"]
-   ]
-  },
-  {
-   "type": "paragraph",
-   "text": "Le retour sur investissement d'un contrat d'entretien est considerable. Pour un cout annuel de 250 a 400 euros, vous prolongez la duree de vie de votre grille metallique de 5 a 10 ans (soit une economie de 1 500 a 5 000 euros sur le long terme), vous evitez les pannes imprevues et les depannages d'urgence (couteux, surtout la nuit), et vous disposez d'un historique d'entretien qui renforce votre dossier en cas de sinistre assurance."
-  },
-  {
-   "type": "heading",
-   "level": 2,
-   "text": "Conclusion : l'entretien, la cle d'un rideau metallique qui dure"
-  },
-  {
-   "type": "paragraph",
-   "text": "Prolonger la duree de vie de votre rideau metallique n'a rien de complique. Il suffit de quelques gestes reguliers, d'un programme d'entretien suivi et de bonnes habitudes de manoeuvre. A Creil, ou les conditions climatiques sont exigeantes, l'entretien est d'autant plus crucial. Un rideau bien entretenu est un rideau qui vous protege efficacement, qui fonctionne sans accroc et qui ne vous impose pas de depense imprevue."
-  },
-  {
-   "type": "paragraph",
-   "text": "DRM Creil vous accompagne tout au long de la vie de votre fermeture metallique : de l'installation a l'entretien courant, du depannage au remplacement le moment venu. Nos contrats d'entretien sont concus pour le climat et les contraintes de l'Oise. Pour souscrire un contrat ou pour un simple conseil, appelez-nous au <strong>{phone}</strong>. Nous intervenons dans tout Creil : du centre-ville aux quartiers peripheriques, de la gare au bord de l'Oise."
-  }
- ]
 }

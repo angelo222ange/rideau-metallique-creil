@@ -16,6 +16,7 @@ interface ReviewsProps {
   title?: string;
   subtitle?: string;
   items: ReviewItem[];
+  allReviewsLink?: string;
 }
 
 /**
@@ -100,7 +101,7 @@ function timeAgo(dateStr: string): string {
   return years === 1 ? "il y a 1 an" : `il y a ${years} ans`;
 }
 
-export function Reviews({ title = "Avis Clients", subtitle, items }: ReviewsProps) {
+export function Reviews({ title = "Avis Clients", subtitle, items, allReviewsLink }: ReviewsProps) {
   const [startIndex, setStartIndex] = useState(0);
   const visibleCount = 3;
   const displayItems = items.slice(0, 9); // Max 9 avis
@@ -173,13 +174,28 @@ export function Reviews({ title = "Avis Clients", subtitle, items }: ReviewsProp
               const photoId = getPhotoId(review.name);
               const photoGender = isFeminine ? "women" : "men";
               const showPhoto = index % 2 === 0; // Alterner photo / initiale
+              const isFeatured = index === 0;
 
               return (
                 <div
                   key={index}
-                  className="flex-shrink-0 w-full sm:w-[calc(50%-10px)] lg:w-[calc(33.333%-14px)] bg-white p-6 border border-gray-100 hover:border-gray-200 hover:shadow-lg transition-all duration-300"
+                  className={`flex-shrink-0 w-full sm:w-[calc(50%-10px)] lg:w-[calc(33.333%-14px)] p-6 transition-all duration-300 ${
+                    isFeatured
+                      ? "bg-primary-50 border-2 border-primary-200 shadow-lg shadow-primary-600/10 ring-1 ring-primary-100"
+                      : "bg-white border border-gray-100 hover:border-gray-200 hover:shadow-lg"
+                  }`}
                   style={{ borderRadius: "16px" }}
                 >
+                  {/* Featured badge */}
+                  {isFeatured && (
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-primary-600 text-white text-[10px] font-bold uppercase tracking-wider rounded-full mb-3">
+                      <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                      Avis du mois
+                    </div>
+                  )}
+
                   {/* Header — Format Google */}
                   <div className="flex items-start justify-between mb-3">
                     <div className="flex items-center gap-3">
@@ -188,18 +204,19 @@ export function Reviews({ title = "Avis Clients", subtitle, items }: ReviewsProp
                         <img
                           src={`https://randomuser.me/api/portraits/${photoGender}/${photoId}.jpg`}
                           alt={review.name}
-                          className="w-10 h-10 rounded-full object-cover"
+                          title={review.name}
+                          className={`rounded-full object-cover ${isFeatured ? "w-12 h-12" : "w-10 h-10"}`}
                           loading="lazy"
                         />
                       ) : (
-                        <div className={`w-10 h-10 ${
+                        <div className={`${isFeatured ? "w-12 h-12 text-base" : "w-10 h-10 text-sm"} ${
                           ['bg-blue-500','bg-emerald-500','bg-amber-500','bg-violet-500','bg-rose-500','bg-cyan-500'][index % 6]
-                        } rounded-full flex items-center justify-center text-white font-bold text-sm`}>
+                        } rounded-full flex items-center justify-center text-white font-bold`}>
                           {review.name.charAt(0).toUpperCase()}
                         </div>
                       )}
                       <div>
-                        <p className="font-semibold text-gray-900 text-sm">{review.name}</p>
+                        <p className={`font-semibold text-gray-900 ${isFeatured ? "text-base" : "text-sm"}`}>{review.name}</p>
                         <p className="text-gray-400 text-xs flex items-center gap-1">
                           Avis de <GoogleLogo /> <span className="text-blue-600 font-medium">Google</span>
                         </p>
@@ -220,7 +237,7 @@ export function Reviews({ title = "Avis Clients", subtitle, items }: ReviewsProp
                   </div>
 
                   {/* Review text */}
-                  <p className="text-gray-600 text-sm leading-relaxed line-clamp-4">
+                  <p className={`text-gray-600 leading-relaxed ${isFeatured ? "text-sm" : "text-sm line-clamp-4"}`}>
                     {review.text}
                   </p>
                 </div>
@@ -242,6 +259,17 @@ export function Reviews({ title = "Avis Clients", subtitle, items }: ReviewsProp
             />
           ))}
         </div>
+
+        {allReviewsLink && (
+          <div className="text-center mt-8">
+            <a href={allReviewsLink} className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-semibold text-sm transition-colors">
+              Voir tous les avis clients
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </div>
+        )}
       </div>
     </section>
   );

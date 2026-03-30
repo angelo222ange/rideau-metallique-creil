@@ -138,28 +138,28 @@
     {
       "title": "<strong>Réparation en Une Seule Visite</strong> à {zone}",
       "content": "<p>Grâce à notre <strong>stock de pièces détachées embarqué</strong>, nous résolvons la grande majorité des pannes de rideau métallique à {zone} en une seule visite. Moteurs <strong>Somfy</strong>, <strong>Nice</strong>, <strong>Came</strong> et <strong>ACM</strong>, lames en acier galvanisé ou aluminium, axes d'enroulement, ressorts, serrures : notre véhicule atelier est équipé pour toutes les situations.</p><p>Appelez le <strong>{phone}</strong> pour un dépannage immédiat dans le <strong>{department}</strong>.</p>",
-      "image": "/images/gallery/rideau-metallique-lame-cobra-realisation.webp",
+      "image": "/images/gallery/depannage-rideau-metallique-paris-19-drm.webp",
       "imageAlt": "Pièces détachées rideau métallique dépannage {zone}",
       "imagePosition": "left"
     },
     {
       "title": "<strong>Réparation Moteur Rideau Métallique {zone}</strong> : Diagnostic",
       "content": "<p>La <strong>panne de moteur</strong> est l'une des causes les plus fréquentes de blocage de <strong>rideau métallique à {zone}</strong>. Nos techniciens maîtrisent le diagnostic et la <strong>réparation de tous types de motorisations</strong> : <strong>moteur tubulaire</strong> ou <strong>moteur central</strong>. Nous intervenons sur <strong>Somfy</strong>, <strong>Nice</strong>, <strong>Came</strong>, <strong>ACM</strong>, <strong>Simu</strong>, <strong>BFT</strong> et <strong>Faac</strong>.</p><p>Le <strong>diagnostic électromécanique</strong> identifie la cause précise : <strong>condensateur défaillant</strong>, carte électronique grillée, bobinage endommagé ou système de frein usé. La réparation est souvent possible et plus économique que le remplacement. Devis détaillé systématique avant intervention.</p>",
-      "image": "/images/gallery/moteur-tubulaire-rideau-metallique-drm.webp",
+      "image": "/images/gallery/realisation-rideau-metallique-lame-pleine-industriel-france.webp",
       "imageAlt": "Réparation moteur rideau métallique à {zone} dans le {department}",
       "imagePosition": "right"
     },
     {
       "title": "<strong>Remplacement Moteur</strong> et Installation à {zone}",
       "content": "<p>Lorsque le remplacement du moteur s'avère nécessaire, <strong>{name}</strong> dispose d'un large choix de motorisations adaptées à votre <strong>rideau de fer à {zone}</strong>. Nous sélectionnons le moteur en fonction du poids du tablier, de la fréquence d'utilisation et de vos besoins spécifiques.</p><p>Chaque <strong>installation de moteur</strong> comprend le réglage des fins de course, la programmation des télécommandes et la vérification complète du fonctionnement. Contactez-nous au <strong>{phone}</strong> pour un diagnostic moteur rapide dans le <strong>{department}</strong>.</p>",
-      "image": "/images/gallery/motorisation-rideau-metallique-creil-60.webp",
+      "image": "/images/gallery/raccordement-rideau-metallique-drm.webp",
       "imageAlt": "Remplacement moteur rideau métallique à {zone}",
       "imagePosition": "left"
     },
     {
       "title": "<strong>Sécurisation Après Effraction à {zone}</strong> ({zonePostal})",
       "content": "<p>Votre <strong>rideau métallique a été forcé lors d'une tentative d'effraction à {zone}</strong> ? <strong>{name}</strong> intervient en urgence, de jour comme de nuit, pour <strong>sécuriser vos locaux</strong>. Les lames déformées sont redressées ou remplacées, la serrure changée si forcée, et l'ensemble du mécanisme vérifié. Nous installons des <strong>renforts anti-effraction</strong> si nécessaire.</p><p>Un <strong>rapport détaillé</strong> vous est remis pour votre déclaration d'assurance. Appelez immédiatement le <strong>{phone}</strong> : nous intervenons sous 30 minutes dans tout le <strong>{department}</strong>.</p>",
-      "image": "/images/gallery/rideau-metallique-lame-pleine-france.webp",
+      "image": "/images/gallery/rideau-metallique-anti-effraction-blinde.webp",
       "imageAlt": "Sécurisation rideau métallique après effraction à {zone} {zonePostal}",
       "imagePosition": "right"
     }

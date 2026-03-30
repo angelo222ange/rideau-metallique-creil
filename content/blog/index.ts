@@ -17,6 +17,7 @@ import article15 from './rideau-metallique-electrique-vs-manuel-guide.json';
 import article16 from './securite-incendie-rideau-metallique-commerce.json';
 import article17 from './rideau-metallique-intelligent-connecte-2026.json';
 import article18 from './fabricant-rideau-metallique-comment-choisir.json';
+import article19 from './top-6-fabricants-rideaux-metalliques-france-2026.json';
 
 export interface BlogArticle {
   slug: string;
@@ -45,7 +46,7 @@ export const blogArticles: BlogArticle[] = [
   article1, article2, article3, article4, article5,
   article6, article7, article8, article9, article10,
   article11, article12, article13, article14, article15,
-  article16, article17, article18,
+  article16, article17, article18, article19,
 ] as BlogArticle[];
 
 export function getArticleBySlug(slug: string): BlogArticle | undefined {

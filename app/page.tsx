@@ -6,6 +6,8 @@ import { FAQ } from "@/components/sections/FAQ";
 import { CTA } from "@/components/sections/CTA";
 import { Reviews } from "@/components/sections/Reviews";
 import { AlternatingFeatures } from "@/components/sections/AlternatingFeatures";
+import { TypesRideauxTabs } from "@/components/sections/TypesRideauxTabs";
+import { ServicesCarousel } from "@/components/sections/ServicesCarousel";
 import { getPageContent } from "@/lib/content";
 import faqData from "@/content/faq.json";
 import homeContent from "@/content/pages/home.json";
@@ -13,9 +15,22 @@ import homeContent from "@/content/pages/home.json";
 const content = getPageContent(homeContent);
 
 export const metadata: Metadata = {
-  title: `Depannage Rideau Metallique ${siteConfig.city} | 24h/24 7j/7 | ${siteConfig.phone}`,
-  description: `Depannage rideau metallique a ${siteConfig.city} (${siteConfig.postalCode}). Intervention en -30 min, 24h/24. Deblocage, reparation, motorisation. ${siteConfig.phone}`,
+  title: `Depannage Rideau Metallique Creil (60100) | 24h/24`,
+  description: `Depannage rideau metallique a Creil : intervention en -30 min, 24h/24, 7j/7. Deblocage, reparation, motorisation. Devis gratuit. ${siteConfig.phone}`,
   alternates: { canonical: `${siteConfig.url}/` },
+  openGraph: {
+    title: `Depannage Rideau Metallique Creil | Urgence 24h/24`,
+    description: `Expert rideau metallique a Creil et dans l'Oise. Intervention rapide 24h/24. Devis gratuit. ${siteConfig.phone}`,
+    type: "website",
+    locale: "fr_FR",
+    url: `${siteConfig.url}/`,
+    images: [{
+      url: `${siteConfig.url}/images/logos/depannage-rideau-metallique-creil.webp`,
+      width: 800,
+      height: 600,
+      alt: `Depannage rideau metallique Creil`,
+    }],
+  },
 };
 
 export default function HomePage() {
@@ -49,12 +64,47 @@ export default function HomePage() {
     reparation: "/images/gallery/realisation-drm-rideau-metallique-lame-pleine.webp",
   };
 
+  // Blog articles avec excerpts (images toutes differentes du reste de la page)
+  const blogArticles = [
+    {
+      title: "Guide entretien rideau metallique 2026",
+      slug: "guide-entretien-rideau-metallique-2026",
+      image: "/images/gallery/entretien-rideau-metallique-france-entretien.webp",
+      excerpt: "Tout savoir pour entretenir votre rideau metallique et eviter les pannes couteuses. Calendrier, produits, gestes essentiels.",
+    },
+    {
+      title: "Signes qu'un depannage urgent est necessaire",
+      slug: "signes-depannage-rideau-metallique-urgent",
+      image: "/images/gallery/rideau-metallique-bloque-depannage-rideau-metallique.webp",
+      excerpt: "Bruits anormaux, lenteur, blocages repetitifs : les signaux d'alerte a ne pas ignorer avant la panne totale.",
+    },
+    {
+      title: "Rideau electrique vs manuel : le guide",
+      slug: "rideau-metallique-electrique-vs-manuel-guide",
+      image: "/images/gallery/Axe-motorise-rideau-metallique-2.webp",
+      excerpt: "Comparatif complet entre rideau metallique electrique et manuel. Couts, avantages, inconvenients et conseils de choix.",
+    },
+  ];
+
+  const homeBreadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": siteConfig.url },
+    ],
+  };
+
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeBreadcrumbSchema) }}
+      />
+
       {/* ===================================================================
-          1. HERO -- Image fond + overlay gradient, texte gauche, produit droite
+          1. HERO -- Compact, dark overlay, texte gauche + produit droite
           =================================================================== */}
-      <section className="relative min-h-[600px] lg:min-h-[650px] overflow-hidden">
+      <section className="relative overflow-hidden">
         {/* Image de fond avec overlay gradient */}
         <div className="absolute inset-0">
           <Image
@@ -71,31 +121,41 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/70 to-gray-900/40" />
         </div>
 
-        <div className="container relative z-10 pt-28 pb-16 md:pt-32 md:pb-20 lg:pt-36 lg:pb-24">
+        <div className="container relative z-10 py-20 md:py-24">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Texte gauche */}
             <div>
-              {/* Badge dispo avec pastille verte animate-ping */}
-              <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/20 text-white px-4 py-2 rounded-full text-sm font-semibold mb-6">
-                <span className="relative flex h-2.5 w-2.5">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-400"></span>
-                </span>
-                Disponible 24h/24 a {siteConfig.city}
+              {/* Urgency badges row */}
+              <div className="flex flex-wrap items-center gap-3 mb-6">
+                {/* Badge: Technicien disponible maintenant */}
+                <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/20 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                  <span className="relative flex h-2.5 w-2.5">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-400"></span>
+                  </span>
+                  Technicien disponible maintenant
+                </div>
+                {/* Badge: Social proof */}
+                <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/15 text-white/90 px-4 py-2 rounded-full text-sm font-medium">
+                  <svg className="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  {siteConfig.reviews.count} clients satisfaits ce mois
+                </div>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-5 leading-tight">
                 Depannage Rideau
                 <br />
                 Metallique <span className="text-primary-300">{siteConfig.city}</span>
               </h1>
 
-              <p className="text-lg text-white/80 mb-8 max-w-xl leading-relaxed">
-                {content.hero.subtitle}
+              <p className="hero-description text-lg text-white/80 mb-7 max-w-lg leading-relaxed">
+                Rideau metallique bloque ou endommage ? Nos techniciens interviennent en urgence 24h/24 a {siteConfig.city} et dans l&apos;{siteConfig.department}.
               </p>
 
-              {/* CTAs -- rounded-full, blanc inverse + outline blanc */}
-              <div className="flex flex-wrap gap-4 mb-10">
+              {/* CTAs */}
+              <div className="flex flex-wrap gap-4 mb-8">
                 <a
                   href={siteConfig.phoneLink}
                   className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-base font-bold text-primary-700 shadow-lg hover:bg-gray-50 transition-all duration-200"
@@ -116,21 +176,21 @@ export default function HomePage() {
                 </Link>
               </div>
 
-              {/* Trust badges en cards */}
+              {/* Trust badges compacts */}
               <div className="flex flex-wrap gap-4">
                 {[
-                  { title: "-30 min", subtitle: "Intervention rapide" },
                   { title: "Garanti", subtitle: "Pieces & main d'oeuvre" },
                   { title: "Devis gratuit", subtitle: "Sans engagement" },
+                  { title: "24h/24", subtitle: "Meme week-end et feries" },
                 ].map((badge, index) => (
-                  <div key={index} className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-xl px-4 py-3 border border-white/10">
-                    <div className="w-9 h-9 bg-white/20 rounded-lg flex items-center justify-center">
-                      <svg className="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div key={index} className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-xl px-4 py-2.5 border border-white/10">
+                    <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
+                      <svg className="w-3.5 h-3.5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
                     <div>
-                      <p className="font-bold text-white text-sm">{badge.title}</p>
+                      <p className="font-bold text-white text-sm leading-tight">{badge.title}</p>
                       <p className="text-[11px] text-white/60">{badge.subtitle}</p>
                     </div>
                   </div>
@@ -138,8 +198,8 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Image produit droite -- JAMAIS coupee, object-contain */}
-            <div className="hidden lg:flex items-center justify-center">
+            {/* Image produit droite -- object-contain pour cutout produit */}
+            <div className="hidden md:flex items-center justify-center">
               <div className="relative w-full max-w-md">
                 <Image
                   src="/images/gallery/hero-rideau-lame-pleine.webp"
@@ -151,7 +211,7 @@ export default function HomePage() {
                   style={{ objectFit: 'contain' }}
                   priority
                   quality={80}
-                  sizes="(max-width: 1024px) 0vw, 450px"
+                  sizes="(max-width: 768px) 0vw, 450px"
                 />
               </div>
             </div>
@@ -160,7 +220,7 @@ export default function HomePage() {
       </section>
 
       {/* ===================================================================
-          2. TRUST BAR -- Stats avec gradient primary-50 to gray-50
+          2. TRUST BAR -- Stats
           =================================================================== */}
       <section className="bg-gradient-to-r from-primary-50 via-gray-50 to-primary-50 py-6 border-y border-gray-200">
         <div className="container">
@@ -185,70 +245,14 @@ export default function HomePage() {
       </section>
 
       {/* ===================================================================
-          3. SERVICES -- Grandes cards avec images DIFFERENTES
+          3. SERVICES -- Carrousel horizontal
           =================================================================== */}
-      <section className="section bg-white">
-        <div className="container">
-          <div className="text-center mb-12">
-            <span className="section-label justify-center">
-              <span className="w-2 h-2 bg-primary-500 rounded-full" />
-              Nos Services
-            </span>
-            <h2 className="section-title">Services Rideau Metallique {siteConfig.city}</h2>
-            <p className="section-subtitle mx-auto text-center mt-3">
-              {siteConfig.name} intervient pour tous vos besoins en rideau metallique a {siteConfig.city} et dans l&apos;{siteConfig.department}.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-            {displayServices.map((service) => {
-              const backgroundImage = serviceImages[service.slug] || "";
-
-              return (
-                <Link
-                  key={service.id}
-                  href={`/${service.slug}-rideau-metallique-creil`}
-                  className="group relative overflow-hidden rounded-2xl min-h-[300px] transition-all duration-300 hover:shadow-xl hover:scale-[1.02]"
-                >
-                  {/* Image de fond */}
-                  {backgroundImage && (
-                    <>
-                      <div className="absolute inset-0">
-                        <Image
-                          src={backgroundImage}
-                          alt={service.name}
-                          title={service.name}
-                          fill
-                          className="object-cover group-hover:scale-105 transition-transform duration-500"
-                          quality={70}
-                          loading="lazy"
-                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                        />
-                      </div>
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent group-hover:from-black/80 transition-all duration-300" />
-                    </>
-                  )}
-
-                  <div className="relative z-10 flex flex-col justify-end h-full p-6">
-                    <h3 className="font-bold text-xl mb-2 text-white">
-                      {service.name}
-                    </h3>
-                    <p className="text-white/80 text-sm group-hover:text-white/90 transition-colors mb-4 line-clamp-2">
-                      {service.shortDesc}
-                    </p>
-                    <span className="text-sm font-semibold text-primary-300 group-hover:text-primary-200 transition-colors inline-flex items-center gap-1">
-                      En savoir plus
-                      <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </span>
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      <ServicesCarousel
+        services={displayServices}
+        serviceImages={serviceImages}
+        city={siteConfig.city}
+        department={siteConfig.department}
+      />
 
       {/* ===================================================================
           4. SECTIONS SEO -- AlternatingFeatures
@@ -258,7 +262,7 @@ export default function HomePage() {
       )}
 
       {/* ===================================================================
-          5. COMMENT CA MARCHE -- 4 cards numerotees, icones cercles primary-600
+          5. COMMENT CA MARCHE -- 4 cards numerotees
           =================================================================== */}
       <section className="section bg-gradient-to-b from-white to-gray-50" id="comment-ca-marche">
         <div className="container">
@@ -290,9 +294,8 @@ export default function HomePage() {
               return (
                 <div
                   key={step.step}
-                  className="relative bg-white rounded-lg p-6 border border-gray-100 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                  className="relative bg-white rounded-2xl p-6 border border-gray-100 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
                 >
-                  {/* Step number + icon in circle */}
                   <div className="w-14 h-14 rounded-full bg-primary-600 flex items-center justify-center text-white mb-5">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       {stepIcons[(step.step - 1) % 4]}
@@ -306,7 +309,6 @@ export default function HomePage() {
                   <h3 className="font-bold text-gray-900 text-lg mb-2">{step.title}</h3>
                   <p className="text-gray-500 text-sm leading-relaxed">{step.description}</p>
 
-                  {/* Connector line */}
                   {step.step < 4 && (
                     <div className="hidden lg:block absolute top-10 -right-3 w-6 border-t-2 border-dashed border-gray-200" />
                   )}
@@ -315,7 +317,6 @@ export default function HomePage() {
             })}
           </div>
 
-          {/* Trust indicators */}
           <div className="mt-12 flex flex-wrap justify-center gap-6 lg:gap-10 text-gray-500 text-sm">
             {["Devis instantane", "Sans engagement", "Intervention garantie", "24h/24 7j/7"].map((item, i) => (
               <div key={i} className="flex items-center gap-2">
@@ -330,7 +331,12 @@ export default function HomePage() {
       </section>
 
       {/* ===================================================================
-          6. PANNES -- Cards rounded-xl avec badges urgence rounded-full
+          5b. TYPES DE RIDEAUX -- Tabs interactifs
+          =================================================================== */}
+      <TypesRideauxTabs />
+
+      {/* ===================================================================
+          6. PANNES -- Cards avec badges urgence
           =================================================================== */}
       <section className="section bg-gray-50">
         <div className="container">
@@ -350,7 +356,7 @@ export default function HomePage() {
               return (
                 <div
                   key={index}
-                  className="bg-white rounded-xl p-6 border border-gray-100 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                  className="bg-white rounded-2xl p-6 border border-gray-100 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
                 >
                   <div className="flex items-start justify-between mb-4">
                     <div className="w-11 h-11 bg-gray-100 rounded-xl flex items-center justify-center text-gray-600">
@@ -359,7 +365,6 @@ export default function HomePage() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                       </svg>
                     </div>
-                    {/* Urgency badge -- rounded-full */}
                     <span className={`text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full ${colors.bg} ${colors.text} border ${colors.border}`}>
                       {urgencyLabel}
                     </span>
@@ -374,10 +379,102 @@ export default function HomePage() {
       </section>
 
       {/* ===================================================================
-          7. URGENCE -- Fond PRIMARY-600 (vert), pattern SVG "+", CTA blanc
+          6b. AVANT/APRES -- Ce que nous reparons (value proposition)
           =================================================================== */}
-      <section className="relative overflow-hidden bg-primary-600 py-16 md:py-24">
-        {/* Pattern SVG "+" en blanc opacity-10 */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container">
+          <div className="text-center mb-12">
+            <span className="section-label justify-center">
+              <span className="w-2 h-2 bg-primary-500 rounded-full" />
+              Resultats
+            </span>
+            <h2 className="section-title">Ce que nous reparons</h2>
+            <p className="section-subtitle mx-auto text-center mt-3">
+              Nos techniciens remettent en etat votre rideau metallique rapidement, quel que soit le probleme.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {[
+              {
+                before: "Rideau bloque",
+                after: "Rideau fonctionnel",
+                icon: (
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                  </svg>
+                ),
+                desc: "Deblocage rapide en position haute, basse ou mi-course",
+              },
+              {
+                before: "Moteur HS",
+                after: "Moteur neuf installe",
+                icon: (
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                ),
+                desc: "Remplacement moteur Somfy, Nice ou Came sous garantie",
+              },
+              {
+                before: "Lames cassees",
+                after: "Lames remplacees",
+                icon: (
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+                  </svg>
+                ),
+                desc: "Lames acier galvanise, aluminium ou micro-perforees",
+              },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="relative bg-gray-50 rounded-2xl p-6 border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+              >
+                {/* Icon */}
+                <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center text-primary-600 mb-5">
+                  {item.icon}
+                </div>
+
+                {/* Before -> After */}
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="text-sm font-semibold text-red-500 bg-red-50 px-3 py-1 rounded-full border border-red-100">
+                    {item.before}
+                  </span>
+                  <svg className="w-5 h-5 text-primary-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                  <span className="text-sm font-semibold text-primary-600 bg-primary-50 px-3 py-1 rounded-full border border-primary-100">
+                    {item.after}
+                  </span>
+                </div>
+
+                <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* CTA under before/after */}
+          <div className="text-center mt-10">
+            <p className="text-gray-500 text-sm mb-4">Un probleme avec votre rideau metallique ?</p>
+            <a
+              href={siteConfig.phoneLink}
+              className="inline-flex items-center gap-2 rounded-full bg-primary-600 px-7 py-3.5 text-base font-bold text-white shadow-lg shadow-primary-600/25 hover:bg-primary-700 transition-all duration-200"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              Appelez le {siteConfig.phone}
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ===================================================================
+          7. URGENCE -- Fond PRIMARY-600 (vert) + image technicien
+          =================================================================== */}
+      <section className="relative overflow-hidden bg-primary-600 section">
+        {/* Pattern SVG "+" */}
         <div className="absolute inset-0 opacity-10" aria-hidden="true">
           <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
             <defs>
@@ -390,7 +487,7 @@ export default function HomePage() {
         </div>
 
         <div className="container relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Contenu gauche */}
             <div>
               <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/20 px-4 py-2 rounded-full mb-6">
@@ -410,11 +507,11 @@ export default function HomePage() {
               </p>
 
               {/* Stats urgence */}
-              <div className="grid grid-cols-3 gap-4 mb-8">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-8">
                 {content.urgence.stats.map((stat: { value: string; label: string }, index: number) => (
                   <div
                     key={index}
-                    className="bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl p-4 text-center"
+                    className="bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl p-3 sm:p-4 text-center"
                   >
                     <p className="text-2xl md:text-3xl font-extrabold text-white leading-none mb-1">{stat.value}</p>
                     <p className="text-[10px] font-semibold uppercase tracking-widest text-white/60">{stat.label}</p>
@@ -449,18 +546,18 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Image technicien a droite */}
-            <div className="hidden lg:block">
+            {/* Image technicien a droite -- image DIFFERENTE du hero */}
+            <div className="hidden md:block">
               <div className="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-2xl">
                 <Image
-                  src="/images/gallery/depannage-rideau-metallique-creil.webp"
-                  alt={`Technicien urgence rideau metallique ${siteConfig.city}`}
-                  title={`Technicien urgence rideau metallique ${siteConfig.city}`}
+                  src="/images/gallery/depannage-rideau-metallique-drm-services.webp"
+                  alt={`Technicien reparation rideau metallique ${siteConfig.city}`}
+                  title={`Technicien reparation rideau metallique ${siteConfig.city}`}
                   fill
                   className="object-cover"
                   quality={75}
                   loading="lazy"
-                  sizes="(max-width: 1024px) 0vw, 42vw"
+                  sizes="(max-width: 768px) 0vw, 42vw"
                 />
               </div>
             </div>
@@ -474,7 +571,7 @@ export default function HomePage() {
       <section className="section bg-gray-50">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Image avec fond tourne */}
+            {/* Image avec fond tourne -- image DIFFERENTE du hero */}
             <div className="relative order-2 lg:order-1">
               <div className="relative max-w-lg mx-auto">
                 {/* Fond tourne */}
@@ -483,9 +580,9 @@ export default function HomePage() {
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                   <div className="aspect-[3/4]">
                     <Image
-                      src="/images/gallery/rideau-metallique-creil.webp"
-                      alt={`Technicien rideau metallique ${siteConfig.city}`}
-                      title={`Technicien rideau metallique ${siteConfig.city}`}
+                      src="/images/gallery/realisation-rideau-metallique-lame-pleine-boulangerie-france.webp"
+                      alt={`Realisation rideau metallique lame pleine ${siteConfig.city}`}
+                      title={`Realisation rideau metallique lame pleine ${siteConfig.city}`}
                       fill
                       className="object-cover"
                       quality={75}
@@ -593,7 +690,6 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Divider */}
           <div className="h-px bg-gray-200 mb-10" />
 
           {/* Communes proches */}
@@ -619,7 +715,6 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Divider */}
           <div className="h-px bg-gray-200 mb-10" />
 
           {/* Zone etendue */}
@@ -650,23 +745,50 @@ export default function HomePage() {
       </section>
 
       {/* ===================================================================
-          10. REVIEWS (avant FAQ)
+          9b. MID-PAGE PHONE CTA BANNER
+          =================================================================== */}
+      <section className="py-8 bg-primary-600">
+        <div className="container">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-3 text-white">
+              <span className="relative flex h-3 w-3">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
+              </span>
+              <p className="text-lg font-bold">Besoin d&apos;un depannage maintenant ?</p>
+            </div>
+            <a
+              href={siteConfig.phoneLink}
+              className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-base font-bold text-primary-700 shadow-lg hover:bg-gray-50 transition-all duration-200"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              {siteConfig.phone}
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ===================================================================
+          10. REVIEWS
           =================================================================== */}
       <Reviews
         title={`Avis Clients ${siteConfig.city}`}
         subtitle={`Ce que disent nos clients a ${siteConfig.city} et dans l'${siteConfig.department}`}
         items={content.reviews}
+        allReviewsLink="/avis"
       />
 
       {/* ===================================================================
-          11. FAQ (toujours juste avant le CTA)
+          11. FAQ
           =================================================================== */}
       <FAQ items={faq.slice(0, 6)} title={`Questions Frequentes - Rideau Metallique ${siteConfig.city}`} />
 
       {/* ===================================================================
-          12. BLOG PREVIEW
+          12. BLOG PREVIEW -- Avec excerpts sous chaque titre
           =================================================================== */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-16 md:py-24 bg-gray-50">
         <div className="container">
           <div className="flex items-end justify-between mb-12">
             <div>
@@ -679,22 +801,21 @@ export default function HomePage() {
             </Link>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
-            {[
-              { title: "Guide entretien rideau métallique 2026", slug: "guide-entretien-rideau-metallique-2026", image: "/images/gallery/entretien-rideau-metallique-rideau-de-fer.webp" },
-              { title: "Signes qu'un dépannage urgent est nécessaire", slug: "signes-depannage-rideau-metallique-urgent", image: "/images/gallery/depannage-rideau-metallique-DRM-reparation.webp" },
-              { title: "Rideau électrique vs manuel : le guide", slug: "rideau-metallique-electrique-vs-manuel-guide", image: "/images/gallery/moteur-tubulaire-rideau-metallique-drm.webp" },
-            ].map((article) => (
+            {blogArticles.map((article) => (
               <Link key={article.slug} href={`/blog/${article.slug}`} className="group">
-                <div className="relative h-48 overflow-hidden" style={{ borderRadius: '16px' }}>
+                <div className="relative h-48 overflow-hidden rounded-2xl">
                   <Image
                     src={article.image}
                     alt={article.title}
                     title={article.title}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>
-                <h3 className="font-bold text-gray-900 mt-4 group-hover:text-primary-600 transition-colors">{article.title}</h3>
+                <h3 className="font-bold text-gray-900 mt-4 mb-2 group-hover:text-primary-600 transition-colors">{article.title}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed line-clamp-2">{article.excerpt}</p>
               </Link>
             ))}
           </div>
@@ -702,12 +823,83 @@ export default function HomePage() {
       </section>
 
       {/* ===================================================================
-          13. CTA FINAL
+          13. PRE-FOOTER CTA -- Dark navy avec image technicien overlap
           =================================================================== */}
-      <CTA
-        title={`Besoin d'un depannage rideau metallique a ${siteConfig.city} ?`}
-        subtitle={`Notre equipe intervient 24h/24, 7j/7. Appelez le ${siteConfig.phone} pour un devis gratuit.`}
-      />
+      <section className="relative overflow-hidden bg-gray-900">
+        <div className="container relative py-16 md:py-24">
+          <div className="grid md:grid-cols-5 gap-10 items-end">
+            {/* Image technicien -- overlap vers le haut */}
+            <div className="hidden md:block md:col-span-2">
+              <div className="relative -mb-0">
+                <div className="relative h-[300px] md:h-[420px] w-full overflow-hidden rounded-2xl">
+                  <Image
+                    src="/images/gallery/depannage-rideau-metallique-creil.webp"
+                    alt={`Expert rideau metallique ${siteConfig.city}`}
+                    title={`Expert rideau metallique ${siteConfig.city}`}
+                    fill
+                    className="object-cover object-top"
+                    quality={75}
+                    loading="lazy"
+                    sizes="(max-width: 768px) 0vw, (max-width: 1024px) 40vw, 35vw"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Contenu */}
+            <div className="md:col-span-3">
+              <div className="inline-flex items-center gap-2 bg-primary-600/20 border border-primary-500/30 px-4 py-2 rounded-full mb-6">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-primary-400"></span>
+                </span>
+                <span className="text-sm font-semibold text-primary-300">Expert disponible maintenant</span>
+              </div>
+
+              <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight mb-4">
+                Besoin d&apos;un depannage rideau metallique a {siteConfig.city} ?
+              </h2>
+              <p className="text-gray-400 text-lg leading-relaxed mb-8 max-w-xl">
+                Notre equipe de techniciens certifies intervient 24h/24, 7j/7. Appelez maintenant pour un diagnostic gratuit et une intervention rapide.
+              </p>
+
+              {/* CTA buttons */}
+              <div className="flex flex-wrap gap-4 mb-8">
+                <a
+                  href={siteConfig.phoneLink}
+                  className="inline-flex items-center gap-3 rounded-full bg-primary-600 px-8 py-4 font-bold text-lg text-white shadow-lg shadow-primary-600/25 hover:bg-primary-700 transition-all duration-200"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  {siteConfig.phone}
+                </a>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 rounded-full border-2 border-gray-600 px-7 py-3.5 text-base font-semibold text-gray-300 hover:bg-gray-800 hover:border-gray-500 transition-all duration-200"
+                >
+                  Demander un devis en ligne
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+              </div>
+
+              {/* Trust points */}
+              <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-gray-500">
+                {["Devis gratuit", "Intervention 30 min", "Garantie pieces et main-d'oeuvre"].map((item, i) => (
+                  <span key={i} className="flex items-center gap-1.5">
+                    <svg className="w-4 h-4 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

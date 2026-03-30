@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Safe area bottom padding for iOS notch/home indicator */
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
 /* ============================================
    DESIGN SYSTEM - DRM Creil
    Style Nantes : Clean, arrondi, professionnel
@@ -9,7 +14,7 @@
    ============================================ */
 
 :root {
-  --font-sans: 'Plus Jakarta Sans', 'DM Sans', system-ui, -apple-system, sans-serif;
+  --font-sans: var(--font-plus-jakarta), var(--font-dm-sans), system-ui, -apple-system, sans-serif;
   --font-heading: var(--font-sans);
 }
 
@@ -159,6 +164,15 @@
 
   .section-subtitle {
     @apply text-lg text-gray-600 max-w-2xl;
+  }
+
+  /* ---- DIVIDERS ---- */
+  .divider-industrial {
+    @apply w-12 h-1 bg-primary-500 rounded-full;
+  }
+
+  .divider-industrial-lg {
+    @apply w-16 h-1 bg-primary-500 rounded-full;
   }
 
   /* ---- STATS ---- */

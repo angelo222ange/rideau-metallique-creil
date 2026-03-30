@@ -90,7 +90,7 @@ function renderContentBlock(block: ContentBlock, index: number) {
     case 'table':
       return (
         <div key={index} className="overflow-x-auto mb-8 -mx-4 px-4">
-          <table className="w-full text-sm border-collapse border border-gray-200">
+          <table className="w-full text-sm border-collapse rounded-2xl overflow-hidden border border-gray-200">
             <thead>
               <tr className="bg-gray-900">
                 {block.headers.map((header, i) => (
@@ -125,25 +125,57 @@ export default function BlogArticlePage({ params }: Props) {
     notFound();
   }
 
-  // Schema.org Article
+  // Schema.org Article with Speakable for LLM/AEO citations
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": article.title,
     "description": article.metaDescription,
     "datePublished": article.date,
+    "dateModified": article.date,
     "author": {
       "@type": "Organization",
       "name": siteConfig.name,
+      "url": siteConfig.url,
     },
     "publisher": {
       "@type": "Organization",
       "name": siteConfig.fullName,
       "url": siteConfig.url,
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${siteConfig.url}/images/logos/favicon.png`,
+      },
     },
     "image": `${siteConfig.url}${article.image}`,
     "mainEntityOfPage": `${siteConfig.url}/blog/${article.slug}`,
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ["h1", "h2", ".article-summary"],
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "Rideaux metalliques",
+      "description": "Fermetures metalliques pour commerces et locaux professionnels",
+    },
   };
+
+  // ItemList schema for "top X" articles — helps LLMs cite the ranking
+  const isTopList = article.slug.startsWith("top-");
+  const itemListSchema = isTopList ? {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": article.title,
+    "description": article.metaDescription,
+    "numberOfItems": article.content.filter(b => b.type === "heading" && b.level === 2 && /^\d/.test(b.text)).length,
+    "itemListElement": article.content
+      .filter((b): b is { type: "heading"; level: 2; text: string } => b.type === "heading" && b.level === 2 && /^\d/.test(b.text))
+      .map((heading, i) => ({
+        "@type": "ListItem",
+        "position": i + 1,
+        "name": heading.text.replace(/<[^>]*>/g, ""),
+      })),
+  } : null;
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -170,16 +202,23 @@ export default function BlogArticlePage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      {itemListSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+        />
+      )}
 
       {/* ─── HERO ─── */}
       <section className="relative overflow-hidden bg-gray-900">
         <Image
-          src="/images/gallery/hero-bg-technicien-drm.webp"
+          src={article.image || "/images/gallery/rideau-metallique-lame-pleine-drm-france-national.webp"}
           alt={`${article.title} - ${siteConfig.name}`}
           title={`${article.title} - ${siteConfig.name}`}
           fill
           className="object-cover opacity-20"
-        />
+          sizes="100vw"
+          />
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/90 to-gray-900/70" />
         <div className="container relative z-10 py-16 md:py-20">
           {/* Breadcrumb */}
@@ -225,14 +264,15 @@ export default function BlogArticlePage({ params }: Props) {
             {/* Main Content */}
             <div className="lg:col-span-8">
               {/* Featured Image */}
-              <div className="relative aspect-[16/9] overflow-hidden mb-10 bg-gray-100 border border-gray-200">
+              <div className="relative aspect-[16/9] rounded-2xl overflow-hidden mb-10 bg-gray-100 shadow-lg">
                 <Image
                   src={article.image}
                   alt={article.imageAlt} title={article.imageAlt}
                   fill
                   className="object-cover"
                   priority
-                />
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
               </div>
 
               {/* Summary Box */}
@@ -240,7 +280,7 @@ export default function BlogArticlePage({ params }: Props) {
                 <h2 className="font-bold text-gray-900 text-lg mb-4">
                   {article.summary.title}
                 </h2>
-                <div className="divider-industrial mb-4" />
+                <div className="h-px bg-gray-200 mb-4" />
                 <ul className="space-y-2">
                   {article.summary.points.map((point, i) => (
                     <li key={i} className="flex items-start gap-3 text-gray-700 text-[15px]">
@@ -252,8 +292,23 @@ export default function BlogArticlePage({ params }: Props) {
               </div>
 
               {/* Content Blocks */}
-              <div className="bg-white border border-gray-200 p-6 md:p-10">
+              <div className="bg-white rounded-2xl border border-gray-100 shadow-lg p-6 md:p-10">
                 {article.content.map((block, index) => renderContentBlock(block, index))}
+              </div>
+
+              {/* Author info */}
+              <div className="bg-white rounded-2xl border border-gray-100 shadow-lg p-6 md:p-8 mt-8 flex items-center gap-5">
+                <div className="w-14 h-14 rounded-full bg-primary-600 text-white flex items-center justify-center text-xl font-bold flex-shrink-0">D</div>
+                <div>
+                  <p className="font-bold text-gray-900">{siteConfig.name}</p>
+                  <p className="text-gray-500 text-sm mt-0.5">
+                    Specialiste du depannage et de l&apos;installation de rideaux metalliques a {siteConfig.city} et dans l&apos;{siteConfig.department}. {siteConfig.experience} ans d&apos;experience.
+                  </p>
+                  <div className="flex gap-3 mt-2">
+                    <Link href="/a-propos" className="text-primary-600 text-sm font-semibold hover:text-primary-700 transition-colors">A propos</Link>
+                    <Link href="/contact" className="text-primary-600 text-sm font-semibold hover:text-primary-700 transition-colors">Contact</Link>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -261,14 +316,14 @@ export default function BlogArticlePage({ params }: Props) {
             <aside className="lg:col-span-4">
               <div className="sticky top-28 space-y-8">
                 {/* CTA Box */}
-                <div className="bg-white border-l-4 border-l-primary-500 border border-gray-200 p-6 text-center">
+                <div className="bg-white rounded-2xl border border-gray-100 shadow-lg p-6 text-center">
                   <p className="section-label">Contact</p>
                   <p className="font-bold text-gray-900 text-lg mb-2">
                     Besoin d&apos;un devis ?
                   </p>
-                  <div className="divider-industrial mx-auto mb-4" />
+                  <div className="h-px bg-gray-200 mx-auto max-w-[60px] mb-4" />
                   <p className="text-gray-500 text-sm mb-5">
-                    Intervention 24h/24 à {siteConfig.city}
+                    Intervention 24h/24 a {siteConfig.city}
                   </p>
                   <a
                     href={siteConfig.phoneLink}
@@ -284,6 +339,32 @@ export default function BlogArticlePage({ params }: Props) {
                   </Link>
                 </div>
 
+                {/* Quick links */}
+                <div className="bg-white rounded-2xl border border-gray-100 shadow-lg p-6">
+                  <h3 className="font-bold text-gray-900 text-xs uppercase tracking-widest mb-4">
+                    Pages utiles
+                  </h3>
+                  <div className="h-px bg-gray-200 mb-4" />
+                  <div className="space-y-2">
+                    <Link href="/tarifs" className="flex items-center justify-between text-sm text-gray-600 hover:text-primary-600 transition-colors py-1">
+                      <span>Nos tarifs</span>
+                      <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                    </Link>
+                    <Link href="/avis" className="flex items-center justify-between text-sm text-gray-600 hover:text-primary-600 transition-colors py-1">
+                      <span>Avis clients ({siteConfig.reviews.rating}/5)</span>
+                      <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                    </Link>
+                    <Link href="/zones" className="flex items-center justify-between text-sm text-gray-600 hover:text-primary-600 transition-colors py-1">
+                      <span>Zones d&apos;intervention</span>
+                      <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                    </Link>
+                    <Link href="/a-propos" className="flex items-center justify-between text-sm text-gray-600 hover:text-primary-600 transition-colors py-1">
+                      <span>A propos de {siteConfig.name}</span>
+                      <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                    </Link>
+                  </div>
+                </div>
+
                 {/* Related Articles */}
                 {relatedArticles.length > 0 && (
                   <div>
@@ -296,7 +377,7 @@ export default function BlogArticlePage({ params }: Props) {
                         <Link
                           key={related.slug}
                           href={`/blog/${related.slug}`}
-                          className="block group bg-white border-l-4 border-l-primary-500 border border-gray-200 hover:border-l-primary-700 overflow-hidden transition-all"
+                          className="block group bg-white rounded-2xl border border-gray-100 shadow-lg hover:shadow-xl overflow-hidden transition-all"
                         >
                           <div className="relative aspect-[16/9] overflow-hidden bg-gray-100">
                             <Image
@@ -304,7 +385,8 @@ export default function BlogArticlePage({ params }: Props) {
                               alt={related.imageAlt} title={related.imageAlt}
                               fill
                               className="object-cover group-hover:scale-105 transition-transform duration-500"
-                            />
+                              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                              />
                           </div>
                           <div className="p-3">
                             <h4 className="font-bold text-gray-900 text-sm group-hover:text-primary-600 transition-colors leading-snug">

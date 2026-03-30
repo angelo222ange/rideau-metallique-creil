@@ -374,29 +374,29 @@
     {
       "title": "<strong>Motorisation Rideau Métallique {zone}</strong> : Confort et Modernité",
       "content": "<p>La <strong>motorisation de rideau métallique à {zone}</strong> ({zonePostal}) transforme radicalement votre quotidien de commerçant. Fini l'effort physique matin et soir pour lever et baisser votre <strong>rideau métallique manuel</strong> : avec un <strong>moteur électrique</strong>, une simple pression sur la <strong>télécommande</strong> ou l'<strong>interrupteur mural</strong> suffit.</p><p>{name} motorise tous types de <strong>rideaux métalliques</strong> à {zone} : lames pleines, micro-perforés, grilles articulées, et portes de garage. Nous installons des <strong>moteurs tubulaires</strong> de grandes marques (<strong>Somfy</strong>, <strong>Nice</strong>, <strong>Came</strong>) reconnus pour leur <strong>fiabilité</strong>, leur <strong>silence</strong> et leur longévité.</p><p>L'<strong>installation de motorisation</strong> est rapide (2 à 4 heures) et ne nécessite aucune modification structurelle majeure. Compatible avec <strong>90% des rideaux manuels existants</strong>. Évaluation gratuite à {zone}.</p>",
-      "image": "/images/gallery/motorisation-rideau-metallique-creil-60.webp",
+      "image": "/images/gallery/motorisation-rideau-metallique-rideau-metallique-drm.webp",
       "imageAlt": "Motorisation rideau métallique {zone} {department}",
       "imagePosition": "right"
     },
     {
       "title": "<strong>Rideau Métallique Motorisé {zone}</strong> : Sécurité Renforcée",
       "content": "<p>Au-delà du confort, la <strong>motorisation de rideau métallique</strong> améliore considérablement la <strong>sécurité</strong> de votre commerce à {zone}. Le <strong>verrouillage automatique</strong> en position fermée rend les tentatives d'effraction beaucoup plus difficiles. Nos systèmes intègrent des <strong>détecteurs d'obstacles</strong> qui protègent personnes et marchandises.</p><p>La <strong>montée et descente régulières</strong> assurées par le moteur réduisent l'usure mécanique et prolongent la durée de vie de votre rideau.</p>",
-      "image": "/images/gallery/moteur-tubulaire-rideau-metallique-drm.webp",
+      "image": "/images/gallery/motorisation-rideau-metallique-rm-rideau-metallique.webp",
       "imageAlt": "Sécurité rideau métallique motorisé {zone}",
       "imagePosition": "left"
     },
     {
       "title": "<strong>Options de Motorisation</strong> à {zone}",
       "content": "<p>De nombreuses options sont disponibles pour personnaliser votre <strong>motorisation à {zone}</strong> : <strong>batterie de secours</strong> pour fonctionner en cas de coupure électrique, <strong>programmation horaire</strong> pour une ouverture/fermeture automatiques, et <strong>débrayage manuel</strong> de sécurité.</p><p>Installation par techniciens certifiés dans tout le <strong>{department}</strong>. Contactez <strong>{name}</strong> au <strong>{phone}</strong> pour une étude gratuite.</p>",
-      "image": "/images/gallery/rideau-metallique-lame-cobra-realisation.webp",
-      "imageAlt": "Options motorisation rideau métallique {zone}",
+      "image": "/images/gallery/rideau-metallique-motorise-garage.webp",
+      "imageAlt": "Moteur central rideau métallique {zone}",
       "imagePosition": "right"
     },
     {
       "title": "<strong>Domotique et Contrôle à Distance</strong> : Pilotez votre rideau depuis {zone}",
       "content": "<p>La <strong>motorisation moderne de rideau métallique</strong> va bien au-delà de la simple télécommande. À {zone} et dans le <strong>{department}</strong>, {name} installe des <strong>systèmes connectés</strong> qui permettent de piloter votre <strong>rideau motorisé</strong> depuis votre <strong>smartphone</strong>, où que vous soyez.</p><p>Avec un <strong>module Wi-Fi</strong> ou une <strong>box domotique</strong>, ouvrez ou fermez votre rideau à distance, programmez des horaires d'ouverture, recevez des alertes en cas de tentative d'intrusion, et intégrez votre rideau à votre système de sécurité global. Compatible avec <strong>Google Home</strong>, <strong>Alexa</strong>, et les principales plateformes domotiques.</p><p>Idéal pour les commerçants multi-sites, les gérants absents, ou simplement pour contrôler l'accès à votre commerce depuis chez vous. La <strong>motorisation connectée</strong> offre une tranquillité d'esprit totale. Devis gratuit pour <strong>motorisation domotique à {zone}</strong> au <strong>{phone}</strong>.</p>",
-      "image": "/images/gallery/Axe-central-motorise-rideau-metallique.webp",
-      "imageAlt": "Contrôle smartphone rideau métallique motorisé {zone}",
+      "image": "/images/gallery/motorisation-rideau-metallique-rideau-metallique-drm.webp",
+      "imageAlt": "Technicien DRM branchement motorisation rideau métallique {zone}",
       "imagePosition": "left"
     }
   ]

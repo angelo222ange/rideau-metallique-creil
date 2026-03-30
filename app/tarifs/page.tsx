@@ -6,22 +6,23 @@ import { CTA } from "@/components/sections/CTA";
 import { FAQ } from "@/components/sections/FAQ";
 
 export const metadata: Metadata = {
-  title: `Prix Rideau Metallique ${siteConfig.city} - Tarifs et Devis 2026`,
-  description: `Prix rideau metallique a ${siteConfig.city} : devis gratuit et sans engagement. Depannage, installation, motorisation, entretien. ${siteConfig.phone}`,
+  title: `Prix Rideau Metallique Creil | Tarifs 2026 + Devis`,
+  description: `Tarifs rideau metallique a Creil : depannage des 150 EUR, installation des 800 EUR. Devis gratuit, sans engagement. ${siteConfig.phone}`,
   keywords: `prix rideau metallique ${siteConfig.city}, tarif rideau metallique, devis rideau metallique ${siteConfig.department}, cout installation rideau metallique`,
   alternates: {
     canonical: `${siteConfig.url}/tarifs/`,
   },
   openGraph: {
-    title: `Prix Rideau Metallique ${siteConfig.city} - Tarifs 2026`,
-    description: `Tarifs rideau metallique a ${siteConfig.city}. Installation, depannage, motorisation. Devis gratuit.`,
+    title: `Prix Rideau Metallique Creil - Tarifs 2026`,
+    description: `Tarifs rideau metallique a Creil. Depannage, installation, motorisation. Devis gratuit.`,
     type: "website",
-    url: `${siteConfig.url}/tarifs`,
+    locale: "fr_FR",
+    url: `${siteConfig.url}/tarifs/`,
     images: [{
       url: `${siteConfig.url}/images/gallery/rideau-metallique-creil.webp`,
       width: 800,
       height: 600,
-      alt: `Tarifs rideau metallique ${siteConfig.city}`,
+      alt: `Tarifs rideau metallique Creil`,
     }],
   },
 };
@@ -63,27 +64,27 @@ const tarifs = {
 const faqTarifs = [
   {
     question: `Combien coute un depannage de rideau metallique a ${siteConfig.city} ?`,
-    answer: `Le prix d'un <strong>depannage de rideau metallique a ${siteConfig.city}</strong> depend de la nature exacte de la panne, des dimensions du rideau et des pieces a remplacer. Chaque situation est differente : un deblocage simple ne coute pas la meme chose qu'un remplacement de moteur ou d'axe. C'est pourquoi le diagnostic est gratuit et le <strong>devis detaille est communique avant toute intervention</strong>. Appelez le <strong>${siteConfig.phone}</strong> pour un devis personnalise.`,
+    answer: `Un depannage de rideau metallique a ${siteConfig.city} coute <strong>a partir de 150 EUR</strong> pour un deblocage simple. Appelez DRM Creil au <strong>${siteConfig.phone}</strong> pour un devis gratuit. Le tarif exact depend de la nature de la panne (moteur, lames, axe, serrure), des dimensions du rideau et des pieces a remplacer. Le diagnostic est gratuit et le devis est communique avant toute intervention.`,
   },
   {
     question: `Quel est le prix d'installation d'un rideau metallique a ${siteConfig.city} ?`,
-    answer: `Le prix d'une <strong>installation de rideau metallique a ${siteConfig.city}</strong> depend du type de rideau (lames pleines, micro-perfore, grille), des dimensions exactes de l'ouverture, du materiau et de la motorisation. Un technicien se deplace <strong>gratuitement</strong> pour prendre les mesures et vous remettre un <strong>devis sur-mesure sans engagement</strong>.`,
+    answer: `L'installation d'un rideau metallique a ${siteConfig.city} coute <strong>entre 800 et 3 000 EUR</strong> selon les dimensions, le type de lames et la motorisation. Appelez DRM Creil au <strong>${siteConfig.phone}</strong> pour un devis sur-mesure gratuit. Un technicien se deplace gratuitement pour prendre les mesures exactes et vous remettre un devis sans engagement.`,
   },
   {
     question: "Le devis est-il gratuit ?",
-    answer: `Oui, <strong>${siteConfig.name}</strong> propose un <strong>devis 100% gratuit et sans engagement</strong> pour tous les services : depannage, installation, motorisation et entretien. Pour les installations, un technicien se deplace gratuitement pour prendre les mesures et evaluer vos besoins.`,
+    answer: `Oui, le devis est <strong>100% gratuit et sans engagement</strong> chez DRM ${siteConfig.city}. Appelez le <strong>${siteConfig.phone}</strong> pour tous les services : depannage, installation, motorisation et entretien. Pour les installations, un technicien se deplace gratuitement pour prendre les mesures et evaluer vos besoins.`,
   },
   {
     question: `Y a-t-il des frais de deplacement a ${siteConfig.city} ?`,
-    answer: `Non, il n'y a <strong>aucun frais de deplacement</strong> sur ${siteConfig.city} et dans les ${siteConfig.department} (rayon 30 km). Le deplacement et le diagnostic sont inclus dans nos tarifs. Vous ne payez que l'intervention validee apres acceptation du devis.`,
+    answer: `Non, il n'y a <strong>aucun frais de deplacement</strong> a ${siteConfig.city} et dans l'${siteConfig.department} (rayon 30 km). Appelez DRM Creil au <strong>${siteConfig.phone}</strong>. Le deplacement et le diagnostic sont inclus dans nos tarifs. Vous ne payez que l'intervention validee apres acceptation du devis.`,
   },
   {
     question: "Comment payer l'intervention ?",
-    answer: `Nous acceptons plusieurs <strong>modes de paiement</strong> : carte bancaire, especes, cheque et virement bancaire. Le paiement en <strong>plusieurs fois</strong> est possible pour les installations. Une facture detaillee est systematiquement remise apres chaque intervention.`,
+    answer: `DRM ${siteConfig.city} accepte <strong>carte bancaire, especes, cheque et virement bancaire</strong>. Appelez le <strong>${siteConfig.phone}</strong> pour toute question. Le paiement en plusieurs fois est possible pour les installations. Une facture detaillee est systematiquement remise apres chaque intervention.`,
   },
   {
     question: `Pourquoi les prix ne sont pas fixes ?`,
-    answer: `Chaque rideau metallique est different : <strong>dimensions, type de lames, marque du moteur, etat general, cause exacte de la panne</strong>... Tous ces facteurs influencent le prix final. Un rideau de 2 metres ne demande pas la meme intervention qu'un rideau de 5 metres. C'est pour cette raison que nous etablissons systematiquement un <strong>devis precis sur place</strong>, apres diagnostic, pour vous donner un prix juste et transparent.`,
+    answer: `Les prix varient car chaque rideau metallique est different : <strong>dimensions, type de lames, marque du moteur, etat general</strong>. Un rideau de 2 metres ne demande pas la meme intervention qu'un rideau de 5 metres. DRM ${siteConfig.city} etablit un <strong>devis precis sur place</strong>, apres diagnostic gratuit, pour un prix juste et transparent. Appelez le <strong>${siteConfig.phone}</strong>.`,
   },
 ];
 
@@ -104,9 +105,9 @@ function TarifTable({ title, label, description, items, columnTitle }: TarifTabl
         <div className="divider-industrial mt-4" />
         <p className="text-gray-500 mt-3">{description}</p>
       </div>
-      <div className="bg-white border border-gray-200 overflow-hidden">
-        <div className="bg-gray-900 px-6 py-4">
-          <div className="grid grid-cols-3 gap-4">
+      <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-lg">
+        <div className="bg-gray-900 rounded-t-2xl px-4 md:px-6 py-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             <p className="text-white font-bold text-sm uppercase tracking-wide">{columnTitle}</p>
             <p className="text-white font-bold text-sm uppercase tracking-wide">Tarif indicatif</p>
             <p className="text-white/70 font-bold text-sm uppercase tracking-wide hidden md:block">Details</p>
@@ -116,7 +117,7 @@ function TarifTable({ title, label, description, items, columnTitle }: TarifTabl
           {items.map((item, i) => (
             <div
               key={i}
-              className={`grid grid-cols-3 gap-4 px-6 py-4 ${i !== items.length - 1 ? 'border-b border-gray-100' : ''} hover:bg-gray-50 transition-colors`}
+              className={`grid grid-cols-2 md:grid-cols-3 gap-4 px-4 md:px-6 py-4 ${i !== items.length - 1 ? 'border-b border-gray-100' : ''} hover:bg-gray-50 transition-colors`}
             >
               <p className="text-gray-900 font-medium text-sm">{item.prestation}</p>
               <p className="text-primary-600 font-bold text-sm whitespace-nowrap">{item.fourchette}</p>
@@ -149,11 +150,12 @@ export default function TarifsPage() {
       {/* ─── HERO ─── */}
       <section className="relative overflow-hidden bg-gray-900">
         <Image
-          src="/images/gallery/hero-bg-technicien-drm.webp"
+          src="/images/gallery/rideau-metallique-france-livraison.webp"
           alt={`Tarifs rideau metallique ${siteConfig.city}`}
           title={`Tarifs rideau metallique ${siteConfig.city}`}
           fill
           className="object-cover opacity-20"
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/90 to-gray-900/70" />
         <div className="container relative z-10 py-16 md:py-20">
@@ -179,7 +181,7 @@ export default function TarifsPage() {
               </svg>
               {siteConfig.phone}
             </a>
-            <Link href="/contact" className="btn-secondary border-white/30 text-white hover:bg-white hover:text-gray-900">
+            <Link href="/contact" className="inline-flex items-center justify-center rounded-full border-2 border-white/30 px-6 py-3 text-base font-semibold text-white bg-transparent hover:bg-white hover:text-gray-900 transition-all duration-200">
               Demander un devis
             </Link>
           </div>
@@ -190,9 +192,22 @@ export default function TarifsPage() {
       {/* ─── RESUME TARIFS ─── */}
       <section className="section bg-white">
         <div className="container">
-          <div className="card p-8 max-w-3xl">
+          {/* Paragraphes quotables pour AI search engines */}
+          <div className="max-w-3xl mb-10 space-y-4">
+            <p className="text-gray-800 text-base leading-relaxed">
+              <strong>Le prix d&apos;un depannage de rideau metallique a {siteConfig.city} commence a partir de 150 EUR</strong> pour un deblocage simple, diagnostic gratuit inclus. Pour une reparation de moteur, comptez a partir de 250 EUR pieces et main d&apos;oeuvre comprises. Appelez DRM Creil au <strong>{siteConfig.phone}</strong> pour un devis gratuit.
+            </p>
+            <p className="text-gray-800 text-base leading-relaxed">
+              <strong>L&apos;installation d&apos;un rideau metallique neuf a {siteConfig.city} coute entre 800 et 3 000 EUR selon les dimensions</strong>, le type de lames (pleines, micro-perforees, grille) et la motorisation. Le prix comprend la fabrication sur-mesure, la pose et la mise en service par un technicien certifie.
+            </p>
+            <p className="text-gray-800 text-base leading-relaxed">
+              <strong>La motorisation d&apos;un rideau metallique existant a {siteConfig.city} coute a partir de 500 EUR</strong> (moteur Somfy, Nice ou Came + installation). Un contrat d&apos;entretien annuel est disponible a partir de 120 EUR par an pour prevenir les pannes.
+            </p>
+          </div>
+
+          <div className="card p-8 md:p-10 max-w-3xl">
             <h2 className="font-bold text-gray-900 text-xl mb-5">Tarifs en bref</h2>
-            <div className="divider-industrial mb-5" />
+            <div className="h-px bg-gray-200 mb-5" />
             <ul className="space-y-3">
               {[
                 `Depannage / deblocage : a partir de 150 EUR (diagnostic gratuit)`,
@@ -226,10 +241,13 @@ export default function TarifsPage() {
             items={tarifs.depannage}
             columnTitle="Prestation"
           />
-          <div className="mt-8">
+          <div className="mt-8 flex flex-wrap gap-4">
             <a href={siteConfig.phoneLink} className="btn-primary">
               Devis depannage gratuit : {siteConfig.phone}
             </a>
+            <Link href="/depannage-rideau-metallique-nogent-sur-oise" className="btn-secondary">
+              Depannage Nogent-sur-Oise
+            </Link>
           </div>
         </div>
       </section>
@@ -244,9 +262,12 @@ export default function TarifsPage() {
             items={tarifs.installation}
             columnTitle="Type de rideau"
           />
-          <div className="mt-8">
+          <div className="mt-8 flex flex-wrap gap-4">
             <Link href="/contact" className="btn-primary">
               Demander un devis installation
+            </Link>
+            <Link href="/installation-rideau-metallique-creil" className="btn-secondary">
+              En savoir plus sur l&apos;installation
             </Link>
           </div>
         </div>
@@ -284,14 +305,14 @@ export default function TarifsPage() {
               return (
                 <div
                   key={i}
-                  className={`relative p-8 border-l-4 transition-colors ${
+                  className={`relative rounded-2xl p-8 transition-all ${
                     isPopular
-                      ? 'bg-primary-600 border-l-primary-800 text-white'
-                      : 'bg-white border-l-primary-500 border border-gray-200 hover:border-l-primary-700'
+                      ? 'bg-primary-600 text-white shadow-xl shadow-primary-600/20 scale-[1.02]'
+                      : 'bg-white border border-gray-200 hover:shadow-lg hover:border-primary-200'
                   }`}
                 >
                   {isPopular && (
-                    <span className="absolute -top-3 left-6 bg-white text-primary-600 text-xs font-bold px-3 py-1 uppercase tracking-wider">
+                    <span className="absolute -top-3 left-6 bg-white text-primary-600 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider shadow-sm">
                       Populaire
                     </span>
                   )}
@@ -306,10 +327,10 @@ export default function TarifsPage() {
                   </p>
                   <a
                     href={siteConfig.phoneLink}
-                    className={`mt-6 block text-center px-6 py-3 font-bold uppercase tracking-wide text-sm transition-colors ${
+                    className={`mt-6 block text-center px-6 py-3 rounded-full font-bold uppercase tracking-wide text-sm transition-colors ${
                       isPopular
-                        ? 'bg-white text-primary-700 hover:bg-gray-50'
-                        : 'bg-primary-600 text-white hover:bg-primary-700'
+                        ? 'bg-white text-primary-700 hover:bg-gray-50 shadow-lg'
+                        : 'bg-primary-600 text-white hover:bg-primary-700 shadow-lg shadow-primary-600/25'
                     }`}
                   >
                     Souscrire
@@ -341,7 +362,10 @@ export default function TarifsPage() {
                 Les prix indicatifs affiches sur cette page sont des <strong>tarifs de depart</strong>, donnes a titre de reference. Le prix final est systematiquement etabli apres un diagnostic sur place par notre technicien, en fonction des dimensions de votre rideau, de l&apos;etat des composants et de la complexite de l&apos;intervention.
               </p>
               <p>
-                Nous intervenons sur l&apos;ensemble de {siteConfig.city} et dans les communes environnantes de l&apos;{siteConfig.department} : Nogent-sur-Oise, Montataire, Senlis, Chantilly, Lamorlaye, Gouvieux et toute l&apos;agglomeration creilloise. <strong>Aucun frais de deplacement</strong> dans un rayon de 30 km.
+                Nous intervenons sur l&apos;ensemble de {siteConfig.city} et dans les communes environnantes de l&apos;{siteConfig.department} : <Link href="/depannage-rideau-metallique-nogent-sur-oise" className="text-primary-600 hover:text-primary-700 underline">Nogent-sur-Oise</Link>, <Link href="/depannage-rideau-metallique-montataire" className="text-primary-600 hover:text-primary-700 underline">Montataire</Link>, <Link href="/depannage-rideau-metallique-senlis" className="text-primary-600 hover:text-primary-700 underline">Senlis</Link>, <Link href="/depannage-rideau-metallique-chantilly" className="text-primary-600 hover:text-primary-700 underline">Chantilly</Link>, Lamorlaye, Gouvieux et toute l&apos;agglomeration creilloise. <strong>Aucun frais de deplacement</strong> dans un rayon de 30 km. Voir toutes nos <Link href="/zones" className="text-primary-600 hover:text-primary-700 underline">zones d&apos;intervention</Link>.
+              </p>
+              <p>
+                Consultez egalement nos pages dediees : <Link href="/a-propos" className="text-primary-600 hover:text-primary-700 underline">notre equipe et nos valeurs</Link>, les <Link href="/avis" className="text-primary-600 hover:text-primary-700 underline">avis de nos clients</Link> ({siteConfig.reviews.rating}/5 sur {siteConfig.reviews.count} avis), et notre <Link href="/blog" className="text-primary-600 hover:text-primary-700 underline">blog de conseils</Link> pour l&apos;entretien de votre rideau metallique.
               </p>
             </div>
           </div>

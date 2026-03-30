@@ -87,17 +87,17 @@ export function ContactForm() {
   };
 
   return (
-    <div className="bg-gray-50 p-8 md:p-10" style={{ borderRadius: '8px' }}>
+    <div className="bg-gray-50 rounded-2xl p-8 md:p-10">
       <h2 className="font-bold text-2xl text-gray-900 mb-6">Demande de devis</h2>
 
       {status.type === 'success' && (
-        <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-sm">
+        <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-xl">
           <p className="text-green-800 text-sm">{status.message}</p>
         </div>
       )}
 
       {status.type === 'error' && (
-        <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-sm">
+        <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl">
           <p className="text-red-800 text-sm">{status.message}</p>
         </div>
       )}
@@ -117,7 +117,6 @@ export function ContactForm() {
               onChange={handleChange}
               disabled={status.type === 'loading'}
               className="w-full px-4 py-3 bg-white border border-gray-200 text-sm focus:ring-1 focus:ring-primary-600 focus:border-primary-600 transition-all disabled:opacity-50"
-              style={{ borderRadius: '8px' }}
               placeholder="Votre nom"
             />
           </div>
@@ -134,7 +133,6 @@ export function ContactForm() {
               onChange={handleChange}
               disabled={status.type === 'loading'}
               className="w-full px-4 py-3 bg-white border border-gray-200 text-sm focus:ring-1 focus:ring-primary-600 focus:border-primary-600 transition-all disabled:opacity-50"
-              style={{ borderRadius: '8px' }}
               placeholder="06 12 34 56 78"
             />
           </div>

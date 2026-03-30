@@ -51,7 +51,8 @@ export function AvantagesMotorisation({ title, subtitle, avantages, comparatif, 
             <h3 className="font-heading font-bold text-gray-900 text-sm uppercase tracking-wider mb-6">
               {comparatif.title}
             </h3>
-            <div className="border border-gray-200" style={{ borderRadius: '8px' }}>
+            <div className="overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0">
+            <div className="border border-gray-200 min-w-[360px]" style={{ borderRadius: '8px' }}>
               <table className="w-full">
                 <thead>
                   <tr className="bg-gray-900">
@@ -70,6 +71,7 @@ export function AvantagesMotorisation({ title, subtitle, avantages, comparatif, 
                   ))}
                 </tbody>
               </table>
+            </div>
             </div>
           </div>
         )}

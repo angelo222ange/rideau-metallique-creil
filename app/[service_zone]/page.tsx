@@ -7,6 +7,7 @@ import { getPageContent, getZoneBySlug, getServiceBySlug, getZoneContent, getNei
 import { FAQ } from "@/components/sections/FAQ";
 import { CTA } from "@/components/sections/CTA";
 import { Reviews } from "@/components/sections/Reviews";
+import { ServicesCarousel } from "@/components/sections/ServicesCarousel";
 
 // Composants SubCity spécifiques
 import { WhyChooseUs } from "@/components/subcity/WhyChooseUs";
@@ -43,6 +44,107 @@ const serviceContents: Record<string, any> = {
   "deblocage": deblocageContent,
   "reparation": reparationContent,
 };
+
+// ═══════════════════════════════════════════════════════════════════════════
+// IMAGES PAR SERVICE — chaque service a des images uniques par section
+// ═══════════════════════════════════════════════════════════════════════════
+const SERVICE_IMAGES: Record<string, {
+  hero: string;
+  intro1: string;
+  intro2: string;
+  zoneIntro: string;
+  zoneFeatures: string[];
+}> = {
+  depannage: {
+    hero: "/images/gallery/depannage-rideau-metallique-creil-60.webp",
+    intro1: "/images/gallery/depannage-rideau-metallique-drm-services.webp",
+    intro2: "/images/gallery/depannage-rideau-metallique-drm-france-rm.webp",
+    zoneIntro: "/images/gallery/depannage-rideau-metallique-creil.webp",
+    zoneFeatures: [
+      "/images/gallery/depannage-rideau-metallique-DRM-reparation.webp",
+      "/images/gallery/depannage-rideau-metallique-paris-19-drm.webp",
+      "/images/gallery/rideau-metallique-bloque-depannage-rideau-metallique.webp",
+      "/images/gallery/depannage-rideau-metallique-rm-drm-france.webp",
+    ],
+  },
+  installation: {
+    hero: "/images/gallery/installation-rideau-metallique-creil.webp",
+    intro1: "/images/gallery/installation-rideau-metallique-drm.webp",
+    intro2: "/images/gallery/installation-rideau-metallique-sur-mesure-france.webp",
+    zoneIntro: "/images/gallery/installation-rideau-metallique-anti-effraction.webp",
+    zoneFeatures: [
+      "/images/gallery/installation-rideau-metallique-paris-1-drm-paris.webp",
+      "/images/gallery/pose-coulisse-tablier-rideau-metallique.webp",
+      "/images/gallery/prise-de-mesure-rideau-metallique-drm.webp",
+      "/images/gallery/raccordement-rideau-metallique-drm.webp",
+    ],
+  },
+  motorisation: {
+    hero: "/images/gallery/motorisation-rideau-metallique-drm-depannage.webp",
+    intro1: "/images/gallery/motorisation-rideau-metallique-rideau-metallique-drm.webp",
+    intro2: "/images/gallery/motorisation-rideau-metallique-rm-rideau-metallique.webp",
+    zoneIntro: "/images/gallery/rideau-metallique-motorise-garage.webp",
+    zoneFeatures: [
+      "/images/gallery/raccordement-rideau-metallique-drm.webp",
+      "/images/gallery/realisation-rideau-metallique-garage.webp",
+      "/images/gallery/depannage-rideau-metallique-paris-19-drm.webp",
+      "/images/gallery/realisation-rideau-metallique-lame-pleine-en-applique-france.webp",
+    ],
+  },
+  entretien: {
+    hero: "/images/gallery/entretien-rideau-metallique-drm-france.webp",
+    intro1: "/images/gallery/entretien-rideau-metallique-drm-rideau-metallique.webp",
+    intro2: "/images/gallery/entretien-rideau-metallique-france-entretien.webp",
+    zoneIntro: "/images/gallery/entretien-rideau-metallique-rideau-de-fer.webp",
+    zoneFeatures: [
+      "/images/gallery/test-rideau-metallique-drm.webp",
+      "/images/gallery/rideau-metallique-depannage-rideau-metallique.webp",
+      "/images/gallery/realisation-rideau-metallique-lame-pleine-commerce.webp",
+      "/images/gallery/details-rideau-metallique-france.webp",
+    ],
+  },
+  fabrication: {
+    hero: "/images/gallery/fabrication-rideau-metallique-creil.webp",
+    intro1: "/images/gallery/fabrication-rideau-metallique-creil-2.webp",
+    intro2: "/images/gallery/rideau-metallique-thermolaquage.webp",
+    zoneIntro: "/images/gallery/fabrication-rideau-metallique-entreprise-drm.webp",
+    zoneFeatures: [
+      "/images/gallery/fabrication-axe-rideau-metallique-france.webp",
+      "/images/gallery/realisation-rideau-metallique-lame-pleine-industriel-france.webp",
+      "/images/gallery/fabrication-rideau-metallique-rideau-metallique-france-drm.webp",
+      "/images/gallery/realisation-rideau-metallique-lame-pleine-en-applique-france.webp",
+    ],
+  },
+  deblocage: {
+    hero: "/images/gallery/rideau-metallique-bloque-depannage-rideau-metallique.webp",
+    intro1: "/images/gallery/depannage-rideau-metallique-drm-france-rm.webp",
+    intro2: "/images/gallery/depannage-rideau-metallique-paris-1-drm-paris.webp",
+    zoneIntro: "/images/gallery/depannage-rideau-metallique-drm.webp",
+    zoneFeatures: [
+      "/images/gallery/rideau-metallique-anti-effraction-blinde.webp",
+      "/images/gallery/depannage-rideau-metallique-rm-drm-france.webp",
+      "/images/gallery/realisation-rideau-metallique-lame-pleine-commerce.webp",
+      "/images/gallery/depannage-rideau-metallique-creil.webp",
+    ],
+  },
+  reparation: {
+    hero: "/images/gallery/depannage-rideau-metallique-DRM-reparation.webp",
+    intro1: "/images/gallery/depannage-rideau-metallique-drm-services.webp",
+    intro2: "/images/gallery/depannage-rideau-metallique-creil.webp",
+    zoneIntro: "/images/gallery/rideau-metallique-depannage-rideau-metallique.webp",
+    zoneFeatures: [
+      "/images/gallery/depannage-rideau-metallique-paris-19-drm.webp",
+      "/images/gallery/rideau-metallique-anti-effraction-blinde.webp",
+      "/images/gallery/depannage-rideau-metallique-rm-drm-france.webp",
+      "/images/gallery/realisation-rideau-metallique-lame-pleine-industriel-france.webp",
+    ],
+  },
+};
+
+// Helper: get the right images for a service (with fallback)
+function getServiceImages(serviceSlug: string) {
+  return SERVICE_IMAGES[serviceSlug] || SERVICE_IMAGES.depannage;
+}
 
 interface Props {
   params: { service_zone: string };
@@ -92,16 +194,14 @@ export function generateStaticParams() {
   for (const service of services) {
     if (!service.hasPage) continue;
     for (const zone of zones) {
-      if (service.slug === "depannage" && 'isMain' in zone) continue;
       params.push({
         service_zone: `${service.slug}-rideau-metallique-${zone.slug}`,
       });
     }
   }
 
-  // Pages zone overview : rideau-metallique-chambly, etc.
+  // Pages zone overview : rideau-metallique-chambly, rideau-metallique-creil, etc.
   for (const zone of zones) {
-    if ('isMain' in zone) continue; // Homepage couvre Creil
     params.push({
       service_zone: `rideau-metallique-${zone.slug}`,
     });
@@ -133,7 +233,7 @@ export function generateMetadata({ params }: Props): Metadata {
       title,
       description,
       alternates: { canonical: `${siteConfig.url}/rideau-metallique-${zone.slug}/` },
-      openGraph: { title, description, type: "website", url: `${siteConfig.url}/rideau-metallique-${zone.slug}` },
+      openGraph: { title, description, type: "website", locale: "fr_FR", url: `${siteConfig.url}/rideau-metallique-${zone.slug}/` },
     };
   }
 
@@ -187,12 +287,13 @@ export function generateMetadata({ params }: Props): Metadata {
       title,
       description,
       type: "website",
-      url: `${siteConfig.url}/${service.slug}-rideau-metallique-${zone.slug}`,
+      locale: "fr_FR",
+      url: `${siteConfig.url}/${service.slug}-rideau-metallique-${zone.slug}/`,
       images: [{
         url: `${siteConfig.url}${service.image}`,
         width: 800,
         height: 600,
-        alt: `${service.name} rideau métallique ${zone.name}`,
+        alt: `${service.name} rideau metallique ${zone.name}`,
       }],
     },
     alternates: {
@@ -226,12 +327,13 @@ export default function ServiceZonePage({ params }: Props) {
         {/* Hero with background image */}
         <section className="relative overflow-hidden bg-gray-900">
           <Image
-            src="/images/gallery/hero-bg-technicien-drm.webp"
+            src="/images/gallery/rideau-metallique-industrielle-rideau-metallique-drm.webp"
             alt={`Rideau métallique ${zone.name}`}
             title={`Rideau métallique ${zone.name}`}
             fill
             className="object-cover opacity-20"
-          />
+            sizes="100vw"
+            />
           <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/90 to-gray-900/70" />
 
           <div className="container relative z-10 py-14 md:py-20">
@@ -291,32 +393,21 @@ export default function ServiceZonePage({ params }: Props) {
           <div className="absolute top-0 right-0 w-1 h-full bg-primary-600 hidden lg:block" />
         </section>
 
-        {/* Services dans cette zone */}
-        <section className="relative py-20 md:py-28 bg-white overflow-hidden">
-          <div className="container relative z-10">
-            <div className="mb-12">
-              <span className="section-label block mb-3">Nos services</span>
-              <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">Services rideau métallique à {zone.name}</h2>
-              <div className="divider-industrial mt-4" />
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-              {services.filter(s => s.hasPage).map((s) => (
-                <Link
-                  key={s.id}
-                  href={`/${s.slug}-rideau-metallique-${zone.slug}`}
-                  className="group bg-white p-6 border-l-4 border-l-primary-500 border border-gray-200 hover:border-l-primary-700 hover:-translate-y-1 transition-all duration-300"
-                >
-                  <h3 className="font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">{s.name}</h3>
-                  <p className="text-gray-400 text-sm mb-4">{s.shortDesc}</p>
-                  <span className="text-primary-600 text-sm font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
-                    {s.name} à {zone.name}
-                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-                  </span>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
+        {/* Services dans cette zone — carrousel avec visuels */}
+        <ServicesCarousel
+          services={services.filter(s => s.hasPage)}
+          serviceImages={{
+            depannage: "/images/gallery/depannage-rideau-metallique-DRM-reparation.webp",
+            installation: "/images/gallery/installation-rideau-metallique-drm.webp",
+            fabrication: "/images/gallery/realisation-rideau-metallique-lame-pleine-commerce.webp",
+            entretien: "/images/gallery/entretien-rideau-metallique-rideau-de-fer.webp",
+            motorisation: "/images/gallery/motorisation-rideau-metallique-drm-depannage.webp",
+            deblocage: "/images/gallery/depannage-rideau-metallique-drm-france-rm.webp",
+            reparation: "/images/gallery/realisation-drm-rideau-metallique-lame-pleine.webp",
+          }}
+          city={zone.name}
+          department={siteConfig.department}
+        />
 
         {/* Infos zone */}
         {zoneLocal && (
@@ -379,6 +470,9 @@ export default function ServiceZonePage({ params }: Props) {
   if (!service) {
     notFound();
   }
+
+  // Images uniques pour ce service
+  const svcImages = getServiceImages(service.slug);
 
   // Récupérer et contextualiser le contenu
   const rawContent = serviceContents[service.slug];
@@ -509,32 +603,33 @@ export default function ServiceZonePage({ params }: Props) {
         />
       )}
 
-      {/* ─── HERO WITH BACKGROUND IMAGE ─── */}
+      {/* ─── HERO ─── */}
       <section className="relative overflow-hidden bg-gray-900">
-        {/* Background image */}
         <Image
-          src="/images/gallery/hero-bg-technicien-drm.webp"
+          src={svcImages.hero}
           alt={`${service.name} rideau métallique ${zone.name}`}
           title={`${service.name} rideau métallique ${zone.name}`}
           fill
-          className="object-cover opacity-20"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/90 to-gray-900/70" />
+          priority
+          className="object-cover opacity-25"
+          sizes="100vw"
+          />
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-900/80 via-gray-900/70 to-gray-900/95" />
 
-        <div className="container relative z-10 py-14 md:py-20">
+        <div className="container relative z-10 py-12 md:py-16">
           {/* Breadcrumb */}
-          <nav className="mb-6" aria-label="Fil d'Ariane">
-            <ol className="flex items-center gap-2 text-xs text-white/30 flex-wrap">
+          <nav className="mb-5" aria-label="Fil d'Ariane">
+            <ol className="flex items-center gap-2 text-xs text-white/40 flex-wrap">
               <li><Link href="/" className="hover:text-primary-400 transition-colors">Accueil</Link></li>
               <li>/</li>
-              <li><Link href={`/zones/${zone.slug}`} className="hover:text-primary-400 transition-colors">{zone.name}</Link></li>
+              <li><Link href={`/rideau-metallique-${zone.slug}`} className="hover:text-primary-400 transition-colors">{zone.name}</Link></li>
               <li>/</li>
-              <li className="text-white/60 font-medium">{service.name}</li>
+              <li className="text-white/70 font-medium">{service.name}</li>
             </ol>
           </nav>
 
           <div className="max-w-3xl">
-            <span className="section-label text-primary-400 mb-4 block">
+            <span className="section-label text-primary-400 mb-3 block">
               {service.name} — {zone.name} ({zone.postalCode})
             </span>
 
@@ -542,13 +637,13 @@ export default function ServiceZonePage({ params }: Props) {
               {content.hero.title.replace(zone.name, '')} <span className="text-primary-400">{zone.name}</span>
             </h1>
 
-            <div className="divider-industrial-lg mb-6" />
+            <div className="divider-industrial-lg mb-5" />
 
-            <p className="text-white/50 text-lg mb-8 leading-relaxed max-w-xl">
+            <p className="text-white/50 text-lg mb-6 leading-relaxed max-w-xl">
               {content.hero.subtitle}
             </p>
 
-            <div className="flex flex-wrap gap-3 mb-10">
+            <div className="flex flex-wrap gap-3">
               <a href={siteConfig.phoneLink} className="btn-phone">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
@@ -560,32 +655,14 @@ export default function ServiceZonePage({ params }: Props) {
                 Devis gratuit
               </Link>
             </div>
-
-            {/* Trust stats */}
-            <div className="flex flex-wrap gap-8 text-sm">
-              <div>
-                <span className="text-white font-bold">{siteConfig.reviews.rating}/5</span>
-                <span className="text-white/40 ml-1">({siteConfig.reviews.count} avis)</span>
-              </div>
-              <div>
-                <span className="text-white font-bold">-30 min</span>
-                <span className="text-white/40 ml-1">intervention</span>
-              </div>
-              <div>
-                <span className="text-white font-bold">24h/24</span>
-                <span className="text-white/40 ml-1">7j/7</span>
-              </div>
-            </div>
           </div>
         </div>
-
-        <div className="absolute top-0 right-0 w-1 h-full bg-primary-600 hidden lg:block" />
       </section>
 
       {/* ─── STATS BAR sous le hero ─── */}
-      <section className="py-6 bg-gradient-to-r from-primary-50 via-gray-50 to-primary-50 border-b border-gray-100">
+      <section className="py-5 bg-white border-b border-gray-100 shadow-sm">
         <div className="container">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-center">
             {[
               { value: siteConfig.experience, label: "ans d'expérience" },
               { value: siteConfig.interventions, label: "interventions" },
@@ -593,8 +670,8 @@ export default function ServiceZonePage({ params }: Props) {
               { value: `${siteConfig.reviews.rating}/5`, label: `${siteConfig.reviews.count} avis` },
             ].map((s, i) => (
               <div key={i}>
-                <p className="text-2xl md:text-3xl font-extrabold text-gray-900">{s.value}</p>
-                <p className="text-xs text-gray-400 font-medium uppercase tracking-wider mt-0.5">{s.label}</p>
+                <p className="text-xl md:text-2xl font-extrabold text-gray-900">{s.value}</p>
+                <p className="text-[10px] md:text-xs text-gray-400 font-medium uppercase tracking-wider mt-0.5">{s.label}</p>
               </div>
             ))}
           </div>
@@ -602,26 +679,27 @@ export default function ServiceZonePage({ params }: Props) {
       </section>
 
       {/* ─── INTRODUCTION (masqué si contenu zone-spécifique) ─── */}
-      {!zoneServiceContent && service.slug === "reparation" ? (
+      {!zoneServiceContent && (service.slug === "reparation" ? (
         <>
-          {/* Section 1 : Image gauche, texte droite */}
-          <section className="py-20 md:py-28 bg-gray-50">
+          {/* Section 1 : Image LEFT, Text RIGHT */}
+          <section className="py-16 md:py-24 bg-gray-50">
             <div className="container">
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
-                <div className="relative hidden lg:block">
-                  <Image
-                    src="/images/gallery/installation-rideau-metallique-paris-1-drm-paris.webp"
-                    alt={`Technicien réparation rideau métallique ${zone.name}`}
-                    title={`Technicien réparation rideau métallique ${zone.name}`}
-                    width={800}
-                    height={600}
-                    className="w-full h-auto"
-                    style={{ borderRadius: '8px' }}
-                  />
+              <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+                <div className="relative order-2 lg:order-1">
+                  <div className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-xl">
+                    <Image
+                      src={svcImages.intro1}
+                      alt={`Technicien réparation rideau métallique ${zone.name}`}
+                      title={`Technicien réparation rideau métallique ${zone.name}`}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      />
+                  </div>
                 </div>
-                <div className="max-w-xl">
-                  <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
-                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">{content.intro.title}</h2>
+                <div className="max-w-xl order-1 lg:order-2">
+                  <div className="w-12 h-1 bg-primary-600 mb-6 rounded" />
+                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">{content.intro.title}</h2>
                   <div className="mt-6">
                     <p className="text-gray-500 text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: content.intro.paragraphs[0] }} />
                   </div>
@@ -630,87 +708,98 @@ export default function ServiceZonePage({ params }: Props) {
             </div>
           </section>
 
-          {/* Section 2 : Texte gauche, image droite */}
-          <section className="py-20 md:py-28 bg-white">
+          {/* Section 2 : Text LEFT, Image RIGHT */}
+          <section className="py-16 md:py-24 bg-white">
             <div className="container">
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
                 <div className="max-w-xl">
-                  <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
-                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">Réparation complète de votre rideau à {zone.name}</h2>
+                  <div className="w-12 h-1 bg-primary-600 mb-6 rounded" />
+                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">Réparation complète de votre rideau à {zone.name}</h2>
                   <div className="mt-6">
                     <p className="text-gray-500 text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: content.intro.paragraphs[1] }} />
                   </div>
                 </div>
-                <div className="relative hidden lg:block">
-                  <Image
-                    src="/images/gallery/depannage-rideau-metallique-creil.webp"
-                    alt={`Réparation lames rideau métallique ${zone.name}`}
-                    title={`Réparation lames rideau métallique ${zone.name}`}
-                    width={800}
-                    height={600}
-                    className="w-full h-auto"
-                    style={{ borderRadius: '8px' }}
-                  />
+                <div className="relative">
+                  <div className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-xl">
+                    <Image
+                      src={svcImages.intro2}
+                      alt={`Réparation lames rideau métallique ${zone.name}`}
+                      title={`Réparation lames rideau métallique ${zone.name}`}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      />
+                  </div>
                 </div>
               </div>
             </div>
           </section>
         </>
-      ) : service.slug === "fabrication" ? (
-        <section className="py-20 md:py-28 bg-gray-50">
-          <div className="container">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="relative hidden lg:block">
-                <div className="relative aspect-[4/3] overflow-hidden" style={{ borderRadius: '8px' }}>
-                  <Image
-                    src="/images/gallery/Drapeau-rideau-metallique-motorisation-centrale-3D.webp"
-                    alt={`Fabrication rideau métallique sur-mesure ${zone.name}`}
-                    title={`Fabrication rideau métallique sur-mesure ${zone.name}`}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-              <div className="max-w-xl">
-                <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">{content.intro.title}</h2>
-                <div className="mt-6 space-y-4">
-                  {content.intro.paragraphs.map((p: string, i: number) => (
-                    <p key={i} className="text-gray-500 text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: p }} />
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
       ) : (
-        <section className="py-20 md:py-28 bg-gray-50">
-          <div className="container">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="max-w-xl">
-                <div className="w-12 h-1 bg-primary-600 mb-6" style={{borderRadius:"4px"}} />
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">{content.intro.title}</h2>
-                <div className="mt-6 space-y-4">
-                  {content.intro.paragraphs.map((p: string, i: number) => (
-                    <p key={i} className="text-gray-500 text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: p }} />
-                  ))}
+        <>
+          {/* Section 1 : Image LEFT, Text RIGHT */}
+          <section className="py-16 md:py-24 bg-gray-50">
+            <div className="container">
+              <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+                <div className="relative order-2 lg:order-1">
+                  <div className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-xl">
+                    <Image
+                      src={svcImages.intro1}
+                      alt={`${service.name} rideau métallique ${zone.name}`}
+                      title={`${service.name} rideau métallique ${zone.name}`}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      />
+                  </div>
                 </div>
-              </div>
-              <div className="relative hidden lg:block">
-                <div className="relative aspect-[4/3] overflow-hidden" style={{ borderRadius: '8px' }}>
-                  <Image
-                    src="/images/gallery/rideau-metallique-lame-pleine-france.webp"
-                    alt={`Rideau métallique ${zone.name}`}
-                    title={`Rideau métallique ${zone.name}`}
-                    fill
-                    className="object-cover"
-                  />
+                <div className="max-w-xl order-1 lg:order-2">
+                  <div className="w-12 h-1 bg-primary-600 mb-6 rounded" />
+                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">{content.intro.title}</h2>
+                  <div className="mt-6 space-y-4">
+                    {content.intro.paragraphs.slice(0, 1).map((p: string, i: number) => (
+                      <p key={i} className="text-gray-500 text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: p }} />
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-      )}
+          </section>
+
+          {/* Section 2 : Text LEFT, Image RIGHT (only if more than 1 paragraph) */}
+          {content.intro.paragraphs.length > 1 && (
+            <section className="py-16 md:py-24 bg-white">
+              <div className="container">
+                <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+                  <div className="max-w-xl">
+                    <div className="w-12 h-1 bg-primary-600 mb-6 rounded" />
+                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
+                      {service.name} sur-mesure à {zone.name}
+                    </h2>
+                    <div className="mt-6 space-y-4">
+                      {content.intro.paragraphs.slice(1).map((p: string, i: number) => (
+                        <p key={i} className="text-gray-500 text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: p }} />
+                      ))}
+                    </div>
+                  </div>
+                  <div className="relative">
+                    <div className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-xl">
+                      <Image
+                        src={svcImages.intro2}
+                        alt={`${service.name} rideau métallique sur-mesure ${zone.name}`}
+                        title={`${service.name} rideau métallique sur-mesure ${zone.name}`}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          )}
+        </>
+      ))}
 
       {/* ─── SITUATIONS / TYPES D'INTERVENTION (masqué si contenu zone-spécifique) ─── */}
       {!zoneServiceContent && !["installation", "reparation", "depannage", "deblocage", "motorisation"].includes(service.slug) && (
@@ -988,11 +1077,9 @@ export default function ServiceZonePage({ params }: Props) {
             </div>
             <div className="divide-y divide-gray-200">
               {content.typesReparation.items.map((type: any, index: number) => (
-                <div key={index} className="grid grid-cols-12 gap-6 py-6 items-center">
-                  <div className="col-span-1">
-                    <span className="font-bold text-2xl text-gray-200">{String(index + 1).padStart(2, '0')}</span>
-                  </div>
-                  <div className="col-span-11 md:col-span-8">
+                <div key={index} className="flex gap-4 md:gap-6 py-6 items-start">
+                  <span className="font-bold text-2xl text-gray-200 flex-shrink-0 w-8">{String(index + 1).padStart(2, '0')}</span>
+                  <div className="flex-1 min-w-0">
                     <h3 className="font-heading font-bold text-gray-900 text-[15px]">{type.name}</h3>
                     <p className="text-gray-400 text-sm">{type.description}</p>
                   </div>
@@ -1124,98 +1211,88 @@ export default function ServiceZonePage({ params }: Props) {
 
       {/* ─── ZONE INTRO UNIQUE ─── */}
       {zoneServiceContent?.zoneIntro && (
-        <section className="relative py-20 md:py-28 bg-white overflow-hidden">
+        <section className="relative py-16 md:py-24 bg-white overflow-hidden">
           <div className="container relative z-10">
-            <div className="grid lg:grid-cols-12 gap-12 items-center max-w-6xl mx-auto">
-              {/* Texte */}
-              <div className="lg:col-span-7">
-                <div className="bg-white border-l-4 border-l-primary-500 border border-gray-200 p-8 md:p-10">
-                  <div className="divider-industrial mb-6" />
-                  <div
-                    className="text-gray-600 text-lg leading-relaxed prose prose-a:text-primary-600 prose-a:no-underline hover:prose-a:underline prose-strong:text-gray-900"
-                    dangerouslySetInnerHTML={{ __html: zoneServiceContent.zoneIntro }}
-                  />
-                </div>
-              </div>
-              {/* Image */}
-              <div className="lg:col-span-5 hidden lg:block">
-                <div className="relative aspect-[4/3] overflow-hidden shadow-2xl">
+            <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center max-w-6xl mx-auto">
+              {/* Image LEFT */}
+              <div className="relative order-2 lg:order-1">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-xl">
                   <Image
-                    src="/images/gallery/rideau-metallique-creil.webp"
+                    src={svcImages.zoneIntro}
                     alt={`${service.name} rideau metallique ${zone.name}`}
                     title={`${service.name} rideau metallique ${zone.name}`}
                     fill
                     className="object-cover"
-                  />
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    />
                 </div>
-                {/* Vertical accent bar */}
-                <div className="absolute -z-10 top-0 -right-3 w-1.5 h-full bg-primary-600" />
+              </div>
+              {/* Text RIGHT */}
+              <div className="order-1 lg:order-2">
+                <div className="w-12 h-1 bg-primary-600 mb-6 rounded" />
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 leading-tight mb-6">
+                  {service.name} rideau metallique à {zone.name}
+                </h2>
+                <div
+                  className="text-gray-500 text-lg leading-relaxed prose prose-lg max-w-none prose-a:text-primary-600 prose-a:no-underline hover:prose-a:underline prose-strong:text-gray-900 [&_p]:mb-4"
+                  dangerouslySetInnerHTML={{ __html: zoneServiceContent.zoneIntro }}
+                />
               </div>
             </div>
           </div>
         </section>
       )}
 
-      {/* ─── ZONE FEATURES ALTERNÉES UNIQUES ─── */}
+      {/* ─── ZONE FEATURES ALTERNEES UNIQUES ─── */}
       {zoneServiceContent?.zoneFeatures && zoneServiceContent.zoneFeatures.length > 0 && (
         <>
-          {zoneServiceContent.zoneFeatures.map((feature, index) => (
-            <section
-              key={index}
-              className={`relative py-20 md:py-28 overflow-hidden ${index % 2 === 0 ? "bg-white" : "bg-gray-50"}`}
-            >
-              <div className="container relative z-10">
-                {/* Section label with number */}
-                <span className="section-label mb-3 block">
-                  {String(index + 1).padStart(2, '0')} — {service.name}
-                </span>
+          {zoneServiceContent.zoneFeatures.map((feature, index) => {
+            // Start with image RIGHT to alternate with zoneIntro (image LEFT)
+            const isImageLeft = index % 2 === 1;
+            const featureImage = feature.image || svcImages.zoneFeatures[index % svcImages.zoneFeatures.length];
+            const featureAlt = feature.imageAlt || `${service.name} rideau métallique ${zone.name}`;
 
-                <div className={`grid lg:grid-cols-2 gap-12 lg:gap-16 items-center ${
-                  feature.imagePosition === "left" ? "" : "lg:grid-flow-dense"
-                }`}>
-                  {feature.imagePosition === "left" && (
-                    <div className="relative hidden lg:block">
-                      <div className="relative aspect-[4/3] overflow-hidden shadow-2xl">
+            return (
+              <section
+                key={index}
+                className={`relative py-16 md:py-24 overflow-hidden ${index % 2 === 0 ? "bg-gray-50" : "bg-white"}`}
+              >
+                <div className="container relative z-10">
+                  <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+                    {/* Image */}
+                    <div className={`relative ${isImageLeft ? "order-2 lg:order-1" : "order-2"}`}>
+                      <div className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-xl">
                         <Image
-                          src={feature.image}
-                          alt={feature.imageAlt} title={feature.imageAlt}
+                          src={featureImage}
+                          alt={featureAlt}
+                          title={featureAlt}
                           fill
                           className="object-cover"
-                        />
+                          sizes="(max-width: 1024px) 100vw, 50vw"
+                          />
                       </div>
-                      {/* Vertical accent bar */}
-                      <div className="absolute -z-10 top-0 -right-3 w-1.5 h-full bg-primary-600" />
                     </div>
-                  )}
-                  <div className="max-w-xl">
-                    <h2
-                      className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight tracking-tight"
-                      dangerouslySetInnerHTML={{ __html: feature.title }}
-                    />
-                    <div className="divider-industrial mt-4 mb-6" />
-                    <div
-                      className="text-gray-500 text-lg leading-relaxed prose prose-a:text-primary-600 prose-a:no-underline hover:prose-a:underline prose-strong:text-gray-900"
-                      dangerouslySetInnerHTML={{ __html: feature.content }}
-                    />
+
+                    {/* Text */}
+                    <div className={`max-w-xl ${isImageLeft ? "order-1 lg:order-2" : "order-1"}`}>
+                      <span className="text-xs font-bold uppercase tracking-widest text-primary-600 mb-3 block">
+                        {String(index + 1).padStart(2, '0')} — {service.name}
+                      </span>
+                      <h2
+                        className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight"
+                        dangerouslySetInnerHTML={{ __html: feature.title }}
+                      />
+                      <div className="w-12 h-1 bg-primary-600 mt-4 mb-6 rounded" />
+                      <div
+                        className="text-gray-500 text-lg leading-relaxed prose prose-lg max-w-none prose-a:text-primary-600 prose-a:no-underline hover:prose-a:underline prose-strong:text-gray-900 [&_p]:mb-4"
+                        dangerouslySetInnerHTML={{ __html: feature.content }}
+                      />
+                    </div>
                   </div>
-                  {feature.imagePosition === "right" && (
-                    <div className="relative hidden lg:block">
-                      <div className="relative aspect-[4/3] overflow-hidden shadow-2xl">
-                        <Image
-                          src={feature.image}
-                          alt={feature.imageAlt} title={feature.imageAlt}
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
-                      {/* Vertical accent bar */}
-                      <div className="absolute -z-10 top-0 -left-3 w-1.5 h-full bg-primary-600" />
-                    </div>
-                  )}
                 </div>
-              </div>
-            </section>
-          ))}
+              </section>
+            );
+          })}
         </>
       )}
 
