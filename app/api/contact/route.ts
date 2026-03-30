@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-const WEBHOOK_URL = 'https://lioai.app.n8n.cloud/webhook/drm-contact';
+const WEBHOOK_URL = process.env.WEBHOOK_URL || process.env.NEXT_PUBLIC_WEBHOOK_URL || '';
 
 export async function POST(request: NextRequest) {
   try {
