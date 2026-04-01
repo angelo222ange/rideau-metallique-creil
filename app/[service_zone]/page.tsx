@@ -571,19 +571,8 @@ export default function ServiceZonePage({ params }: Props) {
     },
   };
 
-  // Schema.org FAQPage (si FAQ disponible)
-  const faqSchema = zoneFaq.length > 0 ? {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": zoneFaq.map((item: FAQItem) => ({
-      "@type": "Question",
-      "name": item.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": item.answer.replace(/<[^>]*>/g, ''),
-      },
-    })),
-  } : null;
+  // NOTE: FAQPage schema is handled by the <FAQ> component itself — do NOT add it here
+  // to avoid duplicate FAQPage structured data (GSC error "Champ FAQPage en double")
 
   return (
     <main>
@@ -596,12 +585,6 @@ export default function ServiceZonePage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
-      {faqSchema && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        />
-      )}
 
       {/* ─── HERO ─── */}
       <section className="relative overflow-hidden bg-gray-900">
